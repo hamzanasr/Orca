@@ -1,7 +1,15 @@
 /* ==========================================================================
    أوركا للرحلات البحرية — Design System
-   Font: IBM Plex Sans Arabic | Theme: Navy & Gold on White
+   Font: Thmanyah Sans | Theme: Navy & Gold on White
    ========================================================================== */
+
+@font-face {
+    font-family: 'Thmanyah Sans';
+    src: url('font/thmanyahsans-Regular.woff2') format('woff2');
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+}
 
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap');
 
@@ -44,7 +52,7 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; font-size: 16px; -webkit-text-size-adjust: 100%; }
 body {
-    font-family: 'IBM Plex Sans Arabic', sans-serif;
+    font-family: 'Thmanyah Sans', 'IBM Plex Sans Arabic', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     background: var(--white);
     color: var(--gray-800);
     line-height: 1.65;
