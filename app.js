@@ -228,6 +228,10 @@ document.addEventListener('DOMContentLoaded', () => {
             { id: 'bayadah-silver', name: 'رحلة بياضة - الباقة الفضية شاملة الدونات (1680 ريال)', basePriceWeekday: 1680, basePriceWeekend: 1680, duration: 6 },
             { id: 'bayadah-gold', name: 'رحلة بياضة - الباقة الذهبية شاملة فواكه وموهيتو (1980 ريال)', basePriceWeekday: 1980, basePriceWeekend: 1980, duration: 6 },
             { id: 'bayadah-special', name: 'رحلة بياضة - باقة الاسبيشل VIP شاملة فطائر (2180 ريال)', basePriceWeekday: 2180, basePriceWeekend: 2180, duration: 6 },
+            { id: 'abu-tair-normal', name: 'رحلة جزيرة أبو طير - الباقة العادية (1780 ريال)', basePriceWeekday: 1780, basePriceWeekend: 1780, duration: 6 },
+            { id: 'abu-tair-silver', name: 'رحلة جزيرة أبو طير - الباقة الفضية شاملة الدونات (1980 ريال)', basePriceWeekday: 1980, basePriceWeekend: 1980, duration: 6 },
+            { id: 'abu-tair-gold', name: 'رحلة جزيرة أبو طير - الباقة الذهبية شاملة فواكه وموهيتو (2280 ريال)', basePriceWeekday: 2280, basePriceWeekend: 2280, duration: 6 },
+            { id: 'abu-tair-special', name: 'رحلة جزيرة أبو طير - باقة الاسبيشل VIP شاملة فطائر (2480 ريال)', basePriceWeekday: 2480, basePriceWeekend: 2480, duration: 6 },
             { id: 'fishing-6', name: 'رحلة صيد (6 ساعات)', basePriceWeekday: 1580, basePriceWeekend: 1580, duration: 6 },
             { id: 'fishing-8', name: 'رحلة صيد (8 ساعات)', basePriceWeekday: 1780, basePriceWeekend: 1780, duration: 8 },
             { id: 'fishing-10', name: 'رحلة صيد (10 ساعات)', basePriceWeekday: 1980, basePriceWeekend: 1980, duration: 10 },
@@ -236,35 +240,41 @@ document.addEventListener('DOMContentLoaded', () => {
         ],
         'large-yacht': [
             { id: 'bayadah-hourly', name: 'رحلة بياضة (ساعة - بحد أدنى ساعتين)', hourlyPriceWeekday: 2000, hourlyPriceWeekend: 2200 },
+            { id: 'abu-tair-hourly', name: 'رحلة جزيرة أبو طير (ساعة - بحد أدنى ساعتين (+300 ريال/رحلة))', hourlyPriceWeekday: 2300, hourlyPriceWeekend: 2500 },
             { id: 'creek-hourly', name: 'رحلة خور (ساعة - بحد أدنى ساعتين)', hourlyPriceWeekday: 2000, hourlyPriceWeekend: 2200 }
         ],
         'baby-yacht-ambassador': [
             { id: 'bayadah', name: 'رحلة بياضة (6 ساعات)', basePriceWeekday: 2000, basePriceWeekend: 2300, duration: 6 },
+            { id: 'abu-tair', name: 'رحلة جزيرة أبو طير (6 ساعات - 2,300 ريال)', basePriceWeekday: 2300, basePriceWeekend: 2600, duration: 6 },
             { id: 'trolling', name: 'صيد ترولنق (6 ساعات)', basePriceWeekday: 2200, basePriceWeekend: 2500, duration: 6 },
             { id: 'creek', name: 'جولة الخور (0.5 – 2 ساعة)', duration: 1 }
         ],
         'baby-yacht-orax-40': [
             { id: 'bayadah', name: 'رحلة بياضة (6 ساعات - 3,100 ريال)', basePriceWeekday: 3100, basePriceWeekend: 3100, duration: 6 },
+            { id: 'abu-tair', name: 'رحلة جزيرة أبو طير (6 ساعات - 3,400 ريال)', basePriceWeekday: 3400, basePriceWeekend: 3400, duration: 6 },
             { id: 'creek', name: 'جولة الخور (0.5 – 2 ساعة)', duration: 1 }
         ],
         'al-ameed': [
             { id: 'bayadah', name: 'رحلة بياضة (وسط الأسبوع 12 ساعة / الويكند 10 ساعات)', basePriceWeekday: 1500, basePriceWeekend: 1800, duration: 12 },
+            { id: 'abu-tair', name: 'رحلة جزيرة أبو طير (وسط الأسبوع 12 ساعة / الويكند 10 ساعات)', basePriceWeekday: 1800, basePriceWeekend: 2100, duration: 12 },
             { id: 'mix', name: 'مكس صيد + بياضة (وسط الأسبوع 12 ساعة / الويكند 10 ساعات)', basePriceWeekday: 1950, basePriceWeekend: 2250, duration: 12 },
             { id: 'fishing', name: 'رحلة صيد فقط (وسط الأسبوع 12 ساعة / الويكند 10 ساعات)', basePriceWeekday: 1800, basePriceWeekend: 2100, duration: 12 },
             { id: 'creek', name: 'رحلة خور (0.5 – 2 ساعة)', duration: 1 }
         ],
         'seven-boat': [
+            { id: 'bayadah', name: 'رحلة بياضة (6 ساعات)', basePriceWeekday: 1300, basePriceWeekend: 1500, duration: 6 },
+            { id: 'abu-tair', name: 'رحلة جزيرة أبو طير (6 ساعات)', basePriceWeekday: 1600, basePriceWeekend: 1800, duration: 6 },
             { id: 'fishing-8', name: 'رحلة صيد (8 ساعات)', basePriceWeekday: 1600, basePriceWeekend: 1800, duration: 8 },
             { id: 'fishing-10', name: 'رحلة صيد (10 ساعات)', basePriceWeekday: 1800, basePriceWeekend: 2000, duration: 10 },
             { id: 'fishing-12', name: 'رحلة صيد (12 ساعة)', basePriceWeekday: 2000, basePriceWeekend: 2200, duration: 12 },
-            { id: 'bayadah', name: 'رحلة بياضة (6 ساعات)', basePriceWeekday: 1300, basePriceWeekend: 1500, duration: 6 },
             { id: 'creek', name: 'رحلة خور (0.5 – 2 ساعة)', duration: 1 }
         ],
         'norseen-large': [
+            { id: 'bayadah', name: 'رحلة بياضة (6 ساعات)', basePriceWeekday: 1800, basePriceWeekend: 2000, duration: 6 },
+            { id: 'abu-tair', name: 'رحلة جزيرة أبو طير (6 ساعات)', basePriceWeekday: 2100, basePriceWeekend: 2300, duration: 6 },
             { id: 'fishing-8', name: 'رحلة صيد (8 ساعات)', basePriceWeekday: 2100, basePriceWeekend: 2300, duration: 8 },
             { id: 'fishing-10', name: 'رحلة صيد (10 ساعات)', basePriceWeekday: 2300, basePriceWeekend: 2500, duration: 10 },
             { id: 'fishing-12', name: 'رحلة صيد (12 ساعة)', basePriceWeekday: 2500, basePriceWeekend: 2700, duration: 12 },
-            { id: 'bayadah', name: 'رحلة بياضة (6 ساعات)', basePriceWeekday: 1800, basePriceWeekend: 2000, duration: 6 },
             { id: 'creek', name: 'رحلة خور (0.5 – 2 ساعة)', duration: 1 }
         ],
         'qimat-al-fawz': [
@@ -272,6 +282,10 @@ document.addEventListener('DOMContentLoaded', () => {
             { id: 'bayadah-silver', name: 'رحلة بياضة - الباقة الفضية شاملة الدونات (1500 ريال)', basePriceWeekday: 1500, basePriceWeekend: 1500, duration: 6 },
             { id: 'bayadah-gold', name: 'رحلة بياضة - الباقة الذهبية شاملة فواكه وموهيتو (1700 ريال)', basePriceWeekday: 1700, basePriceWeekend: 1700, duration: 6 },
             { id: 'bayadah-special', name: 'رحلة بياضة - باقة الاسبيشل VIP شاملة فطائر (2000 ريال)', basePriceWeekday: 2000, basePriceWeekend: 2000, duration: 6 },
+            { id: 'abu-tair-normal', name: 'رحلة جزيرة أبو طير - الباقة العادية (1600 ريال)', basePriceWeekday: 1600, basePriceWeekend: 1600, duration: 6 },
+            { id: 'abu-tair-silver', name: 'رحلة جزيرة أبو طير - الباقة الفضية شاملة الدونات (1800 ريال)', basePriceWeekday: 1800, basePriceWeekend: 1800, duration: 6 },
+            { id: 'abu-tair-gold', name: 'رحلة جزيرة أبو طير - الباقة الذهبية شاملة فواكه وموهيتو (2000 ريال)', basePriceWeekday: 2000, basePriceWeekend: 2000, duration: 6 },
+            { id: 'abu-tair-special', name: 'رحلة جزيرة أبو طير - باقة الاسبيشل VIP شاملة فطائر (2300 ريال)', basePriceWeekday: 2300, basePriceWeekend: 2300, duration: 6 },
             { id: 'fishing-6', name: 'رحلة صيد (6 ساعات)', basePriceWeekday: 1400, basePriceWeekend: 1400, duration: 6 },
             { id: 'fishing-8', name: 'رحلة صيد (8 ساعات)', basePriceWeekday: 1600, basePriceWeekend: 1600, duration: 8 },
             { id: 'fishing-10', name: 'رحلة صيد (10 ساعات)', basePriceWeekday: 1800, basePriceWeekend: 1800, duration: 10 },
@@ -279,6 +293,7 @@ document.addEventListener('DOMContentLoaded', () => {
             { id: 'creek', name: 'جولة الخور / شرم أبحر (0.5 – 2 ساعة)', duration: 1 }
         ],
         'boat-51': [
+            { id: 'abu-tair', name: 'رحلة جزيرة أبو طير (8 ساعات - 1,600 ريال)', basePriceWeekday: 1600, basePriceWeekend: 1600, duration: 8 },
             { id: 'fishing-8', name: 'رحلة صيد (8 ساعات - 1,300 ريال)', basePriceWeekday: 1300, basePriceWeekend: 1300, duration: 8 },
             { id: 'fishing-10', name: 'رحلة صيد (10 ساعات - 1,500 ريال)', basePriceWeekday: 1500, basePriceWeekend: 1500, duration: 10 },
             { id: 'fishing-12', name: 'رحلة صيد (12 ساعة - 1,700 ريال)', basePriceWeekday: 1700, basePriceWeekend: 1700, duration: 12 }
