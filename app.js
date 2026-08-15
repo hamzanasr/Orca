@@ -891,11 +891,45 @@ document.addEventListener('DOMContentLoaded', () => {
         whatsappSubmitBtn.addEventListener('click', sendWhatsAppMessage);
     }
 
+    // Modal click outside to close
+    const calcModal = document.getElementById('calculatorModal');
+    if (calcModal) {
+        calcModal.addEventListener('click', (e) => {
+            if (e.target === calcModal) {
+                closeCalculatorModal();
+            }
+        });
+    }
+
+    // Escape key to close modal
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+            closeCalculatorModal();
+        }
+    });
+
+    // Intercept all links targeting #calculator to open modal
+    document.addEventListener('click', (e) => {
+        const link = e.target.closest('a');
+        if (link) {
+            const href = link.getAttribute('href');
+            if (href && (href === '#calculator' || href.endsWith('#calculator'))) {
+                // If it doesn't already have an onclick handler
+                if (!link.getAttribute('onclick')) {
+                    e.preventDefault();
+                    openCalculatorModal();
+                }
+            }
+        }
+    });
+
     // Run population & URL param pre-selection on load
     if (vesselTypeSelect) {
         populateTripTypes();
         const urlParams = new URLSearchParams(window.location.search);
         const vesselParam = urlParams.get('vessel');
+        const hasCalcHash = window.location.hash === '#calculator';
+
         if (vesselParam) {
             if (vesselParam === 'individual') {
                 const bookingModeSelect = document.getElementById('bookingMode');
@@ -907,9 +941,72 @@ document.addEventListener('DOMContentLoaded', () => {
                 vesselTypeSelect.value = vesselParam;
                 vesselTypeSelect.dispatchEvent(new Event('change'));
             }
+            // Auto open modal when vessel is passed in URL
+            openCalculatorModal(vesselParam);
+        } else if (hasCalcHash) {
+            openCalculatorModal();
         }
     }
 });
+
+// --------------------------------------------------------------------------
+// Calculator Modal Functions
+// --------------------------------------------------------------------------
+function openCalculatorModal(vesselId, tripId, mode) {
+    const modal = document.getElementById('calculatorModal');
+    if (!modal) {
+        // If on a subpage (e.g. boats/*.html), navigate to index.html with query params
+        let targetUrl = '../index.html#calculator';
+        if (vesselId) {
+            targetUrl = `../index.html?vessel=${encodeURIComponent(vesselId)}#calculator`;
+        } else if (mode === 'individual') {
+            targetUrl = '../index.html?vessel=individual#calculator';
+        }
+        window.location.href = targetUrl;
+        return;
+    }
+
+    const bookingModeSelect = document.getElementById('bookingMode');
+    const vesselTypeSelect = document.getElementById('vesselType');
+
+    if (mode === 'individual' || vesselId === 'individual') {
+        if (bookingModeSelect) {
+            bookingModeSelect.value = 'individual';
+            bookingModeSelect.dispatchEvent(new Event('change'));
+        }
+    } else {
+        if (bookingModeSelect && bookingModeSelect.value !== 'group') {
+            bookingModeSelect.value = 'group';
+            bookingModeSelect.dispatchEvent(new Event('change'));
+        }
+        if (vesselId && vesselTypeSelect) {
+            vesselTypeSelect.value = vesselId;
+            vesselTypeSelect.dispatchEvent(new Event('change'));
+        }
+    }
+
+    if (tripId) {
+        const tripTypeSelect = document.getElementById('tripType');
+        if (tripTypeSelect) {
+            tripTypeSelect.value = tripId;
+            tripTypeSelect.dispatchEvent(new Event('change'));
+        }
+    }
+
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+}
+
+function closeCalculatorModal() {
+    const modal = document.getElementById('calculatorModal');
+    if (modal) {
+        modal.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+}
+
+window.openCalculatorModal = openCalculatorModal;
+window.closeCalculatorModal = closeCalculatorModal;
 
 // --------------------------------------------------------------------------
 // Share Boat Functions

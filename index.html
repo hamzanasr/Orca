@@ -34,7 +34,7 @@
                 <ul>
                     <li><a href="#hero" class="nav-link active"><i class="fa-solid fa-house"></i> الرئيسية</a></li>
                     <li><a href="#packages" class="nav-link"><i class="fa-solid fa-ship"></i> الأسطول البحري</a></li>
-                    <li><a href="#calculator" class="nav-link"><i class="fa-solid fa-calculator"></i> حاسبة الأسعار</a></li>
+                    <li><a href="#calculator" class="nav-link" onclick="openCalculatorModal()"><i class="fa-solid fa-calculator"></i> حاسبة الأسعار</a></li>
                     <li><a href="#gallery" class="nav-link"><i class="fa-solid fa-images"></i> معرض الصور</a></li>
                     <li><a href="terms.html" class="nav-link"><i class="fa-solid fa-file-contract"></i> الشروط والأحكام</a></li>
                     <li><a href="#contact" class="nav-link"><i class="fa-solid fa-phone"></i> تواصل معنا</a></li>
@@ -61,7 +61,7 @@
             <h1 class="hero-title animate-up delay-1">رحلات بحرية فاخرة<br>مع <span class="hero-brand">أوركا</span></h1>
             <p class="hero-subtitle animate-up delay-2">يخوت وقوارب مميزة لرحلات البياضة والصيد في البحر الأحمر<br>بأسعار تنافسية لا تُقارن وحجز فوري عبر الواتساب</p>
             <div class="hero-buttons animate-up delay-3">
-                <a href="#calculator" class="btn btn-primary btn-large">
+                <a href="javascript:void(0)" onclick="openCalculatorModal()" class="btn btn-primary btn-large">
                     <i class="fa-solid fa-calculator"></i> احسب سعر رحلتك
                 </a>
                 <a href="#packages" class="btn btn-ghost btn-large">
@@ -240,7 +240,7 @@
                             </div>
                             <div class="package-actions">
                                 <a href="boats/Beneteau.html" class="btn btn-outline"><i class="fa-solid fa-circle-info"></i> التفاصيل</a>
-                                <a href="#calculator" class="btn btn-dark"><i class="fa-solid fa-calculator"></i> احسب واحجز</a>
+                                <button type="button" class="btn btn-dark" onclick="openCalculatorModal('qimat-al-fawz-pentos')"><i class="fa-solid fa-calculator"></i> احسب واحجز</button>
                                 <button type="button" class="btn btn-share" onclick="shareBoatFromCard(this, 'boats/Beneteau.html')" title="مشاركة رابط القارب"><i class="fa-solid fa-share-nodes"></i> مشاركة</button>
                             </div>
                         </div>
@@ -304,7 +304,7 @@
                             </div>
                             <div class="package-actions">
                                 <a href="boats/qimat-al-fawz.html" class="btn btn-outline"><i class="fa-solid fa-circle-info"></i> التفاصيل</a>
-                                <a href="#calculator" class="btn btn-dark"><i class="fa-solid fa-calculator"></i> احسب واحجز</a>
+                                <button type="button" class="btn btn-dark" onclick="openCalculatorModal('qimat-al-fawz')"><i class="fa-solid fa-calculator"></i> احسب واحجز</button>
                                 <button type="button" class="btn btn-share" onclick="shareBoatFromCard(this, 'boats/qimat-al-fawz.html')" title="مشاركة رابط القارب"><i class="fa-solid fa-share-nodes"></i> مشاركة</button>
                             </div>
                         </div>
@@ -360,7 +360,7 @@
                             </div>
                             <div class="package-actions">
                                 <a href="boats/baby-ambassador.html" class="btn btn-outline"><i class="fa-solid fa-circle-info"></i> التفاصيل</a>
-                                <a href="#calculator" class="btn btn-dark"><i class="fa-solid fa-calculator"></i> احسب واحجز</a>
+                                <button type="button" class="btn btn-dark" onclick="openCalculatorModal('baby-yacht-ambassador')"><i class="fa-solid fa-calculator"></i> احسب واحجز</button>
                                 <button type="button" class="btn btn-share" onclick="shareBoatFromCard(this, 'boats/baby-ambassador.html')" title="مشاركة رابط القارب"><i class="fa-solid fa-share-nodes"></i> مشاركة</button>
                             </div>
                         </div>
@@ -408,7 +408,7 @@
                             </div>
                             <div class="package-actions">
                                 <a href="boats/baby-orax-40.html" class="btn btn-outline"><i class="fa-solid fa-circle-info"></i> التفاصيل</a>
-                                <a href="#calculator" class="btn btn-dark"><i class="fa-solid fa-calculator"></i> احسب واحجز</a>
+                                <button type="button" class="btn btn-dark" onclick="openCalculatorModal('baby-yacht-orax-40')"><i class="fa-solid fa-calculator"></i> احسب واحجز</button>
                                 <button type="button" class="btn btn-share" onclick="shareBoatFromCard(this, 'boats/baby-orax-40.html')" title="مشاركة رابط القارب"><i class="fa-solid fa-share-nodes"></i> مشاركة</button>
                             </div>
                         </div>
@@ -483,7 +483,7 @@
                             </div>
                             <div class="package-actions">
                                 <a href="boats/al-ameed.html" class="btn btn-outline"><i class="fa-solid fa-circle-info"></i> التفاصيل</a>
-                                <a href="#calculator" class="btn btn-dark"><i class="fa-solid fa-calculator"></i> احسب واحجز</a>
+                                <button type="button" class="btn btn-dark" onclick="openCalculatorModal('al-ameed')"><i class="fa-solid fa-calculator"></i> احسب واحجز</button>
                                 <button type="button" class="btn btn-share" onclick="shareBoatFromCard(this, 'boats/al-ameed.html')" title="مشاركة رابط القارب"><i class="fa-solid fa-share-nodes"></i> مشاركة</button>
                             </div>
                         </div>
@@ -551,8 +551,9 @@
                             </div>
                             <div class="package-actions">
                                 <a href="boats/norseen-large.html" class="btn btn-outline"><i class="fa-solid fa-circle-info"></i> التفاصيل</a>
-                                <a href="#calculator" class="btn btn-dark"><i class="fa-solid fa-calculator"></i> احسب واحجز</a>
-                                </div>
+                                <button type="button" class="btn btn-dark" onclick="openCalculatorModal('norseen-large')"><i class="fa-solid fa-calculator"></i> احسب واحجز</button>
+                                <button type="button" class="btn btn-share" onclick="shareBoatFromCard(this, 'boats/norseen-large.html')" title="مشاركة رابط القارب"><i class="fa-solid fa-share-nodes"></i> مشاركة</button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -604,7 +605,7 @@
                             </div>
                             <div class="package-actions">
                                 <a href="boats/large-yacht.html" class="btn btn-outline"><i class="fa-solid fa-circle-info"></i> التفاصيل</a>
-                                <a href="#calculator" class="btn btn-dark"><i class="fa-solid fa-calculator"></i> احسب واحجز</a>
+                                <button type="button" class="btn btn-dark" onclick="openCalculatorModal('large-yacht')"><i class="fa-solid fa-calculator"></i> احسب واحجز</button>
                                 <button type="button" class="btn btn-share" onclick="shareBoatFromCard(this, 'boats/large-yacht.html')" title="مشاركة رابط القارب"><i class="fa-solid fa-share-nodes"></i> مشاركة</button>
                             </div>
                         </div>
@@ -670,7 +671,7 @@
                             </div>
                             <div class="package-actions">
                                 <a href="boats/seven-1.html" class="btn btn-outline"><i class="fa-solid fa-circle-info"></i> التفاصيل</a>
-                                <a href="#calculator" class="btn btn-dark"><i class="fa-solid fa-calculator"></i> احسب واحجز</a>
+                                <button type="button" class="btn btn-dark" onclick="openCalculatorModal('seven-boat')"><i class="fa-solid fa-calculator"></i> احسب واحجز</button>
                                 <button type="button" class="btn btn-share" onclick="shareBoatFromCard(this, 'boats/seven-1.html')" title="مشاركة رابط القارب"><i class="fa-solid fa-share-nodes"></i> مشاركة</button>
                             </div>
                         </div>
@@ -733,7 +734,7 @@
                             </div>
                             <div class="package-actions">
                                 <a href="boats/seven-2.html" class="btn btn-outline"><i class="fa-solid fa-circle-info"></i> التفاصيل</a>
-                                <a href="#calculator" class="btn btn-dark"><i class="fa-solid fa-calculator"></i> احسب واحجز</a>
+                                <button type="button" class="btn btn-dark" onclick="openCalculatorModal('seven-boat-2')"><i class="fa-solid fa-calculator"></i> احسب واحجز</button>
                                 <button type="button" class="btn btn-share" onclick="shareBoatFromCard(this, 'boats/seven-2.html')" title="مشاركة رابط القارب"><i class="fa-solid fa-share-nodes"></i> مشاركة</button>
                             </div>
                         </div>
@@ -795,7 +796,7 @@
                             </div>
                             <div class="package-actions">
                                 <a href="boats/seven-3.html" class="btn btn-outline"><i class="fa-solid fa-circle-info"></i> التفاصيل</a>
-                                <a href="#calculator" class="btn btn-dark"><i class="fa-solid fa-calculator"></i> احسب واحجز</a>
+                                <button type="button" class="btn btn-dark" onclick="openCalculatorModal('seven-boat-3')"><i class="fa-solid fa-calculator"></i> احسب واحجز</button>
                                 <button type="button" class="btn btn-share" onclick="shareBoatFromCard(this, 'boats/seven-3.html')" title="مشاركة رابط القارب"><i class="fa-solid fa-share-nodes"></i> مشاركة</button>
                             </div>
                         </div>
@@ -859,7 +860,7 @@
                             </div>
                             <div class="package-actions">
                                 <a href="boats/shaheen.html" class="btn btn-outline"><i class="fa-solid fa-circle-info"></i> التفاصيل</a>
-                                <a href="#calculator" class="btn btn-dark"><i class="fa-solid fa-calculator"></i> احسب واحجز</a>
+                                <button type="button" class="btn btn-dark" onclick="openCalculatorModal('shaheen')"><i class="fa-solid fa-calculator"></i> احسب واحجز</button>
                                 <button type="button" class="btn btn-share" onclick="shareBoatFromCard(this, 'boats/shaheen.html')" title="مشاركة رابط القارب"><i class="fa-solid fa-share-nodes"></i> مشاركة</button>
                             </div>
                         </div>
@@ -926,7 +927,7 @@
                             </div>
                             <div class="package-actions">
                                 <a href="boats/bahr.html" class="btn btn-outline"><i class="fa-solid fa-circle-info"></i> التفاصيل</a>
-                                <a href="#calculator" class="btn btn-dark"><i class="fa-solid fa-calculator"></i> احسب واحجز</a>
+                                <button type="button" class="btn btn-dark" onclick="openCalculatorModal('bahr')"><i class="fa-solid fa-calculator"></i> احسب واحجز</button>
                                 <button type="button" class="btn btn-share" onclick="shareBoatFromCard(this, 'boats/bahr.html')" title="مشاركة رابط القارب"><i class="fa-solid fa-share-nodes"></i> مشاركة</button>
                             </div>
                         </div>
@@ -988,7 +989,7 @@
                             </div>
                             <div class="package-actions">
                                 <a href="boats/al-noor-al-azraq.html" class="btn btn-outline"><i class="fa-solid fa-circle-info"></i> التفاصيل</a>
-                                <a href="#calculator" class="btn btn-dark"><i class="fa-solid fa-calculator"></i> احسب واحجز</a>
+                                <button type="button" class="btn btn-dark" onclick="openCalculatorModal('al-noor-al-azraq')"><i class="fa-solid fa-calculator"></i> احسب واحجز</button>
                                 <button type="button" class="btn btn-share" onclick="shareBoatFromCard(this, 'boats/al-noor-al-azraq.html')" title="مشاركة رابط القارب"><i class="fa-solid fa-share-nodes"></i> مشاركة</button>
                             </div>
                         </div>
@@ -1036,7 +1037,7 @@
                                 </div>
                                 <div class="package-actions">
                                     <a href="boats/jaguar.html" class="btn btn-outline"><i class="fa-solid fa-circle-info"></i> التفاصيل</a>
-                                    <a href="#calculator" class="btn btn-dark"><i class="fa-solid fa-calculator"></i> احسب واحجز</a>
+                                    <button type="button" class="btn btn-dark" onclick="openCalculatorModal('jaguar')"><i class="fa-solid fa-calculator"></i> احسب واحجز</button>
                                     <button type="button" class="btn btn-share" onclick="shareBoatFromCard(this, 'boats/jaguar.html')" title="مشاركة رابط القارب"><i class="fa-solid fa-share-nodes"></i> مشاركة</button>
                                 </div>
                             </div>
@@ -1080,7 +1081,7 @@
                                 </div>
                                 <div class="package-actions">
                                     <a href="boats/ghazal-obhur.html" class="btn btn-outline"><i class="fa-solid fa-circle-info"></i> التفاصيل</a>
-                                    <a href="#calculator" class="btn btn-dark"><i class="fa-solid fa-calculator"></i> احسب واحجز</a>
+                                    <button type="button" class="btn btn-dark" onclick="openCalculatorModal('ghazal-obhur')"><i class="fa-solid fa-calculator"></i> احسب واحجز</button>
                                     <button type="button" class="btn btn-share" onclick="shareBoatFromCard(this, 'boats/ghazal-obhur.html')" title="مشاركة رابط القارب"><i class="fa-solid fa-share-nodes"></i> مشاركة</button>
                                 </div>
                             </div>
@@ -1124,7 +1125,7 @@
                                 </div>
                                 <div class="package-actions">
                                     <a href="boats/bin-shuraiq.html" class="btn btn-outline"><i class="fa-solid fa-circle-info"></i> التفاصيل</a>
-                                    <a href="#calculator" class="btn btn-dark"><i class="fa-solid fa-calculator"></i> احسب واحجز</a>
+                                    <button type="button" class="btn btn-dark" onclick="openCalculatorModal('bin-shuraiq')"><i class="fa-solid fa-calculator"></i> احسب واحجز</button>
                                     <button type="button" class="btn btn-share" onclick="shareBoatFromCard(this, 'boats/bin-shuraiq.html')" title="مشاركة رابط القارب"><i class="fa-solid fa-share-nodes"></i> مشاركة</button>
                                 </div>
                             </div>
@@ -1168,7 +1169,7 @@
                                 </div>
                                 <div class="package-actions">
                                     <a href="boats/shawq-al-layl.html" class="btn btn-outline"><i class="fa-solid fa-circle-info"></i> التفاصيل</a>
-                                    <a href="#calculator" class="btn btn-dark"><i class="fa-solid fa-calculator"></i> احسب واحجز</a>
+                                    <button type="button" class="btn btn-dark" onclick="openCalculatorModal('shawq-al-layl')"><i class="fa-solid fa-calculator"></i> احسب واحجز</button>
                                     <button type="button" class="btn btn-share" onclick="shareBoatFromCard(this, 'boats/shawq-al-layl.html')" title="مشاركة رابط القارب"><i class="fa-solid fa-share-nodes"></i> مشاركة</button>
                                 </div>
                             </div>
@@ -1223,7 +1224,7 @@
                             </div>
                             <div class="package-actions">
                                 <a href="boats/individual-trips.html" class="btn btn-outline"><i class="fa-solid fa-circle-info"></i> التفاصيل</a>
-                                <a href="#calculator" class="btn btn-dark"><i class="fa-solid fa-calculator"></i> احسب واحجز</a>
+                                <button type="button" class="btn btn-dark" onclick="openCalculatorModal(null, null, 'individual')"><i class="fa-solid fa-calculator"></i> احسب واحجز</button>
                                 <button type="button" class="btn btn-share" onclick="shareBoatFromCard(this, 'boats/individual-trips.html')" title="مشاركة رابط القارب"><i class="fa-solid fa-share-nodes"></i> مشاركة</button>
                             </div>
                         </div>
@@ -1267,239 +1268,230 @@
         </div>
     </section>
 
-    <!-- Calculator Section -->
-    <section id="calculator" class="calculator-section">
-        <div class="container">
-            <div class="section-title">
-                <span class="sub-title">احسب تكلفتك</span>
-                <h2>حاسبة الأسعار التفاعلية</h2>
-                <div class="title-underline"></div>
-            </div>
-            <div class="calculator-wrapper">
-                <div class="calculator-info">
-                    <p class="calc-intro">اختر نوع الحجز، وقاربك، والباقة المفضلة لرحلتك — وسنوضح لك السعر الإجمالي والعربون المطلوب فوراً مع تجهيز رسالة الحجز للواتساب.</p>
-                    <div class="calculator-notes">
-                        <h4><i class="fa-solid fa-circle-info"></i> معلومات هامة:</h4>
-                        <ul>
-                            <li>الأسعار تشمل طاقم الإبحار، الوقود، والسترات.</li>
-                            <li>الكابتن مشمول في السعة — الحد الأقصى للضيوف = السعة ناقص واحد.</li>
-                            <li><strong>باقة VIP (+300 ريال):</strong> تشمل ألعاب سحب للبياضة، وطعم طبيعي للصيد.</li>
-                            <li><strong>باقة VVIP (+350 ريال):</strong> تشمل VIP + وجبات خفيفة ومشروبات وثلج وعدة صيد احترافية وتصوير GoPro.</li>
-                            <li>العربون يُدفع فقط بعد تأكيد الحجز مع الكابتن.</li>
-                        </ul>
+    <!-- Calculator Popup Modal -->
+    <div class="calc-modal-backdrop" id="calculatorModal" role="dialog" aria-modal="true" aria-labelledby="calcModalTitle">
+        <div class="calc-modal-dialog">
+            <div class="calc-modal-header">
+                <div class="calc-modal-header-info">
+                    <div class="calc-modal-header-icon">
+                        <i class="fa-solid fa-calculator"></i>
                     </div>
-                    <div class="contact-card-mini">
-                        <div class="avatar-icon"><i class="fa-solid fa-headset"></i></div>
-                        <div class="mini-info">
-                            <span>استفسار مباشر</span>
-                            <a href="tel:0568390147" class="phone-link">056 839 0147</a>
-                        </div>
+                    <div class="calc-modal-header-text">
+                        <h3 id="calcModalTitle">حاسبة تكلفة الرحلات البحرية</h3>
+                        <p>احسب تكلفة رحلتك بدقة واحجز فوراً بأفضل الأسعار</p>
                     </div>
                 </div>
+                <button type="button" class="calc-modal-close-btn" onclick="closeCalculatorModal()" aria-label="إغلاق النافذة">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+            <div class="calc-modal-body">
+                <form id="calcForm" onsubmit="event.preventDefault();">
+                    <!-- Booking Mode Selector -->
+                    <div class="form-group">
+                        <label for="bookingMode"><i class="fa-solid fa-users-viewfinder"></i> نوع الحجز</label>
+                        <select id="bookingMode" required>
+                            <option value="group">حجز يخت/قارب كامل (قروب خاص)</option>
+                            <option value="individual">حجز مقعد فردي (رحلة مشتركة)</option>
+                        </select>
+                    </div>
 
-                <div class="calculator-box">
-                    <form id="calcForm" onsubmit="event.preventDefault();">
-                        <!-- Booking Mode Selector -->
+                    <!-- ══ Group Booking Fields ══ -->
+                    <div id="groupBookingForm">
                         <div class="form-group">
-                            <label for="bookingMode"><i class="fa-solid fa-users-viewfinder"></i> نوع الحجز</label>
-                            <select id="bookingMode" required>
-                                <option value="group">حجز يخت/قارب كامل (قروب خاص)</option>
-                                <option value="individual">حجز مقعد فردي (رحلة مشتركة)</option>
+                            <label for="vesselType"><i class="fa-solid fa-ship"></i> نوع القارب / اليخت</label>
+                            <select id="vesselType" required>
+                                <optgroup label="اليخوت الكبيرة">
+                                    <option value="qimat-al-fawz-pentos" selected>يخت بينتوس VIP ⭐ الأفضل قيمة مقابل سعر وتوثيق اللحظات</option>
+                                    <option value="large-yacht">اليخت الكبير الفاخر (30 شخص)</option>
+                                </optgroup>
+                                <optgroup label="بيبي يخت">
+                                    <option value="baby-yacht-ambassador">بيبي يخت امباسادور 36 اريا قدم</option>
+                                    <option value="baby-yacht-orax-40">بيبي يخت اوراكس 40 قدم</option>
+                                </optgroup>
+                                <optgroup label="قوارب كبيرة">
+                                    <option value="al-ameed">قارب العميد</option>
+                                    <option value="norseen-large">قارب نورسين الكبير (20 شخص)</option>
+                                </optgroup>
+                                <optgroup label="قوارب عادية (الشمال)">
+                                    <option value="seven-boat">قارب سيفين 1</option>
+                                    <option value="seven-boat-2">قارب سيفين 2</option>
+                                    <option value="seven-boat-3">قارب سيفين 3</option>
+                                    <option value="shaheen">قارب شاهين</option>
+                                    <option value="bahr">قارب بحر</option>
+                                    <option value="al-noor-al-azraq">قارب النور الأزرق</option>
+                                    <option value="qimat-al-fawz">قارب قمة الفوز</option>
+                                </optgroup>
+                                <optgroup label="قوارب عادية (الجنوب)">
+                                    <option value="jaguar">قارب جاكور (جنوب جدة)</option>
+                                    <option value="ghazal-obhur">قارب غزال أبحر (جنوب جدة)</option>
+                                    <option value="bin-shuraiq">قارب بن شريق (جنوب جدة)</option>
+                                    <option value="shawq-al-layl">قارب شوق الليل (جنوب جدة)</option>
+                                </optgroup>
                             </select>
                         </div>
 
-                        <!-- ══ Group Booking Fields ══ -->
-                        <div id="groupBookingForm">
-                            <div class="form-group">
-                                <label for="vesselType"><i class="fa-solid fa-ship"></i> نوع القارب / اليخت</label>
-                                <select id="vesselType" required>
-                                    <optgroup label="اليخوت الكبيرة">
-                                        <option value="qimat-al-fawz-pentos" selected>يخت بينتوس VIP ⭐ الأفضل قيمة مقابل سعر وتوثيق اللحظات</option>
-                                        <option value="large-yacht">اليخت الكبير الفاخر (30 شخص)</option>
-                                    </optgroup>
-                                    <optgroup label="بيبي يخت">
-                                        <option value="baby-yacht-ambassador">بيبي يخت امباسادور 36 اريا قدم</option>
-                                <option value="baby-yacht-orax-40">بيبي يخت اوراكس 40 قدم</option>
-                                        
-                                    </optgroup>
-                                    <optgroup label="قوارب كبيرة">
-                                        <option value="al-ameed">قارب العميد</option>
-                                        <option value="norseen-large">قارب نورسين الكبير (20 شخص)</option>
-                                    </optgroup>
-                                    <optgroup label="قوارب عادية (الشمال)">
-                                        <option value="seven-boat">قارب سيفين 1</option>
-                                        <option value="seven-boat-2">قارب سيفين 2</option>
-                                        <option value="seven-boat-3">قارب سيفين 3</option>
-                                        <option value="shaheen">قارب شاهين</option>
-                                        <option value="bahr">قارب بحر</option>
-                                        <option value="al-noor-al-azraq">قارب النور الأزرق</option>
-                                        <option value="qimat-al-fawz">قارب قمة الفوز</option>
-                                    </optgroup>
-                                    <optgroup label="قوارب عادية (الجنوب)">
-                                        <option value="jaguar">قارب جاكور (جنوب جدة)</option>
-                                        <option value="ghazal-obhur">قارب غزال أبحر (جنوب جدة)</option>
-                                        <option value="bin-shuraiq">قارب بن شريق (جنوب جدة)</option>
-                                        <option value="shawq-al-layl">قارب شوق الليل (جنوب جدة)</option>
-                                    </optgroup>
-                                </select>
-                            </div>
+                        <div class="form-group" id="tripTypeGroup">
+                            <label for="tripType"><i class="fa-solid fa-anchor"></i> نوع الرحلة</label>
+                            <select id="tripType" required></select>
+                        </div>
 
-                            <div class="form-group" id="tripTypeGroup">
-                                <label for="tripType"><i class="fa-solid fa-anchor"></i> نوع الرحلة</label>
-                                <select id="tripType" required></select>
+                        <!-- Creek duration range input (visible when Creek is selected as trip type) -->
+                        <div class="form-group hidden" id="creekHoursGroup">
+                            <div class="label-row">
+                                <label for="creekHours"><i class="fa-solid fa-hourglass-half"></i> ساعات جولة الخور (0.5 – 2 ساعة)</label>
+                                <span class="current-value-badge" id="creekHoursVal">1</span>
                             </div>
-
-                            <!-- Creek duration range input (visible when Creek is selected as trip type) -->
-                            <div class="form-group hidden" id="creekHoursGroup">
-                                <div class="label-row">
-                                    <label for="creekHours"><i class="fa-solid fa-hourglass-half"></i> ساعات جولة الخور (0.5 – 2 ساعة)</label>
-                                    <span class="current-value-badge" id="creekHoursVal">1</span>
-                                </div>
-                                <input type="range" id="creekHours" min="0.5" max="2" value="1" step="0.5">
-                                <div class="range-labels">
-                                    <span>0.5 ساعة</span>
-                                    <span>2 ساعة</span>
-                                </div>
-                            </div>
-
-                            <div class="form-group hidden" id="southernMarinaGroup">
-                                <label for="southernMarinaSelect"><i class="fa-solid fa-map-pin"></i> مرسى الانطلاق (الجنوب)</label>
-                                <select id="southernMarinaSelect">
-                                    <option value="badeeh">مرسى البضيع</option>
-                                    <option value="saroom">مرسى السروم</option>
-                                    <option value="shoiba">مرسى الشعيبة</option>
-                                    <option value="tufyah">مرسى الطفية</option>
-                                </select>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="dayType"><i class="fa-solid fa-calendar-day"></i> يوم الرحلة</label>
-                                <select id="dayType" required>
-                                    <option value="weekday">وسط الأسبوع (الأحد – الأربعاء)</option>
-                                    <option value="weekend">الويكند (الخميس – السبت)</option>
-                                </select>
-                            </div>
-
-                            <div class="form-group" id="packageGroup">
-                                <label for="packageType"><i class="fa-solid fa-gift"></i> باقة الرحلة</label>
-                                <select id="packageType" required>
-                                    <option value="economic">الباقة الاقتصادية (العادية)</option>
-                                    <option value="vip">الباقة المميزة VIP (+300 ريال)</option>
-                                    <option value="vvip">الباقة الفاخرة VVIP (+350 ريال)</option>
-                                </select>
-                            </div>
-
-                            <div class="form-group hidden" id="specialRequestsGroup">
-                                <label for="specialRequests"><i class="fa-solid fa-wand-magic-sparkles"></i> طلبات خاصة (تزيين، كيك، بوفيه...)</label>
-                                <textarea id="specialRequests" placeholder="مثال: تزيين اليخوت، كيك مناسبات، وجبة غذاء/عشاء خاصة..." rows="3" style="width: 100%; padding: 12px 14px; border: 1.5px solid var(--gray-100); border-radius: var(--radius-md); background: var(--off-white); font-family: inherit; font-size: 0.95rem; resize: vertical; outline: none; transition: var(--transition);"></textarea>
-                            </div>
-
-                            <!-- Yacht hourly duration group -->
-                            <div class="form-group hidden" id="yachtHoursGroup">
-                                <div class="label-row">
-                                    <label for="yachtHours"><i class="fa-solid fa-clock"></i> عدد ساعات الحجز (ساعتين كحد أدنى)</label>
-                                    <span class="current-value-badge" id="yachtHoursVal">2</span>
-                                </div>
-                                <input type="range" id="yachtHours" min="2" max="12" value="2" step="1">
-                            </div>
-
-                            <!-- Baby Yacht specific options (BBQ only) -->
-                            <div class="form-group hidden" id="babyYachtOptions">
-                                <div class="sub-form-group">
-                                    <label for="addBBQ"><i class="fa-solid fa-utensils"></i> إضافة وجبة مشويات</label>
-                                    <select id="addBBQ">
-                                        <option value="no">لا أرغب في المشويات</option>
-                                        <option value="yes">إضافة وجبة مشويات على اليخت (+600 ريال)</option>
-                                    </select>
-                                </div>
-                            </div>
-
-                            <div class="form-group" id="peopleGroup">
-                                <div class="label-row">
-                                    <label for="numPeople"><i class="fa-solid fa-users"></i> عدد الضيوف (أقصى <span id="maxGuestsText">11</span> ضيوف)</label>
-                                    <span class="current-value-badge" id="peopleValDisplay">6 أشخاص</span>
-                                </div>
-                                <input type="range" id="numPeople" min="1" max="11" value="6" step="1">
-                                <div class="range-labels">
-                                    <span>1</span>
-                                    <span id="maxLabel">11</span>
-                                </div>
+                            <input type="range" id="creekHours" min="0.5" max="2" value="1" step="0.5">
+                            <div class="range-labels">
+                                <span>0.5 ساعة</span>
+                                <span>2 ساعة</span>
                             </div>
                         </div>
 
-                        <!-- ══ Individual Booking Fields ══ -->
-                        <div id="individualBookingForm" class="hidden">
-                            <div class="form-group">
-                                <label for="indTripType"><i class="fa-solid fa-anchor"></i> نوع الرحلة</label>
-                                <select id="indTripType">
-                                    <option value="fishing">رحلة صيد أسماك مشتركة</option>
-                                    <option value="bayadah">رحلة بياضة مائية مشتركة</option>
-                                </select>
+                        <div class="form-group hidden" id="southernMarinaGroup">
+                            <label for="southernMarinaSelect"><i class="fa-solid fa-map-pin"></i> مرسى الانطلاق (الجنوب)</label>
+                            <select id="southernMarinaSelect">
+                                <option value="badeeh">مرسى البضيع</option>
+                                <option value="saroom">مرسى السروم</option>
+                                <option value="shoiba">مرسى الشعيبة</option>
+                                <option value="tufyah">مرسى الطفية</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="dayType"><i class="fa-solid fa-calendar-day"></i> يوم الرحلة</label>
+                            <select id="dayType" required>
+                                <option value="weekday">وسط الأسبوع (الأحد – الأربعاء)</option>
+                                <option value="weekend">الويكند (الخميس – السبت)</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group" id="packageGroup">
+                            <label for="packageType"><i class="fa-solid fa-gift"></i> باقة الرحلة</label>
+                            <select id="packageType" required>
+                                <option value="economic">الباقة الاقتصادية (العادية)</option>
+                                <option value="vip">الباقة المميزة VIP (+300 ريال)</option>
+                                <option value="vvip">الباقة الفاخرة VVIP (+350 ريال)</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group hidden" id="specialRequestsGroup">
+                            <label for="specialRequests"><i class="fa-solid fa-wand-magic-sparkles"></i> طلبات خاصة (تزيين، كيك، بوفيه...)</label>
+                            <textarea id="specialRequests" placeholder="مثال: تزيين اليخوت، كيك مناسبات، وجبة غذاء/عشاء خاصة..." rows="3" style="width: 100%; padding: 12px 14px; border: 1.5px solid var(--gray-100); border-radius: var(--radius-md); background: var(--off-white); font-family: inherit; font-size: 0.95rem; resize: vertical; outline: none; transition: var(--transition);"></textarea>
+                        </div>
+
+                        <!-- Yacht hourly duration group -->
+                        <div class="form-group hidden" id="yachtHoursGroup">
+                            <div class="label-row">
+                                <label for="yachtHours"><i class="fa-solid fa-clock"></i> عدد ساعات الحجز (ساعتين كحد أدنى)</label>
+                                <span class="current-value-badge" id="yachtHoursVal">2</span>
                             </div>
-                            <div class="form-group">
-                                <label for="indDayType"><i class="fa-solid fa-calendar-day"></i> يوم الرحلة</label>
-                                <select id="indDayType">
-                                    <option value="weekday">وسط الأسبوع (الأحد – الأربعاء)</option>
-                                    <option value="weekend">الويكند (الخميس – السبت)</option>
+                            <input type="range" id="yachtHours" min="2" max="12" value="2" step="1">
+                        </div>
+
+                        <!-- Baby Yacht specific options (BBQ only) -->
+                        <div class="form-group hidden" id="babyYachtOptions">
+                            <div class="sub-form-group">
+                                <label for="addBBQ"><i class="fa-solid fa-utensils"></i> إضافة وجبة مشويات</label>
+                                <select id="addBBQ">
+                                    <option value="no">لا أرغب في المشويات</option>
+                                    <option value="yes">إضافة وجبة مشويات على اليخت (+600 ريال)</option>
                                 </select>
-                            </div>
-                            <div class="form-group">
-                                <label for="indPackageType"><i class="fa-solid fa-gift"></i> باقة الرحلة</label>
-                                <select id="indPackageType">
-                                    <option value="economic">الباقة الاقتصادية (250 ريال / شخص)</option>
-                                    <option value="vip">الباقة المميزة VIP (300 ريال / شخص)</option>
-                                    <option value="vvip">الباقة الفاخرة VVIP (320 ريال / شخص)</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <div class="label-row">
-                                    <label for="indPeople"><i class="fa-solid fa-users"></i> عدد المقاعد المطلوبة</label>
-                                    <span class="current-value-badge" id="indPeopleVal">1</span>
-                                </div>
-                                <input type="range" id="indPeople" min="1" max="10" value="1" step="1">
-                                <div class="range-labels">
-                                    <span>1</span>
-                                    <span>10</span>
-                                </div>
                             </div>
                         </div>
 
-                        <!-- Results Display -->
-                        <div class="price-display-wrapper">
-                            <div class="price-item-row">
-                                <span>السعر الأساسي</span>
-                                <span id="basePriceDisplay">—</span>
+                        <div class="form-group" id="peopleGroup">
+                            <div class="label-row">
+                                <label for="numPeople"><i class="fa-solid fa-users"></i> عدد الضيوف (أقصى <span id="maxGuestsText">11</span> ضيوف)</label>
+                                <span class="current-value-badge" id="peopleValDisplay">6 أشخاص</span>
                             </div>
-                            <div class="price-item-row hidden" id="weekendExtraRow">
-                                <span>إضافة الويكند</span>
-                                <span id="weekendPriceDisplay">—</span>
-                            </div>
-                            <div class="price-item-row hidden" id="guestExtraRow">
-                                <span>إضافات وباقات</span>
-                                <span id="guestPriceDisplay">—</span>
-                            </div>
-                            <div class="price-total-row">
-                                <span>الإجمالي المقدر</span>
-                                <span class="total-price" id="totalPriceDisplay">0 ريال</span>
-                            </div>
-                            <div class="deposit-row" id="depositRow">
-                                <i class="fa-solid fa-hand-holding-dollar"></i>
-                                <span>العربون المطلوب للتأكيد:</span>
-                                <span class="deposit-amount" id="depositDisplay">—</span>
-                            </div>
-                            <div class="duration-badge-calc" id="durationCalc">
-                                <i class="fa-regular fa-clock"></i> مدة الرحلة: <span>6 ساعات</span>
+                            <input type="range" id="numPeople" min="1" max="11" value="6" step="1">
+                            <div class="range-labels">
+                                <span>1</span>
+                                <span id="maxLabel">11</span>
                             </div>
                         </div>
+                    </div>
 
-                        <button type="button" id="whatsappSubmitBtn" class="btn btn-whatsapp btn-full btn-large">
-                            <i class="fa-brands fa-whatsapp"></i> احجز الآن عبر واتساب
-                        </button>
-                    </form>
-                </div>
+                    <!-- ══ Individual Booking Fields ══ -->
+                    <div id="individualBookingForm" class="hidden">
+                        <div class="form-group">
+                            <label for="indTripType"><i class="fa-solid fa-anchor"></i> نوع الرحلة</label>
+                            <select id="indTripType">
+                                <option value="fishing">رحلة صيد أسماك مشتركة</option>
+                                <option value="bayadah">رحلة بياضة مائية مشتركة</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="indDayType"><i class="fa-solid fa-calendar-day"></i> يوم الرحلة</label>
+                            <select id="indDayType">
+                                <option value="weekday">وسط الأسبوع (الأحد – الأربعاء)</option>
+                                <option value="weekend">الويكند (الخميس – السبت)</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="indPackageType"><i class="fa-solid fa-gift"></i> باقة الرحلة</label>
+                            <select id="indPackageType">
+                                <option value="economic">الباقة الاقتصادية (250 ريال / شخص)</option>
+                                <option value="vip">الباقة المميزة VIP (300 ريال / شخص)</option>
+                                <option value="vvip">الباقة الفاخرة VVIP (320 ريال / شخص)</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <div class="label-row">
+                                <label for="indPeople"><i class="fa-solid fa-users"></i> عدد المقاعد المطلوبة</label>
+                                <span class="current-value-badge" id="indPeopleVal">1</span>
+                            </div>
+                            <input type="range" id="indPeople" min="1" max="10" value="1" step="1">
+                            <div class="range-labels">
+                                <span>1</span>
+                                <span>10</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Results Display -->
+                    <div class="price-display-wrapper">
+                        <div class="price-item-row">
+                            <span>السعر الأساسي</span>
+                            <span id="basePriceDisplay">—</span>
+                        </div>
+                        <div class="price-item-row hidden" id="weekendExtraRow">
+                            <span>إضافة الويكند</span>
+                            <span id="weekendPriceDisplay">—</span>
+                        </div>
+                        <div class="price-item-row hidden" id="guestExtraRow">
+                            <span>إضافات وباقات</span>
+                            <span id="guestPriceDisplay">—</span>
+                        </div>
+                        <div class="price-total-row">
+                            <span>الإجمالي المقدر</span>
+                            <span class="total-price" id="totalPriceDisplay">0 ريال</span>
+                        </div>
+                        <div class="deposit-row" id="depositRow">
+                            <i class="fa-solid fa-hand-holding-dollar"></i>
+                            <span>العربون المطلوب للتأكيد:</span>
+                            <span class="deposit-amount" id="depositDisplay">—</span>
+                        </div>
+                        <div class="duration-badge-calc" id="durationCalc">
+                            <i class="fa-regular fa-clock"></i> مدة الرحلة: <span>6 ساعات</span>
+                        </div>
+                    </div>
+
+                    <button type="button" id="whatsappSubmitBtn" class="btn btn-whatsapp btn-full btn-large">
+                        <i class="fa-brands fa-whatsapp"></i> احجز الآن عبر واتساب
+                    </button>
+                </form>
             </div>
         </div>
-    </section>
+    </div>
+
+    <!-- Floating Action Button for Calculator -->
+    <button type="button" class="floating-calc-btn" onclick="openCalculatorModal()" id="floatingCalcBtn" aria-label="فتح حاسبة الأسعار">
+        <i class="fa-solid fa-calculator"></i>
+        <span>احسب التكلفة واحجز</span>
+    </button>
 
     <!-- Gallery Section -->
     <section id="gallery" class="gallery-section">
