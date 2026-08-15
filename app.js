@@ -332,13 +332,13 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Aliased vessels that share "seven-boat" pricing configuration
-    const sevenAliases = ['seven-boat-2', 'seven-boat-3', 'various-boats'];
+    const sevenAliases = ['seven-boat-2', 'seven-boat-3', 'various-boats', 'shaheen', 'bahr', 'al-noor-al-azraq', 'shawq-al-layl', 'blue-light', 'bahr-boat'];
     sevenAliases.forEach(alias => {
         tripOptions[alias] = JSON.parse(JSON.stringify(tripOptions['seven-boat']));
     });
 
     // Large Boats aliases that share "al-ameed" pricing configuration
-    const largeBoatAliases = ['shaheen', 'bahr', 'al-noor-al-azraq', 'shawq-al-layl', 'blue-light', 'bahr-boat'];
+    const largeBoatAliases = [];
     largeBoatAliases.forEach(alias => {
         tripOptions[alias] = JSON.parse(JSON.stringify(tripOptions['al-ameed']));
     });
