@@ -1286,51 +1286,23 @@
                 </button>
             </div>
             <div class="calc-modal-body">
-                <form id="calcForm" onsubmit="event.preventDefault();">
-                    <!-- Booking Mode Selector -->
-                    <div class="form-group">
-                        <label for="bookingMode"><i class="fa-solid fa-users-viewfinder"></i> نوع الحجز</label>
-                        <select id="bookingMode" required>
-                            <option value="group">حجز يخت/قارب كامل (قروب خاص)</option>
-                            <option value="individual">حجز مقعد فردي (رحلة مشتركة)</option>
-                        </select>
+                <!-- Selected Boat Info Banner (Dedicated per boat) -->
+                <div class="selected-vessel-banner" id="selectedVesselBanner">
+                    <div class="vessel-banner-icon">
+                        <i class="fa-solid fa-ship" id="vesselBannerIcon"></i>
                     </div>
+                    <div class="vessel-banner-info">
+                        <span class="vessel-banner-label">القارب المختار للحجز:</span>
+                        <h4 class="vessel-banner-title" id="selectedVesselTitle">يخت بينتوس VIP</h4>
+                    </div>
+                </div>
+
+                <form id="calcForm" onsubmit="event.preventDefault();">
+                    <input type="hidden" id="bookingMode" value="group">
+                    <input type="hidden" id="vesselType" value="qimat-al-fawz-pentos">
 
                     <!-- ══ Group Booking Fields ══ -->
                     <div id="groupBookingForm">
-                        <div class="form-group">
-                            <label for="vesselType"><i class="fa-solid fa-ship"></i> نوع القارب / اليخت</label>
-                            <select id="vesselType" required>
-                                <optgroup label="اليخوت الكبيرة">
-                                    <option value="qimat-al-fawz-pentos" selected>يخت بينتوس VIP ⭐ الأفضل قيمة مقابل سعر وتوثيق اللحظات</option>
-                                    <option value="large-yacht">اليخت الكبير الفاخر (30 شخص)</option>
-                                </optgroup>
-                                <optgroup label="بيبي يخت">
-                                    <option value="baby-yacht-ambassador">بيبي يخت امباسادور 36 اريا قدم</option>
-                                    <option value="baby-yacht-orax-40">بيبي يخت اوراكس 40 قدم</option>
-                                </optgroup>
-                                <optgroup label="قوارب كبيرة">
-                                    <option value="al-ameed">قارب العميد</option>
-                                    <option value="norseen-large">قارب نورسين الكبير (20 شخص)</option>
-                                </optgroup>
-                                <optgroup label="قوارب عادية (الشمال)">
-                                    <option value="seven-boat">قارب سيفين 1</option>
-                                    <option value="seven-boat-2">قارب سيفين 2</option>
-                                    <option value="seven-boat-3">قارب سيفين 3</option>
-                                    <option value="shaheen">قارب شاهين</option>
-                                    <option value="bahr">قارب بحر</option>
-                                    <option value="al-noor-al-azraq">قارب النور الأزرق</option>
-                                    <option value="qimat-al-fawz">قارب قمة الفوز</option>
-                                </optgroup>
-                                <optgroup label="قوارب عادية (الجنوب)">
-                                    <option value="jaguar">قارب جاكور (جنوب جدة)</option>
-                                    <option value="ghazal-obhur">قارب غزال أبحر (جنوب جدة)</option>
-                                    <option value="bin-shuraiq">قارب بن شريق (جنوب جدة)</option>
-                                    <option value="shawq-al-layl">قارب شوق الليل (جنوب جدة)</option>
-                                </optgroup>
-                            </select>
-                        </div>
-
                         <div class="form-group" id="tripTypeGroup">
                             <label for="tripType"><i class="fa-solid fa-anchor"></i> نوع الرحلة</label>
                             <select id="tripType" required></select>

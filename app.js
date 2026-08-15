@@ -748,6 +748,28 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    // Vessel display names dictionary
+    const vesselDisplayNames = {
+        'qimat-al-fawz-pentos': 'يخت بينتوس VIP',
+        'qimat-al-fawz': 'قارب قمة الفوز (موديل 2025)',
+        'baby-yacht-ambassador': 'بيبي يخت امباسادور 36 قدم',
+        'baby-yacht-orax-40': 'بيبي يخت اوراكس 40 قدم',
+        'large-yacht': 'اليخت الكبير الفاخر (30 شخص)',
+        'al-ameed': 'قارب العميد (15 شخص)',
+        'norseen-large': 'قارب نورسين الكبير (20 شخص)',
+        'seven-boat': 'قارب سيفين 1 (10 متر)',
+        'seven-boat-2': 'قارب سيفين 2',
+        'seven-boat-3': 'قارب سيفين 3',
+        'shaheen': 'قارب شاهين',
+        'bahr': 'قارب بحر',
+        'al-noor-al-azraq': 'قارب النور الأزرق',
+        'jaguar': 'قارب جاكور (جنوب جدة)',
+        'ghazal-obhur': 'قارب غزال أبحر (جنوب جدة)',
+        'bin-shuraiq': 'قارب بن شريق (جنوب جدة)',
+        'shawq-al-layl': 'قارب شوق الليل (جنوب جدة)',
+        'individual': 'رحلات المقاعد الفردية المشتركة'
+    };
+
     // Generate WhatsApp Message & Submit
     function sendWhatsAppMessage() {
         const isIndividual = (bookingModeSelect && bookingModeSelect.value === 'individual');
@@ -778,8 +800,8 @@ document.addEventListener('DOMContentLoaded', () => {
             const guests = numPeopleInput.value;
             const pkg = packageTypeSelect.value;
 
-            let vesselName = vesselTypeSelect.options[vesselTypeSelect.selectedIndex].text;
-            let tripName = tripTypeSelect.options[tripTypeSelect.selectedIndex].text;
+            let vesselName = vesselDisplayNames[vessel] || 'قارب أوركا';
+            let tripName = (tripTypeSelect.options && tripTypeSelect.options[tripTypeSelect.selectedIndex]) ? tripTypeSelect.options[tripTypeSelect.selectedIndex].text : '';
             let dayName = dayTypeSelect.options[dayTypeSelect.selectedIndex].text;
             let packageName = packageTypeSelect.options[packageTypeSelect.selectedIndex].text;
             let totalPrice = totalPriceDisplay.textContent;
@@ -789,7 +811,7 @@ document.addEventListener('DOMContentLoaded', () => {
             let customDetails = '';
 
             // Add southern marina detail if selected
-            if (vessel === 'boat-51') {
+            if (vessel === 'boat-51' || southernBoatAliases.includes(vessel)) {
                 customDetails += `\n📍 مرسى الانطلاق: *${southernMarinaSelect.options[southernMarinaSelect.selectedIndex].text}*`;
             } else {
                 customDetails += `\n📍 مرسى الانطلاق: *مرسى البحر الاحمر*`;
@@ -836,9 +858,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Event listeners and setup
-    if (vesselTypeSelect) {
-        vesselTypeSelect.addEventListener('change', populateTripTypes);
-    }
     if (tripTypeSelect) {
         tripTypeSelect.addEventListener('change', calculatePrice);
     }
@@ -931,17 +950,6 @@ document.addEventListener('DOMContentLoaded', () => {
         const hasCalcHash = window.location.hash === '#calculator';
 
         if (vesselParam) {
-            if (vesselParam === 'individual') {
-                const bookingModeSelect = document.getElementById('bookingMode');
-                if (bookingModeSelect) {
-                    bookingModeSelect.value = 'individual';
-                    bookingModeSelect.dispatchEvent(new Event('change'));
-                }
-            } else {
-                vesselTypeSelect.value = vesselParam;
-                vesselTypeSelect.dispatchEvent(new Event('change'));
-            }
-            // Auto open modal when vessel is passed in URL
             openCalculatorModal(vesselParam);
         } else if (hasCalcHash) {
             openCalculatorModal();
@@ -966,32 +974,138 @@ function openCalculatorModal(vesselId, tripId, mode) {
         return;
     }
 
-    const bookingModeSelect = document.getElementById('bookingMode');
-    const vesselTypeSelect = document.getElementById('vesselType');
+    const vesselDisplayNames = {
+        'qimat-al-fawz-pentos': 'يخت بينتوس VIP',
+        'qimat-al-fawz': 'قارب قمة الفوز (موديل 2025)',
+        'baby-yacht-ambassador': 'بيبي يخت امباسادور 36 قدم',
+        'baby-yacht-orax-40': 'بيبي يخت اوراكس 40 قدم',
+        'large-yacht': 'اليخت الكبير الفاخر (30 شخص)',
+        'al-ameed': 'قارب العميد (15 شخص)',
+        'norseen-large': 'قارب نورسين الكبير (20 شخص)',
+        'seven-boat': 'قارب سيفين 1 (10 متر)',
+        'seven-boat-2': 'قارب سيفين 2',
+        'seven-boat-3': 'قارب سيفين 3',
+        'shaheen': 'قارب شاهين',
+        'bahr': 'قارب بحر',
+        'al-noor-al-azraq': 'قارب النور الأزرق',
+        'jaguar': 'قارب جاكور (جنوب جدة)',
+        'ghazal-obhur': 'قارب غزال أبحر (جنوب جدة)',
+        'bin-shuraiq': 'قارب بن شريق (جنوب جدة)',
+        'shawq-al-layl': 'قارب شوق الليل (جنوب جدة)',
+        'individual': 'رحلات المقاعد الفردية المشتركة'
+    };
+
+    const bookingModeInput = document.getElementById('bookingMode');
+    const vesselTypeInput = document.getElementById('vesselType');
+    const groupBookingForm = document.getElementById('groupBookingForm');
+    const individualBookingForm = document.getElementById('individualBookingForm');
+    const selectedVesselTitle = document.getElementById('selectedVesselTitle');
+    const vesselBannerIcon = document.getElementById('vesselBannerIcon');
 
     if (mode === 'individual' || vesselId === 'individual') {
-        if (bookingModeSelect) {
-            bookingModeSelect.value = 'individual';
-            bookingModeSelect.dispatchEvent(new Event('change'));
-        }
+        if (bookingModeInput) bookingModeInput.value = 'individual';
+        if (groupBookingForm) groupBookingForm.classList.add('hidden');
+        if (individualBookingForm) individualBookingForm.classList.remove('hidden');
+        if (selectedVesselTitle) selectedVesselTitle.textContent = 'رحلات المقاعد الفردية المشتركة';
+        if (vesselBannerIcon) vesselBannerIcon.className = 'fa-solid fa-users';
     } else {
-        if (bookingModeSelect && bookingModeSelect.value !== 'group') {
-            bookingModeSelect.value = 'group';
-            bookingModeSelect.dispatchEvent(new Event('change'));
+        const activeVessel = vesselId || 'qimat-al-fawz-pentos';
+        if (bookingModeInput) bookingModeInput.value = 'group';
+        if (vesselTypeInput) vesselTypeInput.value = activeVessel;
+        if (groupBookingForm) groupBookingForm.classList.remove('hidden');
+        if (individualBookingForm) individualBookingForm.classList.add('hidden');
+        if (selectedVesselTitle) selectedVesselTitle.textContent = vesselDisplayNames[activeVessel] || 'قارب أوركا';
+        if (vesselBannerIcon) {
+            if (activeVessel.includes('yacht')) {
+                vesselBannerIcon.className = 'fa-solid fa-ship';
+            } else {
+                vesselBannerIcon.className = 'fa-solid fa-anchor';
+            }
         }
-        if (vesselId && vesselTypeSelect) {
-            vesselTypeSelect.value = vesselId;
-            vesselTypeSelect.dispatchEvent(new Event('change'));
+
+        // Populate trip types for active vessel
+        const tripTypeSelect = document.getElementById('tripType');
+        if (tripTypeSelect && tripOptions[activeVessel]) {
+            tripTypeSelect.innerHTML = '';
+            tripOptions[activeVessel].forEach(trip => {
+                const opt = document.createElement('option');
+                opt.value = trip.id;
+                opt.textContent = trip.name;
+                tripTypeSelect.appendChild(opt);
+            });
         }
+
+        // Toggle UI panels based on active vessel
+        const yachtHoursGroup = document.getElementById('yachtHoursGroup');
+        const babyYachtOptions = document.getElementById('babyYachtOptions');
+        const southernMarinaGroup = document.getElementById('southernMarinaGroup');
+        const packageGroup = document.getElementById('packageGroup');
+        const specialRequestsGroup = document.getElementById('specialRequestsGroup');
+        const creekHoursGroup = document.getElementById('creekHoursGroup');
+
+        if (activeVessel === 'large-yacht') {
+            if (yachtHoursGroup) yachtHoursGroup.classList.remove('hidden');
+            if (babyYachtOptions) babyYachtOptions.classList.add('hidden');
+            if (southernMarinaGroup) southernMarinaGroup.classList.add('hidden');
+            if (packageGroup) packageGroup.classList.add('hidden');
+            if (specialRequestsGroup) specialRequestsGroup.classList.remove('hidden');
+            if (creekHoursGroup) creekHoursGroup.classList.add('hidden');
+        } else if (activeVessel.startsWith('baby-yacht')) {
+            if (yachtHoursGroup) yachtHoursGroup.classList.add('hidden');
+            if (babyYachtOptions) babyYachtOptions.classList.remove('hidden');
+            if (southernMarinaGroup) southernMarinaGroup.classList.add('hidden');
+            if (packageGroup) packageGroup.classList.remove('hidden');
+            if (specialRequestsGroup) specialRequestsGroup.classList.add('hidden');
+        } else if (southernBoatAliases.includes(activeVessel)) {
+            if (yachtHoursGroup) yachtHoursGroup.classList.add('hidden');
+            if (babyYachtOptions) babyYachtOptions.classList.add('hidden');
+            if (southernMarinaGroup) southernMarinaGroup.classList.remove('hidden');
+            if (packageGroup) packageGroup.classList.add('hidden');
+            if (specialRequestsGroup) specialRequestsGroup.classList.add('hidden');
+            if (creekHoursGroup) creekHoursGroup.classList.add('hidden');
+        } else {
+            if (yachtHoursGroup) yachtHoursGroup.classList.add('hidden');
+            if (babyYachtOptions) babyYachtOptions.classList.add('hidden');
+            if (southernMarinaGroup) southernMarinaGroup.classList.add('hidden');
+            if (packageGroup) packageGroup.classList.remove('hidden');
+            if (specialRequestsGroup) specialRequestsGroup.classList.add('hidden');
+        }
+
+        // Capacity adjustments
+        const numPeopleInput = document.getElementById('numPeople');
+        const maxGuestsText = document.getElementById('maxGuestsText');
+        const maxLabel = document.getElementById('maxLabel');
+        const peopleValDisplay = document.getElementById('peopleValDisplay');
+
+        let maxGuests = 9;
+        if (activeVessel === 'large-yacht') maxGuests = 35;
+        else if (activeVessel === 'al-ameed') maxGuests = 14;
+        else if (activeVessel === 'norseen-large') maxGuests = 19;
+        else if (activeVessel === 'qimat-al-fawz-pentos') maxGuests = 11;
+        else if (activeVessel === 'baby-yacht-ambassador') maxGuests = 11;
+        else if (activeVessel === 'baby-yacht-orax-40') maxGuests = 12;
+        else if (southernBoatAliases.includes(activeVessel)) maxGuests = 8;
+        else maxGuests = 9;
+
+        if (numPeopleInput) {
+            numPeopleInput.max = maxGuests;
+            if (parseInt(numPeopleInput.value) > maxGuests) {
+                numPeopleInput.value = maxGuests;
+            }
+            if (peopleValDisplay) peopleValDisplay.textContent = `${numPeopleInput.value} أشخاص`;
+        }
+        if (maxGuestsText) maxGuestsText.textContent = maxGuests;
+        if (maxLabel) maxLabel.textContent = maxGuests;
     }
 
     if (tripId) {
         const tripTypeSelect = document.getElementById('tripType');
         if (tripTypeSelect) {
             tripTypeSelect.value = tripId;
-            tripTypeSelect.dispatchEvent(new Event('change'));
         }
     }
+
+    calculatePrice();
 
     modal.classList.add('active');
     document.body.style.overflow = 'hidden';
