@@ -774,6 +774,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function sendWhatsAppMessage() {
         const isIndividual = (bookingModeSelect && bookingModeSelect.value === 'individual');
         const phoneNumber = '966568390147';
+        const isEn = (document.documentElement.lang === 'en' || document.documentElement.dir === 'ltr');
         let messageText = '';
 
         if (isIndividual) {
@@ -783,15 +784,27 @@ document.addEventListener('DOMContentLoaded', () => {
             const guests = indPeopleInput.value;
             const total = totalPriceDisplay.textContent;
 
-            messageText = 
-                `السلام عليكم،\n` +
-                `أود حجز *رحلة فردية* مع *أوركا للرحلات البحرية* بالتفاصيل التالية:\n\n` +
-                `👥 عدد المقاعد: *${guests}*\n` +
-                `⚓ نوع الرحلة: *${tripTypeName}*\n` +
-                `📅 اليوم المفضل: *${dayName}*\n` +
-                `🎁 الباقة المحددة: *${packageName}*\n` +
-                `💵 التكلفة الكلية: *${total}*\n\n` +
-                `يرجى تأكيد المقاعد وطريقة تأكيد العربون. شكراً 🙏`;
+            if (isEn) {
+                messageText = 
+                    `Hello ORCA Marine Trips,\n` +
+                    `I would like to book *Shared Individual Seats* with the following details:\n\n` +
+                    `👥 Number of Seats: *${guests}*\n` +
+                    `⚓ Trip Type: *${tripTypeName}*\n` +
+                    `📅 Preferred Day: *${dayName}*\n` +
+                    `🎁 Selected Package: *${packageName}*\n` +
+                    `💵 Total Estimated Cost: *${total}*\n\n` +
+                    `Please confirm seat availability and payment instructions. Thank you! 🙏`;
+            } else {
+                messageText = 
+                    `السلام عليكم،\n` +
+                    `أود حجز *رحلة فردية* مع *أوركا للرحلات البحرية* بالتفاصيل التالية:\n\n` +
+                    `👥 عدد المقاعد: *${guests}*\n` +
+                    `⚓ نوع الرحلة: *${tripTypeName}*\n` +
+                    `📅 اليوم المفضل: *${dayName}*\n` +
+                    `🎁 الباقة المحددة: *${packageName}*\n` +
+                    `💵 التكلفة الكلية: *${total}*\n\n` +
+                    `يرجى تأكيد المقاعد وطريقة تأكيد العربون. شكراً 🙏`;
+            }
         } 
         else {
             const vessel = vesselTypeSelect.value;
@@ -800,7 +813,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const guests = numPeopleInput.value;
             const pkg = packageTypeSelect.value;
 
-            let vesselName = vesselDisplayNames[vessel] || 'قارب أوركا';
+            let vesselName = vesselDisplayNames[vessel] || (isEn ? 'ORCA Boat' : 'قارب أوركا');
             let tripName = (tripTypeSelect.options && tripTypeSelect.options[tripTypeSelect.selectedIndex]) ? tripTypeSelect.options[tripTypeSelect.selectedIndex].text : '';
             let dayName = dayTypeSelect.options[dayTypeSelect.selectedIndex].text;
             let packageName = packageTypeSelect.options[packageTypeSelect.selectedIndex].text;
@@ -812,45 +825,61 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Add southern marina detail if selected
             if (vessel === 'boat-51' || southernBoatAliases.includes(vessel)) {
-                customDetails += `\n📍 مرسى الانطلاق: *${southernMarinaSelect.options[southernMarinaSelect.selectedIndex].text}*`;
+                customDetails += isEn ? `\n📍 Departure Marina: *${southernMarinaSelect.options[southernMarinaSelect.selectedIndex].text}*` : `\n📍 مرسى الانطلاق: *${southernMarinaSelect.options[southernMarinaSelect.selectedIndex].text}*`;
             } else {
-                customDetails += `\n📍 مرسى الانطلاق: *مرسى البحر الاحمر*`;
+                customDetails += isEn ? `\n📍 Departure Marina: *Red Sea Marina*` : `\n📍 مرسى الانطلاق: *مرسى البحر الاحمر*`;
             }
 
-            let packageLine = `🎁 الباقة: *${packageName}*\n`;
+            let packageLine = isEn ? `🎁 Package: *${packageName}*\n` : `🎁 الباقة: *${packageName}*\n`;
 
             // Yacht hours detail
             if (vessel === 'large-yacht') {
-                customDetails += `\n⏱ الساعات المطلوبة: *${yachtHoursInput.value} ساعات*`;
+                customDetails += isEn ? `\n⏱ Requested Hours: *${yachtHoursInput.value} Hours*` : `\n⏱ الساعات المطلوبة: *${yachtHoursInput.value} ساعات*`;
                 packageLine = '';
                 if (specialRequestsInput && specialRequestsInput.value.trim() !== '') {
-                    customDetails += `\n✨ طلبات خاصة: *${specialRequestsInput.value.trim()}*`;
+                    customDetails += isEn ? `\n✨ Special Requests: *${specialRequestsInput.value.trim()}*` : `\n✨ طلبات خاصة: *${specialRequestsInput.value.trim()}*`;
                 }
             }
 
             // Creek hours detail (if selected as trip type)
             if (tripId === 'creek') {
-                customDetails += `\n⏱ ساعات جولة الخور: *${creekHoursInput.value} ساعة*`;
+                customDetails += isEn ? `\n⏱ Creek Tour Hours: *${creekHoursInput.value} Hour(s)*` : `\n⏱ ساعات جولة الخور: *${creekHoursInput.value} ساعة*`;
             }
 
             // Baby Yacht options (only if not creek trip)
             if (vessel.startsWith('baby-yacht') && tripId !== 'creek' && addBBQSelect.value === 'yes') {
-                customDetails += `\n🥩 إضافة وجبة مشويات: *نعم (+600 ريال)*`;
+                customDetails += isEn ? `\n🥩 Add BBQ Meal: *Yes (+600 SAR)*` : `\n🥩 إضافة وجبة مشويات: *نعم (+600 ريال)*`;
             }
 
-            messageText =
-                `السلام عليكم،\n` +
-                `أود الاستفسار عن حجز رحلة بحرية مع *أوركا للرحلات البحرية* بالتفاصيل التالية:\n\n` +
-                `⛵ القارب/اليخت: *${vesselName}*\n` +
-                `⚓ الرحلة: *${tripName}*\n` +
-                packageLine +
-                `📅 اليوم: *${dayName}*\n` +
-                `👥 العدد: *${guests} ضيوف*` +
-                `${customDetails}\n` +
-                `⏱ مدة الإبحار: *${duration}*\n` +
-                `💵 السعر الإجمالي: *${totalPrice}*\n` +
-                `💰 العربون المطلوب: *${depositText}*\n\n` +
-                `يرجى تأكيد توافر الموعد. شكراً لك 🌊`;
+            if (isEn) {
+                messageText =
+                    `Hello ORCA Marine Trips,\n` +
+                    `I would like to inquire about booking a marine trip with the following details:\n\n` +
+                    `⛵ Vessel: *${vesselName}*\n` +
+                    `⚓ Trip: *${tripName}*\n` +
+                    packageLine +
+                    `📅 Day: *${dayName}*\n` +
+                    `👥 Number of Guests: *${guests} Guests*` +
+                    `${customDetails}\n` +
+                    `⏱ Duration: *${duration}*\n` +
+                    `💵 Total Price: *${totalPrice}*\n` +
+                    `💰 Required Deposit: *${depositText}*\n\n` +
+                    `Please confirm date availability and booking procedure. Thank you! 🌊`;
+            } else {
+                messageText =
+                    `السلام عليكم،\n` +
+                    `أود الاستفسار عن حجز رحلة بحرية مع *أوركا للرحلات البحرية* بالتفاصيل التالية:\n\n` +
+                    `⛵ القارب/اليخت: *${vesselName}*\n` +
+                    `⚓ الرحلة: *${tripName}*\n` +
+                    packageLine +
+                    `📅 اليوم: *${dayName}*\n` +
+                    `👥 العدد: *${guests} ضيوف*` +
+                    `${customDetails}\n` +
+                    `⏱ مدة الإبحار: *${duration}*\n` +
+                    `💵 السعر الإجمالي: *${totalPrice}*\n` +
+                    `💰 العربون المطلوب: *${depositText}*\n\n` +
+                    `يرجى تأكيد توافر الموعد. شكراً لك 🌊`;
+            }
         }
 
         const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(messageText)}`;
