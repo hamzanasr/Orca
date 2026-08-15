@@ -773,7 +773,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Generate WhatsApp Message & Submit
     function sendWhatsAppMessage() {
         const isIndividual = (bookingModeSelect && bookingModeSelect.value === 'individual');
-        const phoneNumber = '966568390147';
+        const phoneNumber = '966531403454';
         let messageText = '';
 
         if (isIndividual) {
