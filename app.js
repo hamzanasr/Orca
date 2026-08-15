@@ -293,10 +293,10 @@ document.addEventListener('DOMContentLoaded', () => {
             { id: 'creek', name: 'جولة الخور / شرم أبحر (0.5 – 2 ساعة)', duration: 1 }
         ],
         'boat-51': [
-            { id: 'abu-tair', name: 'رحلة جزيرة أبو طير (8 ساعات - 1,600 ريال)', basePriceWeekday: 1600, basePriceWeekend: 1600, duration: 8 },
-            { id: 'fishing-8', name: 'رحلة صيد (8 ساعات - 1,300 ريال)', basePriceWeekday: 1300, basePriceWeekend: 1300, duration: 8 },
-            { id: 'fishing-10', name: 'رحلة صيد (10 ساعات - 1,500 ريال)', basePriceWeekday: 1500, basePriceWeekend: 1500, duration: 10 },
-            { id: 'fishing-12', name: 'رحلة صيد (12 ساعة - 1,700 ريال)', basePriceWeekday: 1700, basePriceWeekend: 1700, duration: 12 }
+            { id: 'fishing-8', name: 'رحلة صيد (8 ساعات)', basePriceWeekday: 1200, basePriceWeekend: 1300, duration: 8 },
+            { id: 'fishing-10', name: 'رحلة صيد (10 ساعات)', basePriceWeekday: 1300, basePriceWeekend: 1400, duration: 10 },
+            { id: 'fishing-12', name: 'رحلة صيد (12 ساعة)', basePriceWeekday: 1500, basePriceWeekend: 1600, duration: 12 },
+            { id: 'abu-tair', name: 'رحلة جزيرة أبو طير (8 ساعات - 1,600 ريال)', basePriceWeekday: 1600, basePriceWeekend: 1600, duration: 8 }
         ]
     };
 
@@ -351,7 +351,7 @@ document.addEventListener('DOMContentLoaded', () => {
         'al-ameed':               { max: 11, label: '11 ضيفاً' },
         'seven-boat':             { max: 9,  label: '9 ضيوف' },
         'norseen-large':          { max: 19, label: '19 ضيفاً' },
-        'boat-51':                { max: 7,  label: '7 ضيوف' }
+        'boat-51':                { max: 8,  label: '8 ضيوف (يشمل 6 أشخاص)' }
     };
     sevenAliases.forEach(alias => {
         capacities[alias] = { max: 9, label: '9 ضيوف' };
@@ -650,6 +650,11 @@ document.addEventListener('DOMContentLoaded', () => {
         else if (vessel === 'boat-51') {
             basePrice = (day === 'weekend') ? selectedTrip.basePriceWeekend : selectedTrip.basePriceWeekday;
             durationText = `${selectedTrip.duration} ساعات`;
+
+            // Extra guests above 6 -> 100 SAR per person
+            if (guests > 6) {
+                guestExtra += (guests - 6) * 100;
+            }
         } 
         else {
             // Seven boat series & Norseen Large Boat
