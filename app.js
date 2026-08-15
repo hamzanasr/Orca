@@ -306,10 +306,6 @@ document.addEventListener('DOMContentLoaded', () => {
             if (hours <= 0.5) return 250;
             return 450; // 1 hour full is 450
         }
-        if (vessel === 'qimat-al-fawz') {
-            if (hours <= 0.5) return 150;
-            return 250; // 1 hour full is 250
-        }
         if (vessel === 'baby-yacht-orax-40') {
             if (hours <= 0.5) return 350;
             return 700; // 700 per hour
@@ -324,15 +320,16 @@ document.addEventListener('DOMContentLoaded', () => {
             if (hours <= 1.5) return 750;
             return 1000; // 2 hours
         } else {
-            if (hours <= 0.5) return 250;
-            if (hours <= 1.0) return 400;
-            if (hours <= 1.5) return 650;
-            return 800; // 2 hours
+            // Regular boats: qimat-al-fawz, seven series (1, 2, 3), shaheen, bahr, al-noor-al-azraq, etc.
+            if (hours <= 0.5) return 200;
+            if (hours <= 1.0) return 350;
+            if (hours <= 1.5) return 550;
+            return 700; // 2 hours
         }
     }
 
     // Aliased vessels that share "seven-boat" pricing configuration
-    const sevenAliases = ['seven-boat-2', 'seven-boat-3', 'various-boats', 'shaheen', 'bahr', 'al-noor-al-azraq', 'shawq-al-layl', 'blue-light', 'bahr-boat'];
+    const sevenAliases = ['seven-boat-2', 'seven-boat-3', 'various-boats', 'shaheen', 'bahr', 'al-noor-al-azraq', 'blue-light', 'bahr-boat'];
     sevenAliases.forEach(alias => {
         tripOptions[alias] = JSON.parse(JSON.stringify(tripOptions['seven-boat']));
     });
@@ -344,7 +341,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Southern Boats aliases that share "boat-51" pricing configuration
-    const southernBoatAliases = ['jaguar', 'ghazal-obhur', 'bin-shuraiq'];
+    const southernBoatAliases = ['jaguar', 'ghazal-obhur', 'bin-shuraiq', 'shawq-al-layl'];
     southernBoatAliases.forEach(alias => {
         tripOptions[alias] = JSON.parse(JSON.stringify(tripOptions['boat-51']));
     });
@@ -512,7 +509,7 @@ document.addEventListener('DOMContentLoaded', () => {
             yachtHoursGroup.classList.add('hidden');
             if (babyYachtOptions) babyYachtOptions.classList.add('hidden');
             southernMarinaGroup.classList.remove('hidden');
-            if (packageGroup) packageGroup.classList.remove('hidden');
+            if (packageGroup) packageGroup.classList.add('hidden');
             if (specialRequestsGroup) specialRequestsGroup.classList.add('hidden');
         } else {
             yachtHoursGroup.classList.add('hidden');
@@ -676,8 +673,8 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
 
-        // 2. VIP & VVIP Package additions (if not large-yacht)
-        if (vessel !== 'large-yacht') {
+        // 2. VIP & VVIP Package additions (if not large-yacht and not southern boats)
+        if (vessel !== 'large-yacht' && vessel !== 'boat-51' && !southernBoatAliases.includes(vessel)) {
             if (pkg === 'vip') {
                 packageExtra = 300;
             } else if (pkg === 'vvip') {
