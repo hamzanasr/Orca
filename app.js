@@ -332,9 +332,15 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Aliased vessels that share "seven-boat" pricing configuration
-    const sevenAliases = ['seven-boat-2', 'seven-boat-3', 'blue-light', 'bahr-boat', 'various-boats'];
+    const sevenAliases = ['seven-boat-2', 'seven-boat-3', 'various-boats'];
     sevenAliases.forEach(alias => {
         tripOptions[alias] = JSON.parse(JSON.stringify(tripOptions['seven-boat']));
+    });
+
+    // Large Boats aliases that share "al-ameed" pricing configuration
+    const largeBoatAliases = ['shaheen', 'bahr', 'al-noor-al-azraq', 'shawq-al-layl', 'blue-light', 'bahr-boat'];
+    largeBoatAliases.forEach(alias => {
+        tripOptions[alias] = JSON.parse(JSON.stringify(tripOptions['al-ameed']));
     });
 
     // Capacities constraints (max guests)
@@ -342,13 +348,16 @@ document.addEventListener('DOMContentLoaded', () => {
         'qimat-al-fawz-pentos':   { max: 12, label: '12 ضيفاً' },
         'large-yacht':            { max: 35, label: '35 شخصاً' },
         'baby-yacht-ambassador':  { max: 11, label: '11 ضيفاً' },
-                'al-ameed':               { max: 11, label: '11 ضيفاً' },
+        'al-ameed':               { max: 11, label: '11 ضيفاً' },
         'seven-boat':             { max: 9,  label: '9 ضيوف' },
         'norseen-large':          { max: 19, label: '19 ضيفاً' },
         'boat-51':                { max: 7,  label: '7 ضيوف' }
     };
     sevenAliases.forEach(alias => {
         capacities[alias] = { max: 9, label: '9 ضيوف' };
+    });
+    largeBoatAliases.forEach(alias => {
+        capacities[alias] = { max: 11, label: '11 ضيفاً' };
     });
 
     // Default deposits
@@ -367,7 +376,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (tripId.includes('12')) return 400;
             return 300;
         }
-        if (vessel === 'al-ameed') {
+        if (vessel === 'al-ameed' || largeBoatAliases.includes(vessel)) {
             return (day === 'weekend') ? 300 : 200;
         }
         // Seven and Norseen boats
@@ -600,7 +609,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     guestExtra += (guests - 6) * 100;
                 }
             } 
-            else if (vessel === 'al-ameed') {
+            else if (vessel === 'al-ameed' || largeBoatAliases.includes(vessel)) {
                 // Extra guests above 6 -> 100 SAR per person
                 if (guests > 6) {
                     guestExtra += (guests - 6) * 100;
@@ -628,7 +637,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 guestExtra += 600;
             }
         } 
-        else if (vessel === 'al-ameed') {
+        else if (vessel === 'al-ameed' || largeBoatAliases.includes(vessel)) {
             basePrice = (day === 'weekend') ? selectedTrip.basePriceWeekend : selectedTrip.basePriceWeekday;
             const durationHrs = (day === 'weekend') ? 10 : 12;
             durationText = `${durationHrs} ساعة`;
