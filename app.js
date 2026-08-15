@@ -343,6 +343,12 @@ document.addEventListener('DOMContentLoaded', () => {
         tripOptions[alias] = JSON.parse(JSON.stringify(tripOptions['al-ameed']));
     });
 
+    // Southern Boats aliases that share "boat-51" pricing configuration
+    const southernBoatAliases = ['jaguar', 'ghazal-obhur', 'bin-shuraiq'];
+    southernBoatAliases.forEach(alias => {
+        tripOptions[alias] = JSON.parse(JSON.stringify(tripOptions['boat-51']));
+    });
+
     // Capacities constraints (max guests)
     const capacities = {
         'qimat-al-fawz-pentos':   { max: 12, label: '12 ضيفاً' },
@@ -359,6 +365,9 @@ document.addEventListener('DOMContentLoaded', () => {
     largeBoatAliases.forEach(alias => {
         capacities[alias] = { max: 11, label: '11 ضيفاً' };
     });
+    southernBoatAliases.forEach(alias => {
+        capacities[alias] = { max: 8, label: '8 ضيوف (يشمل 6 أشخاص)' };
+    });
 
     // Default deposits
     function calculateDepositAmount(vessel, totalCost, day, tripId) {
@@ -371,7 +380,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (vessel.startsWith('baby-yacht')) {
             return (day === 'weekend') ? 1000 : 700;
         }
-        if (vessel === 'boat-51') {
+        if (vessel === 'boat-51' || southernBoatAliases.includes(vessel)) {
             if (tripId.includes('8') || tripId.includes('10')) return 300;
             if (tripId.includes('12')) return 400;
             return 300;
@@ -499,7 +508,7 @@ document.addEventListener('DOMContentLoaded', () => {
             southernMarinaGroup.classList.add('hidden');
             if (packageGroup) packageGroup.classList.remove('hidden');
             if (specialRequestsGroup) specialRequestsGroup.classList.add('hidden');
-        } else if (vessel === 'boat-51') {
+        } else if (vessel === 'boat-51' || southernBoatAliases.includes(vessel)) {
             yachtHoursGroup.classList.add('hidden');
             if (babyYachtOptions) babyYachtOptions.classList.add('hidden');
             southernMarinaGroup.classList.remove('hidden');
@@ -647,7 +656,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 guestExtra += (guests - 6) * 100;
             }
         }
-        else if (vessel === 'boat-51') {
+        else if (vessel === 'boat-51' || southernBoatAliases.includes(vessel)) {
             basePrice = (day === 'weekend') ? selectedTrip.basePriceWeekend : selectedTrip.basePriceWeekday;
             durationText = `${selectedTrip.duration} ساعات`;
 
