@@ -6,11 +6,12 @@
     <title>رحلات المقاعد الفردية المشتركة | أوركا تأجير يخوت وقوارب جدة</title>
     <meta name="description" content="رحلات صيد أو بياضة جماعية مميزة، احجز مقعدك الفردي وتعرف على أصدقاء جدد في البحر الأحمر. - احجز رحلات المقاعد الفردية المشتركة بأفضل الأسعار لرحلات بياضة والصيد والخور في جدة.">
     <!-- Google Fonts & FontAwesome -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="../style.css">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"></noscript>
+    <link rel="stylesheet" href="../style.min.css">
+    <link rel="preload" href="../font/thmanyahsans-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../font/thmanyahserifdisplay-Bold.woff2" as="font" type="font/woff2" crossorigin>
 </head>
 <body class="boat-detail-page">
         <!-- Navigation Overlay -->
@@ -39,7 +40,7 @@
                 <a href="https://wa.me/966568390147" target="_blank" class="btn btn-whatsapp btn-nav">
                     <i class="fa-brands fa-whatsapp"></i> <span>احجز الآن</span>
                 </a>
-                <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="فتح القائمة">
+                <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="فتح القائمة" aria-label="Menu">
                     <i class="fa-solid fa-bars"></i>
                 </button>
             </div>
@@ -73,8 +74,8 @@
                             <img class="slide active" src="../images/boat51.jpg" alt="رحلات المقاعد الفردية المشتركة" decoding="async">
                             <img class="slide" src="../images/boat52.jpg" alt="رحلات المقاعد الفردية المشتركة" loading="lazy" decoding="async">
                         </div>
-                        <button class="slider-btn prev" aria-label="السابق"><i class="fa-solid fa-chevron-right"></i></button>
-                        <button class="slider-btn next" aria-label="التالي"><i class="fa-solid fa-chevron-left"></i></button>
+                        <button class="slider-btn prev" aria-label="السابق" aria-label="Previous image"><i class="fa-solid fa-chevron-right"></i></button>
+                        <button class="slider-btn next" aria-label="التالي" aria-label="Next image"><i class="fa-solid fa-chevron-left"></i></button>
                         <div class="slider-dots"></div>
                         <div class="slider-counter">1 / 2</div>
                     </div>
@@ -256,6 +257,6 @@
     </footer>
 
     <!-- JS script -->
-    <script src="../app.js"></script>
+    <script src="../app.min.js" defer></script>
 </body>
 </html>

@@ -6,11 +6,12 @@
     <title>شروط وأحكام الحجز | أوركا للرحلات البحرية بجدة</title>
     <meta name="description" content="تعرف على شروط وأحكام حجز القوارب واليخوت مع أوركا للرحلات البحرية بجدة: خطوات الحجز، الهويات المطلوبة، وتعليمات السلامة وحرس الحدود.">
     <!-- Google Fonts & FontAwesome -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"></noscript>
+    <link rel="stylesheet" href="style.min.css">
+    <link rel="preload" href="font/thmanyahsans-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="font/thmanyahserifdisplay-Bold.woff2" as="font" type="font/woff2" crossorigin>
 </head>
 <body class="boat-detail-page">
     <!-- Navigation Overlay -->
@@ -40,7 +41,7 @@
                 <a href="https://wa.me/966568390147" target="_blank" class="btn btn-whatsapp btn-nav">
                     <i class="fa-brands fa-whatsapp"></i> <span>احجز الآن</span>
                 </a>
-                <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="فتح القائمة">
+                <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="فتح القائمة" aria-label="Menu">
                     <i class="fa-solid fa-bars"></i>
                 </button>
             </div>
@@ -253,6 +254,6 @@
         </div>
     </footer>
 
-    <script src="app.js"></script>
+    <script src="app.min.js" defer></script>
 </body>
 </html>

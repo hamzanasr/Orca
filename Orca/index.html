@@ -3,17 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="أوركا للرحلات البحرية — أفضل أسعار اليخوت والقوارب في جدة. رحلات بياضة وصيد بأسعار لا تُقارن وخدمة احترافية على البحر الأحمر.">
-    <title>أوركا | للرحلات البحرية في جدة</title>
+    <meta name="description" content="أوركا للرحلات البحرية في جدة — أفضل أسعار اليخوت والقوارب الفاخرة. رحلات بياضة وأبو طير وصيد بأسعار منافسة وخدمة 5 نجوم.">
+    <title>أوركا | للرحلات البحرية واليخوت الفاخرة في جدة</title>
+    
+    <!-- Canonical & SEO Meta -->
+    <link rel="canonical" href="https://orca.mahallatonline7.workers.dev/">
+    <meta property="og:title" content="أوركا | للرحلات البحرية واليخوت الفاخرة في جدة">
+    <meta property="og:description" content="احجز أفخم اليخوت والقوارب البحرية في جدة (بياضة، أبو طير، رحلات الصيد والنزهة) بأفضل الأسعار.">
+    <meta property="og:image" content="https://orca.mahallatonline7.workers.dev/images/بارباروسا/1.webp">
+    <meta property="og:url" content="https://orca.mahallatonline7.workers.dev/">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="images/logo.png">
     <link rel="apple-touch-icon" href="images/logo.png">
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+
+    <!-- Preconnect to CDNs -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+
+    <!-- Font Preloads (Local Fonts, 0 FOIT/FOUT) -->
+    <link rel="preload" href="font/thmanyahsans-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="font/thmanyahserifdisplay-Bold.woff2" as="font" type="font/woff2" crossorigin>
+
+    <!-- Preload LCP Hero Image -->
+    <link rel="preload" as="image" href="images/بارباروسا/1.webp" type="image/webp" fetchpriority="high">
+
+    <!-- Non-render-blocking FontAwesome -->
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"></noscript>
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.min.css">
 </head>
 <body>
 
@@ -24,7 +45,7 @@
     <header class="main-header" id="mainHeader">
         <div class="container header-container">
             <a href="index.html" class="logo">
-                <img src="images/logo.png" alt="أوركا للرحلات البحرية" class="logo-img" decoding="async">
+                <img src="images/logo.png" alt="شعار أوركا للرحلات البحرية" class="logo-img" decoding="async" width="84" height="84">
                 <div class="logo-text">
                     <span class="brand-name">أوركا <span class="highlight">ORCA</span></span>
                     <span class="brand-sub">تجربة تشدك للبحر</span>
@@ -47,7 +68,7 @@
                 <a href="https://wa.me/966568390147" target="_blank" class="btn btn-whatsapp btn-nav">
                     <i class="fa-brands fa-whatsapp"></i> <span>احجز الآن</span>
                 </a>
-                <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="فتح القائمة">
+                <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="فتح القائمة" aria-label="فتح القائمة الرئيسية">
                     <i class="fa-solid fa-bars"></i>
                 </button>
             </div>
@@ -189,7 +210,7 @@
                         <div class="package-badge badge-gold"><i class="fa-solid fa-crown"></i> قارب بارباروسا VIP — خصوصية عائلية وطاقم فلبيني</div>
                         <div class="package-slider" data-slider-id="barbaros">
                             <div class="slides-container">
-                                <img class="slide active" src="images/بارباروسا/1.jpeg" alt="قارب بارباروسا VIP" decoding="async">
+                                <img class="slide active" src="images/بارباروسا/1.webp" alt="قارب بارباروسا VIP" fetchpriority="high" decoding="async" width="662" height="407">
                                 <img class="slide" src="images/بارباروسا/2.jpeg" alt="صالون وجلسات قارب بارباروسا الفاخرة" loading="lazy" decoding="async">
                                 <img class="slide" src="images/بارباروسا/3.jpeg" alt="غرفة النوم الداخلية" loading="lazy" decoding="async">
                                 <img class="slide" src="images/بارباروسا/4.jpeg" alt="جلسات الاسترخاء" loading="lazy" decoding="async">
@@ -416,7 +437,7 @@
                         <div class="package-badge badge-gold"><i class="fa-solid fa-crown"></i> VIP طاقم فلبيني وألعاب مائية</div>
                         <div class="package-slider" data-slider-id="baby-barbaros">
                             <div class="slides-container">
-                                <img class="slide active" src="images/بارباروسا/1.jpeg" alt="قارب بارباروسا VIP" loading="lazy" decoding="async">
+                                <img class="slide active" src="images/بارباروسا/1.webp" alt="قارب بارباروسا VIP" fetchpriority="high" decoding="async" width="662" height="407">
                                 <img class="slide" src="images/بارباروسا/2.jpeg" alt="صالون وجلسات قارب بارباروسا الفاخرة" loading="lazy" decoding="async">
                                 <img class="slide" src="images/بارباروسا/3.jpeg" alt="غرفة النوم الداخلية" loading="lazy" decoding="async">
                                 <img class="slide" src="images/بارباروسا/5.jpeg" alt="زحليقة مائية وكرسي معلق" loading="lazy" decoding="async">
@@ -1194,8 +1215,8 @@
                                 <img class="slide active" src="images/جاكور/1.jpeg" alt="قارب جاكور 1" loading="lazy" decoding="async">
                                 <img class="slide" src="images/جاكور/2.jpeg" alt="قارب جاكور 2" loading="lazy" decoding="async">
                             </div>
-                            <button class="slider-btn prev" aria-label="السابق"><i class="fa-solid fa-chevron-right"></i></button>
-                            <button class="slider-btn next" aria-label="التالي"><i class="fa-solid fa-chevron-left"></i></button>
+                            <button class="slider-btn prev" aria-label="السابق" aria-label="الصورة السابقة"><i class="fa-solid fa-chevron-right"></i></button>
+                            <button class="slider-btn next" aria-label="التالي" aria-label="الصورة التالية"><i class="fa-solid fa-chevron-left"></i></button>
                             <div class="slider-dots"></div>
                             <div class="slider-counter">1 / 2</div>
                         </div>
@@ -1242,8 +1263,8 @@
                                 <img class="slide active" src="images/غزال ابحر/1.jpeg" alt="قارب غزال ابحر 1" loading="lazy" decoding="async">
                                 <img class="slide" src="images/غزال ابحر/2.jpeg" alt="قارب غزال ابحر 2" loading="lazy" decoding="async">
                             </div>
-                            <button class="slider-btn prev" aria-label="السابق"><i class="fa-solid fa-chevron-right"></i></button>
-                            <button class="slider-btn next" aria-label="التالي"><i class="fa-solid fa-chevron-left"></i></button>
+                            <button class="slider-btn prev" aria-label="السابق" aria-label="الصورة السابقة"><i class="fa-solid fa-chevron-right"></i></button>
+                            <button class="slider-btn next" aria-label="التالي" aria-label="الصورة التالية"><i class="fa-solid fa-chevron-left"></i></button>
                             <div class="slider-dots"></div>
                             <div class="slider-counter">1 / 2</div>
                         </div>
@@ -1290,8 +1311,8 @@
                                 <img class="slide active" src="images/بن شريق/1.jpeg" alt="قارب بن شريق 1" loading="lazy" decoding="async">
                                 <img class="slide" src="images/بن شريق/2.jpeg" alt="قارب بن شريق 2" loading="lazy" decoding="async">
                             </div>
-                            <button class="slider-btn prev" aria-label="السابق"><i class="fa-solid fa-chevron-right"></i></button>
-                            <button class="slider-btn next" aria-label="التالي"><i class="fa-solid fa-chevron-left"></i></button>
+                            <button class="slider-btn prev" aria-label="السابق" aria-label="الصورة السابقة"><i class="fa-solid fa-chevron-right"></i></button>
+                            <button class="slider-btn next" aria-label="التالي" aria-label="الصورة التالية"><i class="fa-solid fa-chevron-left"></i></button>
                             <div class="slider-dots"></div>
                             <div class="slider-counter">1 / 2</div>
                         </div>
@@ -1338,8 +1359,8 @@
                                 <img class="slide active" src="images/شوق الليل/1.jpeg" alt="قارب شوق الليل 1" loading="lazy" decoding="async">
                                 <img class="slide" src="images/شوق الليل/2.jpeg" alt="قارب شوق الليل 2" loading="lazy" decoding="async">
                             </div>
-                            <button class="slider-btn prev" aria-label="السابق"><i class="fa-solid fa-chevron-right"></i></button>
-                            <button class="slider-btn next" aria-label="التالي"><i class="fa-solid fa-chevron-left"></i></button>
+                            <button class="slider-btn prev" aria-label="السابق" aria-label="الصورة السابقة"><i class="fa-solid fa-chevron-right"></i></button>
+                            <button class="slider-btn next" aria-label="التالي" aria-label="الصورة التالية"><i class="fa-solid fa-chevron-left"></i></button>
                             <div class="slider-dots"></div>
                             <div class="slider-counter">1 / 2</div>
                         </div>
@@ -1391,8 +1412,8 @@
                                 <img class="slide active" src="images/boat51.jpg" alt="رحلات المقاعد الفردية المشتركة" loading="lazy" decoding="async">
                                 <img class="slide" src="images/boat52.jpg" alt="رحلات المقاعد الفردية المشتركة" loading="lazy" decoding="async">
                             </div>
-                            <button class="slider-btn prev" aria-label="السابق"><i class="fa-solid fa-chevron-right"></i></button>
-                            <button class="slider-btn next" aria-label="التالي"><i class="fa-solid fa-chevron-left"></i></button>
+                            <button class="slider-btn prev" aria-label="السابق" aria-label="الصورة السابقة"><i class="fa-solid fa-chevron-right"></i></button>
+                            <button class="slider-btn next" aria-label="التالي" aria-label="الصورة التالية"><i class="fa-solid fa-chevron-left"></i></button>
                             <div class="slider-dots"></div>
                             <div class="slider-counter">1 / 2</div>
                         </div>
@@ -1512,7 +1533,7 @@
                     <div id="groupBookingForm">
                         <div class="form-group" id="tripTypeGroup">
                             <label for="tripType"><i class="fa-solid fa-anchor"></i> نوع الرحلة</label>
-                            <select id="tripType" required></select>
+                            <select id="tripType" required aria-label="نوع الرحلة البحرية"></select>
                         </div>
 
                         <!-- Creek duration range input (visible when Creek is selected as trip type) -->
@@ -1521,7 +1542,7 @@
                                 <label for="creekHours"><i class="fa-solid fa-hourglass-half"></i> ساعات جولة الخور (0.5 – 2 ساعة)</label>
                                 <span class="current-value-badge" id="creekHoursVal">1</span>
                             </div>
-                            <input type="range" id="creekHours" min="0.5" max="2" value="1" step="0.5">
+                            <input type="range" id="creekHours" min="0.5" max="2" value="1" step="0.5" aria-label="عدد ساعات نزهة الخور">
                             <div class="range-labels">
                                 <span>0.5 ساعة</span>
                                 <span>2 ساعة</span>
@@ -1530,7 +1551,7 @@
 
                         <div class="form-group hidden" id="southernMarinaGroup">
                             <label for="southernMarinaSelect"><i class="fa-solid fa-map-pin"></i> مرسى الانطلاق (الجنوب)</label>
-                            <select id="southernMarinaSelect">
+                            <select id="southernMarinaSelect" aria-label="مرسى الانطلاق بأبحر الجنوبية">
                                 <option value="badeeh">مرسى البضيع</option>
                                 <option value="saroom">مرسى السروم</option>
                                 <option value="shoiba">مرسى الشعيبة</option>
@@ -1540,7 +1561,7 @@
 
                         <div class="form-group">
                             <label for="dayType"><i class="fa-solid fa-calendar-day"></i> يوم الرحلة</label>
-                            <select id="dayType" required>
+                            <select id="dayType" required aria-label="توقيت الرحلة">
                                 <option value="weekday">وسط الأسبوع (الأحد – الأربعاء)</option>
                                 <option value="weekend">الويكند (الخميس – السبت)</option>
                             </select>
@@ -1548,7 +1569,7 @@
 
                         <div class="form-group" id="packageGroup">
                             <label for="packageType"><i class="fa-solid fa-gift"></i> باقة الرحلة</label>
-                            <select id="packageType" required>
+                            <select id="packageType" required aria-label="نوع الباقة المطلوبة">
                                 <option value="economic">الباقة الاقتصادية (العادية)</option>
                                 <option value="vip">الباقة المميزة VIP (+300 ريال)</option>
                                 <option value="vvip">الباقة الفاخرة VVIP (+350 ريال)</option>
@@ -1557,7 +1578,7 @@
 
                         <div class="form-group hidden" id="specialRequestsGroup">
                             <label for="specialRequests"><i class="fa-solid fa-wand-magic-sparkles"></i> طلبات خاصة (تزيين، كيك، بوفيه...)</label>
-                            <textarea id="specialRequests" placeholder="مثال: تزيين اليخوت، كيك مناسبات، وجبة غذاء/عشاء خاصة..." rows="3" style="width: 100%; padding: 12px 14px; border: 1.5px solid var(--gray-100); border-radius: var(--radius-md); background: var(--off-white); font-family: inherit; font-size: 0.95rem; resize: vertical; outline: none; transition: var(--transition);"></textarea>
+                            <textarea id="specialRequests" placeholder="مثال: تزيين اليخوت، كيك مناسبات، وجبة غذاء/عشاء خاصة..." rows="3" style="width: 100%; padding: 12px 14px; border: 1.5px solid var(--gray-100); border-radius: var(--radius-md); background: var(--off-white); font-family: inherit; font-size: 0.95rem; resize: vertical; outline: none; transition: var(--transition);" aria-label="طلبات أو ملاحظات خاصة"></textarea>
                         </div>
 
                         <!-- Yacht hourly duration group -->
@@ -1566,14 +1587,14 @@
                                 <label for="yachtHours"><i class="fa-solid fa-clock"></i> عدد ساعات الحجز (ساعتين كحد أدنى)</label>
                                 <span class="current-value-badge" id="yachtHoursVal">2</span>
                             </div>
-                            <input type="range" id="yachtHours" min="2" max="12" value="2" step="1">
+                            <input type="range" id="yachtHours" min="2" max="12" value="2" step="1" aria-label="مدة إيجار اليخت بالساعات">
                         </div>
 
                         <!-- Baby Yacht specific options (BBQ only) -->
                         <div class="form-group hidden" id="babyYachtOptions">
                             <div class="sub-form-group">
                                 <label for="addBBQ"><i class="fa-solid fa-utensils"></i> إضافة وجبة مشويات</label>
-                                <select id="addBBQ">
+                                <select id="addBBQ" aria-label="إضافة وجبات الشواء">
                                     <option value="no">لا أرغب في المشويات</option>
                                     <option value="yes">إضافة وجبة مشويات على اليخت (+600 ريال)</option>
                                 </select>
@@ -1585,7 +1606,7 @@
                                 <label for="numPeople"><i class="fa-solid fa-users"></i> عدد الضيوف (أقصى <span id="maxGuestsText">11</span> ضيوف)</label>
                                 <span class="current-value-badge" id="peopleValDisplay">6 أشخاص</span>
                             </div>
-                            <input type="range" id="numPeople" min="1" max="11" value="6" step="1">
+                            <input type="range" id="numPeople" min="1" max="11" value="6" step="1" aria-label="عدد الأشخاص">
                             <div class="range-labels">
                                 <span>1</span>
                                 <span id="maxLabel">11</span>
@@ -1597,21 +1618,21 @@
                     <div id="individualBookingForm" class="hidden">
                         <div class="form-group">
                             <label for="indTripType"><i class="fa-solid fa-anchor"></i> نوع الرحلة</label>
-                            <select id="indTripType">
+                            <select id="indTripType" aria-label="نوع الرحلة الفردية">
                                 <option value="fishing">رحلة صيد أسماك مشتركة</option>
                                 <option value="bayadah">رحلة بياضة مائية مشتركة</option>
                             </select>
                         </div>
                         <div class="form-group">
                             <label for="indDayType"><i class="fa-solid fa-calendar-day"></i> يوم الرحلة</label>
-                            <select id="indDayType">
+                            <select id="indDayType" aria-label="يوم الرحلة الفردية">
                                 <option value="weekday">وسط الأسبوع (الأحد – الأربعاء)</option>
                                 <option value="weekend">الويكند (الخميس – السبت)</option>
                             </select>
                         </div>
                         <div class="form-group">
                             <label for="indPackageType"><i class="fa-solid fa-gift"></i> باقة الرحلة</label>
-                            <select id="indPackageType">
+                            <select id="indPackageType" aria-label="باقة الرحلة الفردية">
                                 <option value="economic">الباقة الاقتصادية (250 ريال / شخص)</option>
                                 <option value="vip">الباقة المميزة VIP (300 ريال / شخص)</option>
                                 <option value="vvip">الباقة الفاخرة VVIP (320 ريال / شخص)</option>
@@ -1622,7 +1643,7 @@
                                 <label for="indPeople"><i class="fa-solid fa-users"></i> عدد المقاعد المطلوبة</label>
                                 <span class="current-value-badge" id="indPeopleVal">1</span>
                             </div>
-                            <input type="range" id="indPeople" min="1" max="10" value="1" step="1">
+                            <input type="range" id="indPeople" min="1" max="10" value="1" step="1" aria-label="عدد التذاكر الفردية">
                             <div class="range-labels">
                                 <span>1</span>
                                 <span>10</span>
@@ -1940,7 +1961,7 @@
                 <!-- Col 1: Brand Info -->
                 <div class="footer-col brand-col">
                     <a href="index.html" class="footer-brand-logo">
-                        <img src="images/logo.png" alt="أوركا للرحلات البحرية" class="footer-logo-img" decoding="async">
+                        <img src="images/logo.png" alt="شعار أوركا للرحلات البحرية" class="logo-img" decoding="async" width="84" height="84">
                         <div class="brand-text">
                             <span class="brand-title">أوركا <span class="highlight-gold">ORCA</span></span>
                             <span class="brand-tagline">تجربة تشدك للبحر</span>
@@ -2029,6 +2050,6 @@
         <div id="caption"></div>
     </div>
 
-    <script src="app.js"></script>
+    <script src="app.min.js" defer></script>
 </body>
 </html>
