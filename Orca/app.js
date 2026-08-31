@@ -70,15 +70,22 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
-        // Dynamically inject prev/next buttons
+        // Dynamically inject prev/next buttons with accessible names & 48px touch targets
+        const isAr = document.documentElement.lang !== 'en';
         const prevBtn = document.createElement('button');
+        prevBtn.type = 'button';
         prevBtn.className = 'slider-btn prev-btn';
-        prevBtn.innerHTML = '<i class="fa-solid fa-chevron-left"></i>';
+        prevBtn.setAttribute('aria-label', isAr ? 'الصورة السابقة' : 'Previous slide');
+        prevBtn.title = isAr ? 'الصورة السابقة' : 'Previous slide';
+        prevBtn.innerHTML = '<i class="fa-solid fa-chevron-left" aria-hidden="true"></i><span class="sr-only">' + (isAr ? 'السابق' : 'Previous') + '</span>';
         slider.appendChild(prevBtn);
 
         const nextBtn = document.createElement('button');
+        nextBtn.type = 'button';
         nextBtn.className = 'slider-btn next-btn';
-        nextBtn.innerHTML = '<i class="fa-solid fa-chevron-right"></i>';
+        nextBtn.setAttribute('aria-label', isAr ? 'الصورة التالية' : 'Next slide');
+        nextBtn.title = isAr ? 'الصورة التالية' : 'Next slide';
+        nextBtn.innerHTML = '<i class="fa-solid fa-chevron-right" aria-hidden="true"></i><span class="sr-only">' + (isAr ? 'التالي' : 'Next') + '</span>';
         slider.appendChild(nextBtn);
 
         // Dynamically inject image counter

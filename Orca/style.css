@@ -2279,3 +2279,42 @@ input[type="range"]::-webkit-slider-thumb:hover { transform: scale(1.15); }
     color: #1E293B !important;
     font-weight: 600 !important;
 }
+
+
+/* Screen reader only utility */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* 48px Minimum Touch Target Sizing for Lighthouse */
+.slider-btn, .slider-btn.prev-btn, .slider-btn.next-btn {
+    width: 48px !important;
+    height: 48px !important;
+    min-width: 48px !important;
+    min-height: 48px !important;
+    border-radius: 50% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    cursor: pointer !important;
+    z-index: 10 !important;
+}
+.package-slider .slider-btn {
+    position: absolute !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+}
+.package-slider .prev-btn, .package-slider .prev {
+    left: 12px !important;
+}
+.package-slider .next-btn, .package-slider .next {
+    right: 12px !important;
+}
