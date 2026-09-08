@@ -235,7 +235,7 @@ document.addEventListener('DOMContentLoaded', () => {
             { id: 'bayadah-9', name: 'رحلة البحر المفتوح (بياضة/أبو طير) - 9 ساعات (2,500 ريال)', basePriceWeekday: 2500, basePriceWeekend: 2500, duration: 9 },
             { id: 'open-sea-vip-6', name: 'باقة VIP الشاملة بالألعاب المائية والمشويات (5-6 أشخاص - 3,000 ريال)', basePriceWeekday: 3000, basePriceWeekend: 3000, duration: 9 },
             { id: 'open-sea-vip-9', name: 'باقة VIP الشاملة بالألعاب المائية والمشويات (7-9 أشخاص - 3,500 ريال)', basePriceWeekday: 3500, basePriceWeekend: 3500, duration: 9 },
-            { id: 'creek', name: 'جولة النزهة / شرم أبحر (0.5 – 2 ساعة)', duration: 1 }
+            { id: 'creek', name: 'جولة النزهة / شرم أبحر (460 ريال/ساعة)', duration: 1 }
         ],
         'qimat-al-fawz-pentos': [
             { id: 'bayadah', name: 'رحلة جزيرة بياضة (6 ساعات - 1,480 ريال)', basePriceWeekday: 1480, basePriceWeekend: 1480, duration: 6 },
@@ -313,7 +313,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function getCreekPrice(vessel, hours) {
         if (vessel === 'barbaros') {
             if (hours <= 0.5) return 230;
-            return 450 * hours; // 450 per hour
+            return 460 * hours; // 460 per hour
         }
         if (vessel === 'qimat-al-fawz-pentos') {
             if (hours <= 0.5) return 250;
