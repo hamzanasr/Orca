@@ -262,6 +262,12 @@ document.addEventListener('DOMContentLoaded', () => {
             { id: 'abu-tair', name: 'رحلة جزيرة أبو طير (6 ساعات - 3,400 ريال)', basePriceWeekday: 3400, basePriceWeekend: 3400, duration: 6 },
             { id: 'creek', name: 'جولة الخور (0.5 – 2 ساعة)', duration: 1 }
         ],
+        'al-jawhari': [
+            { id: 'bayadah', name: 'رحلة جزيرة بياضة (6 ساعات - 1,750 ريال)', basePriceWeekday: 1750, basePriceWeekend: 1750, duration: 6 },
+            { id: 'abu-tair', name: 'رحلة جزيرة أبو طير (6 ساعات - 2,000 ريال)', basePriceWeekday: 2000, basePriceWeekend: 2000, duration: 6 },
+            { id: 'khor-saud', name: 'رحلة خور سعود (6 ساعات - 1,750 ريال)', basePriceWeekday: 1750, basePriceWeekend: 1750, duration: 6 },
+            { id: 'creek', name: 'جولة الخور / شرم أبحر (460 ريال/ساعة)', duration: 1 }
+        ],
         'al-ameed': [
             { id: 'bayadah', name: 'رحلة بياضة (وسط الأسبوع 12 ساعة / الويكند 10 ساعات)', basePriceWeekday: 1500, basePriceWeekend: 1800, duration: 12 },
             { id: 'abu-tair', name: 'رحلة جزيرة أبو طير (وسط الأسبوع 12 ساعة / الويكند 10 ساعات)', basePriceWeekday: 1800, basePriceWeekend: 2100, duration: 12 },
@@ -313,6 +319,10 @@ document.addEventListener('DOMContentLoaded', () => {
             if (hours <= 0.5) return 250;
             return 450; // 1 hour full is 450
         }
+        if (vessel === 'al-jawhari') {
+            if (hours <= 0.5) return 230;
+            return 460 * hours; // 460 per hour
+        }
         if (vessel === 'baby-yacht-orax-40') {
             if (hours <= 0.5) return 350;
             return 700; // 700 per hour
@@ -356,6 +366,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Capacities constraints (max guests)
     const capacities = {
         'barbaros':               { max: 10, label: '10 ضيوف' },
+        'al-jawhari':             { max: 10, label: '10 ضيوف' },
         'qimat-al-fawz-pentos':   { max: 12, label: '12 ضيفاً' },
         'large-yacht':            { max: 35, label: '35 شخصاً' },
         'baby-yacht-ambassador':  { max: 11, label: '11 ضيفاً' },
@@ -379,7 +390,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (tripId === 'creek' || tripId === 'creek-hourly') {
             return totalCost; // 100% deposit for short Creek trips
         }
-        if (vessel === 'barbaros' || vessel === 'qimat-al-fawz-pentos' || vessel === 'large-yacht') {
+        if (vessel === 'barbaros' || vessel === 'qimat-al-fawz-pentos' || vessel === 'large-yacht' || vessel === 'al-jawhari') {
             return totalCost * 0.50; // 50% deposit
         }
         if (vessel.startsWith('baby-yacht')) {
@@ -501,27 +512,39 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         // Toggle UI panels based on yacht / baby-yacht / southern marina properties
-        if (vessel === 'large-yacht') {
+        const alJawhariOptions = document.getElementById('alJawhariOptions');
+        if (vessel === 'al-jawhari') {
+            yachtHoursGroup.classList.add('hidden');
+            if (babyYachtOptions) babyYachtOptions.classList.add('hidden');
+            if (alJawhariOptions) alJawhariOptions.classList.remove('hidden');
+            southernMarinaGroup.classList.add('hidden');
+            if (packageGroup) packageGroup.classList.add('hidden');
+            if (specialRequestsGroup) specialRequestsGroup.classList.remove('hidden');
+        } else if (vessel === 'large-yacht') {
             yachtHoursGroup.classList.remove('hidden');
             if (babyYachtOptions) babyYachtOptions.classList.add('hidden');
+            if (alJawhariOptions) alJawhariOptions.classList.add('hidden');
             southernMarinaGroup.classList.add('hidden');
             if (packageGroup) packageGroup.classList.add('hidden');
             if (specialRequestsGroup) specialRequestsGroup.classList.remove('hidden');
         } else if (vessel.startsWith('baby-yacht')) {
             yachtHoursGroup.classList.add('hidden');
             toggleBabyYachtBBQ();
+            if (alJawhariOptions) alJawhariOptions.classList.add('hidden');
             southernMarinaGroup.classList.add('hidden');
             if (packageGroup) packageGroup.classList.remove('hidden');
             if (specialRequestsGroup) specialRequestsGroup.classList.add('hidden');
         } else if (vessel === 'boat-51' || southernBoatAliases.includes(vessel)) {
             yachtHoursGroup.classList.add('hidden');
             if (babyYachtOptions) babyYachtOptions.classList.add('hidden');
+            if (alJawhariOptions) alJawhariOptions.classList.add('hidden');
             southernMarinaGroup.classList.remove('hidden');
             if (packageGroup) packageGroup.classList.add('hidden');
             if (specialRequestsGroup) specialRequestsGroup.classList.add('hidden');
         } else {
             yachtHoursGroup.classList.add('hidden');
             if (babyYachtOptions) babyYachtOptions.classList.add('hidden');
+            if (alJawhariOptions) alJawhariOptions.classList.add('hidden');
             southernMarinaGroup.classList.add('hidden');
             if (packageGroup) packageGroup.classList.remove('hidden');
             if (specialRequestsGroup) specialRequestsGroup.classList.add('hidden');
@@ -637,6 +660,15 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             }
         }
+        else if (vessel === 'al-jawhari') {
+            basePrice = (day === 'weekend') ? selectedTrip.basePriceWeekend : selectedTrip.basePriceWeekday;
+            durationText = `${selectedTrip.duration} ساعات`;
+
+            const addBananaBoatSelect = document.getElementById('addBananaBoat');
+            if (addBananaBoatSelect && addBananaBoatSelect.value === 'yes') {
+                guestExtra += 250;
+            }
+        }
         else if (vessel.startsWith('baby-yacht')) {
             basePrice = (day === 'weekend') ? selectedTrip.basePriceWeekend : selectedTrip.basePriceWeekday;
             durationText = `${selectedTrip.duration} ساعات`;
@@ -681,8 +713,8 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
 
-        // 2. VIP & VVIP Package additions (if not large-yacht and not southern boats)
-        if (vessel !== 'large-yacht' && vessel !== 'boat-51' && !southernBoatAliases.includes(vessel)) {
+        // 2. VIP & VVIP Package additions (if not large-yacht, not southern boats, and not al-jawhari)
+        if (vessel !== 'large-yacht' && vessel !== 'boat-51' && vessel !== 'al-jawhari' && !southernBoatAliases.includes(vessel)) {
             if (pkg === 'vip') {
                 packageExtra = 300;
             } else if (pkg === 'vvip') {
@@ -759,6 +791,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Vessel display names dictionary
     const vesselDisplayNames = {
         'barbaros': 'قارب بارباروسا VIP (نادي الأمانة)',
+        'al-jawhari': 'يخت الجوهري',
         'qimat-al-fawz-pentos': 'يخت بينتوس VIP',
         'qimat-al-fawz': 'قارب قمة الفوز (موديل 2025)',
         'baby-yacht-ambassador': 'بيبي يخت امباسادور 36 قدم',
@@ -862,6 +895,15 @@ document.addEventListener('DOMContentLoaded', () => {
                 customDetails += isEn ? `\n🥩 Add BBQ Meal: *Yes (+600 SAR)*` : `\n🥩 إضافة وجبة مشويات: *نعم (+600 ريال)*`;
             }
 
+            // Al-Jawhari water toy option
+            if (vessel === 'al-jawhari') {
+                const addBananaBoatSelect = document.getElementById('addBananaBoat');
+                if (addBananaBoatSelect && addBananaBoatSelect.value === 'yes') {
+                    customDetails += isEn ? `\n🍌 Banana Boat Water Toy: *Yes (+250 SAR)*` : `\n🍌 لعبة سحب الموزة: *نعم (+250 ريال)*`;
+                }
+                packageLine = '';
+            }
+
             if (isEn) {
                 messageText =
                     `Hello ORCA Marine Trips,\n` +
@@ -933,6 +975,12 @@ document.addEventListener('DOMContentLoaded', () => {
     // Add BBQ
     if (addBBQSelect) {
         addBBQSelect.addEventListener('change', calculatePrice);
+    }
+
+    // Add Banana Boat (Al-Jawhari)
+    const addBananaBoatSelect = document.getElementById('addBananaBoat');
+    if (addBananaBoatSelect) {
+        addBananaBoatSelect.addEventListener('change', calculatePrice);
     }
 
     // Individual listeners
