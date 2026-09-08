@@ -2110,36 +2110,35 @@ input[type="range"]::-webkit-slider-thumb:hover { transform: scale(1.15); }
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 6px;
-    padding: 8px 14px;
+    gap: 7px;
+    padding: 8px 15px;
     border-radius: var(--radius-full);
-    background: rgba(255, 255, 255, 0.15);
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    background: var(--navy);
+    border: 1.5px solid var(--navy);
     color: var(--white);
-    font-size: 0.82rem;
+    font-size: 0.84rem;
     font-weight: 700;
     text-decoration: none;
     transition: var(--transition);
-    backdrop-filter: blur(8px);
     cursor: pointer;
     flex-shrink: 0;
+    box-shadow: 0 2px 8px rgba(11, 45, 94, 0.18);
+}
+.btn-lang i {
+    color: var(--gold-light);
+    font-size: 0.95rem;
+    transition: var(--transition);
 }
 .btn-lang:hover {
-    background: var(--gold);
-    color: var(--navy);
-    border-color: var(--gold);
+    background: var(--navy-light);
+    border-color: var(--navy-light);
+    color: var(--white);
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(201, 162, 39, 0.25);
+    box-shadow: 0 4px 14px rgba(11, 45, 94, 0.3);
 }
-.site-header.scrolled .btn-lang {
-    background: var(--off-white);
-    border-color: var(--gray-200);
-    color: var(--navy);
-}
-.site-header.scrolled .btn-lang:hover {
-    background: var(--gold);
-    color: var(--navy);
-    border-color: var(--gold);
+.btn-lang:hover i {
+    color: var(--gold);
+    transform: rotate(15deg);
 }
 
 @media (max-width: 768px) {
