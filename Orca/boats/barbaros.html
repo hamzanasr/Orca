@@ -75,8 +75,12 @@
                         <p class="detail-desc" style="color: var(--navy); font-weight: 700; font-size: 1.1rem; margin-bottom: 8px;">
                             ✨ قارب بونتون فاخر دورين يجمع بين الخصوصية العائلية، الألعاب المائية الحصرية، والسينما المفتوحة على البحر!
                         </p>
-                        <p class="detail-desc">
-                            يُعد قارب بارباروسا VIP من أرقى قوارب البونتون الفاخرة ذات الدورين في نادي الأمانة لليخوت (أبحر الجنوبية). صُمم بجلسات عائلية واسعة ومفتوحة تمنحكم أقصى درجات الراحة والانطلاق مع باقات ألعاب مائية استثنائية، شاشة بروجكتر سينمائية لعرض الأفلام والمباريات، مكينة سلاش للعصائر المثلجة، ويتوفر بالقارب دورة مياه متكاملة ومروش بماء عذب (لا يتوفر صالون مغلق مكيف أو غرفة نوم فندقية).
+                        <p class="detail-desc expandable-block" id="barbaros-desc-block">
+                            يُعد قارب بارباروسا VIP من أرقى قوارب البونتون الفاخرة ذات الدورين في نادي الأمانة لليخوت (أبحر الجنوبية). صُمم بجلسات عائلية واسعة ومفتوحة تمنحكم أقصى درجات الراحة والانطلاق مع باقات ألعاب مائية استثنائية<span class="ellipsis-inline">...</span><span class="more-content-inline">، شاشة بروجكتر سينمائية لعرض الأفلام والمباريات، مكينة سلاش للعصائر المثلجة، ويتوفر بالقارب دورة مياه متكاملة ومروش بماء عذب (لا يتوفر صالون مغلق مكيف أو غرفة نوم فندقية).</span>
+                            <button type="button" class="btn-toggle-more-link" onclick="toggleExpand(this)">
+                                <span class="toggle-text">عرض المزيد</span>
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </button>
                         </p>
                     </div>
 
@@ -97,17 +101,25 @@
                     </div>
 
                     <!-- Specs Card -->
-                    <div class="detail-section-card">
+                    <div class="detail-section-card expandable-block" id="barbaros-specs-card">
                         <h3 class="section-card-title"><i class="fa-solid fa-list-check"></i> مواصفات ومميزات قارب بارباروسا VIP</h3>
                         <ul class="package-specs detail-specs-list">
                             <li><i class="fa-solid fa-user-shield" style="color: var(--gold);"></i> <strong>طاقم الرحلة:</strong> يتواجد كابتن واحد فقط للرحلات العادية (6 و 9 ساعات)، ويتواجد الكابتن مع العاملة في رحلات الـ 9 ساعات VIP لضمان أعلى مستويات الخدمة والخصوصية العائلية.</li>
                             <li><i class="fa-solid fa-film" style="color: var(--ocean);"></i> <strong>سينما وبروجكتر خارجي:</strong> شاشة عرض للأفلام (نتفلكس، ديزني للأطفال) ومباريات كرة القدم بعد الغروب مع فشار ومشروبات مجاناً.</li>
                             <li><i class="fa-solid fa-water-ladder" style="color: var(--ocean);"></i> <strong>باقة ألعاب مائية حصرية:</strong> زحليقة مائية، منصة وسرير تشميس عائم، كرسي معلق، خيمة مائية عائمة، ملعب طائرة مائي، جلسة عائمة دائرية، وألعاب سحب مائية.</li>
-                            <li><i class="fa-solid fa-gift" style="color: var(--gold);"></i> <strong>هدايا مجانية لكل ضيف:</strong> حقيبة بحرية، كفر جوال مقاوم للماء، جزمة بحرية، وسدادات أذن وأنف (المناشف ونظارات الغوص متوفرة للاستعمال خلال الرحلة وليست هدية).</li>
-                            <li><i class="fa-solid fa-blender" style="color: var(--ocean);"></i> <strong>مكينة سلاش وضيافة مجانية:</strong> مكينة سلاش لعمل العصائر المثلجة متوفرة بجميع الرحلات + تقديم القهوة الأمريكية والشاي لرحلات النزهة لأكثر من ساعة ولرحلات العشاء والحفلات.</li>
-                            <li><i class="fa-solid fa-restroom" style="color: var(--ocean);"></i> <strong>التجهيزات والمرافق:</strong> دورة مياه متكاملة ومروش مجهز بماء عذب (لا يتوفر صالون مغلق مكيف أو غرفة نوم).</li>
-                            <li><i class="fa-solid fa-location-dot" style="color: var(--ocean);"></i> <strong>مرسى الانطلاق:</strong> نادي الأمانة لليخوت (أبحر الجنوبية / شرم أبحر، جدة).</li>
                         </ul>
+                        <div class="more-content">
+                            <ul class="package-specs detail-specs-list" style="border-top: none; padding-top: 0; margin-top: 10px;">
+                                <li><i class="fa-solid fa-gift" style="color: var(--gold);"></i> <strong>هدايا مجانية لكل ضيف:</strong> حقيبة بحرية، كفر جوال مقاوم للماء، جزمة بحرية، وسدادات أذن وأنف (المناشف ونظارات الغوص متوفرة للاستعمال خلال الرحلة وليست هدية).</li>
+                                <li><i class="fa-solid fa-blender" style="color: var(--ocean);"></i> <strong>مكينة سلاش وضيافة مجانية:</strong> مكينة سلاش لعمل العصائر المثلجة متوفرة بجميع الرحلات + تقديم القهوة الأمريكية والشاي لرحلات النزهة لأكثر من ساعة ولرحلات العشاء والحفلات.</li>
+                                <li><i class="fa-solid fa-restroom" style="color: var(--ocean);"></i> <strong>التجهيزات والمرافق:</strong> دورة مياه متكاملة ومروش مجهز بماء عذب (لا يتوفر صالون مغلق مكيف أو غرفة نوم).</li>
+                                <li><i class="fa-solid fa-location-dot" style="color: var(--ocean);"></i> <strong>مرسى الانطلاق:</strong> نادي الأمانة لليخوت (أبحر الجنوبية / شرم أبحر، جدة).</li>
+                            </ul>
+                        </div>
+                        <button type="button" class="btn-toggle-more" onclick="toggleExpand(this)">
+                            <span class="toggle-text">عرض المزيد من المواصفات</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </button>
                     </div>
 
                     <!-- Activities Section (قسم الأنشطة والألعاب المائية والترفيه المصورة) -->
@@ -306,20 +318,25 @@
                                 <span style="font-size: 0.78rem; font-weight: 700; background: var(--gold); color: #fff; padding: 4px 12px; border-radius: var(--radius-full);">أبو طير فقط خصوصية أكبر للعوائل</span>
                             </div>
 
-                            <div style="background: rgba(201,162,39,0.08); padding: 12px 14px; border-radius: var(--radius-md); margin-bottom: 14px; border: 1px solid var(--gold); font-size: 0.88rem; color: var(--navy); line-height: 1.8;">
+                            <div class="expandable-block" style="background: rgba(201,162,39,0.08); padding: 12px 14px; border-radius: var(--radius-md); margin-bottom: 14px; border: 1px solid var(--gold); font-size: 0.88rem; color: var(--navy); line-height: 1.8;">
                                 <h5 style="margin: 0 0 6px 0; color: var(--navy); font-size: 0.95rem; font-weight: 800;"><i class="fa-solid fa-clock" style="color: var(--gold);"></i> أوقات وتعليمات رحلات البحر المفتوح:</h5>
                                 <ul style="margin: 0; padding-right: 18px; list-style: square; font-size: 0.84rem;">
                                     <li><strong>الوجهة:</strong> جزيرة بياضة، أو <strong>جزيرة أبو طير (خصوصية أكبر للعوائل)</strong>.</li>
-                                    <li><strong>أوقات رحلات الـ 6 ساعات (رحلتين يومياً):</strong>
-                                        الفترة الأولى: من (5:00 أو 6:00 فجراً) إلى (11:00 صباحاً أو 12:00 ظهراً) | 
-                                        الفترة الثانية: من 1:00 ظهراً إلى 7:00 مساءً.
-                                    </li>
-                                    <li><strong>أوقات رحلة الـ 9 ساعات (رحلة واحدة يومياً):</strong> من (5:00 أو 6:00 صباحاً) إلى (2:00 أو 3:00 ظهراً).</li>
-                                    <li><strong>تأكيد الرحلة:</strong> يتم التأكيد النهائي للرحلة قبل موعدها بـ <strong>24 ساعة</strong> للتأكد من الحالة الجوية.</li>
-                                    <li><strong>تصريح الإبحار:</strong> يتم إرسال صورة من بطاقة الأحوال أو الإقامة لعمل تصريح الإبحار بعد التأكيد النهائي للرحلة.</li>
                                     <li><strong>السعة المسموحة:</strong> حتى 10 أشخاص.</li>
-                                    <li><strong>طاقم الرحلة:</strong> يتواجد <strong>كابتن واحد فقط</strong> لرحلات الـ 6 و 9 ساعات بالباقة العادية، ويتواجد <strong>الكابتن مع العاملة</strong> في رحلات الـ 9 ساعات VIP.</li>
+                                    <li><strong>أوقات رحلات الـ 6 ساعات:</strong> من (5:00 فجراً إلى 11:00 صباحاً) أو من (1:00 ظهراً إلى 7:00 مساءً).</li>
                                 </ul>
+                                <div class="more-content">
+                                    <ul style="margin: 4px 0 0 0; padding-right: 18px; list-style: square; font-size: 0.84rem;">
+                                        <li><strong>أوقات رحلة الـ 9 ساعات:</strong> من (5:00 أو 6:00 صباحاً) إلى (2:00 أو 3:00 ظهراً).</li>
+                                        <li><strong>تأكيد الرحلة:</strong> يتم التأكيد النهائي للرحلة قبل موعدها بـ <strong>24 ساعة</strong> للتأكد من الحالة الجوية.</li>
+                                        <li><strong>تصريح الإبحار:</strong> يتم إرسال صورة من بطاقة الأحوال أو الإقامة لعمل تصريح الإبحار بعد التأكيد النهائي للرحلة.</li>
+                                        <li><strong>طاقم الرحلة:</strong> يتواجد <strong>كابتن واحد فقط</strong> لرحلات الـ 6 و 9 ساعات بالباقة العادية، ويتواجد <strong>الكابتن مع العاملة</strong> في رحلات الـ 9 ساعات VIP.</li>
+                                    </ul>
+                                </div>
+                                <button type="button" class="btn-toggle-more" onclick="toggleExpand(this)">
+                                    <span class="toggle-text">عرض المزيد من التعليمات</span>
+                                    <i class="fa-solid fa-chevron-down"></i>
+                                </button>
                             </div>
 
                             <!-- Package 1 Basic -->
@@ -342,7 +359,7 @@
                             </div>
 
                             <!-- Package 2 VIP All-Inclusive -->
-                            <div class="trip-price-item" style="background: rgba(0,119,182,0.06); padding: 14px 16px; border-radius: var(--radius-md); border: 1.5px solid var(--ocean-light); box-shadow: var(--shadow-sm);">
+                            <div class="trip-price-item expandable-block" style="background: rgba(0,119,182,0.06); padding: 14px 16px; border-radius: var(--radius-md); border: 1.5px solid var(--ocean-light); box-shadow: var(--shadow-sm);">
                                 <div class="trip-info">
                                     <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 4px;">
                                         <span class="trip-name" style="font-weight: 800; font-size: 1.02rem; color: var(--ocean-dark);">الباقة الثانية (VIP الشاملة الألعاب والمشويات)</span>
@@ -350,16 +367,24 @@
                                     </div>
                                     <ul style="font-size: 0.84rem; color: var(--navy); line-height: 1.7; margin: 4px 0 0 0; padding-right: 18px; list-style: square;">
                                         <li><strong>طاقم العمل:</strong> كابتن مع العاملة في رحلات الـ 9 ساعات VIP لضمان أعلى مستويات الخدمة والخصوصية.</li>
-                                        <li><strong>المشروبات:</strong> ماء بارد + عصيرات ومشروبات غازية + <strong>مكينة سلاش لعمل العصائر المثلجة</strong> في جميع الرحلات.</li>
-                                        <li><strong>هدايا مجانية تذكارية لكل ضيف:</strong> حقيبة بحرية + كفر للجوال ضد الماء + جزمة بحرية + سدادات أذن وأنف.</li>
-                                        <li><strong>أغراض للاستعمال خلال الرحلة:</strong> منشفة كبيرة + نظارات غوص.</li>
+                                        <li><strong>المشروبات:</strong> ماء بارد + عصيرات ومشروبات غازية + <strong>مكينة سلاش لعمل العصائر المثلجة</strong>.</li>
                                         <li><strong>وجبة برجر مشوي:</strong> لكل شخص عدد 2 برجر طازج مشوي في القارب مع المشروبات.</li>
-                                        <li><strong>ألعاب مائية شاملة:</strong> منصة تشميس + زحليقة مائية + كرسي معلق.</li>
                                         <li><strong>اختيار مميز بين:</strong> (خيمة مائية عائمة) أو (ملعب طائرة مائي) أو (الترامبولين مع الجلسة المائية).</li>
-                                        <li><strong>ألعاب سحب مجانية:</strong> تتوفر مجاناً عند عدم وجود أمواج عالية.</li>
                                     </ul>
+                                    <div class="more-content">
+                                        <ul style="font-size: 0.84rem; color: var(--navy); line-height: 1.7; margin: 2px 0 0 0; padding-right: 18px; list-style: square;">
+                                            <li><strong>ألعاب مائية شاملة:</strong> منصة تشميس + زحليقة مائية + كرسي معلق.</li>
+                                            <li><strong>هدايا مجانية تذكارية لكل ضيف:</strong> حقيبة بحرية + كفر للجوال ضد الماء + جزمة بحرية + سدادات أذن وأنف.</li>
+                                            <li><strong>أغراض للاستعمال خلال الرحلة:</strong> منشفة كبيرة + نظارات غوص.</li>
+                                            <li><strong>ألعاب سحب مجانية:</strong> تتوفر مجاناً عند عدم وجود أمواج عالية.</li>
+                                        </ul>
+                                    </div>
+                                    <button type="button" class="btn-toggle-more" onclick="toggleExpand(this)">
+                                        <span class="toggle-text">عرض تفاصيل الباقة</span>
+                                        <i class="fa-solid fa-chevron-down"></i>
+                                    </button>
                                 </div>
-                                <div class="trip-price" style="text-align: left; white-space: nowrap; min-width: 160px;">
+                                <div class="trip-price" style="text-align: left; white-space: nowrap; min-width: 160px; align-self: flex-start;">
                                     <div style="font-size: 0.95rem; color: var(--navy); font-weight: 700;">مجموعة 5 – 6 أشخاص: <strong style="color: var(--ocean-dark);">3,000 ريال</strong></div>
                                     <div style="font-size: 1.05rem; color: var(--gold); font-weight: 800; margin-top: 4px;">مجموعة 7 – 9 أشخاص: <strong style="color: var(--gold);">3,500 ريال</strong></div>
                                 </div>
@@ -376,14 +401,22 @@
                             </div>
 
                             <!-- Picnic Timings & Policies Box -->
-                            <div style="background: rgba(0,119,182,0.06); padding: 14px 16px; border-radius: var(--radius-md); margin-bottom: 16px; border: 1px solid var(--ocean-light); font-size: 0.86rem; color: var(--navy); line-height: 1.8;">
+                            <div class="expandable-block" style="background: rgba(0,119,182,0.06); padding: 14px 16px; border-radius: var(--radius-md); margin-bottom: 16px; border: 1px solid var(--ocean-light); font-size: 0.86rem; color: var(--navy); line-height: 1.8;">
                                 <h5 style="margin: 0 0 8px 0; color: var(--navy); font-size: 0.95rem; font-weight: 800;"><i class="fa-solid fa-calendar-check" style="color: var(--ocean);"></i> أوقات وسياسات رحلات النزهة:</h5>
                                 <ul style="margin: 0; padding-right: 18px; list-style: square;">
                                     <li><strong>ساعات العمل:</strong> من 4:00 عصراً إلى 12:00 ليلاً (أيام: السبت، الإثنين، الثلاثاء، الأربعاء، الخميس، والجمعة).</li>
-                                    <li><strong>الحضور والمواعيد:</strong> يُشترط حضور العميل قبل موعد الرحلة بـ <strong>15 دقيقة (ربع ساعة)</strong>، وأي تأخير في الحضور يُحسب من الوقت المخصص للرحلة.</li>
-                                    <li><strong>الحجز المسبق وأقل مدة:</strong> يتطلب حجز رحلات العشاء والحفلات الحجز قبل موعد الرحلة بـ <strong>4 ساعات على الأقل</strong>، وأقل مدة لرحلات العشاء والحفلات هي <strong>ساعة كاملة</strong> (لا يُقبل حجز نصف ساعة للعشاء أو الحفلات؛ حجز النصف ساعة متاح فقط للنزهة العادية).</li>
-                                    <li><strong>الضيافة المجانية:</strong> تُقدم <strong>القهوة الأمريكية والشاي مجاناً</strong> خلال رحلات النزهة التي تزيد عن ساعة واحدة، وكذلك في جميع رحلات العشاء والحفلات.</li>
+                                    <li><strong>الحضور والمواعيد:</strong> يُشترط حضور العميل قبل موعد الرحلة بـ <strong>15 دقيقة (ربع ساعة)</strong>.</li>
                                 </ul>
+                                <div class="more-content">
+                                    <ul style="margin: 4px 0 0 0; padding-right: 18px; list-style: square;">
+                                        <li><strong>الحجز المسبق وأقل مدة:</strong> يتطلب حجز رحلات العشاء والحفلات الحجز قبل موعد الرحلة بـ <strong>4 ساعات على الأقل</strong>، وأقل مدة لرحلات العشاء والحفلات هي <strong>ساعة كاملة</strong> (لا يُقبل حجز نصف ساعة للعشاء أو الحفلات؛ حجز النصف ساعة متاح فقط للنزهة العادية).</li>
+                                        <li><strong>الضيافة المجانية:</strong> تُقدم <strong>القهوة الأمريكية والشاي مجاناً</strong> خلال رحلات النزهة التي تزيد عن ساعة واحدة، وكذلك في جميع رحلات العشاء والحفلات.</li>
+                                    </ul>
+                                </div>
+                                <button type="button" class="btn-toggle-more" onclick="toggleExpand(this)">
+                                    <span class="toggle-text">عرض المزيد من السياسات</span>
+                                    <i class="fa-solid fa-chevron-down"></i>
+                                </button>
                             </div>
 
                             <!-- Basic Picnic Rate -->

@@ -97,17 +97,25 @@
                     </div>
 
                     <!-- Specs Card -->
-                    <div class="detail-section-card">
+                    <div class="detail-section-card expandable-block" id="barbaros-specs-card">
                         <h3 class="section-card-title"><i class="fa-solid fa-list-check"></i> Specifications & Amenities</h3>
                         <ul class="package-specs detail-specs-list">
                             <li><i class="fa-solid fa-user-shield" style="color: var(--gold);"></i> <strong>Cruise Crew:</strong> 1 professional captain for standard cruises (6 & 9 hours), with a dedicated captain and female assistant on 9-hour VIP cruises for superior privacy.</li>
                             <li><i class="fa-solid fa-film" style="color: var(--ocean);"></i> <strong>Outdoor Cinema Projector:</strong> Night cinema showing Netflix, Disney movies, and football matches after sunset with complimentary popcorn and soft drinks.</li>
                             <li><i class="fa-solid fa-water-ladder" style="color: var(--ocean);"></i> <strong>Exclusive Water Toys:</strong> Built-in water slide, floating sunbed platform, crane hammock chair, floating tent, water volleyball, circular water lounge, and towable tube.</li>
-                            <li><i class="fa-solid fa-gift" style="color: var(--gold);"></i> <strong>Free Guest Souvenirs:</strong> Beach tote bag, waterproof phone pouch, water shoes, ear/nose plugs (towels and snorkeling goggles are provided for on-board use).</li>
-                            <li><i class="fa-solid fa-blender" style="color: var(--ocean);"></i> <strong>Slush Machine & Hospitality:</strong> On-board slush machine for icy fruit drinks on all cruises + complimentary American coffee & tea for picnic cruises over 1 hour and dinner cruises.</li>
-                            <li><i class="fa-solid fa-restroom" style="color: var(--ocean);"></i> <strong>Facilities:</strong> Marine restroom and freshwater shower (no enclosed air-conditioned indoor salon or bedroom).</li>
-                            <li><i class="fa-solid fa-location-dot" style="color: var(--ocean);"></i> <strong>Departure Marina:</strong> Al-Amanah Yacht Club (South Obhur / Sharm Obhur, Jeddah).</li>
                         </ul>
+                        <div class="more-content">
+                            <ul class="package-specs detail-specs-list" style="border-top: none; padding-top: 0; margin-top: 10px;">
+                                <li><i class="fa-solid fa-gift" style="color: var(--gold);"></i> <strong>Free Guest Souvenirs:</strong> Beach tote bag, waterproof phone pouch, water shoes, ear/nose plugs (towels and snorkeling goggles are provided for on-board use).</li>
+                                <li><i class="fa-solid fa-blender" style="color: var(--ocean);"></i> <strong>Slush Machine & Hospitality:</strong> On-board slush machine for icy fruit drinks on all cruises + complimentary American coffee & tea for picnic cruises over 1 hour and dinner cruises.</li>
+                                <li><i class="fa-solid fa-restroom" style="color: var(--ocean);"></i> <strong>Facilities:</strong> Marine restroom and freshwater shower (no enclosed air-conditioned indoor salon or bedroom).</li>
+                                <li><i class="fa-solid fa-location-dot" style="color: var(--ocean);"></i> <strong>Departure Marina:</strong> Al-Amanah Yacht Club (South Obhur / Sharm Obhur, Jeddah).</li>
+                            </ul>
+                        </div>
+                        <button type="button" class="btn-toggle-more" onclick="toggleExpand(this)">
+                            <span class="toggle-text">Show More Specs</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </button>
                     </div>
 
                     <!-- Activities Section -->

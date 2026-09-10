@@ -1189,3 +1189,25 @@ function showToast(message) {
     }, 3500);
 }
 
+// --------------------------------------------------------------------------
+// Expandable Details / Read More Handler
+// --------------------------------------------------------------------------
+function toggleExpand(btn) {
+    const block = btn.closest('.expandable-block');
+    if (!block) return;
+    
+    const isExpanded = block.classList.toggle('expanded');
+    const isAr = document.documentElement.lang !== 'en';
+    
+    const textSpan = btn.querySelector('.toggle-text');
+    if (textSpan) {
+        if (isExpanded) {
+            textSpan.textContent = isAr ? 'عرض أقل' : 'Show Less';
+        } else {
+            textSpan.textContent = isAr ? 'عرض المزيد' : 'Show More';
+        }
+    }
+}
+window.toggleExpand = toggleExpand;
+
+
