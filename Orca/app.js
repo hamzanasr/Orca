@@ -233,8 +233,8 @@ document.addEventListener('DOMContentLoaded', () => {
         'barbaros': [
             { id: 'bayadah-6', name: 'رحلة البحر المفتوح (بياضة/أبو طير) - 6 ساعات (2,000 ريال)', basePriceWeekday: 2000, basePriceWeekend: 2000, duration: 6 },
             { id: 'bayadah-9', name: 'رحلة البحر المفتوح (بياضة/أبو طير) - 9 ساعات (2,500 ريال)', basePriceWeekday: 2500, basePriceWeekend: 2500, duration: 9 },
-            { id: 'open-sea-vip-6', name: 'باقة VIP الشاملة بالألعاب المائية والمشويات (5-6 أشخاص - 3,000 ريال)', basePriceWeekday: 3000, basePriceWeekend: 3000, duration: 9 },
-            { id: 'open-sea-vip-9', name: 'باقة VIP الشاملة بالألعاب المائية والمشويات (7-9 أشخاص - 3,500 ريال)', basePriceWeekday: 3500, basePriceWeekend: 3500, duration: 9 },
+            { id: 'open-sea-vip-6', name: 'باقة VIP الشاملة بالألعاب المائية والمشويات (5-6 أشخاص - 3,000 ريال)', basePriceWeekday: 3000, basePriceWeekend: 3000, duration: 6 },
+            { id: 'open-sea-vip-9', name: 'باقة VIP الشاملة بالألعاب المائية والمشويات (7-9 أشخاص - 3,500 ريال)', basePriceWeekday: 3500, basePriceWeekend: 3500, duration: 6 },
             { id: 'creek', name: 'جولة النزهة / شرم أبحر (460 ريال/ساعة)', duration: 1 }
         ],
         'qimat-al-fawz-pentos': [
@@ -312,8 +312,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Creek price lookup based on vessel type and duration
     function getCreekPrice(vessel, hours) {
         if (vessel === 'barbaros') {
-            if (hours <= 0.5) return 230;
-            return 460 * hours; // 460 per hour
+            return 460 * Math.max(1, hours); // 460 per hour, minimum 1 full hour
         }
         if (vessel === 'qimat-al-fawz-pentos') {
             if (hours <= 0.5) return 250;
@@ -510,6 +509,19 @@ document.addEventListener('DOMContentLoaded', () => {
             option.textContent = trip.name;
             tripTypeSelect.appendChild(option);
         });
+
+        // Ensure Barbaros creek minimum is 1 hour
+        if (creekHoursInput) {
+            if (vessel === 'barbaros') {
+                creekHoursInput.min = '1';
+                if (parseFloat(creekHoursInput.value) < 1) {
+                    creekHoursInput.value = '1';
+                    if (creekHoursVal) creekHoursVal.textContent = '1';
+                }
+            } else {
+                creekHoursInput.min = '0.5';
+            }
+        }
 
         // Toggle UI panels based on yacht / baby-yacht / southern marina properties
         const alJawhariOptions = document.getElementById('alJawhariOptions');
