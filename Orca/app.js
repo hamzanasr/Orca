@@ -230,6 +230,17 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Trip options mapping to vessel types
     const tripOptions = {
+        'nardo': [
+            { id: 'bayadah-6', name: 'رحلة جزيرة بياضة (6 ساعات - تبدأ من 3,180 ريال)', duration: 6 },
+            { id: 'bayadah-9', name: 'رحلة جزيرة بياضة ممددة (9 ساعات - تبدأ من 3,880 ريال)', duration: 9 },
+            { id: 'fishing-add', name: 'رحلة صيد ومغامرات (ساعة صيد إضافية +300 ريال على بياضة)', duration: 7 },
+            { id: 'creek', name: 'جولة الخور / شرم أبحر (الساعة الأولى 680 / الإضافية 580 ريال)', duration: 1 }
+        ],
+        'tam': [
+            { id: 'bayadah-abu-tair-6', name: 'رحلة بياضة أو أبو طير (6 ساعات - تبدأ من 1,580 ريال)', duration: 6 },
+            { id: 'bayadah-abu-tair-9', name: 'رحلة بياضة أو أبو طير ممددة (9 ساعات - تبدأ من 2,080 ريال)', duration: 9 },
+            { id: 'creek', name: 'جولة الخور / شرم أبحر (الساعة الأولى 460 / الإضافية 430 ريال)', duration: 1 }
+        ],
         'barbaros': [
             { id: 'bayadah-6', name: 'رحلة البحر المفتوح (بياضة/أبو طير) - 6 ساعات (2,000 ريال)', basePriceWeekday: 2000, basePriceWeekend: 2000, duration: 6 },
             { id: 'bayadah-9', name: 'رحلة البحر المفتوح (بياضة/أبو طير) - 9 ساعات (2,500 ريال)', basePriceWeekday: 2500, basePriceWeekend: 2500, duration: 9 },
@@ -311,6 +322,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Creek price lookup based on vessel type and duration
     function getCreekPrice(vessel, hours) {
+        if (vessel === 'nardo') {
+            if (hours <= 0.5) return 340;
+            return 680 + Math.max(0, hours - 1) * 580;
+        }
+        if (vessel === 'tam') {
+            if (hours <= 0.5) return 230;
+            return 460 + Math.max(0, hours - 1) * 430;
+        }
         if (vessel === 'barbaros') {
             return 460 * Math.max(1, hours); // 460 per hour, minimum 1 full hour
         }
@@ -364,6 +383,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Capacities constraints (max guests)
     const capacities = {
+        'nardo':                  { max: 14, label: '14 ضيفاً' },
+        'tam':                    { max: 11, label: '11 ضيفاً' },
         'barbaros':               { max: 10, label: '10 ضيوف' },
         'al-jawhari':             { max: 10, label: '10 ضيوف' },
         'qimat-al-fawz-pentos':   { max: 12, label: '12 ضيفاً' },
@@ -389,7 +410,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (tripId === 'creek' || tripId === 'creek-hourly') {
             return totalCost; // 100% deposit for short Creek trips
         }
-        if (vessel === 'barbaros' || vessel === 'qimat-al-fawz-pentos' || vessel === 'large-yacht' || vessel === 'al-jawhari') {
+        if (vessel === 'barbaros' || vessel === 'qimat-al-fawz-pentos' || vessel === 'large-yacht' || vessel === 'al-jawhari' || vessel === 'nardo' || vessel === 'tam') {
             return totalCost * 0.50; // 50% deposit
         }
         if (vessel.startsWith('baby-yacht')) {
@@ -525,7 +546,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Toggle UI panels based on yacht / baby-yacht / southern marina properties
         const alJawhariOptions = document.getElementById('alJawhariOptions');
-        if (vessel === 'al-jawhari') {
+        if (vessel === 'nardo' || vessel === 'tam') {
+            yachtHoursGroup.classList.add('hidden');
+            if (babyYachtOptions) babyYachtOptions.classList.add('hidden');
+            if (alJawhariOptions) alJawhariOptions.classList.add('hidden');
+            southernMarinaGroup.classList.add('hidden');
+            if (packageGroup) packageGroup.classList.add('hidden');
+            if (specialRequestsGroup) specialRequestsGroup.classList.remove('hidden');
+        } else if (vessel === 'al-jawhari') {
             yachtHoursGroup.classList.add('hidden');
             if (babyYachtOptions) babyYachtOptions.classList.add('hidden');
             if (alJawhariOptions) alJawhariOptions.classList.remove('hidden');
@@ -652,7 +680,11 @@ document.addEventListener('DOMContentLoaded', () => {
             // Calculate base price dynamically using getCreekPrice helper
             basePrice = getCreekPrice(vessel, creekHrs);
 
-            if (vessel.startsWith('baby-yacht')) {
+            if (vessel === 'nardo' || vessel === 'tam') {
+                // Flat creek tour rate covering full capacity
+                guestExtra = 0;
+            }
+            else if (vessel.startsWith('baby-yacht')) {
                 // Extra guests above 6 -> 100 SAR per person
                 if (guests > 6) {
                     guestExtra += (guests - 6) * 100;
@@ -670,6 +702,41 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (guests > 7) {
                     guestExtra += (guests - 7) * 100;
                 }
+            }
+        }
+        else if (vessel === 'nardo') {
+            let tierPrice = 3180;
+            if (guests >= 7 && guests <= 9) tierPrice = 3680;
+            else if (guests > 9) tierPrice = 3980;
+
+            if (tripId === 'bayadah-6') {
+                basePrice = tierPrice;
+                durationText = '6 ساعات';
+            } else if (tripId === 'bayadah-9') {
+                basePrice = tierPrice + 700;
+                durationText = '9 ساعات';
+            } else if (tripId === 'fishing-add') {
+                basePrice = tierPrice + 300;
+                durationText = '7 ساعات';
+            } else {
+                basePrice = tierPrice;
+                durationText = `${selectedTrip.duration} ساعات`;
+            }
+        }
+        else if (vessel === 'tam') {
+            let tierPrice = 1580;
+            if (guests >= 7 && guests <= 9) tierPrice = 1880;
+            else if (guests > 9) tierPrice = 1980;
+
+            if (tripId === 'bayadah-abu-tair-6') {
+                basePrice = tierPrice;
+                durationText = '6 ساعات';
+            } else if (tripId === 'bayadah-abu-tair-9') {
+                basePrice = tierPrice + 500;
+                durationText = '9 ساعات';
+            } else {
+                basePrice = tierPrice;
+                durationText = `${selectedTrip.duration} ساعات`;
             }
         }
         else if (vessel === 'al-jawhari') {
@@ -725,8 +792,8 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
 
-        // 2. VIP & VVIP Package additions (if not large-yacht, not southern boats, and not al-jawhari)
-        if (vessel !== 'large-yacht' && vessel !== 'boat-51' && vessel !== 'al-jawhari' && !southernBoatAliases.includes(vessel)) {
+        // 2. VIP & VVIP Package additions (if not large-yacht, not southern boats, not al-jawhari, not nardo, and not tam)
+        if (vessel !== 'large-yacht' && vessel !== 'boat-51' && vessel !== 'al-jawhari' && vessel !== 'nardo' && vessel !== 'tam' && !southernBoatAliases.includes(vessel)) {
             if (pkg === 'vip') {
                 packageExtra = 300;
             } else if (pkg === 'vvip') {
@@ -802,6 +869,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Vessel display names dictionary
     const vesselDisplayNames = {
+        'nardo': 'يخت ناردو VIP الفاخر (14 شخص)',
+        'tam': 'يخت تام الفاخر (11 شخص)',
         'barbaros': 'قارب بارباروسا VIP (نادي الأمانة)',
         'al-jawhari': 'يخت الجوهري',
         'qimat-al-fawz-pentos': 'يخت بينتوس VIP',
@@ -914,6 +983,17 @@ document.addEventListener('DOMContentLoaded', () => {
                     customDetails += isEn ? `\n🍌 Banana Boat Water Toy: *Yes (+250 SAR)*` : `\n🍌 لعبة سحب الموزة: *نعم (+250 ريال)*`;
                 }
                 packageLine = '';
+            }
+
+            // Nardo and Tam custom details
+            if (vessel === 'nardo' || vessel === 'tam') {
+                packageLine = '';
+                if (vessel === 'tam') {
+                    customDetails += isEn ? `\n❄️ A/C: *Guaranteed with dedicated generator*` : `\n❄️ التكييف: *مضمون مع تشغيل المولد الخاص*`;
+                }
+                if (specialRequestsInput && specialRequestsInput.value.trim() !== '') {
+                    customDetails += isEn ? `\n✨ Special Requests: *${specialRequestsInput.value.trim()}*` : `\n✨ طلبات خاصة: *${specialRequestsInput.value.trim()}*`;
+                }
             }
 
             if (isEn) {
