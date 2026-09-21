@@ -16,11 +16,62 @@
 
     <!-- Google Fonts & FontAwesome -->
     <!-- Local FontAwesome (font-display: swap, non-blocking) -->
+    <noscript></noscript>
+    
+    <!-- Preload Primary Font -->
+    <link rel="preload" href="../font/thmanyahsans-Regular.woff2" as="font" type="font/woff2" crossorigin>
+
+    <!-- Asynchronous Non-blocking Boat Page Stylesheet -->
+    <link rel="preload" href="../boat-page.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="../boat-page.min.css"></noscript>
+
+    <!-- FontAwesome Non-blocking -->
     <link rel="preload" href="../font/fontawesome.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="../font/fontawesome.min.css"></noscript>
-    <link rel="stylesheet" href="../style.min.css">
-    <link rel="preload" href="../font/thmanyahsans-Regular.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="../font/thmanyahserifdisplay-Bold.woff2" as="font" type="font/woff2" crossorigin>
+
+    <!-- Inlined Critical CSS for Instant 0ms Paint -->
+    <style>
+        :root{--navy:#0B2545;--navy-light:#133E68;--navy-dark:#061527;--ocean:#0077B6;--ocean-light:#0096C7;--sand:#F4E8C1;--gold:#D4AF37;--gold-dark:#B89628;--white:#FFFFFF;--off-white:#F8F9FA;--gray-100:#E9ECEF;--gray-200:#DEE2E6;--gray-400:#CED4DA;--gray-600:#6C757D;--font-heading:'Thmanyah Serif Display',serif;--font-body:'Thmanyah Sans',sans-serif;--shadow-sm:0 2px 8px rgba(11,37,69,0.06);--shadow-md:0 4px 16px rgba(11,37,69,0.1);--radius-md:12px;--radius-lg:16px;--radius-full:9999px;--header-h:74px}
+        *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+        body{font-family:var(--font-body);color:var(--navy);background-color:var(--off-white);line-height:1.6;overflow-x:hidden}
+        a{text-decoration:none;color:inherit}
+        ul{list-style:none}
+        img{max-width:100%;height:auto;display:block}
+        button{cursor:pointer;font-family:inherit;border:none;outline:none;background:none}
+        .container{width:100%;max-width:1240px;margin-inline:auto;padding-inline:20px}
+        .main-header{position:fixed;top:0;left:0;width:100%;z-index:1000;background:rgba(255,255,255,.95);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:2px solid var(--gray-100);height:var(--header-h);box-shadow:0 2px 12px rgba(11,45,94,.06)}
+        .header-container{display:flex;align-items:center;justify-content:space-between;height:100%}
+        .logo{display:flex;align-items:center;gap:12px}
+        .logo-img{height:48px;width:48px;border-radius:50%;object-fit:cover}
+        .logo-text{display:flex;flex-direction:column}
+        .brand-name{font-family:var(--font-heading);font-size:1.4rem;font-weight:700;color:var(--navy);line-height:1.1}
+        .brand-name .highlight{color:var(--ocean)}
+        .brand-sub{font-size:.72rem;color:var(--gray-600);font-weight:600}
+        .main-nav ul{display:flex;align-items:center;gap:28px}
+        .main-nav .nav-link{display:flex;align-items:center;gap:6px;font-size:.92rem;font-weight:600;color:var(--navy)}
+        .header-cta{display:flex;align-items:center;gap:12px}
+        .btn-lang{display:inline-flex;align-items:center;gap:6px;background:rgba(11,37,69,.05);border:1px solid var(--gray-200);color:var(--navy);font-weight:700;font-size:.85rem;padding:7px 14px;border-radius:var(--radius-full)}
+        .btn-whatsapp{background:#25D366;color:var(--white);font-weight:700;padding:9px 18px;border-radius:var(--radius-full);display:inline-flex;align-items:center;gap:8px;font-size:.88rem}
+        .detail-main-wrapper{padding-top:calc(var(--header-h) + 32px);padding-bottom:70px}
+        .breadcrumbs{display:flex;align-items:center;gap:10px;font-size:.88rem;color:var(--gray-600);margin-bottom:24px;flex-wrap:wrap}
+        .breadcrumbs a{color:var(--navy);font-weight:600}
+        .breadcrumbs .divider{font-size:.7rem;color:var(--gray-400)}
+        .breadcrumbs .active{color:var(--gold-dark);font-weight:700}
+        .boat-detail-grid{display:grid;grid-template-columns:1fr 360px;gap:32px;align-items:start}
+        .boat-content-col{display:flex;flex-direction:column;gap:24px}
+        .boat-title-box{background:var(--white);padding:24px 28px;border-radius:var(--radius-lg);box-shadow:var(--shadow-sm);border:1px solid var(--gray-100)}
+        .badge-wrap{margin-bottom:10px}
+        .package-badge{display:inline-flex;align-items:center;gap:6px;padding:5px 14px;border-radius:var(--radius-full);font-size:.8rem;font-weight:700}
+        .badge-gold{background:linear-gradient(135deg,#B89628 0%,#D4AF37 50%,#E6CA65 100%);color:#061527}
+        .detail-title{font-family:var(--font-heading);font-size:2.1rem;font-weight:800;color:var(--navy);margin-bottom:10px;line-height:1.25}
+        .detail-desc{font-size:1.05rem;color:var(--gray-600);line-height:1.7}
+        .package-slider{position:relative;width:100%;overflow:hidden;background:#061527;border-radius:var(--radius-lg);box-shadow:var(--shadow-md);aspect-ratio:16/10}
+        .slides-container{width:100%;height:100%;position:relative}
+        .slide{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;visibility:hidden;transition:opacity .35s ease,visibility .35s ease;z-index:1}
+        .slide.active{opacity:1;visibility:visible;z-index:2}
+        @media(max-width:992px){.boat-detail-grid{grid-template-columns:1fr}.detail-slider{aspect-ratio:4/3!important}}
+        @media(max-width:768px){.main-nav{display:none}.detail-title{font-size:1.6rem}}
+    </style>
 </head>
 <body class="boat-detail-page">
     <!-- Navigation Overlay -->
@@ -83,7 +134,7 @@
                     <!-- Slider -->
                     <div class="package-slider detail-slider" data-slider-id="detail-tam">
                         <div class="slides-container">
-                            <img class="slide active" src="../images/تام/1.webp" alt="يخت تام الأبيض في مرسى أبحر بجدة" decoding="async" width="1200" height="1600">
+                            <img class="slide active" src="../images/تام/1.webp" alt="يخت تام الأبيض في مرسى أبحر بجدة" decoding="async" width="1200" height="1600" fetchpriority="high">
                         </div>
                     </div>
 
@@ -314,6 +365,6 @@
     </footer>
 
     <!-- JS script -->
-    <script src="../app.min.js" defer></script>
+    <script src="../boat-detail.min.js" defer></script>
 </body>
 </html>
