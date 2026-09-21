@@ -2400,3 +2400,691 @@ input[type="range"]::-webkit-slider-thumb:hover { transform: scale(1.15); }
         transform: translateY(0);
     }
 }
+
+
+/* ══════════════════════════════════════════════════════════════════════════
+   MINIMALIST BOAT CARDS & FLEET SECTION RESTRUCTURE
+   ══════════════════════════════════════════════════════════════════════════ */
+.minimalist-boat-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background: var(--white);
+    border-radius: var(--radius-xl);
+    overflow: hidden;
+    border: 1px solid var(--gray-200);
+    box-shadow: 0 4px 20px rgba(11, 45, 94, 0.06);
+    transition: transform 0.28s ease, box-shadow 0.28s ease, border-color 0.28s ease;
+}
+.minimalist-boat-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 36px rgba(11, 45, 94, 0.12);
+    border-color: rgba(201, 162, 39, 0.4);
+}
+.card-compact-body {
+    padding: 20px 22px 22px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    gap: 14px;
+}
+.card-header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 12px;
+}
+.card-header-row .package-name {
+    font-size: 1.22rem;
+    font-weight: 800;
+    color: var(--navy);
+    line-height: 1.35;
+    margin: 0;
+}
+.card-cat-tag {
+    font-size: 0.76rem;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: var(--radius-full);
+    background: rgba(0, 119, 182, 0.08);
+    color: var(--ocean-dark);
+    border: 1px solid rgba(0, 119, 182, 0.2);
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+/* 3 Quick Spec Badges */
+.boat-quick-specs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: center;
+}
+.quick-spec-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: var(--off-white);
+    color: var(--gray-800);
+    border: 1px solid var(--gray-200);
+    border-radius: var(--radius-md);
+    padding: 6px 11px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    transition: background 0.2s ease;
+}
+.quick-spec-badge i {
+    color: var(--ocean);
+    font-size: 0.82rem;
+}
+.quick-spec-badge.highlight-feature {
+    background: rgba(201, 162, 39, 0.1);
+    color: var(--navy);
+    border-color: rgba(201, 162, 39, 0.35);
+    font-weight: 700;
+}
+.quick-spec-badge.highlight-feature i {
+    color: var(--gold);
+}
+
+/* Prominent Price Container */
+.card-price-container {
+    background: linear-gradient(135deg, rgba(248, 249, 250, 0.95), rgba(241, 245, 249, 0.95));
+    border: 1px solid var(--gray-200);
+    border-radius: var(--radius-lg);
+    padding: 12px 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+}
+.price-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+.price-meta .price-label {
+    font-size: 0.74rem;
+    color: var(--gray-500);
+    font-weight: 600;
+}
+.price-meta .price-subtext {
+    font-size: 0.72rem;
+    color: var(--ocean-dark);
+    font-weight: 600;
+}
+.price-value-box {
+    display: flex;
+    align-items: baseline;
+    gap: 4px;
+    direction: rtl;
+}
+.price-value-box .price-from {
+    font-size: 0.76rem;
+    color: var(--gray-500);
+    font-weight: 600;
+}
+.price-value-box .price-amount {
+    font-size: 1.45rem;
+    font-weight: 900;
+    color: var(--navy);
+    font-family: inherit;
+    line-height: 1;
+}
+.price-value-box .price-currency {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--ocean-dark);
+}
+
+/* Action Buttons */
+.card-action-buttons {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr auto;
+    gap: 8px;
+    align-items: center;
+    padding-top: 4px;
+}
+.card-action-buttons .btn-full-details {
+    background: var(--navy);
+    color: var(--white);
+    padding: 10px 14px;
+    border-radius: var(--radius-md);
+    font-size: 0.88rem;
+    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.22s ease;
+    box-shadow: 0 4px 12px rgba(11, 45, 94, 0.15);
+}
+.card-action-buttons .btn-full-details:hover {
+    background: var(--ocean-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(0, 119, 182, 0.25);
+}
+.card-action-buttons .btn-card-book {
+    padding: 10px 12px;
+    border-radius: var(--radius-md);
+    font-size: 0.86rem;
+    font-weight: 700;
+    border: 1.5px solid var(--navy);
+    color: var(--navy);
+    background: transparent;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    cursor: pointer;
+    transition: all 0.22s ease;
+}
+.card-action-buttons .btn-card-book:hover {
+    background: var(--navy);
+    color: var(--white);
+    transform: translateY(-2px);
+}
+.card-action-buttons .btn-share-icon {
+    width: 42px;
+    height: 42px;
+    border-radius: var(--radius-md);
+    background: var(--off-white);
+    border: 1px solid var(--gray-200);
+    color: var(--navy);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: all 0.22s ease;
+}
+.card-action-buttons .btn-share-icon:hover {
+    background: var(--gold);
+    color: var(--navy);
+    border-color: var(--gold);
+    transform: translateY(-2px);
+}
+
+/* ══════════════════════════════════════════════════════════════════════════
+   BOAT DETAILS MODAL & MOBILE BOTTOM SHEET
+   ══════════════════════════════════════════════════════════════════════════ */
+.boat-modal-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(11, 25, 44, 0.75);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.3s ease;
+}
+.boat-modal-backdrop.active {
+    opacity: 1;
+    visibility: visible;
+}
+.boat-modal-sheet {
+    background: var(--white);
+    width: 100%;
+    max-width: 920px;
+    max-height: 92vh;
+    border-radius: var(--radius-2xl, 24px);
+    box-shadow: 0 24px 64px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    transform: scale(0.94) translateY(20px);
+    transition: transform 0.32s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.boat-modal-backdrop.active .boat-modal-sheet {
+    transform: scale(1) translateY(0);
+}
+.modal-drag-indicator {
+    display: none;
+    width: 44px;
+    height: 5px;
+    background: var(--gray-300);
+    border-radius: 99px;
+    margin: 10px auto 4px;
+    flex-shrink: 0;
+}
+
+/* Modal Header */
+.modal-sheet-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 20px 28px 16px;
+    border-bottom: 1px solid var(--gray-200);
+    background: var(--white);
+    z-index: 5;
+}
+.modal-header-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+.modal-badges-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: center;
+}
+.modal-tag-badge {
+    background: rgba(201, 162, 39, 0.15);
+    color: var(--navy);
+    font-size: 0.78rem;
+    font-weight: 700;
+    padding: 3px 12px;
+    border-radius: var(--radius-full);
+    border: 1px solid var(--gold);
+}
+.modal-spec-chip {
+    background: var(--off-white);
+    color: var(--navy);
+    border: 1px solid var(--gray-200);
+    border-radius: var(--radius-full);
+    padding: 3px 10px;
+    font-size: 0.78rem;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+.modal-spec-chip i {
+    color: var(--ocean);
+}
+.modal-boat-title {
+    font-size: 1.45rem;
+    font-weight: 800;
+    color: var(--navy);
+    margin: 0;
+}
+.modal-close-button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid var(--gray-200);
+    background: var(--off-white);
+    color: var(--navy);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.15rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    flex-shrink: 0;
+}
+.modal-close-button:hover {
+    background: #e63946;
+    color: var(--white);
+    border-color: #e63946;
+    transform: rotate(90deg);
+}
+
+/* Modal Body */
+.modal-sheet-body {
+    padding: 24px 28px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    overscroll-behavior: contain;
+}
+.modal-sheet-body::-webkit-scrollbar {
+    width: 6px;
+}
+.modal-sheet-body::-webkit-scrollbar-thumb {
+    background: var(--gray-300);
+    border-radius: 4px;
+}
+
+/* Modal Slider & Gallery */
+.modal-gallery-box {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.modal-main-slider {
+    aspect-ratio: 16 / 9;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    background: #0b1d3a;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+}
+.modal-thumbnails-strip {
+    display: flex;
+    gap: 8px;
+    overflow-x: auto;
+    padding-bottom: 6px;
+    scrollbar-width: thin;
+}
+.modal-thumbnails-strip::-webkit-scrollbar {
+    height: 4px;
+}
+.modal-thumbnails-strip::-webkit-scrollbar-thumb {
+    background: var(--gray-300);
+    border-radius: 4px;
+}
+.modal-thumb {
+    width: 72px;
+    height: 48px;
+    border-radius: 6px;
+    overflow: hidden;
+    flex-shrink: 0;
+    cursor: pointer;
+    border: 2px solid transparent;
+    opacity: 0.65;
+    transition: all 0.2s ease;
+}
+.modal-thumb:hover {
+    opacity: 0.9;
+}
+.modal-thumb.active {
+    opacity: 1;
+    border-color: var(--gold);
+    transform: scale(1.04);
+}
+.modal-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Modal Info Cards */
+.modal-info-card {
+    background: var(--off-white);
+    border: 1px solid var(--gray-200);
+    border-radius: var(--radius-lg);
+    padding: 20px 22px;
+}
+.modal-card-heading {
+    font-size: 1.05rem;
+    font-weight: 800;
+    color: var(--navy);
+    margin: 0 0 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border-bottom: 1.5px solid var(--gray-200);
+    padding-bottom: 10px;
+}
+.modal-desc-paragraphs p {
+    font-size: 0.92rem;
+    color: var(--gray-700);
+    line-height: 1.7;
+    margin: 0 0 8px;
+}
+.modal-desc-paragraphs p:last-child {
+    margin-bottom: 0;
+}
+
+/* Specs List in Modal */
+.modal-specs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 12px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.modal-specs-grid li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 0.88rem;
+    color: var(--navy);
+    background: var(--white);
+    padding: 10px 14px;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--gray-200);
+}
+.modal-specs-grid li i {
+    color: var(--ocean);
+    margin-top: 3px;
+    font-size: 1rem;
+    flex-shrink: 0;
+}
+
+/* PDF Actions */
+.modal-pdf-hint {
+    font-size: 0.86rem;
+    color: var(--gray-600);
+    margin: 0 0 12px;
+}
+.modal-pdf-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.modal-pdf-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #B91C1C;
+    color: var(--white);
+    padding: 8px 16px;
+    border-radius: var(--radius-md);
+    font-size: 0.84rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+.modal-pdf-btn:hover {
+    background: #991B1B;
+    transform: translateY(-2px);
+    color: var(--white);
+}
+
+/* Deposit Unified Card in Modal */
+.deposit-box-inner {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+.deposit-box-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: rgba(46, 196, 182, 0.15);
+    color: #0f9f90;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    flex-shrink: 0;
+}
+.deposit-box-content h4 {
+    margin: 0 0 4px;
+    color: var(--navy);
+    font-size: 0.96rem;
+    font-weight: 800;
+}
+.deposit-box-content p {
+    margin: 0;
+    font-size: 0.86rem;
+    color: var(--gray-700);
+    line-height: 1.6;
+}
+
+/* Sticky Bottom Actions */
+.modal-sticky-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 28px;
+    border-top: 1px solid var(--gray-200);
+    background: var(--white);
+    box-shadow: 0 -8px 20px rgba(0, 0, 0, 0.04);
+    z-index: 5;
+}
+.modal-sticky-actions .modal-btn-calc {
+    flex: 1.2;
+    padding: 12px 18px;
+    font-size: 0.94rem;
+    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+.modal-sticky-actions .modal-btn-whatsapp {
+    flex: 1.2;
+    padding: 12px 18px;
+    font-size: 0.94rem;
+    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+.modal-sticky-actions .modal-btn-share {
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+}
+
+/* ══════════════════════════════════════════════════════════════════════════
+   MOBILE BOTTOM SHEET RESPONSIVENESS (< 768px)
+   ══════════════════════════════════════════════════════════════════════════ */
+@media (max-width: 768px) {
+    .boat-modal-backdrop {
+        padding: 0;
+        align-items: flex-end;
+    }
+    .boat-modal-sheet {
+        max-width: 100%;
+        max-height: 94vh;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        transform: translateY(100%);
+    }
+    .boat-modal-backdrop.active .boat-modal-sheet {
+        transform: translateY(0);
+    }
+    .modal-drag-indicator {
+        display: block;
+    }
+    .modal-sheet-header {
+        padding: 12px 18px 12px;
+    }
+    .modal-boat-title {
+        font-size: 1.22rem;
+    }
+    .modal-sheet-body {
+        padding: 16px 18px;
+        gap: 18px;
+    }
+    .modal-info-card {
+        padding: 16px;
+    }
+    .modal-sticky-actions {
+        padding: 12px 16px;
+        gap: 8px;
+    }
+    .modal-sticky-actions .modal-btn-calc,
+    .modal-sticky-actions .modal-btn-whatsapp {
+        font-size: 0.84rem;
+        padding: 10px 10px;
+        gap: 5px;
+    }
+    .modal-sticky-actions .modal-btn-share {
+        width: 42px;
+        height: 42px;
+    }
+    .card-action-buttons {
+        grid-template-columns: 1fr 1fr;
+    }
+    .card-action-buttons .btn-share-icon {
+        display: none;
+    }
+    .price-value-box .price-amount {
+        font-size: 1.25rem;
+    }
+}
+
+
+/* ══════════════════════════════════════════════════════════════════════════
+   CARD EXPANDED PRICING BLOCK
+   ══════════════════════════════════════════════════════════════════════════ */
+.card-pricing-block {
+    background: linear-gradient(135deg, rgba(248, 249, 250, 0.98), rgba(241, 245, 249, 0.95));
+    border: 1px solid var(--gray-200);
+    border-radius: var(--radius-lg);
+    padding: 12px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: auto;
+    transition: var(--transition);
+}
+.card-pricing-block:hover {
+    background: #fff;
+    border-color: rgba(0, 119, 182, 0.3);
+    box-shadow: 0 4px 12px rgba(11, 45, 94, 0.05);
+}
+.pricing-block-title {
+    font-size: 0.78rem;
+    font-weight: 800;
+    color: var(--navy);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    border-bottom: 1px dashed var(--gray-300);
+    padding-bottom: 6px;
+}
+.pricing-block-title i {
+    color: var(--gold);
+}
+.pricing-mini-list {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+.pricing-mini-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.83rem;
+    gap: 10px;
+}
+.trip-mini-label {
+    color: var(--gray-700);
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    white-space: nowrap;
+}
+.trip-mini-label i {
+    color: var(--ocean);
+    font-size: 0.8rem;
+    width: 14px;
+    text-align: center;
+}
+.trip-mini-val {
+    color: var(--navy);
+    font-weight: 800;
+    direction: ltr;
+    text-align: left;
+    white-space: nowrap;
+    background: rgba(0, 119, 182, 0.06);
+    padding: 2px 8px;
+    border-radius: 4px;
+    border: 1px solid rgba(0, 119, 182, 0.12);
+}
