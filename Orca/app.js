@@ -119,6 +119,27 @@ document.addEventListener('DOMContentLoaded', () => {
         nextBtn.addEventListener('click', nextSlide);
         prevBtn.addEventListener('click', prevSlide);
         
+        // Touch Swipe Support for iOS, Android and iPads
+        let touchStartX = 0;
+        let touchStartY = 0;
+        slider.addEventListener('touchstart', (e) => {
+            if (e.touches && e.touches.length > 0) {
+                touchStartX = e.touches[0].clientX;
+                touchStartY = e.touches[0].clientY;
+            }
+        }, { passive: true });
+
+        slider.addEventListener('touchend', (e) => {
+            if (e.changedTouches && e.changedTouches.length > 0) {
+                const diffX = e.changedTouches[0].clientX - touchStartX;
+                const diffY = e.changedTouches[0].clientY - touchStartY;
+                if (Math.abs(diffX) > 35 && Math.abs(diffX) > Math.abs(diffY)) {
+                    if (diffX < 0) nextSlide();
+                    else prevSlide();
+                }
+            }
+        }, { passive: true });
+
         // Initial setup
         updateSlides();
     });
@@ -4411,6 +4432,29 @@ function openBoatDetailsModal(boatKey) {
                 counter.id = 'modalSliderCounter';
                 counter.textContent = '1 / ' + modalSlideCount;
                 modalSlider.appendChild(counter);
+
+                // Touch Swipe Support on Modal Slider
+                let modalTouchStartX = 0;
+                let modalTouchStartY = 0;
+                modalSlider.ontouchstart = (e) => {
+                    if (e.touches && e.touches.length > 0) {
+                        modalTouchStartX = e.touches[0].clientX;
+                        modalTouchStartY = e.touches[0].clientY;
+                    }
+                };
+                modalSlider.ontouchend = (e) => {
+                    if (e.changedTouches && e.changedTouches.length > 0) {
+                        const diffX = e.changedTouches[0].clientX - modalTouchStartX;
+                        const diffY = e.changedTouches[0].clientY - modalTouchStartY;
+                        if (Math.abs(diffX) > 35 && Math.abs(diffX) > Math.abs(diffY)) {
+                            if (diffX < 0) {
+                                switchModalSlide((currentModalSlideIdx + 1) % modalSlideCount);
+                            } else {
+                                switchModalSlide((currentModalSlideIdx - 1 + modalSlideCount) % modalSlideCount);
+                            }
+                        }
+                    }
+                };
             }
         }
     }
@@ -4514,6 +4558,44 @@ function openBoatDetailsModal(boatKey) {
     if (shareBtn) {
         shareBtn.title = isEn ? 'Share Boat Link' : 'مشاركة رابط القارب';
         shareBtn.setAttribute('aria-label', isEn ? 'Share Boat Link' : 'مشاركة رابط القارب');
+    }
+
+    // Update Direct Boat Page Link
+    const boatPageMap = {
+        'barbaros': 'barbaros.html',
+        'pentos': 'Beneteau.html',
+        'qimat-al-fawz': 'qimat-al-fawz.html',
+        'nardo': 'nardo.html',
+        'tam': 'tam.html',
+        'baby-ambassador': 'baby-ambassador.html',
+        'baby-orax-40': 'baby-orax-40.html',
+        'baby-al-jawhari': 'al-jawhari.html',
+        'al-ameed': 'al-ameed.html',
+        'norseen-large': 'norseen-large.html',
+        'large-yacht': 'large-yacht.html',
+        'seven-1': 'seven-1.html',
+        'seven-2': 'seven-2.html',
+        'seven-3': 'seven-3.html',
+        'shaheen': 'shaheen.html',
+        'bahr': 'bahr.html',
+        'al-noor-al-azraq': 'al-noor-al-azraq.html',
+        'jaguar': 'jaguar.html',
+        'ghazal-obhur': 'ghazal-obhur.html',
+        'bin-shuraiq': 'bin-shuraiq.html',
+        'shawq-al-layl': 'shawq-al-layl.html',
+        'individual': 'individual-trips.html'
+    };
+    const targetFile = boatPageMap[boatKey] || (boatKey + '.html');
+    const targetUrl = 'boats/' + targetFile;
+    const directPageBtn = document.getElementById('modalDirectBoatPageBtn');
+    if (directPageBtn) {
+        directPageBtn.href = targetUrl;
+        directPageBtn.title = isEn ? 'Open dedicated boat page' : 'الانتقال إلى صفحة القارب المستقلة';
+    }
+    const stickyPageBtn = document.getElementById('modalStickyBoatPageBtn');
+    if (stickyPageBtn) {
+        stickyPageBtn.href = targetUrl;
+        stickyPageBtn.title = isEn ? 'Open dedicated boat page' : 'الانتقال إلى صفحة القارب المستقلة';
     }
 
     // Show modal & disable background scroll

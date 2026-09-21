@@ -3088,3 +3088,250 @@ input[type="range"]::-webkit-slider-thumb:hover { transform: scale(1.15); }
     border-radius: 4px;
     border: 1px solid rgba(0, 119, 182, 0.12);
 }
+
+
+/* ══════════════════════════════════════════════════════════════════════════
+   COMPREHENSIVE RESPONSIVENESS & DEDICATED BOAT PAGES STYLES
+   ══════════════════════════════════════════════════════════════════════════ */
+.package-name-link {
+    text-decoration: none;
+    color: inherit;
+    display: inline-block;
+    transition: color 0.2s ease;
+}
+.package-name-link:hover .package-name {
+    color: var(--ocean) !important;
+}
+
+.card-action-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr auto;
+    gap: 6px;
+    align-items: center;
+    padding-top: 4px;
+}
+.card-action-buttons .btn-boat-page {
+    padding: 10px 8px;
+    border-radius: var(--radius-md);
+    font-size: 0.82rem;
+    font-weight: 700;
+    border: 1.5px solid var(--ocean);
+    color: var(--ocean-dark);
+    background: rgba(0, 119, 182, 0.05);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    text-decoration: none;
+    transition: all 0.22s ease;
+    white-space: nowrap;
+}
+.card-action-buttons .btn-boat-page:hover {
+    background: var(--ocean);
+    color: var(--white) !important;
+    border-color: var(--ocean);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 119, 182, 0.2);
+}
+
+.modal-direct-page-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    background: var(--navy);
+    color: var(--white) !important;
+    border: 1.5px solid var(--gold);
+    padding: 6px 14px;
+    border-radius: var(--radius-full);
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 8px rgba(11, 45, 94, 0.15);
+}
+.modal-direct-page-link:hover {
+    background: var(--navy-light);
+    border-color: var(--gold-light);
+    transform: translateY(-1px);
+    color: var(--white) !important;
+}
+.modal-sticky-actions .modal-btn-page {
+    flex: 1;
+    padding: 12px 12px;
+    font-size: 0.86rem;
+    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    text-decoration: none;
+    border: 1.5px solid var(--ocean);
+    color: var(--ocean-dark);
+    background: rgba(0, 119, 182, 0.06);
+    border-radius: var(--radius-md);
+    transition: all 0.2s ease;
+    white-space: nowrap;
+}
+.modal-sticky-actions .modal-btn-page:hover {
+    background: var(--ocean);
+    color: var(--white) !important;
+}
+
+/* iPads, Tablets & Small Laptops (≤ 1024px) */
+@media (max-width: 1024px) {
+    .boat-detail-grid {
+        grid-template-columns: 1fr !important;
+        gap: 24px !important;
+        width: 100% !important;
+    }
+    .boat-sidebar-col {
+        position: static !important;
+        width: 100% !important;
+        top: 0 !important;
+    }
+    .sticky-sidebar-box {
+        position: static !important;
+        width: 100% !important;
+        padding: 22px !important;
+    }
+    .detail-slider {
+        height: auto !important;
+        aspect-ratio: 16 / 10 !important;
+        max-height: 480px !important;
+    }
+    .sidebar-guarantees-list {
+        display: grid !important;
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 16px !important;
+    }
+}
+
+/* Tablets Portrait & Phones (≤ 768px) */
+@media (max-width: 768px) {
+    .boat-detail-page .detail-main-wrapper {
+        padding-top: calc(var(--header-h) + 16px) !important;
+        padding-bottom: 40px !important;
+    }
+    .detail-slider {
+        height: auto !important;
+        aspect-ratio: 16 / 10 !important;
+        max-height: 380px !important;
+        border-radius: var(--radius-md) !important;
+    }
+    .boat-title-box {
+        padding: 18px 20px !important;
+    }
+    .detail-title {
+        font-size: 1.55rem !important;
+        line-height: 1.3 !important;
+    }
+    .detail-desc {
+        font-size: 0.92rem !important;
+        line-height: 1.65 !important;
+    }
+    .detail-section-card {
+        padding: 20px 18px !important;
+        border-radius: var(--radius-md) !important;
+    }
+    .sidebar-guarantees-list {
+        grid-template-columns: 1fr !important;
+        gap: 12px !important;
+    }
+    .action-buttons-group .btn {
+        min-height: 46px !important;
+        font-size: 0.92rem !important;
+    }
+    .card-action-buttons {
+        grid-template-columns: 1fr 1fr 1fr !important;
+        gap: 6px !important;
+    }
+    .card-action-buttons .btn-share-icon {
+        display: none !important;
+    }
+    .card-action-buttons .btn {
+        font-size: 0.78rem !important;
+        padding: 9px 5px !important;
+        min-height: 40px !important;
+    }
+    .modal-sticky-actions .modal-btn-page {
+        font-size: 0.78rem !important;
+        padding: 10px 8px !important;
+    }
+}
+
+/* Mobile Screens (≤ 640px) */
+@media (max-width: 640px) {
+    .trip-price-item {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 8px !important;
+        padding: 12px 0 !important;
+    }
+    .trip-info {
+        max-width: 100% !important;
+        width: 100% !important;
+    }
+    .trip-price {
+        width: 100% !important;
+        text-align: right !important;
+        align-items: flex-start !important;
+        min-width: 0 !important;
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: wrap !important;
+        gap: 6px 12px !important;
+    }
+    .trip-options-box {
+        padding: 14px 14px !important;
+    }
+    .package-specs li, .detail-specs-list li {
+        font-size: 0.88rem !important;
+    }
+}
+
+/* Small Phones: iPhone SE, Galaxy S (≤ 480px) */
+@media (max-width: 480px) {
+    .boat-detail-page .detail-main-wrapper {
+        padding-top: calc(var(--header-h) + 12px) !important;
+        padding-bottom: 30px !important;
+    }
+    .breadcrumbs {
+        font-size: 0.76rem !important;
+        gap: 4px 6px !important;
+        margin-bottom: 12px !important;
+    }
+    .boat-title-box {
+        padding: 14px 14px !important;
+    }
+    .detail-title {
+        font-size: 1.35rem !important;
+    }
+    .detail-slider {
+        height: auto !important;
+        aspect-ratio: 4 / 3 !important;
+        max-height: 280px !important;
+    }
+    .detail-section-card {
+        padding: 14px 12px !important;
+    }
+    .section-card-title {
+        font-size: 1.05rem !important;
+        margin-bottom: 12px !important;
+        padding-bottom: 8px !important;
+    }
+    .sticky-sidebar-box {
+        padding: 16px 14px !important;
+    }
+    .action-buttons-group .btn {
+        font-size: 0.86rem !important;
+        padding: 11px 12px !important;
+    }
+    .card-action-buttons {
+        grid-template-columns: 1fr 1fr !important;
+        gap: 6px !important;
+    }
+    .card-action-buttons .btn-card-book {
+        grid-column: span 2 !important;
+    }
+}
