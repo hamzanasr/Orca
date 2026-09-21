@@ -32,7 +32,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Local FontAwesome Icons (font-display: swap, non-render-blocking) -->
+    <link rel="preload" href="../font/fontawesome.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="../font/fontawesome.min.css"></noscript>
     <link rel="stylesheet" href="../style.min.css?v=4">
 </head>
 <body>
@@ -136,40 +138,7 @@
         </div>
     </section>
 
-    <!-- ══ Value Proposition Section ══ -->
-    <section id="value-prop" class="value-section">
-        <div class="container">
-            <div class="section-title">
-                <span class="sub-title">Why Choose Orca?</span>
-                <h2>Unbeatable Yacht & Boat Rental Rates in Jeddah</h2>
-                <div class="title-underline"></div>
-                <p class="section-desc">We provide premium marine experiences at fair, transparent rates with zero hidden charges. Whether you want a luxury yacht or a specialized fishing boat — you'll find the best value and highest safety standards in the Red Sea.</p>
-            </div>
-
-            <div class="value-grid">
-                <div class="value-card">
-                    <div class="value-icon"><i class="fa-solid fa-hand-holding-dollar"></i></div>
-                    <h3>Unmatched Competitive Rates</h3>
-                    <p>We continuously monitor the market to deliver the best value for every SAR. No surprises, no hidden fees — transparent pricing from the start.</p>
-                </div>
-                <div class="value-card">
-                    <div class="value-icon"><i class="fa-solid fa-shield-heart"></i></div>
-                    <h3>Uncompromising Quality & Safety</h3>
-                    <p>All vessels are fully equipped with safety gear and captained by licensed, highly experienced maritime professionals.</p>
-                </div>
-                <div class="value-card">
-                    <div class="value-icon"><i class="fa-solid fa-star"></i></div>
-                    <h3>Unforgettable Moments</h3>
-                    <p>From the crystal-clear waters of Bayadah to exciting deep-sea fishing trips — every journey creates memories that last a lifetime.</p>
-                </div>
-                <div class="value-card">
-                    <div class="value-icon"><i class="fa-solid fa-clock-rotate-left"></i></div>
-                    <h3>Flexible Cruise Durations</h3>
-                    <p>Select your ideal voyage from 1 to 12 hours. Sunrise, afternoon, or sunset cruises on weekdays or weekends.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+    
 
     <!-- ══ Deposit Policy Banner ══ -->
     <div class="deposit-banner">
@@ -2254,6 +2223,41 @@
                 <div class="gallery-item" data-category="individual">
                     <img src="../images/boat52.webp" alt="Shared Individual Trips - Atmosphere" loading="lazy" decoding="async" width="600" height="375">
                     <div class="gallery-overlay"><h3>Shared Seat Trips</h3><p>Great marine atmosphere & cost saving</p></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ══ Value Proposition Section ══ -->
+    <section id="value-prop" class="value-section" style="background: var(--white); border-top: 1px solid var(--gray-100);">
+        <div class="container">
+            <div class="section-title">
+                <span class="sub-title">Why Choose Orca?</span>
+                <h2>Unbeatable Yacht & Boat Rental Rates in Jeddah</h2>
+                <div class="title-underline"></div>
+                <p class="section-desc">We provide premium marine experiences at fair, transparent rates with zero hidden charges. Whether you want a luxury yacht or a specialized fishing boat — you'll find the best value and highest safety standards in the Red Sea.</p>
+            </div>
+
+            <div class="value-grid">
+                <div class="value-card">
+                    <div class="value-icon"><i class="fa-solid fa-hand-holding-dollar"></i></div>
+                    <h3>Unmatched Competitive Rates</h3>
+                    <p>We continuously monitor the market to deliver the best value for every SAR. No surprises, no hidden fees — transparent pricing from the start.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon"><i class="fa-solid fa-shield-heart"></i></div>
+                    <h3>Uncompromising Quality & Safety</h3>
+                    <p>All vessels are fully equipped with safety gear and captained by licensed, highly experienced maritime professionals.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon"><i class="fa-solid fa-star"></i></div>
+                    <h3>Unforgettable Moments</h3>
+                    <p>From the crystal-clear waters of Bayadah to exciting deep-sea fishing trips — every journey creates memories that last a lifetime.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon"><i class="fa-solid fa-clock-rotate-left"></i></div>
+                    <h3>Flexible Cruise Durations</h3>
+                    <p>Select your ideal voyage from 1 to 12 hours. Sunrise, afternoon, or sunset cruises on weekdays or weekends.</p>
                 </div>
             </div>
         </div>

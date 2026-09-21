@@ -33,26 +33,58 @@ document.addEventListener('DOMContentLoaded', () => {
         navLinks.forEach(link => link.addEventListener('click', closeNav));
     }
 
-    // Scroll active link behavior
+    // ── High-Performance Scroll-Spy (Nav & Categories) without Forced Reflow ──
     const sections = document.querySelectorAll('section');
     const scrollLinks = document.querySelectorAll('.nav-link');
+    let isScrollTicking = false;
+    let activeNavId = '';
+    let activeCatId = '';
+
+    const updateActiveScrollState = () => {
+        const scrollY = window.pageYOffset || document.documentElement.scrollTop;
+
+        // Update main navigation active state
+        let currentNav = '';
+        sections.forEach(sec => {
+            if (scrollY >= sec.offsetTop - 100) {
+                currentNav = sec.getAttribute('id');
+            }
+        });
+        if (currentNav && currentNav !== activeNavId) {
+            activeNavId = currentNav;
+            scrollLinks.forEach(link => {
+                const href = link.getAttribute('href');
+                link.classList.toggle('active', href === `#${currentNav}` || href.substring(1) === currentNav);
+            });
+        }
+
+        // Update category tabs active state if present
+        const categorySections = document.querySelectorAll('.category-section');
+        const tabBtns = document.querySelectorAll('.packages-tabs .tab-btn');
+        if (categorySections.length > 0 && tabBtns.length > 0) {
+            let currentCat = '';
+            categorySections.forEach(sec => {
+                if (scrollY >= sec.offsetTop - 120) {
+                    currentCat = sec.getAttribute('id');
+                }
+            });
+            if (currentCat && currentCat !== activeCatId) {
+                activeCatId = currentCat;
+                tabBtns.forEach(btn => {
+                    btn.classList.toggle('active', btn.getAttribute('href') === `#${currentCat}`);
+                });
+            }
+        }
+
+        isScrollTicking = false;
+    };
 
     window.addEventListener('scroll', () => {
-        let current = '';
-        sections.forEach(section => {
-            const sectionTop = section.offsetTop - 100;
-            if (pageYOffset >= sectionTop) {
-                current = section.getAttribute('id');
-            }
-        });
-
-        scrollLinks.forEach(link => {
-            link.classList.remove('active');
-            if (link.getAttribute('href').substring(1) === current) {
-                link.classList.add('active');
-            }
-        });
-    });
+        if (!isScrollTicking) {
+            window.requestAnimationFrame(updateActiveScrollState);
+            isScrollTicking = true;
+        }
+    }, { passive: true });
 
     // --------------------------------------------------------------------------
     // 1.5. Card Image Slider Controls
@@ -226,24 +258,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    window.addEventListener('scroll', () => {
-        let currentSecId = '';
-        categorySections.forEach(sec => {
-            const secTop = sec.offsetTop - 120;
-            if (window.pageYOffset >= secTop) {
-                currentSecId = sec.getAttribute('id');
-            }
-        });
-
-        if (currentSecId) {
-            tabBtns.forEach(btn => {
-                btn.classList.remove('active');
-                if (btn.getAttribute('href') === `#${currentSecId}`) {
-                    btn.classList.add('active');
-                }
-            });
-        }
-    });
 
     // --------------------------------------------------------------------------
     // 3. Dynamic Pricing Calculator & WhatsApp Booking Link Generator
