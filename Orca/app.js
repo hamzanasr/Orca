@@ -303,11 +303,11 @@ document.addEventListener('DOMContentLoaded', () => {
             { id: 'creek', name: 'جولة الخور / شرم أبحر (الساعة الأولى 460 / الإضافية 430 ريال)', duration: 1 }
         ],
         'barbaros': [
-            { id: 'bayadah-6', name: 'رحلة البحر المفتوح (بياضة/أبو طير) - 6 ساعات (2,000 ريال)', basePriceWeekday: 2000, basePriceWeekend: 2000, duration: 6 },
-            { id: 'bayadah-9', name: 'رحلة البحر المفتوح (بياضة/أبو طير) - 9 ساعات (2,500 ريال)', basePriceWeekday: 2500, basePriceWeekend: 2500, duration: 9 },
-            { id: 'open-sea-vip-6', name: 'باقة VIP الشاملة بالألعاب المائية والمشويات (5-6 أشخاص - 3,000 ريال)', basePriceWeekday: 3000, basePriceWeekend: 3000, duration: 6 },
-            { id: 'open-sea-vip-9', name: 'باقة VIP الشاملة بالألعاب المائية والمشويات (7-9 أشخاص - 3,500 ريال)', basePriceWeekday: 3500, basePriceWeekend: 3500, duration: 6 },
-            { id: 'creek', name: 'جولة النزهة / شرم أبحر (460 ريال/ساعة)', duration: 1 }
+            { id: 'bayadah-pkg1', name: 'رحلة بياضة — الباقة الأولى (6 ساعات - تبدأ من 2,000 ريال)', duration: 6 },
+            { id: 'abu-tair-pkg1', name: 'رحلة جزيرة أبو طير — الباقة الأولى (+300 ريال خصوصية - تبدأ من 2,300 ريال)', duration: 6 },
+            { id: 'bayadah-pkg2', name: 'رحلة بياضة — الباقة الثانية VIP المشويات والألعاب (6 ساعات - تبدأ من 3,000 ريال)', duration: 6 },
+            { id: 'abu-tair-pkg2', name: 'رحلة جزيرة أبو طير — الباقة الثانية VIP المشويات والألعاب (+300 ريال خصوصية - تبدأ من 3,300 ريال)', duration: 6 },
+            { id: 'creek', name: 'جولة النزهة في الخور / شرم أبحر (460 ريال/ساعة)', duration: 1 }
         ],
         'qimat-al-fawz-pentos': [
             { id: 'bayadah', name: 'رحلة جزيرة بياضة (6 ساعات - 1,480 ريال)', basePriceWeekday: 1480, basePriceWeekend: 1480, duration: 6 },
@@ -446,7 +446,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const capacities = {
         'nardo':                  { max: 14, label: '14 ضيفاً' },
         'tam':                    { max: 11, label: '11 ضيفاً' },
-        'barbaros':               { max: 10, label: '10 ضيوف' },
+        'barbaros':               { max: 11, label: '11 ضيفاً' },
         'al-jawhari':             { max: 10, label: '10 ضيوف' },
         'qimat-al-fawz-pentos':   { max: 12, label: '12 ضيفاً' },
         'large-yacht':            { max: 35, label: '35 شخصاً' },
@@ -607,7 +607,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Toggle UI panels based on yacht / baby-yacht / southern marina properties
         const alJawhariOptions = document.getElementById('alJawhariOptions');
-        if (vessel === 'nardo' || vessel === 'tam') {
+        if (vessel === 'nardo' || vessel === 'tam' || vessel === 'barbaros') {
             yachtHoursGroup.classList.add('hidden');
             if (babyYachtOptions) babyYachtOptions.classList.add('hidden');
             if (alJawhariOptions) alJawhariOptions.classList.add('hidden');
@@ -741,7 +741,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // Calculate base price dynamically using getCreekPrice helper
             basePrice = getCreekPrice(vessel, creekHrs);
 
-            if (vessel === 'nardo' || vessel === 'tam') {
+            if (vessel === 'nardo' || vessel === 'tam' || vessel === 'barbaros') {
                 // Flat creek tour rate covering full capacity
                 guestExtra = 0;
             }
@@ -764,6 +764,33 @@ document.addEventListener('DOMContentLoaded', () => {
                     guestExtra += (guests - 7) * 100;
                 }
             }
+        }
+        else if (vessel === 'barbaros') {
+            if (tripId === 'bayadah-pkg1') {
+                if (guests <= 6) basePrice = 2000;
+                else if (guests <= 9) basePrice = 2500;
+                else basePrice = 3000;
+                durationText = '6 ساعات (صباحية 6-12 أو مسائية 1-7)';
+            } else if (tripId === 'abu-tair-pkg1') {
+                if (guests <= 6) basePrice = 2300;
+                else if (guests <= 9) basePrice = 2800;
+                else basePrice = 3300;
+                durationText = '6 ساعات (صباحية 6-12 أو مسائية 1-7)';
+            } else if (tripId === 'bayadah-pkg2') {
+                if (guests <= 6) basePrice = 3000;
+                else if (guests <= 8) basePrice = 3500;
+                else basePrice = 4000;
+                durationText = '6 ساعات VIP (ألعاب ومشويات)';
+            } else if (tripId === 'abu-tair-pkg2') {
+                if (guests <= 6) basePrice = 3300;
+                else if (guests <= 8) basePrice = 3800;
+                else basePrice = 4300;
+                durationText = '6 ساعات VIP (ألعاب ومشويات)';
+            } else {
+                basePrice = 2000;
+                durationText = '6 ساعات';
+            }
+            guestExtra = 0;
         }
         else if (vessel === 'nardo') {
             let tierPrice = 3180;
@@ -853,8 +880,8 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
 
-        // 2. VIP & VVIP Package additions (if not large-yacht, not southern boats, not al-jawhari, not nardo, and not tam)
-        if (vessel !== 'large-yacht' && vessel !== 'boat-51' && vessel !== 'al-jawhari' && vessel !== 'nardo' && vessel !== 'tam' && !southernBoatAliases.includes(vessel)) {
+        // 2. VIP & VVIP Package additions (if not large-yacht, not southern boats, not al-jawhari, not nardo, not tam, and not barbaros)
+        if (vessel !== 'large-yacht' && vessel !== 'boat-51' && vessel !== 'al-jawhari' && vessel !== 'nardo' && vessel !== 'tam' && vessel !== 'barbaros' && !southernBoatAliases.includes(vessel)) {
             if (pkg === 'vip') {
                 packageExtra = 300;
             } else if (pkg === 'vvip') {
@@ -956,6 +983,10 @@ const vesselDisplayNamesEn = {
 };
 
 const tripNamesEn = {
+    'bayadah-pkg1': 'Bayadah Island — Package 1 (6 Hours - From 2,000 SAR)',
+    'abu-tair-pkg1': 'Abu Tair Island — Package 1 (6 Hours - From 2,300 SAR)',
+    'bayadah-pkg2': 'Bayadah Island — Package 2 VIP Toys & BBQ (6 Hours - From 3,000 SAR)',
+    'abu-tair-pkg2': 'Abu Tair Island — Package 2 VIP Toys & BBQ (6 Hours - From 3,300 SAR)',
     'barbaros-6h': 'Open Sea Standard Cruise (6 Hours - 2,000 SAR)',
     'barbaros-9h': 'Open Sea Standard Cruise (9 Hours - 2,500 SAR)',
     'barbaros-vip-6h-small': 'VIP Toys & BBQ (6 Hours / Up to 6 Guests - 3,000 SAR)',
@@ -1094,8 +1125,8 @@ const vesselDisplayNames = {
                 packageLine = '';
             }
 
-            // Nardo and Tam custom details
-            if (vessel === 'nardo' || vessel === 'tam') {
+            // Nardo, Tam, and Barbaros custom details
+            if (vessel === 'nardo' || vessel === 'tam' || vessel === 'barbaros') {
                 packageLine = '';
                 if (vessel === 'tam') {
                     customDetails += isEn ? `\n❄️ A/C: *Guaranteed with dedicated generator*` : `\n❄️ التكييف: *مضمون مع تشغيل المولد الخاص*`;
@@ -1438,32 +1469,32 @@ const fleetDetailsData = {
         "name": "قارب بارباروسا VIP (Barbarossa)",
         "badge": "قارب بارباروسا VIP — خصوصية عائلية وسينما ومكينة سلاش",
         "catTag": "نادي الأمانة لليخوت",
-        "capacity": "حتى 10 أشخاص",
+        "capacity": "حتى 11 شخصاً",
         "marina": "نادي الأمانة لليخوت",
-        "keyFeature": "سينما وسلاش وألعاب مائية",
+        "keyFeature": "سينما مجاناً وسلاش وألعاب مائية",
         "featureIcon": "fa-solid fa-film",
         "startingPrice": "460",
         "priceUnit": "ر.س / ساعة",
-        "priceSubtext": "أو 2,000 ر.س للبحر المفتوح (6س)",
+        "priceSubtext": "أو تبدأ من 2,000 ر.س للبحر المفتوح (6س)",
         "descriptions": [
-            "🌟 طاقم احترافي + سينما بروجكتر + مكينة سلاش مثلجة + باقة ألعاب مائية استثنائية!",
-            "أرقى قارب عائلي فاخر يوفر خصوصية تامة للعوائل في جزيرة أبو طير، هدايا تذكارية للضيوف، شواء مباشر في القارب، وجولات نزهة وبحر مفتوح متكاملة."
+            "🌟 طاقم احترافي + سينما مجاناً بعد الغروب + مكينة سلاش مثلجة + ألعاب مائية متكاملة!",
+            "أرقى قارب عائلي فاخر يوفر خصوصية تامة للعوائل في جزيرتي بياضة وأبو طير، هدايا تذكارية للضيوف، شواء برجر طازج في القارب، وجولات نزهة الخور بـ 460 ريال/ساعة."
         ],
         "specs": [
             {
                 "icon": "fa-solid fa-user-shield",
-                "text": "طاقم الرحلة: كابتن للرحلات العادية، وكابتن مع عاملة لرحلة 9 ساعات VIP لضمان أعلى درجات الخدمة والخصوصية"
+                "text": "طاقم الرحلة: كابتن محترف للرحلات، مع تواجد الكابتن والعاملة في رحلات VIP لضمان أعلى مستويات الخدمة والخصوصية العائلية"
             },
             {
                 "icon": "fa-solid fa-water-ladder",
-                "text": "ألعاب مائية وسينما وسلاش: زحليقة مائية، سرير تشميس، خيمة مائية، ملعب طائرة، جلسة دائرية، مكينة سلاش، وبروجكتر سينما"
+                "text": "ألعاب مائية وسينما وسلاش: زحليقة مائية، سرير تشميس، كاياك، كرسي معلق، ألعاب كبيرة (خيمة، طائرة، جلسة دائرية)، سينما مجانية بعد الغروب، ومكينة سلاش"
             },
             {
                 "icon": "fa-solid fa-restroom",
-                "text": "مرافق القارب: دورة مياه ومروش مياه عذبة، جلسات مظللة مريحة (لا يتوفر غرف نوم أو صالون مغلق مكيف)"
+                "text": "مرافق القارب: دورة مياه ومروش مجهز بماء عذب، جلسات مظللة مريحة (لا يتوفر غرف نوم أو صالون مغلق مكيف)"
             }
         ],
-        "packagesHtml": "<h4 class=\"box-title\" style=\"color: var(--navy); border-bottom: 2px solid var(--gold); padding-bottom: 6px; margin-bottom: 10px;\">\r\n                                    <i class=\"fa-solid fa-compass\" style=\"color: var(--gold);\"></i> 1. رحلات البحر المفتوح (بياضة أو جزيرة أبو طير بخصوصية أكبر — حتى 10 أشخاص)\r\n                                </h4>\r\n                                <div class=\"trip-price-item\">\r\n                                    <div class=\"trip-info\">\r\n                                        <span class=\"trip-name\" style=\"font-weight: 700;\">الباقة الأولى (الأساسية)</span>\r\n                                        <small class=\"weekend-note\">كابتن واحد + ماء وعصيرات ومكينة سلاش + منشفة ونظارات غوص للاستعمال + زحليقة وكرسي وتشميس</small>\r\n                                    </div>\r\n                                    <div class=\"trip-price\"><strong>6س: 2,000 | 9س: 2,500 ريال</strong></div>\r\n                                </div>\r\n                                <div class=\"trip-price-item border-top-dash\">\r\n                                    <div class=\"trip-info\">\r\n                                        <span class=\"trip-name\" style=\"font-weight: 700; color: var(--ocean-dark);\">الباقة الثانية VIP (الشاملة الألعاب والمشويات)</span>\r\n                                        <small class=\"weekend-note\">كابتن وعاملة (6س) + مكينة سلاش وهدايا تذكارية للضيوف + برجر مشوي بالقارب (2 للشخص) + اختيار (خيمة/طائرة/الترامبولين مع الجلسة المائية) + سحب مجاني</small>\r\n                                    </div>\r\n                                    <div class=\"trip-price\"><strong>5-6 ضيوف: 3,000 | 7-9 ضيوف: 3,500 ريال</strong></div>\r\n                                </div>\r\n\r\n                                <h4 class=\"box-title\" style=\"color: var(--navy); border-bottom: 2px solid var(--ocean); padding-bottom: 6px; margin: 16px 0 10px 0;\">\r\n                                    <i class=\"fa-solid fa-ship\" style=\"color: var(--ocean);\"></i> 2. رحلات النزهة وجولات الخور (شرم أبحر الجنوبية)\r\n                                </h4>\r\n                                <div class=\"trip-price-item\">\r\n                                    <div class=\"trip-info\">\r\n                                        <span class=\"trip-name\" style=\"font-weight: 700;\">إيجار النزهة الأساسي</span>\r\n                                        <small class=\"weekend-note\">ساعة كاملة 460 ريال (تشمل قهوة أمريكية وشاي مجاناً)</small>\r\n                                    </div>\r\n                                    <div class=\"trip-price\"><strong>460 ريال/ساعة</strong></div>\r\n                                </div>\r\n                                <div class=\"trip-price-item border-top-dash\">\r\n                                    <div class=\"trip-info\">\r\n                                        <span class=\"trip-name\" style=\"font-weight: 700;\">باقات العشاء والمناسبات الخاصة (1-2 ساعة)</span>\r\n                                        <small class=\"weekend-note\">ساندوتشات أرتشي أو برجر مشوي 60 ريال | سوشي ماكي 120 ريال | كيكة ومناسبات 60 – 200 ريال | سينما مجاناً بعد الغروب</small>\r\n                                    </div>\r\n                                    <div class=\"trip-price\"><strong>حسب الباقة</strong></div>\r\n                                </div>",
+        "packagesHtml": "<h4 class=\"box-title\" style=\"color: var(--navy); border-bottom: 2px solid var(--gold); padding-bottom: 6px; margin-bottom: 10px;\">\r\n                                    <i class=\"fa-solid fa-compass\" style=\"color: var(--gold);\"></i> 1. رحلات البحر المفتوح (بياضة أو جزيرة أبو طير +300 ريال — حتى 11 شخصاً)\r\n                                </h4>\r\n                                <div class=\"trip-price-item\">\r\n                                    <div class=\"trip-info\">\r\n                                        <span class=\"trip-name\" style=\"font-weight: 700;\">الباقة الأولى (الأساسية) — 6 ساعات</span>\r\n                                        <small class=\"weekend-note\">صباحية (6-12) أو مسائية (1-7) | ماء وعصيرات ومكينة سلاش + منشفة ونظارات غوص للاستعمال + زحليقة وكرسي وتشميس | إضافة ساعتين (300 ريال/ساعة)</small>\r\n                                    </div>\r\n                                    <div class=\"trip-price\"><strong>5-6 ضيوف: 2,000 | 7-9 ضيوف: 2,500 | 9-11 ضيفاً: 3,000 ريال</strong><br><small style=\"color: var(--gold-dark); font-weight: 700;\">(أبو طير: +300 ريال)</small></div>\r\n                                </div>\r\n                                <div class=\"trip-price-item border-top-dash\">\r\n                                    <div class=\"trip-info\">\r\n                                        <span class=\"trip-name\" style=\"font-weight: 700; color: var(--ocean-dark);\">الباقة الثانية VIP (الشاملة الألعاب والمشويات) — 6 ساعات</span>\r\n                                        <small class=\"weekend-note\">كابتن وعاملة + هدايا تذكارية للضيوف + برجر مشوي بالقارب (2 للشخص) + سرير وكاياك وزحليقة وكرسي معلق + لعبة كبيرة مشمولة (خيمة/طائرة/جلسة دائرية) | لعبة ثانية 500 ريال | ألعاب سحب 200 ريال</small>\r\n                                    </div>\r\n                                    <div class=\"trip-price\"><strong>5-6 ضيوف: 3,000 | 7-8 ضيوف: 3,500 | 9-10 ضيوف: 4,000 ريال</strong><br><small style=\"color: var(--gold-dark); font-weight: 700;\">(أبو طير: +300 ريال)</small></div>\r\n                                </div>\r\n\r\n                                <h4 class=\"box-title\" style=\"color: var(--navy); border-bottom: 2px solid var(--ocean); padding-bottom: 6px; margin: 16px 0 10px 0;\">\r\n                                    <i class=\"fa-solid fa-ship\" style=\"color: var(--ocean);\"></i> 2. رحلات النزهة وجولات الخور (شرم أبحر الجنوبية)\r\n                                </h4>\r\n                                <div class=\"trip-price-item\">\r\n                                    <div class=\"trip-info\">\r\n                                        <span class=\"trip-name\" style=\"font-weight: 700;\">إيجار النزهة الأساسي</span>\r\n                                        <small class=\"weekend-note\">ساعة كاملة 460 ريال (تشمل قهوة أمريكية وشاي أحمر أو أخضر مجاناً) | السينما مجاني بعد الغروب مع فشار ومشروبات</small>\r\n                                    </div>\r\n                                    <div class=\"trip-price\"><strong>460 ريال/ساعة</strong></div>\r\n                                </div>\r\n                                <div class=\"trip-price-item border-top-dash\">\r\n                                    <div class=\"trip-info\">\r\n                                        <span class=\"trip-name\" style=\"font-weight: 700;\">وجبات العشاء والمناسبات (اختياري عبر الواتس اب)</span>\r\n                                        <small class=\"weekend-note\">ساندوتشات أرتشي 60 ريال | برجر مشوي 60 ريال | سوشي ماكي 120 ريال | كيكة وتنسيق 60 ريال (مع برجر 100 / مع سوشي 200) | شوكولاته 120-200 ريال</small>\r\n                                    </div>\r\n                                    <div class=\"trip-price\"><strong>حسب الوجبة</strong></div>\r\n                                </div>",
         "pdfLinks": [
             {
                 "url": "files/barbaros/البحر المفتوح.pdf",
@@ -2762,9 +2793,9 @@ const fleetDetailsDataEn = {
         "name": "Barbaros VIP Boat (Barbarossa)",
         "catTag": "Al-Amanah Yacht Club",
         "badge": "Most Popular — VIP Choice",
-        "capacity": "Up to 10 Guests",
+        "capacity": "Up to 11 Guests",
         "marina": "Al-Amanah Yacht Club (South Obhur)",
-        "keyFeature": "Cinema, Slush & Water Park",
+        "keyFeature": "Free Cinema, Slush & Water Park",
         "featureIcon": "fa-solid fa-film",
         "pricingRows": [
             {
@@ -2773,35 +2804,40 @@ const fleetDetailsDataEn = {
                 "icon": "fa-solid fa-ship"
             },
             {
-                "label": "Open Sea (6h)",
-                "val": "2,000 SAR",
+                "label": "Bayadah (Pkg 1)",
+                "val": "From 2,000 SAR",
                 "icon": "fa-solid fa-compass"
             },
             {
-                "label": "Open Sea (9h)",
-                "val": "2,500 SAR",
+                "label": "Bayadah (VIP Pkg 2)",
+                "val": "From 3,000 SAR",
+                "icon": "fa-solid fa-crown"
+            },
+            {
+                "label": "Abu Tair Island",
+                "val": "+300 SAR to Packages",
                 "icon": "fa-solid fa-water"
             }
         ],
         "descriptions": [
-            "🌟 Professional Crew + Cinema Projector + Slush Machine + Full Water Park!",
-            "Top-rated double-decker pontoon boat offering enhanced family privacy at Abu Tair Island, souvenir gifts, on-board BBQ, and all-inclusive marine cruises."
+            "🌟 Professional Crew + Free Sunset Cinema + Slush Machine + Full Water Park!",
+            "Top-rated luxury double-decker pontoon boat offering total family privacy in Bayadah and Abu Tair islands, souvenir gifts, fresh on-board burger BBQ, and creek sightseeing tours at 460 SAR/hr."
         ],
         "specs": [
             {
                 "icon": "fa-solid fa-user-shield",
-                "text": "Professional Crew: 1 Captain for standard cruises, Captain + female attendant for 6h VIP cruise."
+                "text": "Professional Crew: Professional captain for cruises, with captain and female assistant on VIP Package 2 for maximum service and family privacy."
             },
             {
                 "icon": "fa-solid fa-water-ladder",
-                "text": "Water Toys, Cinema & Slush: Giant water slide, floating sunbed, water tent, volleyball, circular lounge, slush smoothies & cinema projector."
+                "text": "Water Toys, Cinema & Slush: Built-in water slide, floating sunbed platform, sea kayak, hanging chair, large games (tent, volleyball, circular lounge), towable tube (200 SAR), free sunset cinema projector & slush machine."
             },
             {
                 "icon": "fa-solid fa-restroom",
-                "text": "Boat Facilities: Marine restroom & freshwater shower, shaded open lounges across two decks."
+                "text": "Boat Facilities: Marine restroom & freshwater shower, shaded open lounges across two decks (no enclosed AC salon or bedroom)."
             }
         ],
-        "packagesHtml": "<h4 class=\"box-title\" style=\"color: var(--navy); border-bottom: 2px solid var(--gold); padding-bottom: 6px; margin-bottom: 10px;\">\n            <i class=\"fa-solid fa-compass\" style=\"color: var(--gold);\"></i> 1. Open Sea Cruises (Bayadah / Abu Tair Privacy — Up to 10 Guests)\n        </h4>\n        <div class=\"trip-price-item\">\n            <div class=\"trip-info\">\n                <span class=\"trip-name\" style=\"font-weight: 700;\">Package 1 (Standard Cruise)</span>\n                <small class=\"weekend-note\">1 Captain + Slush smoothies & cold drinks + towels & snorkel gear for use + water slide, sunbed & hammock</small>\n            </div>\n            <div class=\"trip-price\"><strong>6h: 2,000 | 9h: 2,500 SAR</strong></div>\n        </div>\n        <div class=\"trip-price-item border-top-dash\">\n            <div class=\"trip-info\">\n                <span class=\"trip-name\" style=\"font-weight: 700; color: var(--ocean-dark);\">Package 2: VIP Water Toys & On-Board BBQ</span>\n                <small class=\"weekend-note\">Captain & female assistant (6h) + Slush + souvenir gifts + grilled burgers (2/guest) + choice of (tent/volleyball/trampoline with circular lounge)</small>\n            </div>\n            <div class=\"trip-price\"><strong>5-6 guests: 3,000 | 7-9 guests: 3,500 SAR</strong></div>\n        </div>\n        <h4 class=\"box-title\" style=\"color: var(--navy); border-bottom: 2px solid var(--ocean); padding-bottom: 6px; margin: 16px 0 10px 0;\">\n            <i class=\"fa-solid fa-ship\" style=\"color: var(--ocean);\"></i> 2. Picnic & Creek Sightseeing Tours (South Obhur)\n        </h4>\n        <div class=\"trip-price-item\">\n            <div class=\"trip-info\">\n                <span class=\"trip-name\" style=\"font-weight: 700;\">Standard Sightseeing Cruise</span>\n                <small class=\"weekend-note\">1 Full Hour 460 SAR (includes complimentary American coffee & tea)</small>\n            </div>\n            <div class=\"trip-price\"><strong>460 SAR / hr</strong></div>\n        </div>\n        <div class=\"trip-price-item border-top-dash\">\n            <div class=\"trip-info\">\n                <span class=\"trip-name\" style=\"font-weight: 700;\">Dinner & Special Occasion Packages (1-2 Hours)</span>\n                <small class=\"weekend-note\">Sandwiches or BBQ burgers 60 SAR | Maki Sushi 120 SAR | Cake & Occasions 60 – 200 SAR | Free Cinema after sunset</small>\n            </div>\n            <div class=\"trip-price\"><strong>Per Package</strong></div>\n        </div>",
+        "packagesHtml": "<h4 class=\"box-title\" style=\"color: var(--navy); border-bottom: 2px solid var(--gold); padding-bottom: 6px; margin-bottom: 10px;\">\n            <i class=\"fa-solid fa-compass\" style=\"color: var(--gold);\"></i> 1. Open Sea Cruises (Bayadah or Abu Tair +300 SAR — Up to 11 Guests)\n        </h4>\n        <div class=\"trip-price-item\">\n            <div class=\"trip-info\">\n                <span class=\"trip-name\" style=\"font-weight: 700;\">Package 1 (Standard Cruise) — 6 Hours</span>\n                <small class=\"weekend-note\">Morning (6-12) or Evening (1-7) | Slush smoothies & drinks + towels & snorkeling gear for use + water slide, sunbed & hanging chair | Extra hours (300 SAR/hr)</small>\n            </div>\n            <div class=\"trip-price\"><strong>5-6 Guests: 2,000 | 7-9 Guests: 2,500 | 9-11 Guests: 3,000 SAR</strong><br><small style=\"color: var(--gold-dark); font-weight: 700;\">(Abu Tair: +300 SAR)</small></div>\n        </div>\n        <div class=\"trip-price-item border-top-dash\">\n            <div class=\"trip-info\">\n                <span class=\"trip-name\" style=\"font-weight: 700; color: var(--ocean-dark);\">Package 2: VIP Water Toys & On-Board BBQ — 6 Hours</span>\n                <small class=\"weekend-note\">Captain & female assistant + Slush + souvenir gifts to keep + grilled burgers (2/guest) + sunbed, kayak, slide & hanging chair + 1 Big Toy included (tent/volleyball/circular lounge) | 2nd Big Toy 500 SAR | Towables 200 SAR</small>\n            </div>\n            <div class=\"trip-price\"><strong>5-6 Guests: 3,000 | 7-8 Guests: 3,500 | 9-10 Guests: 4,000 SAR</strong><br><small style=\"color: var(--gold-dark); font-weight: 700;\">(Abu Tair: +300 SAR)</small></div>\n        </div>\n        <h4 class=\"box-title\" style=\"color: var(--navy); border-bottom: 2px solid var(--ocean); padding-bottom: 6px; margin: 16px 0 10px 0;\">\n            <i class=\"fa-solid fa-ship\" style=\"color: var(--ocean);\"></i> 2. Picnic & Creek Sightseeing Tours (South Obhur)\n        </h4>\n        <div class=\"trip-price-item\">\n            <div class=\"trip-info\">\n                <span class=\"trip-name\" style=\"font-weight: 700;\">Standard Sightseeing Cruise</span>\n                <small class=\"weekend-note\">1 Full Hour 460 SAR (includes complimentary American coffee & tea) | Cinema is FREE after sunset with complimentary popcorn & drinks</small>\n            </div>\n            <div class=\"trip-price\"><strong>460 SAR / hr</strong></div>\n        </div>\n        <div class=\"trip-price-item border-top-dash\">\n            <div class=\"trip-info\">\n                <span class=\"trip-name\" style=\"font-weight: 700;\">Dinner & Special Occasion Packages (Optional via WhatsApp)</span>\n                <small class=\"weekend-note\">Artche Sandwiches 60 SAR | Grilled Burgers 60 SAR | Maki Sushi 120 SAR | Cake & Styling 60 SAR (with Burgers 100 / with Sushi 200) | Chocolates 120-200 SAR</small>\n            </div>\n            <div class=\"trip-price\"><strong>Per Package</strong></div>\n        </div>",
         "pdfLinks": [
             {
                 "url": "files/barbaros/البحر المفتوح.pdf",
