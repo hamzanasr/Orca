@@ -132,9 +132,10 @@
                     <div class="detail-section-card">
                         <h3 class="section-card-title"><i class="fa-solid fa-list-check"></i> مواصفات وتجهيزات القارب</h3>
                         <ul class="package-specs detail-specs-list">
-                            <li><i class="fa-solid fa-users"></i> السعة الكلية 12 شخصاً — <span class="captain-note">الحد الأقصى للضيوف 11 ضيفاً (الكابتن مشمول)</span></li>
-                            <li><i class="fa-solid fa-circle-check"></i> السعر الأساسي يشمل 6 أشخاص (كل شخص إضافي 100 ريال)</li>
-                            <li><i class="fa-solid fa-map-location-dot"></i> مرسى الانطلاق: مرسى البحر الأحمر</li>
+                            <li><i class="fa-solid fa-map-location-dot" style="color: var(--gold);"></i> <strong>مرسى الانطلاق:</strong> مرسى الأحلام (شرم أبحر)</li>
+                            <li><i class="fa-solid fa-users" style="color: var(--ocean);"></i> <strong>السعة:</strong> حتى 11 ضيفاً كحد أقصى</li>
+                            <li><i class="fa-solid fa-circle-check" style="color: var(--gold);"></i> <strong>باقة الأساس:</strong> السعر يشمل 6 أشخاص (كل شخص إضافي بعد 6 بـ 100 ريال - باستثناء رحلة الصيد)</li>
+                            <li><i class="fa-solid fa-stopwatch" style="color: var(--ocean);"></i> <strong>الساعات الإضافية:</strong> كل إضافة ساعة جديدة بـ 150 ريال</li>
                         </ul>
                     </div>
 
@@ -142,22 +143,41 @@
                     <div class="detail-section-card">
                         <h3 class="section-card-title"><i class="fa-solid fa-tags"></i> أسعار ورحلات قارب العميد</h3>
                         <div class="trip-options-box">
-                            <h4 class="box-title"><i class="fa-solid fa-gift"></i> خيارات الرحلات الأساسية (الاقتصادية)</h4>
+                            <h4 class="box-title"><i class="fa-solid fa-gift"></i> خيارات الرحلات الأساسية</h4>
                                 <div class="trip-price-item">
-                                    <div class="trip-info"><span class="trip-name">رحلة بياضة (12/10 ساعات)</span></div>
+                                    <div class="trip-info">
+                                        <span class="trip-name">رحلة جزيرة بياضة (6 ساعات)</span>
+                                        <small class="weekend-note">تشمل 6 أشخاص | كل شخص إضافي بعد 6 بـ 100 ريال</small>
+                                    </div>
                                     <div class="trip-price"><strong>1,500 أسبوع | 1,800 ويكند</strong></div>
                                 </div>
                                 <div class="trip-price-item">
-                                    <div class="trip-info"><span class="trip-name">رحلة جزيرة أبو طير (12/10 ساعات) (+300 ريال)</span></div>
+                                    <div class="trip-info">
+                                        <span class="trip-name">رحلة جزيرة أبو طير (6 ساعات)</span>
+                                        <small class="weekend-note">تشمل 6 أشخاص | كل شخص إضافي بعد 6 بـ 100 ريال (+300 ريال عن بياضة)</small>
+                                    </div>
                                     <div class="trip-price"><strong>1,800 أسبوع | 2,100 ويكند</strong></div>
                                 </div>
                                 <div class="trip-price-item">
-                                    <div class="trip-info"><span class="trip-name">رحلة صيد فقط (12/10 ساعات)</span></div>
+                                    <div class="trip-info">
+                                        <span class="trip-name">رحلة صيد فقط (12/10 ساعات)</span>
+                                        <small class="weekend-note">رحلة متخصصة لمحبي الصيد مع تجهيزات كاملة</small>
+                                    </div>
                                     <div class="trip-price"><strong>1,800 أسبوع | 2,100 ويكند</strong></div>
                                 </div>
                                 <div class="trip-price-item">
-                                    <div class="trip-info"><span class="trip-name">رحلة مكس (بياضة + صيد)</span></div>
+                                    <div class="trip-info">
+                                        <span class="trip-name">رحلة مكس (بياضة + صيد - 6 ساعات)</span>
+                                        <small class="weekend-note">تشمل 6 أشخاص | كل شخص إضافي بعد 6 بـ 100 ريال</small>
+                                    </div>
                                     <div class="trip-price"><strong>1,950 أسبوع | 2,250 ويكند</strong></div>
+                                </div>
+                                <div class="trip-price-item border-top-dash" style="background: rgba(0,119,182,0.03);">
+                                    <div class="trip-info">
+                                        <span class="trip-name" style="font-weight: 700;">إضافة ساعات جديدة</span>
+                                        <small class="weekend-note">إمكانية تمديد الرحلة حسب التوفر</small>
+                                    </div>
+                                    <div class="trip-price"><strong style="color: var(--ocean-dark);">150 ريال / لكل ساعة إضافية</strong></div>
                                 </div>
                                 <div class="trip-price-item border-top-dash">
                                     <div class="trip-info">
@@ -189,10 +209,10 @@
                     <div class="sticky-sidebar-box">
                         <div class="deposit-chip deposit-sidebar-chip">
                             <i class="fa-solid fa-hand-holding-dollar"></i>
-                                العربون: <strong>200 ريال</strong> أسبوع | <strong>300 ريال</strong> ويكند (رحلات 12 / 10 ساعات)
+                                بياضة (6س): <strong>1,500 أسبوع | 1,800 ويكند</strong>
                         </div>
 
-                                                <div class="action-buttons-group">
+                        <div class="action-buttons-group">
                             <button type="button" class="btn btn-share btn-full" onclick="shareBoatDetails()" style="margin-bottom: 4px;">
                                 <i class="fa-solid fa-share-nodes"></i> مشاركة تفاصيل القارب
                             </button>
@@ -225,8 +245,8 @@
                             <div class="guarantee-item">
                                 <i class="fa-solid fa-location-dot"></i>
                                 <div class="g-text">
-                                    <strong>انطلاق موثوق من جدة</strong>
-                                    <span>مرسى البحر الأحمر ومراسي الجنوب</span>
+                                    <strong>مرسى الانطلاق</strong>
+                                    <span>مرسى الأحلام (شرم أبحر)</span>
                                 </div>
                             </div>
                         </div>

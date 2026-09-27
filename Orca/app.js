@@ -292,30 +292,32 @@ document.addEventListener('DOMContentLoaded', () => {
     // Trip options mapping to vessel types
     const tripOptions = {
         'nardo': [
-            { id: 'bayadah-6', name: 'رحلة جزيرة بياضة (6 ساعات - تبدأ من 3,180 ريال)', duration: 6 },
-            { id: 'bayadah-9', name: 'رحلة جزيرة بياضة ممددة (9 ساعات - تبدأ من 3,880 ريال)', duration: 9 },
+            { id: 'bayadah-6', name: 'رحلة جزيرة بياضة (6 ساعات - تبدأ من 3,680 ريال)', duration: 6 },
+            { id: 'abu-tair-6', name: 'رحلة جزيرة أبو طير (6 ساعات - تبدأ من 3,980 ريال)', duration: 6 },
+            { id: 'bayadah-9', name: 'رحلة جزيرة بياضة ممددة (9 ساعات - تبدأ من 4,580 ريال)', duration: 9 },
             { id: 'fishing-add', name: 'رحلة صيد ومغامرات (ساعة صيد إضافية +300 ريال على بياضة)', duration: 7 },
             { id: 'creek', name: 'جولة الخور / شرم أبحر (الساعة الأولى 680 / الإضافية 580 ريال)', duration: 1 }
         ],
         'tam': [
-            { id: 'bayadah-abu-tair-6', name: 'رحلة بياضة أو أبو طير (6 ساعات - تبدأ من 1,580 ريال)', duration: 6 },
-            { id: 'bayadah-abu-tair-9', name: 'رحلة بياضة أو أبو طير ممددة (9 ساعات - تبدأ من 2,080 ريال)', duration: 9 },
+            { id: 'bayadah-6', name: 'رحلة جزيرة بياضة (6 ساعات - تبدأ من 1,880 ريال)', duration: 6 },
+            { id: 'abu-tair-6', name: 'رحلة جزيرة أبو طير (6 ساعات - تبدأ من 2,080 ريال)', duration: 6 },
+            { id: 'bayadah-9', name: 'رحلة جزيرة بياضة ممددة (9 ساعات - تبدأ من 2,780 ريال)', duration: 9 },
             { id: 'creek', name: 'جولة الخور / شرم أبحر (الساعة الأولى 460 / الإضافية 430 ريال)', duration: 1 }
         ],
         'barbaros': [
-            { id: 'bayadah-pkg1', name: 'رحلة بياضة — الباقة الأولى (6 ساعات - تبدأ من 2,000 ريال)', duration: 6 },
-            { id: 'abu-tair-pkg1', name: 'رحلة جزيرة أبو طير — الباقة الأولى (+300 ريال خصوصية - تبدأ من 2,300 ريال)', duration: 6 },
-            { id: 'bayadah-pkg2', name: 'رحلة بياضة — الباقة الثانية VIP المشويات والألعاب (6 ساعات - تبدأ من 3,000 ريال)', duration: 6 },
-            { id: 'abu-tair-pkg2', name: 'رحلة جزيرة أبو طير — الباقة الثانية VIP المشويات والألعاب (+300 ريال خصوصية - تبدأ من 3,300 ريال)', duration: 6 },
+            { id: 'bayadah-pkg1', name: 'رحلة بياضة — باقة عادية (6 ساعات - تبدأ من 2,000 ريال)', duration: 6 },
+            { id: 'abu-tair-pkg1', name: 'رحلة جزيرة أبو طير — باقة عادية (+300 ريال خصوصية - تبدأ من 2,300 ريال)', duration: 6 },
+            { id: 'bayadah-pkg2', name: 'رحلة بياضة — باقة VIP فقط حتى 10 أشخاص (6 ساعات - تبدأ من 3,000 ريال)', duration: 6 },
+            { id: 'abu-tair-pkg2', name: 'رحلة جزيرة أبو طير — باقة VIP فقط حتى 10 أشخاص (+300 ريال - تبدأ من 3,300 ريال)', duration: 6 },
             { id: 'creek', name: 'جولة النزهة في الخور / شرم أبحر (460 ريال/ساعة)', duration: 1 }
         ],
         'qimat-al-fawz-pentos': [
-            { id: 'bayadah', name: 'رحلة جزيرة بياضة (6 ساعات - 1,480 ريال)', basePriceWeekday: 1480, basePriceWeekend: 1480, duration: 6 },
-            { id: 'abu-tair', name: 'رحلة جزيرة أبو طير (6 ساعات - 1,780 ريال)', basePriceWeekday: 1780, basePriceWeekend: 1780, duration: 6 },
-            { id: 'fishing-6', name: 'رحلة صيد (6 ساعات - 1,500 ريال)', basePriceWeekday: 1500, basePriceWeekend: 1500, duration: 6 },
-            { id: 'fishing-8', name: 'رحلة صيد (8 ساعات - 1,780 ريال)', basePriceWeekday: 1780, basePriceWeekend: 1780, duration: 8 },
-            { id: 'fishing-10', name: 'رحلة صيد (10 ساعات - 1,980 ريال)', basePriceWeekday: 1980, basePriceWeekend: 1980, duration: 10 },
-            { id: 'fishing-12', name: 'رحلة صيد (12 ساعة - 2,180 ريال)', basePriceWeekday: 2180, basePriceWeekend: 2180, duration: 12 },
+            { id: 'bayadah', name: 'رحلة جزيرة بياضة (6 ساعات - 1,980 ريال)', basePriceWeekday: 1980, basePriceWeekend: 2180, duration: 6 },
+            { id: 'abu-tair', name: 'رحلة جزيرة أبو طير (6 ساعات - 2,280 ريال)', basePriceWeekday: 2280, basePriceWeekend: 2480, duration: 6 },
+            { id: 'fishing-6', name: 'رحلة صيد (6 ساعات - 2,000 ريال)', basePriceWeekday: 2000, basePriceWeekend: 2200, duration: 6 },
+            { id: 'fishing-8', name: 'رحلة صيد (8 ساعات - 2,280 ريال)', basePriceWeekday: 2280, basePriceWeekend: 2480, duration: 8 },
+            { id: 'fishing-10', name: 'رحلة صيد (10 ساعات - 2,480 ريال)', basePriceWeekday: 2480, basePriceWeekend: 2680, duration: 10 },
+            { id: 'fishing-12', name: 'رحلة صيد (12 ساعة - 2,680 ريال)', basePriceWeekday: 2680, basePriceWeekend: 2880, duration: 12 },
             { id: 'creek', name: 'جولة الخور / شرم أبحر (0.5 – 2 ساعة)', duration: 1 }
         ],
         'large-yacht': [
@@ -335,15 +337,15 @@ document.addEventListener('DOMContentLoaded', () => {
             { id: 'creek', name: 'جولة الخور (0.5 – 2 ساعة)', duration: 1 }
         ],
         'al-jawhari': [
-            { id: 'bayadah', name: 'رحلة جزيرة بياضة (6 ساعات - 1,750 ريال)', basePriceWeekday: 1750, basePriceWeekend: 1750, duration: 6 },
-            { id: 'abu-tair', name: 'رحلة جزيرة أبو طير (6 ساعات - 2,000 ريال)', basePriceWeekday: 2000, basePriceWeekend: 2000, duration: 6 },
-            { id: 'khor-saud', name: 'رحلة خور سعود (6 ساعات - 1,750 ريال)', basePriceWeekday: 1750, basePriceWeekend: 1750, duration: 6 },
+            { id: 'bayadah', name: 'رحلة جزيرة بياضة (6 ساعات - 1,880 ريال)', basePriceWeekday: 1880, basePriceWeekend: 2080, duration: 6 },
+            { id: 'abu-tair', name: 'رحلة جزيرة أبو طير (6 ساعات - 2,180 ريال)', basePriceWeekday: 2180, basePriceWeekend: 2380, duration: 6 },
+            { id: 'khor-saud', name: 'رحلة خور سعود (6 ساعات - 1,880 ريال)', basePriceWeekday: 1880, basePriceWeekend: 2080, duration: 6 },
             { id: 'creek', name: 'جولة الخور / شرم أبحر (460 ريال/ساعة)', duration: 1 }
         ],
         'al-ameed': [
-            { id: 'bayadah', name: 'رحلة بياضة (وسط الأسبوع 12 ساعة / الويكند 10 ساعات)', basePriceWeekday: 1500, basePriceWeekend: 1800, duration: 12 },
-            { id: 'abu-tair', name: 'رحلة جزيرة أبو طير (وسط الأسبوع 12 ساعة / الويكند 10 ساعات)', basePriceWeekday: 1800, basePriceWeekend: 2100, duration: 12 },
-            { id: 'mix', name: 'مكس صيد + بياضة (وسط الأسبوع 12 ساعة / الويكند 10 ساعات)', basePriceWeekday: 1950, basePriceWeekend: 2250, duration: 12 },
+            { id: 'bayadah', name: 'رحلة جزيرة بياضة (6 ساعات - 1,500 ريال)', basePriceWeekday: 1500, basePriceWeekend: 1800, duration: 6 },
+            { id: 'abu-tair', name: 'رحلة جزيرة أبو طير (6 ساعات - 1,800 ريال)', basePriceWeekday: 1800, basePriceWeekend: 2100, duration: 6 },
+            { id: 'mix', name: 'مكس صيد + بياضة (6 ساعات - 1,950 ريال)', basePriceWeekday: 1950, basePriceWeekend: 2250, duration: 6 },
             { id: 'fishing', name: 'رحلة صيد فقط (وسط الأسبوع 12 ساعة / الويكند 10 ساعات)', basePriceWeekday: 1800, basePriceWeekend: 2100, duration: 12 },
             { id: 'creek', name: 'رحلة خور (0.5 – 2 ساعة)', duration: 1 }
         ],
@@ -447,13 +449,13 @@ document.addEventListener('DOMContentLoaded', () => {
         'nardo':                  { max: 14, label: '14 ضيفاً' },
         'tam':                    { max: 11, label: '11 ضيفاً' },
         'barbaros':               { max: 11, label: '11 ضيفاً' },
-        'al-jawhari':             { max: 10, label: '10 ضيوف' },
+        'al-jawhari':             { max: 11, label: '11 ضيفاً' },
         'qimat-al-fawz-pentos':   { max: 12, label: '12 ضيفاً' },
-        'large-yacht':            { max: 35, label: '35 شخصاً' },
+        'large-yacht':            { max: 30, label: '30 شخصاً' },
         'baby-yacht-ambassador':  { max: 11, label: '11 ضيفاً' },
         'al-ameed':               { max: 11, label: '11 ضيفاً' },
         'seven-boat':             { max: 9,  label: '9 ضيوف' },
-        'norseen-large':          { max: 19, label: '19 ضيفاً' },
+        'norseen-large':          { max: 14, label: '14 ضيفاً' },
         'boat-51':                { max: 8,  label: '8 ضيوف (يشمل 6 أشخاص)' }
     };
     sevenAliases.forEach(alias => {
@@ -793,15 +795,17 @@ document.addEventListener('DOMContentLoaded', () => {
             guestExtra = 0;
         }
         else if (vessel === 'nardo') {
-            let tierPrice = 3180;
-            if (guests >= 7 && guests <= 9) tierPrice = 3680;
-            else if (guests > 9) tierPrice = 3980;
+            let tierPrice = 3680;
+            if (guests > 7) tierPrice = 3980;
 
             if (tripId === 'bayadah-6') {
                 basePrice = tierPrice;
                 durationText = '6 ساعات';
+            } else if (tripId === 'abu-tair-6') {
+                basePrice = tierPrice + 300;
+                durationText = '6 ساعات';
             } else if (tripId === 'bayadah-9') {
-                basePrice = tierPrice + 700;
+                basePrice = tierPrice + 900;
                 durationText = '9 ساعات';
             } else if (tripId === 'fishing-add') {
                 basePrice = tierPrice + 300;
@@ -810,26 +814,41 @@ document.addEventListener('DOMContentLoaded', () => {
                 basePrice = tierPrice;
                 durationText = `${selectedTrip.duration} ساعات`;
             }
+
+            if (day === 'weekend' && tripId !== 'creek') {
+                weekendExtra = 300;
+            }
         }
         else if (vessel === 'tam') {
-            let tierPrice = 1580;
-            if (guests >= 7 && guests <= 9) tierPrice = 1880;
-            else if (guests > 9) tierPrice = 1980;
+            let tierPrice = 1880;
+            if (guests > 6) tierPrice = 2280;
 
-            if (tripId === 'bayadah-abu-tair-6') {
+            if (tripId === 'bayadah-6') {
                 basePrice = tierPrice;
                 durationText = '6 ساعات';
-            } else if (tripId === 'bayadah-abu-tair-9') {
-                basePrice = tierPrice + 500;
+            } else if (tripId === 'abu-tair-6') {
+                basePrice = tierPrice + 200;
+                durationText = '6 ساعات';
+            } else if (tripId === 'bayadah-9') {
+                basePrice = tierPrice + 900;
                 durationText = '9 ساعات';
             } else {
                 basePrice = tierPrice;
                 durationText = `${selectedTrip.duration} ساعات`;
             }
+
+            if (day === 'weekend' && tripId !== 'creek') {
+                weekendExtra = 200;
+            }
         }
         else if (vessel === 'al-jawhari') {
             basePrice = (day === 'weekend') ? selectedTrip.basePriceWeekend : selectedTrip.basePriceWeekday;
             durationText = `${selectedTrip.duration} ساعات`;
+
+            // Base covers 5-6 guests, +100 SAR per person above 6 up to 11
+            if (guests > 6) {
+                guestExtra += (guests - 6) * 100;
+            }
 
             const addBananaBoatSelect = document.getElementById('addBananaBoat');
             if (addBananaBoatSelect && addBananaBoatSelect.value === 'yes') {
@@ -852,12 +871,15 @@ document.addEventListener('DOMContentLoaded', () => {
         } 
         else if (vessel === 'al-ameed' || largeBoatAliases.includes(vessel)) {
             basePrice = (day === 'weekend') ? selectedTrip.basePriceWeekend : selectedTrip.basePriceWeekday;
-            const durationHrs = (day === 'weekend') ? 10 : 12;
-            durationText = `${durationHrs} ساعة`;
-
-            // Extra guests above 6 -> 100 SAR per person
-            if (guests > 6) {
-                guestExtra += (guests - 6) * 100;
+            if (tripId === 'fishing') {
+                const durationHrs = (day === 'weekend') ? 10 : 12;
+                durationText = `${durationHrs} ساعة`;
+            } else {
+                durationText = '6 ساعات';
+                // Extra guests above 6 -> 100 SAR per person (not applied to fishing trip)
+                if (guests > 6) {
+                    guestExtra += (guests - 6) * 100;
+                }
             }
         }
         else if (vessel === 'boat-51' || southernBoatAliases.includes(vessel)) {
@@ -983,10 +1005,10 @@ const vesselDisplayNamesEn = {
 };
 
 const tripNamesEn = {
-    'bayadah-pkg1': 'Bayadah Island — Package 1 (6 Hours - From 2,000 SAR)',
-    'abu-tair-pkg1': 'Abu Tair Island — Package 1 (6 Hours - From 2,300 SAR)',
-    'bayadah-pkg2': 'Bayadah Island — Package 2 VIP Toys & BBQ (6 Hours - From 3,000 SAR)',
-    'abu-tair-pkg2': 'Abu Tair Island — Package 2 VIP Toys & BBQ (6 Hours - From 3,300 SAR)',
+    'bayadah-pkg1': 'Bayadah Island — Regular Package (6 Hours - From 2,000 SAR)',
+    'abu-tair-pkg1': 'Abu Tair Island — Regular Package (6 Hours - From 2,300 SAR)',
+    'bayadah-pkg2': 'Bayadah Island — VIP Package Max 10 Guests (6 Hours - From 3,000 SAR)',
+    'abu-tair-pkg2': 'Abu Tair Island — VIP Package Max 10 Guests (6 Hours - From 3,300 SAR)',
     'barbaros-6h': 'Open Sea Standard Cruise (6 Hours - 2,000 SAR)',
     'barbaros-9h': 'Open Sea Standard Cruise (9 Hours - 2,500 SAR)',
     'barbaros-vip-6h-small': 'VIP Toys & BBQ (6 Hours / Up to 6 Guests - 3,000 SAR)',
@@ -1003,6 +1025,10 @@ const tripNamesEn = {
     'fishing': 'Deep-Sea Fishing Trip (10-12 Hours)',
     'trolling': 'Trolling Fishing Cruise (6 Hours)',
     'khor-saud': 'Khor Saud Cruise (6 Hours - 1,750 SAR)',
+    'bayadah-6': 'Bayadah Island Cruise (6 Hours)',
+    'abu-tair-6': 'Abu Tair Island Cruise (6 Hours)',
+    'bayadah-9': 'Bayadah Island Extended Cruise (9 Hours)',
+    'fishing-add': 'Bayadah Island + Extra Fishing Hour (7 Hours)',
     'bayadah-hourly': 'Bayadah Island Cruise (Hourly - Min. 2h)',
     'abu-tair-hourly': 'Abu Tair Island Cruise (Hourly - Min. 2h)',
     'creek-hourly': 'Obhur Creek Sightseeing (Hourly - Min. 2h)'
@@ -1012,14 +1038,14 @@ const vesselDisplayNames = {
         'nardo': 'يخت ناردو VIP الفاخر (14 شخص)',
         'tam': 'يخت تام الفاخر (11 شخص)',
         'barbaros': 'قارب بارباروسا VIP (نادي الأمانة)',
-        'al-jawhari': 'يخت الجوهري',
-        'qimat-al-fawz-pentos': 'يخت بينتوس VIP',
+        'al-jawhari': 'يخت الجوهري (11 شخص)',
+        'qimat-al-fawz-pentos': 'يخت بينتوس VIP (مرسى الأحلام)',
         'qimat-al-fawz': 'قارب قمة الفوز (موديل 2025)',
         'baby-yacht-ambassador': 'بيبي يخت امباسادور 36 قدم',
         'baby-yacht-orax-40': 'بيبي يخت اوراكس 40 قدم',
         'large-yacht': 'اليخت الكبير الفاخر (30 شخص)',
-        'al-ameed': 'قارب العميد (15 شخص)',
-        'norseen-large': 'قارب نورسين الكبير (20 شخص)',
+        'al-ameed': 'قارب العميد (11 شخص)',
+        'norseen-large': 'قارب نورسين الكبير (14 شخص)',
         'seven-boat': 'قارب سيفين 1 (10 متر)',
         'seven-boat-2': 'قارب سيفين 2',
         'seven-boat-3': 'قارب سيفين 3',
@@ -1087,8 +1113,10 @@ const vesselDisplayNames = {
             let customDetails = '';
 
             // Add marina details
-            if (vessel === 'barbaros') {
+            if (vessel === 'barbaros' || vessel === 'nardo' || vessel === 'tam' || vessel === 'al-jawhari') {
                 customDetails += isEn ? `\n📍 Departure Marina: *Al-Amanah Yacht Club (South Obhur)*` : `\n📍 مرسى الانطلاق: *نادي الأمانة لليخوت (أبحر الجنوبية)*`;
+            } else if (vessel === 'qimat-al-fawz-pentos' || vessel === 'al-ameed' || vessel === 'norseen-large') {
+                customDetails += isEn ? `\n📍 Departure Marina: *Marsa Al Ahlam*` : `\n📍 مرسى الانطلاق: *مرسى الأحلام*`;
             } else if (vessel === 'boat-51' || southernBoatAliases.includes(vessel)) {
                 customDetails += isEn ? `\n📍 Departure Marina: *${southernMarinaSelect.options[southernMarinaSelect.selectedIndex].text}*` : `\n📍 مرسى الانطلاق: *${southernMarinaSelect.options[southernMarinaSelect.selectedIndex].text}*`;
             } else {
@@ -1469,32 +1497,32 @@ const fleetDetailsData = {
         "name": "قارب بارباروسا VIP (Barbarossa)",
         "badge": "قارب بارباروسا VIP — خصوصية عائلية وسينما ومكينة سلاش",
         "catTag": "نادي الأمانة لليخوت",
-        "capacity": "حتى 11 شخصاً",
+        "capacity": "حتى 11 شخصاً (باقة VIP لـ 10 فقط)",
         "marina": "نادي الأمانة لليخوت",
-        "keyFeature": "سينما مجاناً وسلاش وألعاب مائية",
+        "keyFeature": "ألعاب مائية وسلاش وسينما للحفلات",
         "featureIcon": "fa-solid fa-film",
         "startingPrice": "460",
         "priceUnit": "ر.س / ساعة",
         "priceSubtext": "أو تبدأ من 2,000 ر.س للبحر المفتوح (6س)",
         "descriptions": [
-            "🌟 طاقم احترافي + سينما مجاناً بعد الغروب + مكينة سلاش مثلجة + ألعاب مائية متكاملة!",
+            "🌟 طاقم احترافي (كابتن فلبيني، وعاملة فلبينية للباقة VIP) + سينما لحفلات المناسبات + مكينة سلاش مثلجة + ألعاب مائية متكاملة!",
             "أرقى قارب عائلي فاخر يوفر خصوصية تامة للعوائل في جزيرتي بياضة وأبو طير، هدايا تذكارية للضيوف، شواء برجر طازج في القارب، وجولات نزهة الخور بـ 460 ريال/ساعة."
         ],
         "specs": [
             {
                 "icon": "fa-solid fa-user-shield",
-                "text": "طاقم الرحلة: كابتن محترف للرحلات، مع تواجد الكابتن والعاملة في رحلات VIP لضمان أعلى مستويات الخدمة والخصوصية العائلية"
+                "text": "طاقم الرحلة: كابتن فلبيني محترف للرحلات، مع تواجد كابتن فلبيني وعاملة فلبينية للباقة VIP لضمان أعلى مستويات الخدمة والخصوصية العائلية"
             },
             {
                 "icon": "fa-solid fa-water-ladder",
-                "text": "ألعاب مائية وسينما وسلاش: زحليقة مائية، سرير تشميس، كاياك، كرسي معلق، ألعاب كبيرة (خيمة، طائرة، جلسة دائرية)، سينما مجانية بعد الغروب، ومكينة سلاش"
+                "text": "ألعاب مائية وسينما وسلاش: زحليقة مائية ودرج، سرير تشميس، كاياك، كرسي معلق، لعبة كبيرة مجاناً مع VIP (خيمة/طائرة/جلسة دائرية)، سينما مجانية لحفلات المناسبات فوق ساعتين، ألعاب سحب (بحسب الأمواج والجو)، ومكينة سلاش"
             },
             {
                 "icon": "fa-solid fa-restroom",
                 "text": "مرافق القارب: دورة مياه ومروش مجهز بماء عذب، جلسات مظللة مريحة (لا يتوفر غرف نوم أو صالون مغلق مكيف)"
             }
         ],
-        "packagesHtml": "<h4 class=\"box-title\" style=\"color: var(--navy); border-bottom: 2px solid var(--gold); padding-bottom: 6px; margin-bottom: 10px;\">\r\n                                    <i class=\"fa-solid fa-compass\" style=\"color: var(--gold);\"></i> 1. رحلات البحر المفتوح (بياضة أو جزيرة أبو طير +300 ريال — حتى 11 شخصاً)\r\n                                </h4>\r\n                                <div class=\"trip-price-item\">\r\n                                    <div class=\"trip-info\">\r\n                                        <span class=\"trip-name\" style=\"font-weight: 700;\">الباقة الأولى (الأساسية) — 6 ساعات</span>\r\n                                        <small class=\"weekend-note\">صباحية (6-12) أو مسائية (1-7) | ماء وعصيرات ومكينة سلاش + منشفة ونظارات غوص للاستعمال + زحليقة وكرسي وتشميس | إضافة ساعتين (300 ريال/ساعة)</small>\r\n                                    </div>\r\n                                    <div class=\"trip-price\"><strong>5-6 ضيوف: 2,000 | 7-9 ضيوف: 2,500 | 9-11 ضيفاً: 3,000 ريال</strong><br><small style=\"color: var(--gold-dark); font-weight: 700;\">(أبو طير: +300 ريال)</small></div>\r\n                                </div>\r\n                                <div class=\"trip-price-item border-top-dash\">\r\n                                    <div class=\"trip-info\">\r\n                                        <span class=\"trip-name\" style=\"font-weight: 700; color: var(--ocean-dark);\">الباقة الثانية VIP (الشاملة الألعاب والمشويات) — 6 ساعات</span>\r\n                                        <small class=\"weekend-note\">كابتن وعاملة + هدايا تذكارية للضيوف + برجر مشوي بالقارب (2 للشخص) + سرير وكاياك وزحليقة وكرسي معلق + لعبة كبيرة مشمولة (خيمة/طائرة/جلسة دائرية) | لعبة ثانية 500 ريال | ألعاب سحب 200 ريال</small>\r\n                                    </div>\r\n                                    <div class=\"trip-price\"><strong>5-6 ضيوف: 3,000 | 7-8 ضيوف: 3,500 | 9-10 ضيوف: 4,000 ريال</strong><br><small style=\"color: var(--gold-dark); font-weight: 700;\">(أبو طير: +300 ريال)</small></div>\r\n                                </div>\r\n\r\n                                <h4 class=\"box-title\" style=\"color: var(--navy); border-bottom: 2px solid var(--ocean); padding-bottom: 6px; margin: 16px 0 10px 0;\">\r\n                                    <i class=\"fa-solid fa-ship\" style=\"color: var(--ocean);\"></i> 2. رحلات النزهة وجولات الخور (شرم أبحر الجنوبية)\r\n                                </h4>\r\n                                <div class=\"trip-price-item\">\r\n                                    <div class=\"trip-info\">\r\n                                        <span class=\"trip-name\" style=\"font-weight: 700;\">إيجار النزهة الأساسي</span>\r\n                                        <small class=\"weekend-note\">ساعة كاملة 460 ريال (تشمل قهوة أمريكية وشاي أحمر أو أخضر مجاناً) | السينما مجاني بعد الغروب مع فشار ومشروبات</small>\r\n                                    </div>\r\n                                    <div class=\"trip-price\"><strong>460 ريال/ساعة</strong></div>\r\n                                </div>\r\n                                <div class=\"trip-price-item border-top-dash\">\r\n                                    <div class=\"trip-info\">\r\n                                        <span class=\"trip-name\" style=\"font-weight: 700;\">وجبات العشاء والمناسبات (اختياري عبر الواتس اب)</span>\r\n                                        <small class=\"weekend-note\">ساندوتشات أرتشي 60 ريال | برجر مشوي 60 ريال | سوشي ماكي 120 ريال | كيكة وتنسيق 60 ريال (مع برجر 100 / مع سوشي 200) | شوكولاته 120-200 ريال</small>\r\n                                    </div>\r\n                                    <div class=\"trip-price\"><strong>حسب الوجبة</strong></div>\r\n                                </div>",
+        "packagesHtml": "<h4 class=\"box-title\" style=\"color: var(--navy); border-bottom: 2px solid var(--gold); padding-bottom: 6px; margin-bottom: 10px;\">\r\n                                    <i class=\"fa-solid fa-compass\" style=\"color: var(--gold);\"></i> 1. رحلات البحر المفتوح (بياضة أو جزيرة أبو طير +300 ريال)\r\n                                </h4>\r\n                                <div class=\"trip-price-item\">\r\n                                    <div class=\"trip-info\">\r\n                                        <span class=\"trip-name\" style=\"font-weight: 700;\">الباقة الأولى (باقة عادية) — حتى 11 شخصاً (6 ساعات)</span>\r\n                                        <small class=\"weekend-note\">كابتن فلبيني | صباحية (6-12) أو مسائية (1-7) | ماء وعصيرات ومكينة سلاش + منشفة ونظارات غوص للاستعمال + زحليقة وكرسي وتشميس | إضافة ساعات إضافية (بحد أدنى ساعتين - 300 ريال/ساعة)</small>\r\n                                    </div>\r\n                                    <div class=\"trip-price\"><strong>5-6 ضيوف: 2,000 | 7-9 ضيوف: 2,500 | 9-11 ضيفاً: 3,000 ريال</strong><br><small style=\"color: var(--gold-dark); font-weight: 700;\">(أبو طير: +300 ريال)</small></div>\r\n                                </div>\r\n                                <div class=\"trip-price-item border-top-dash\">\r\n                                    <div class=\"trip-info\">\r\n                                        <span class=\"trip-name\" style=\"font-weight: 700; color: var(--ocean-dark);\">الباقة الثانية (باقة VIP — فقط حتى 10 أشخاص) — 6 ساعات</span>\r\n                                        <small class=\"weekend-note\">كابتن فلبيني وعاملة فلبينية للباقة VIP + هدايا تذكارية للضيوف + برجر مشوي بالقارب (2 للشخص) + سرير وكاياك وزحليقة وكرسي معلق + لعبة كبيرة واحدة مجاناً (خيمة/طائرة/جلسة دائرية) | لعبة ثانية 500 ريال | ألعاب سحب بالتيوب 200 ريال (تخضع لحالة الأمواج والجو) | إضافة ساعات إضافية (بحد أدنى ساعتين - 300 ريال/ساعة)</small>\r\n                                    </div>\r\n                                    <div class=\"trip-price\"><strong>5-6 ضيوف: 3,000 | 7-8 ضيوف: 3,500 | 9-10 ضيوف: 4,000 ريال</strong><br><small style=\"color: var(--navy); font-weight: 800;\">(باقة VIP فقط حتى 10 أشخاص)</small><br><small style=\"color: var(--gold-dark); font-weight: 700;\">(أبو طير: +300 ريال)</small></div>\r\n                                </div>\r\n\r\n                                <h4 class=\"box-title\" style=\"color: var(--navy); border-bottom: 2px solid var(--ocean); padding-bottom: 6px; margin: 16px 0 10px 0;\">\r\n                                    <i class=\"fa-solid fa-ship\" style=\"color: var(--ocean);\"></i> 2. رحلات النزهة وجولات الخور (شرم أبحر الجنوبية)\r\n                                </h4>\r\n                                <div class=\"trip-price-item\">\r\n                                    <div class=\"trip-info\">\r\n                                        <span class=\"trip-name\" style=\"font-weight: 700;\">إيجار النزهة الأساسي</span>\r\n                                        <small class=\"weekend-note\">ساعة كاملة 460 ريال (تشمل قهوة أمريكية وشاي أحمر أو أخضر مجاناً) | السينما مجانية للحفلات التي تزيد مدتها عن ساعتين مع فشار ومشروبات</small>\r\n                                    </div>\r\n                                    <div class=\"trip-price\"><strong>460 ريال/ساعة</strong></div>\r\n                                </div>\r\n                                <div class=\"trip-price-item border-top-dash\">\r\n                                    <div class=\"trip-info\">\r\n                                        <span class=\"trip-name\" style=\"font-weight: 700;\">وجبات العشاء والمناسبات (اختياري عبر الواتس اب)</span>\r\n                                        <small class=\"weekend-note\">ساندوتشات أرتشي 60 ريال | برجر مشوي 60 ريال | سوشي ماكي 120 ريال | كيكة وتنسيق 60 ريال (مع برجر 100 / مع سوشي 200) | شوكولاته 120-200 ريال</small>\r\n                                    </div>\r\n                                    <div class=\"trip-price\"><strong>حسب الوجبة</strong></div>\r\n                                </div>",
         "pdfLinks": [
             {
                 "url": "files/barbaros/البحر المفتوح.pdf",
@@ -1513,7 +1541,7 @@ const fleetDetailsData = {
                 "alt": "قارب بارباروسا VIP"
             },
             {
-                "src": "images/بارباروسا/2.webp",
+                "src": "images/بارباروسا/activities/cinema.webp",
                 "alt": "سهرة السينما والبروجكتر وشاشة العرض"
             },
             {
@@ -1559,14 +1587,14 @@ const fleetDetailsData = {
         "badge": "الأفضل قيمة مقابل سعر",
         "catTag": "اليخت الفاخر VIP",
         "capacity": "حتى 12 ضيفاً",
-        "marina": "مرسى البحر الأحمر",
+        "marina": "مرسى الأحلام",
         "keyFeature": "فخامة وتوثيق احترافي",
         "featureIcon": "fa-solid fa-camera-retro",
         "startingPrice": "450",
         "priceUnit": "ر.س / ساعة",
-        "priceSubtext": "أو 1,480 ر.س لجزيرة بياضة (6س)",
+        "priceSubtext": "أو 1,980 ر.س لجزيرة بياضة (6س)",
         "descriptions": [
-            "🌟 لمن يبحث عن الفخامة وتوثيق اللحظات باحترافية بأفضل الأسعار!",
+            "🌟 لمن يبحث عن الفخامة وتوثيق اللحظات باحترافية بأفضل الأسعار في مرسى الأحلام فقط!",
             "الخيار الأول المصمم ليمنحكم تجربة بحرية استثنائية تجمع بين الرفاهية والراحة الكاملة والتصوير الإبداعي."
         ],
         "specs": [
@@ -1575,15 +1603,15 @@ const fleetDetailsData = {
                 "text": "توثيق اللحظات باحترافية: تصميم فاخر وزوايا تصوير رائعة لإلتقاط أجمل الذكريات"
             },
             {
-                "icon": "fa-solid fa-users",
-                "text": "مناسب لكافة الرحلات: مثالي جداً للرحلات العائلية، الجمعات الشبابية، السباحة، والصيد"
+                "icon": "fa-solid fa-map-location-dot",
+                "text": "مرسى الانطلاق: مرسى الأحلام فقط"
             },
             {
                 "icon": "fa-solid fa-bed",
                 "text": "غرفة نوم متكاملة وجلسات واسعة أمامية وخلفية"
             }
         ],
-        "packagesHtml": "<h4 class=\"box-title\"><i class=\"fa-solid fa-crown\" style=\"color: var(--gold);\"></i> أسعار وباقات يخت بينتوس VIP (شاملة 6 أشخاص)</h4>\r\n                                <div class=\"trip-price-item\">\r\n                                    <div class=\"trip-info\"><span class=\"trip-name\">رحلة جزيرة بياضة (6 ساعات)</span></div>\r\n                                    <div class=\"trip-price\"><strong>1,480 ريال</strong></div>\r\n                                </div>\r\n                                <div class=\"trip-price-item\">\r\n                                    <div class=\"trip-info\"><span class=\"trip-name\">رحلة جزيرة أبو طير (6 ساعات)</span></div>\r\n                                    <div class=\"trip-price\"><strong>1,780 ريال</strong></div>\r\n                                </div>\r\n                                <div class=\"trip-price-item border-top-dash\">\r\n                                    <div class=\"trip-info\">\r\n                                        <span class=\"trip-name\">رحلات الصيد (6 / 8 / 10 / 12 ساعة)</span>\r\n                                        <small class=\"weekend-note\">6س: 1500 | 8س: 1780 | 10س: 1980 | 12س: 2180 ريال</small>\r\n                                    </div>\r\n                                    <div class=\"trip-price\"><strong>تبدأ من 1,500 ريال</strong></div>\r\n                                </div>\r\n                                <div class=\"trip-price-item border-top-dash\">\r\n                                    <div class=\"trip-info\">\r\n                                        <span class=\"trip-name\">جولات الخور / شرم أبحر</span>\r\n                                        <small class=\"weekend-note\">ساعة كاملة 450 ريال | نصف ساعة 250 ريال</small>\r\n                                    </div>\r\n                                    <div class=\"trip-price\"><strong>250 – 450 ريال</strong></div>\r\n                                </div>\r\n                            </div>\r\n                            <div class=\"package-actions\">\r\n                                <a href=\"boats/Beneteau.html\" class=\"btn btn-outline\"><i class=\"fa-solid fa-circle-info\"></i> التفاصيل</a>\r\n                                <button type=\"button\" class=\"btn btn-dark\" onclick=\"openCalculatorModal('qimat-al-fawz-pentos')\"><i class=\"fa-solid fa-calculator\"></i> احسب واحجز</button>\r\n                                <button type=\"button\" class=\"btn btn-share\" onclick=\"shareBoatFromCard(this, 'boats/Beneteau.html')\" title=\"مشاركة رابط القارب\"><i class=\"fa-solid fa-share-nodes\"></i> مشاركة</button>\r\n                            </div>\r\n                        </div>",
+        "packagesHtml": "<h4 class=\"box-title\"><i class=\"fa-solid fa-crown\" style=\"color: var(--gold);\"></i> أسعار وباقات يخت بينتوس VIP (شاملة 6 أشخاص)</h4>\r\n                                <div class=\"trip-price-item\">\r\n                                    <div class=\"trip-info\"><span class=\"trip-name\">رحلة جزيرة بياضة (6 ساعات)</span></div>\r\n                                    <div class=\"trip-price\"><strong>1,980 ريال أسبوع | 2,180 ريال ويكند</strong></div>\r\n                                </div>\r\n                                <div class=\"trip-price-item\">\r\n                                    <div class=\"trip-info\"><span class=\"trip-name\">رحلة جزيرة أبو طير (6 ساعات)</span></div>\r\n                                    <div class=\"trip-price\"><strong>2,280 ريال أسبوع | 2,480 ريال ويكند</strong></div>\r\n                                </div>\r\n                                <div class=\"trip-price-item border-top-dash\">\r\n                                    <div class=\"trip-info\">\r\n                                        <span class=\"trip-name\">رحلات الصيد (6 / 8 / 10 / 12 ساعة)</span>\r\n                                        <small class=\"weekend-note\">6س: 2000 | 8س: 2280 | 10س: 2480 | 12س: 2680 ريال (+200 ريال بالويكند)</small>\r\n                                    </div>\r\n                                    <div class=\"trip-price\"><strong>تبدأ من 2,000 ريال</strong></div>\r\n                                </div>\r\n                                <div class=\"trip-price-item border-top-dash\">\r\n                                    <div class=\"trip-info\">\r\n                                        <span class=\"trip-name\">جولات الخور / شرم أبحر</span>\r\n                                        <small class=\"weekend-note\">ساعة كاملة 450 ريال | نصف ساعة 250 ريال (بدون زيادة ويكند)</small>\r\n                                    </div>\r\n                                    <div class=\"trip-price\"><strong>250 – 450 ريال</strong></div>\r\n                                </div>\r\n                            </div>\r\n                            <div class=\"package-actions\">\r\n                                <a href=\"boats/Beneteau.html\" class=\"btn btn-outline\"><i class=\"fa-solid fa-circle-info\"></i> التفاصيل</a>\r\n                                <button type=\"button\" class=\"btn btn-dark\" onclick=\"openCalculatorModal('qimat-al-fawz-pentos')\"><i class=\"fa-solid fa-calculator\"></i> احسب واحجز</button>\r\n                                <button type=\"button\" class=\"btn btn-share\" onclick=\"shareBoatFromCard(this, 'boats/Beneteau.html')\" title=\"مشاركة رابط القارب\"><i class=\"fa-solid fa-share-nodes\"></i> مشاركة</button>\r\n                            </div>\r\n                        </div>",
         "pdfLinks": [],
         "images": [
             {
@@ -1686,14 +1714,14 @@ const fleetDetailsData = {
         "badge": "يخت VIP فاخر | رمادي",
         "catTag": "يخت فاخر VIP",
         "capacity": "حتى 14 ضيفاً",
-        "marina": "مرسى البحر الأحمر",
+        "marina": "نادي الأمانة لليخوت",
         "keyFeature": "تكييف كامل وصالون فندقي",
         "featureIcon": "fa-solid fa-snowflake",
         "startingPrice": "680",
         "priceUnit": "ر.س / ساعة",
-        "priceSubtext": "أو 3,180 ر.س لجزيرة بياضة (6س)",
+        "priceSubtext": "أو 3,680 ر.س لجزيرة بياضة (6س)",
         "descriptions": [
-            "يخت سوبر فاخر بلونه الرمادي الانسيابي المميز. رحلات بياضة والخور وتجارب صيد لا تُنسى بأعلى درجات الرفاهية والخصوصية لسعة حتى 14 شخصاً."
+            "يخت سوبر فاخر بلونه الرمادي الانسيابي المميز بنادي الأمانة لليخوت. رحلات بياضة وأبو طير والخور وتجارب صيد لا تُنسى بأعلى درجات الرفاهية والخصوصية لسعة حتى 14 شخصاً."
         ],
         "specs": [
             {
@@ -1706,10 +1734,10 @@ const fleetDetailsData = {
             },
             {
                 "icon": "fa-solid fa-map-location-dot",
-                "text": "مرسى الانطلاق: جدة — مراسي أبحر"
+                "text": "مرسى الانطلاق: نادي الأمانة لليخوت — أبحر الجنوبية"
             }
         ],
-        "packagesHtml": "<h4 class=\"box-title\"><i class=\"fa-solid fa-gift\"></i> باقات وأسعار رحلات ناردو</h4>\r\n                                <div class=\"trip-price-item\">\r\n                                    <div class=\"trip-info\">\r\n                                        <span class=\"trip-name\">باقة جزيرة بياضة (6 ساعات)</span>\r\n                                        <small class=\"weekend-note\">5-6 ضيوف: 3,180 | 7-9 ضيوف: 3,680 | 9-14 ضيف: 3,980 ريال</small>\r\n                                    </div>\r\n                                    <div class=\"trip-price\"><strong>3,180 – 3,980 ريال</strong></div>\r\n                                </div>\r\n                                <div class=\"trip-price-item border-top-dash\">\r\n                                    <div class=\"trip-info\">\r\n                                        <span class=\"trip-name\">خيار التمديد إلى 9 ساعات</span>\r\n                                        <small class=\"weekend-note\">إضافة 3 ساعات إضافية على باقة بياضة</small>\r\n                                    </div>\r\n                                    <div class=\"trip-price\"><strong>+ 700 ريال</strong></div>\r\n                                </div>\r\n                                <div class=\"trip-price-item border-top-dash\">\r\n                                    <div class=\"trip-info\">\r\n                                        <span class=\"trip-name\">رحلات ومغامرات الصيد</span>\r\n                                        <small class=\"weekend-note\">احتساب ساعة صيد إضافية تُضاف على باقة بياضة</small>\r\n                                    </div>\r\n                                    <div class=\"trip-price\"><strong>+ 300 ريال / ساعة</strong></div>\r\n                                </div>\r\n                                <div class=\"trip-price-item border-top-dash\">\r\n                                    <div class=\"trip-info\">\r\n                                        <span class=\"trip-name\">رحلات الخور (شرم أبحر)</span>\r\n                                        <small class=\"weekend-note\">الساعة الأولى: 680 ريال | كل ساعة إضافية: 580 ريال</small>\r\n                                    </div>\r\n                                    <div class=\"trip-price\"><strong>680 ريال / أول ساعة</strong></div>\r\n                                </div>\r\n                            </div>\r\n                            <div class=\"package-actions\">\r\n                                <a href=\"boats/nardo.html\" class=\"btn btn-outline\"><i class=\"fa-solid fa-circle-info\"></i> التفاصيل</a>\r\n                                <button type=\"button\" class=\"btn btn-dark\" onclick=\"openCalculatorModal('nardo')\"><i class=\"fa-solid fa-calculator\"></i> احسب واحجز</button>\r\n                                <button type=\"button\" class=\"btn btn-share\" onclick=\"shareBoatFromCard(this, 'boats/nardo.html')\" title=\"مشاركة رابط القارب\"><i class=\"fa-solid fa-share-nodes\"></i> مشاركة</button>\r\n                            </div>\r\n                        </div>",
+        "packagesHtml": "<h4 class=\"box-title\"><i class=\"fa-solid fa-gift\"></i> باقات وأسعار رحلات ناردو</h4>\r\n                                <div class=\"trip-price-item\">\r\n                                    <div class=\"trip-info\">\r\n                                        <span class=\"trip-name\">باقة جزيرة بياضة (6 ساعات)</span>\r\n                                        <small class=\"weekend-note\">5-7 ضيوف: 3,680 ريال | 7-14 ضيفاً: 3,980 ريال (+300 ريال بالويكند)</small>\r\n                                    </div>\r\n                                    <div class=\"trip-price\"><strong>3,680 – 3,980 ريال</strong></div>\r\n                                </div>\r\n                                <div class=\"trip-price-item border-top-dash\">\r\n                                    <div class=\"trip-info\">\r\n                                        <span class=\"trip-name\">باقة جزيرة أبو طير (6 ساعات)</span>\r\n                                        <small class=\"weekend-note\">نفس باقات بياضة بإضافة 300 ريال (5-7: 3,980 | 7-14: 4,280 ريال) (+300 بالويكند)</small>\r\n                                    </div>\r\n                                    <div class=\"trip-price\"><strong>3,980 – 4,280 ريال</strong></div>\r\n                                </div>\r\n                                <div class=\"trip-price-item border-top-dash\">\r\n                                    <div class=\"trip-info\">\r\n                                        <span class=\"trip-name\">إضافة ساعات إضافية</span>\r\n                                        <small class=\"weekend-note\">لكل ساعة إضافية 300 ريال، وأقل شيء للإضافة ساعتين</small>\r\n                                    </div>\r\n                                    <div class=\"trip-price\"><strong>300 ريال / ساعة</strong></div>\r\n                                </div>\r\n                                <div class=\"trip-price-item border-top-dash\">\r\n                                    <div class=\"trip-info\">\r\n                                        <span class=\"trip-name\">رحلات الخور (شرم أبحر)</span>\r\n                                        <small class=\"weekend-note\">الساعة الأولى: 680 ريال | كل ساعة إضافية: 580 ريال (لا تعديل عليها)</small>\r\n                                    </div>\r\n                                    <div class=\"trip-price\"><strong>680 ريال / أول ساعة</strong></div>\r\n                                </div>\r\n                            </div>\r\n                            <div class=\"package-actions\">\r\n                                <a href=\"boats/nardo.html\" class=\"btn btn-outline\"><i class=\"fa-solid fa-circle-info\"></i> التفاصيل</a>\r\n                                <button type=\"button\" class=\"btn btn-dark\" onclick=\"openCalculatorModal('nardo')\"><i class=\"fa-solid fa-calculator\"></i> احسب واحجز</button>\r\n                                <button type=\"button\" class=\"btn btn-share\" onclick=\"shareBoatFromCard(this, 'boats/nardo.html')\" title=\"مشاركة رابط القارب\"><i class=\"fa-solid fa-share-nodes\"></i> مشاركة</button>\r\n                            </div>\r\n                        </div>",
         "pdfLinks": [],
         "images": [
             {
@@ -1727,14 +1755,14 @@ const fleetDetailsData = {
         "badge": "بيبي يخت أنيق | أبيض",
         "catTag": "يخت فاخر VIP",
         "capacity": "حتى 11 ضيفاً",
-        "marina": "مرسى البحر الأحمر",
+        "marina": "نادي الأمانة لليخوت",
         "keyFeature": "تكييف بمولد خاص وغرفة نوم",
         "featureIcon": "fa-solid fa-bed",
         "startingPrice": "460",
         "priceUnit": "ر.س / ساعة",
-        "priceSubtext": "أو 1,580 ر.س لجزيرة بياضة (6س)",
+        "priceSubtext": "أو 1,880 ر.س لجزيرة بياضة (6س)",
         "descriptions": [
-            "يخت كبائن خاص أنيق باللون الأبيض الناصع. خيار مميز يجمع بين القيمة التنافسية والراحة لرحلات بياضة وأبو طير والخور لسعة حتى 11 شخصاً."
+            "يخت كبائن خاص أنيق باللون الأبيض الناصع بنادي الأمانة لليخوت. خيار مميز يجمع بين القيمة التنافسية والراحة لرحلات بياضة وأبو طير والخور لسعة حتى 11 شخصاً."
         ],
         "specs": [
             {
@@ -1746,11 +1774,11 @@ const fleetDetailsData = {
                 "text": "تكييف مضمون مع التزام المالك بتشغيل المولد الخاص"
             },
             {
-                "icon": "fa-solid fa-compass",
-                "text": "الوجهة: جزيرة بياضة أو جزيرة أبو طير"
+                "icon": "fa-solid fa-map-location-dot",
+                "text": "مرسى الانطلاق: نادي الأمانة لليخوت — أبحر الجنوبية"
             }
         ],
-        "packagesHtml": "<h4 class=\"box-title\"><i class=\"fa-solid fa-gift\"></i> باقات وأسعار رحلات تام</h4>\r\n                                <div class=\"trip-price-item\">\r\n                                    <div class=\"trip-info\">\r\n                                        <span class=\"trip-name\">باقات بياضة أو أبو طير (6 ساعات)</span>\r\n                                        <small class=\"weekend-note\">5-6 ضيوف: 1,580 | 7-9 ضيوف: 1,880 | 9-11 ضيف: 1,980 ريال</small>\r\n                                    </div>\r\n                                    <div class=\"trip-price\"><strong>1,580 – 1,980 ريال</strong></div>\r\n                                </div>\r\n                                <div class=\"trip-price-item border-top-dash\">\r\n                                    <div class=\"trip-info\">\r\n                                        <span class=\"trip-name\">خيار التمديد إلى 9 ساعات</span>\r\n                                        <small class=\"weekend-note\">إضافة 3 ساعات إضافية على الباقة المختارة</small>\r\n                                    </div>\r\n                                    <div class=\"trip-price\"><strong>+ 500 ريال</strong></div>\r\n                                </div>\r\n                                <div class=\"trip-price-item border-top-dash\">\r\n                                    <div class=\"trip-info\">\r\n                                        <span class=\"trip-name\">رحلات ومغامرات الصيد</span>\r\n                                        <small class=\"weekend-note\">مخصصة لعدد محدود (2 إلى 4 أشخاص)</small>\r\n                                    </div>\r\n                                    <div class=\"trip-price\"><strong>تسعيرة خاصة</strong></div>\r\n                                </div>\r\n                                <div class=\"trip-price-item border-top-dash\">\r\n                                    <div class=\"trip-info\">\r\n                                        <span class=\"trip-name\">رحلات الخور (شرم أبحر)</span>\r\n                                        <small class=\"weekend-note\">الساعة الأولى: 460 ريال | كل ساعة إضافية: 430 ريال</small>\r\n                                    </div>\r\n                                    <div class=\"trip-price\"><strong>460 ريال / أول ساعة</strong></div>\r\n                                </div>\r\n                            </div>\r\n                            <div class=\"package-actions\">\r\n                                <a href=\"boats/tam.html\" class=\"btn btn-outline\"><i class=\"fa-solid fa-circle-info\"></i> التفاصيل</a>\r\n                                <button type=\"button\" class=\"btn btn-dark\" onclick=\"openCalculatorModal('tam')\"><i class=\"fa-solid fa-calculator\"></i> احسب واحجز</button>\r\n                                <button type=\"button\" class=\"btn btn-share\" onclick=\"shareBoatFromCard(this, 'boats/tam.html')\" title=\"مشاركة رابط القارب\"><i class=\"fa-solid fa-share-nodes\"></i> مشاركة</button>\r\n                            </div>\r\n                        </div>",
+        "packagesHtml": "<h4 class=\"box-title\"><i class=\"fa-solid fa-gift\"></i> باقات وأسعار رحلات تام</h4>\r\n                                <div class=\"trip-price-item\">\r\n                                    <div class=\"trip-info\">\r\n                                        <span class=\"trip-name\">باقة جزيرة بياضة (6 ساعات)</span>\r\n                                        <small class=\"weekend-note\">5-6 ضيوف: 1,880 ريال | 7-10 ضيوف: 2,280 ريال (+200 ريال بالويكند)</small>\r\n                                    </div>\r\n                                    <div class=\"trip-price\"><strong>1,880 – 2,280 ريال</strong></div>\r\n                                </div>\r\n                                <div class=\"trip-price-item border-top-dash\">\r\n                                    <div class=\"trip-info\">\r\n                                        <span class=\"trip-name\">باقة جزيرة أبو طير (6 ساعات)</span>\r\n                                        <small class=\"weekend-note\">نفس باقات بياضة بإضافة 200 ريال (5-6: 2,080 | 7-10: 2,480 ريال) (+200 بالويكند)</small>\r\n                                    </div>\r\n                                    <div class=\"trip-price\"><strong>2,080 – 2,480 ريال</strong></div>\r\n                                </div>\r\n                                <div class=\"trip-price-item border-top-dash\">\r\n                                    <div class=\"trip-info\">\r\n                                        <span class=\"trip-name\">إضافة ساعات إضافية</span>\r\n                                        <small class=\"weekend-note\">لكل ساعة إضافية 300 ريال، وأقل شيء للإضافة ساعتين</small>\r\n                                    </div>\r\n                                    <div class=\"trip-price\"><strong>300 ريال / ساعة</strong></div>\r\n                                </div>\r\n                                <div class=\"trip-price-item border-top-dash\">\r\n                                    <div class=\"trip-info\">\r\n                                        <span class=\"trip-name\">رحلات الخور (شرم أبحر)</span>\r\n                                        <small class=\"weekend-note\">الساعة الأولى: 460 ريال | كل ساعة إضافية: 430 ريال (لا تعديل عليها)</small>\r\n                                    </div>\r\n                                    <div class=\"trip-price\"><strong>460 ريال / أول ساعة</strong></div>\r\n                                </div>\r\n                            </div>\r\n                            <div class=\"package-actions\">\r\n                                <a href=\"boats/tam.html\" class=\"btn btn-outline\"><i class=\"fa-solid fa-circle-info\"></i> التفاصيل</a>\r\n                                <button type=\"button\" class=\"btn btn-dark\" onclick=\"openCalculatorModal('tam')\"><i class=\"fa-solid fa-calculator\"></i> احسب واحجز</button>\r\n                                <button type=\"button\" class=\"btn btn-share\" onclick=\"shareBoatFromCard(this, 'boats/tam.html')\" title=\"مشاركة رابط القارب\"><i class=\"fa-solid fa-share-nodes\"></i> مشاركة</button>\r\n                            </div>\r\n                        </div>",
         "pdfLinks": [],
         "images": [
             {
@@ -1891,34 +1919,34 @@ const fleetDetailsData = {
     "baby-al-jawhari": {
         "key": "baby-al-jawhari",
         "name": "يخت الجوهري (Al-Jawhari)",
-        "badge": "VIP فخامة وألعاب مائية",
+        "badge": "VIP فخامة وراحة",
         "catTag": "بيبي يخت VIP",
-        "capacity": "حتى 10 ضيوف",
-        "marina": "مرسى البحر الأحمر",
-        "keyFeature": "صالون مكيف ولعبة الموزة",
-        "featureIcon": "fa-solid fa-water",
+        "capacity": "حتى 11 ضيفاً",
+        "marina": "نادي الأمانة لليخوت",
+        "keyFeature": "فخامة وجلسات استرخاء",
+        "featureIcon": "fa-solid fa-sun",
         "startingPrice": "460",
         "priceUnit": "ر.س / ساعة",
-        "priceSubtext": "أو 1,750 ر.س لجزيرة بياضة (6س)",
+        "priceSubtext": "أو 1,880 ر.س لجزيرة بياضة (6س)",
         "descriptions": [
-            "🌟 فخامة وراحة خاصة مع كابينة مكيفة وجلسة تشميس أمامية وألعاب مائية!",
-            "تصميم راقٍ يجمع بين الخصوصية التامة للعائلات والمجموعات، مع ألعاب مائية متنوعة تشمل لعبة سحب الموزة وبورد التجديف وجلسات تيك مظللة."
+            "🌟 فخامة وراحة خاصة مع جلسة تشميس أمامية وألعاب مائية بنادي الأمانة لليخوت!",
+            "تصميم راقٍ يجمع بين الخصوصية التامة للعائلات والمجموعات، مع ألعاب مائية متنوعة وجلسات تيك مظللة."
         ],
         "specs": [
             {
-                "icon": "fa-solid fa-snowflake",
-                "text": "كابينة داخلية مكيفة + غرفة نوم + دورة مياه متكاملة ومطبخ تحضيري"
+                "icon": "fa-solid fa-bed",
+                "text": "غرفة نوم + دورة مياه متكاملة ومطبخ تحضيري"
             },
             {
                 "icon": "fa-solid fa-sun",
                 "text": "جلسة تشميس أمامية فاخرة (Sunlounger) + أرضيات تيك وسلم سباحة"
             },
             {
-                "icon": "fa-solid fa-person-swimming",
-                "text": "بورد تجديف (SUP) وفرشة عائمة + تتوفر لعبة سحب الموزة المائية"
+                "icon": "fa-solid fa-map-location-dot",
+                "text": "مرسى الانطلاق: نادي الأمانة لليخوت — أبحر الجنوبية"
             }
         ],
-        "packagesHtml": "<h4 class=\"box-title\"><i class=\"fa-solid fa-tags\" style=\"color: var(--gold);\"></i> باقات وأسعار يخت الجوهري</h4>\r\n                                <div class=\"trip-price-item\">\r\n                                    <div class=\"trip-info\">\r\n                                        <span class=\"trip-name\">رحلة جزيرة بياضة (6 ساعات)</span>\r\n                                        <small class=\"weekend-note\">سباحة واستجمام في المالديف + أنشطة بحرية</small>\r\n                                    </div>\r\n                                    <div class=\"trip-price\"><strong>1,750 ريال</strong></div>\r\n                                </div>\r\n                                <div class=\"trip-price-item\">\r\n                                    <div class=\"trip-info\">\r\n                                        <span class=\"trip-name\">رحلة جزيرة أبو طير (6 ساعات)</span>\r\n                                        <small class=\"weekend-note\">مياه نقية وطبيعة بحرية ساحرة</small>\r\n                                    </div>\r\n                                    <div class=\"trip-price\"><strong>2,000 ريال</strong></div>\r\n                                </div>\r\n                                <div class=\"trip-price-item\">\r\n                                    <div class=\"trip-info\">\r\n                                        <span class=\"trip-name\">رحلة خور سعود (6 ساعات)</span>\r\n                                        <small class=\"weekend-note\">هدوء وأجواء خلابة في خور سعود</small>\r\n                                    </div>\r\n                                    <div class=\"trip-price\"><strong>1,750 ريال</strong></div>\r\n                                </div>\r\n                                <div class=\"trip-price-item border-top-dash\">\r\n                                    <div class=\"trip-info\">\r\n                                        <span class=\"trip-name\">جولات الخور (شرم أبحر)</span>\r\n                                        <small class=\"weekend-note\">ساعة كاملة 460 ريال | نصف ساعة 230 ريال</small>\r\n                                    </div>\r\n                                    <div class=\"trip-price\"><strong>230 – 460 ريال</strong></div>\r\n                                </div>\r\n                                <div class=\"trip-price-item border-top-dash\" style=\"background: rgba(201,162,39,0.06); margin: 6px -12px -12px -12px; padding: 10px 12px; border-radius: 0 0 var(--radius-md) var(--radius-md);\">\r\n                                    <div class=\"trip-info\">\r\n                                        <span class=\"trip-name\" style=\"color: var(--navy); font-weight: 700;\"><i class=\"fa-solid fa-bolt\" style=\"color: var(--gold);\"></i> إضافة لعبة سحب الموزة (Banana Boat)</span>\r\n                                        <small class=\"weekend-note\">لعبة سحب مائية ممتعة للمجموعة</small>\r\n                                    </div>\r\n                                    <div class=\"trip-price\"><strong>+ 250 ريال</strong></div>\r\n                                </div>\r\n                            </div>\r\n                            <div class=\"package-actions\">\r\n                                <a href=\"boats/al-jawhari.html\" class=\"btn btn-outline\"><i class=\"fa-solid fa-circle-info\"></i> التفاصيل</a>\r\n                                <button type=\"button\" class=\"btn btn-dark\" onclick=\"openCalculatorModal('al-jawhari')\"><i class=\"fa-solid fa-calculator\"></i> احسب واحجز</button>\r\n                                <button type=\"button\" class=\"btn btn-share\" onclick=\"shareBoatFromCard(this, 'boats/al-jawhari.html')\" title=\"مشاركة رابط القارب\"><i class=\"fa-solid fa-share-nodes\"></i> مشاركة</button>\r\n                            </div>\r\n                        </div>\r\n                    </div>\r\n                </div>",
+        "packagesHtml": "<h4 class=\"box-title\"><i class=\"fa-solid fa-tags\" style=\"color: var(--gold);\"></i> باقات وأسعار يخت الجوهري</h4>\r\n                                <div class=\"trip-price-item\">\r\n                                    <div class=\"trip-info\">\r\n                                        <span class=\"trip-name\">رحلة جزيرة بياضة (6 ساعات)</span>\r\n                                        <small class=\"weekend-note\">من 5 إلى 6 أشخاص: 1,880 ريال | كل شخص إضافي: 100 ريال حتى 11 ضيفاً (+200 بالويكند)</small>\r\n                                    </div>\r\n                                    <div class=\"trip-price\"><strong>1,880 ريال</strong></div>\r\n                                </div>\r\n                                <div class=\"trip-price-item\">\r\n                                    <div class=\"trip-info\">\r\n                                        <span class=\"trip-name\">رحلة جزيرة أبو طير (6 ساعات)</span>\r\n                                        <small class=\"weekend-note\">إضافة 300 ريال على بياضة (2,180 ريال لـ 5-6 أشخاص) + 100 ريال لكل شخص إضافي (+200 بالويكند)</small>\r\n                                    </div>\r\n                                    <div class=\"trip-price\"><strong>2,180 ريال</strong></div>\r\n                                </div>\r\n                                <div class=\"trip-price-item border-top-dash\">\r\n                                    <div class=\"trip-info\">\r\n                                        <span class=\"trip-name\">إضافة ساعات إضافية</span>\r\n                                        <small class=\"weekend-note\">لكل ساعة إضافية 300 ريال، وأقل شيء للإضافة ساعتين</small>\r\n                                    </div>\r\n                                    <div class=\"trip-price\"><strong>300 ريال / ساعة</strong></div>\r\n                                </div>\r\n                                <div class=\"trip-price-item border-top-dash\">\r\n                                    <div class=\"trip-info\">\r\n                                        <span class=\"trip-name\">جولات الخور (شرم أبحر)</span>\r\n                                        <small class=\"weekend-note\">ساعة كاملة 460 ريال | نصف ساعة 230 ريال</small>\r\n                                    </div>\r\n                                    <div class=\"trip-price\"><strong>230 – 460 ريال</strong></div>\r\n                                </div>\r\n                                <div class=\"trip-price-item border-top-dash\" style=\"background: rgba(201,162,39,0.06); margin: 6px -12px -12px -12px; padding: 10px 12px; border-radius: 0 0 var(--radius-md) var(--radius-md);\">\r\n                                    <div class=\"trip-info\">\r\n                                        <span class=\"trip-name\" style=\"color: var(--navy); font-weight: 700;\"><i class=\"fa-solid fa-bolt\" style=\"color: var(--gold);\"></i> إضافة لعبة سحب الموزة (Banana Boat)</span>\r\n                                        <small class=\"weekend-note\">لعبة سحب مائية ممتعة للمجموعة في البحر المفتوح</small>\r\n                                    </div>\r\n                                    <div class=\"trip-price\"><strong>+ 250 ريال</strong></div>\r\n                                </div>\r\n                            </div>\r\n                            <div class=\"package-actions\">\r\n                                <a href=\"boats/al-jawhari.html\" class=\"btn btn-outline\"><i class=\"fa-solid fa-circle-info\"></i> التفاصيل</a>\r\n                                <button type=\"button\" class=\"btn btn-dark\" onclick=\"openCalculatorModal('al-jawhari')\"><i class=\"fa-solid fa-calculator\"></i> احسب واحجز</button>\r\n                                <button type=\"button\" class=\"btn btn-share\" onclick=\"shareBoatFromCard(this, 'boats/al-jawhari.html')\" title=\"مشاركة رابط القارب\"><i class=\"fa-solid fa-share-nodes\"></i> مشاركة</button>\r\n                            </div>\r\n                        </div>\r\n                    </div>\r\n                </div>",
         "pdfLinks": [],
         "images": [
             {
@@ -1967,31 +1995,31 @@ const fleetDetailsData = {
         "name": "قارب العميد",
         "badge": "الأفضل قيمة ومساحة",
         "catTag": "قارب كبير للمجموعات",
-        "capacity": "حتى 11 ضيفاً (15 كحد أقصى)",
-        "marina": "مرسى البحر الأحمر",
-        "keyFeature": "رحلات صيد 12 ساعة ومكس بياضة",
+        "capacity": "حتى 11 ضيفاً",
+        "marina": "مرسى الأحلام",
+        "keyFeature": "رحلات 6 ساعات وصيد 12 ساعة ومكس بياضة",
         "featureIcon": "fa-solid fa-fish-fins",
         "startingPrice": "1,500",
-        "priceUnit": "ر.س (12 ساعة)",
+        "priceUnit": "ر.س (6 ساعات)",
         "priceSubtext": "أو 350 ر.س / ساعة جولات الخور",
         "descriptions": [
-            "قارب واسع ومريح ومثالي للعوائل الكبيرة والرحلات الطويلة والمميزة."
+            "قارب واسع ومريح بمرسى الأحلام ومثالي للعوائل والرحلات المميزة لجزيرة بياضة وجزيرة أبو طير ورحلات الصيد."
         ],
         "specs": [
             {
                 "icon": "fa-solid fa-users",
-                "text": "السعة الكلية 12 شخصاً — الحد الأقصى للضيوف 11 ضيفاً (الكابتن مشمول)"
+                "text": "السعة الكلية: حتى 11 ضيفاً كحد أقصى"
             },
             {
-                "icon": "fa-solid fa-circle-check",
-                "text": "السعر الأساسي يشمل 6 أشخاص (كل شخص إضافي 100 ريال)"
+                "icon": "fa-solid fa-clock",
+                "text": "المدد: 6 ساعات لبياضة وأبو طير والمكس (الصيد فقط 12/10 ساعات)"
             },
             {
                 "icon": "fa-solid fa-map-location-dot",
-                "text": "مرسى الانطلاق: مرسى البحر الأحمر"
+                "text": "مرسى الانطلاق: مرسى الأحلام"
             }
         ],
-        "packagesHtml": "<h4 class=\"box-title\"><i class=\"fa-solid fa-gift\"></i> خيارات الرحلات الأساسية (الاقتصادية)</h4>\r\n                                <div class=\"trip-price-item\">\r\n                                    <div class=\"trip-info\"><span class=\"trip-name\">رحلة بياضة (12/10 ساعات)</span></div>\r\n                                    <div class=\"trip-price\"><strong>1,500 أسبوع | 1,800 ويكند</strong></div>\r\n                                </div>\r\n                                <div class=\"trip-price-item\">\r\n                                    <div class=\"trip-info\"><span class=\"trip-name\">رحلة صيد فقط (12/10 ساعات)</span></div>\r\n                                    <div class=\"trip-price\"><strong>1,800 أسبوع | 2,100 ويكند</strong></div>\r\n                                </div>\r\n                                <div class=\"trip-price-item\">\r\n                                    <div class=\"trip-info\"><span class=\"trip-name\">رحلة مكس (بياضة + صيد)</span></div>\r\n                                    <div class=\"trip-price\"><strong>1,950 أسبوع | 2,250 ويكند</strong></div>\r\n                                </div>\r\n                                <div class=\"trip-price-item border-top-dash\">\r\n                                    <div class=\"trip-info\">\r\n                                        <span class=\"trip-name\">باقة المميز VIP (+300 ريال)</span>\r\n                                        <small class=\"weekend-note\">تشمل ألعاب سحب بياضة وطعم صيد طبيعي</small>\r\n                                    </div>\r\n                                    <div class=\"trip-price\"><strong>+300 ريال</strong></div>\r\n                                </div>\r\n                                <div class=\"trip-price-item\">\r\n                                    <div class=\"trip-info\">\r\n                                        <span class=\"trip-name\">باقة مميز بلس VVIP (+350 ريال)</span>\r\n                                        <small class=\"weekend-note\">VIP + مشروبات باردة ومأكولات خفيفة وعدة صيد وتصوير GoPro</small>\r\n                                    </div>\r\n                                    <div class=\"trip-price\"><strong>+350 ريال</strong></div>\r\n                                </div>\r\n                                <div class=\"trip-price-item border-top-dash\">\r\n                                    <div class=\"trip-info\">\r\n                                        <span class=\"trip-name\">رحلة الخور المنفصلة (للساعة)</span>\r\n                                        <small class=\"weekend-note\">رحلة مستقلة تبدأ من 0.5 إلى 2 ساعة</small>\r\n                                    </div>\r\n                                    <div class=\"trip-price\"><strong>400 ريال/ساعة | 250 لنصف ساعة</strong></div>\r\n                                </div>\r\n                            </div>\r\n                            <div class=\"package-actions\">\r\n                                <a href=\"boats/al-ameed.html\" class=\"btn btn-outline\"><i class=\"fa-solid fa-circle-info\"></i> التفاصيل</a>\r\n                                <button type=\"button\" class=\"btn btn-dark\" onclick=\"openCalculatorModal('al-ameed')\"><i class=\"fa-solid fa-calculator\"></i> احسب واحجز</button>\r\n                                <button type=\"button\" class=\"btn btn-share\" onclick=\"shareBoatFromCard(this, 'boats/al-ameed.html')\" title=\"مشاركة رابط القارب\"><i class=\"fa-solid fa-share-nodes\"></i> مشاركة</button>\r\n                            </div>\r\n                        </div>",
+        "packagesHtml": "<h4 class=\"box-title\"><i class=\"fa-solid fa-gift\"></i> خيارات الرحلات الأساسية (الاقتصادية)</h4>\r\n                                <div class=\"trip-price-item\">\r\n                                    <div class=\"trip-info\"><span class=\"trip-name\">رحلة بياضة (6 ساعات)</span></div>\r\n                                    <div class=\"trip-price\"><strong>1,500 أسبوع | 1,800 ويكند</strong></div>\r\n                                </div>\r\n                                <div class=\"trip-price-item\">\r\n                                    <div class=\"trip-info\"><span class=\"trip-name\">رحلة أبو طير (6 ساعات)</span></div>\r\n                                    <div class=\"trip-price\"><strong>1,800 أسبوع | 2,100 ويكند</strong></div>\r\n                                </div>\r\n                                <div class=\"trip-price-item\">\r\n                                    <div class=\"trip-info\"><span class=\"trip-name\">رحلة مكس (بياضة + صيد - 6 ساعات)</span></div>\r\n                                    <div class=\"trip-price\"><strong>1,950 أسبوع | 2,250 ويكند</strong></div>\r\n                                </div>\r\n                                <div class=\"trip-price-item\">\r\n                                    <div class=\"trip-info\"><span class=\"trip-name\">رحلة صيد فقط (12 أسبوع / 10 ويكند)</span><small class=\"weekend-note\">لا تغيير في مدة أو سعر رحلة الصيد</small></div>\r\n                                    <div class=\"trip-price\"><strong>1,800 أسبوع | 2,100 ويكند</strong></div>\r\n                                </div>\r\n                                <div class=\"trip-price-item border-top-dash\">\r\n                                    <div class=\"trip-info\">\r\n                                        <span class=\"trip-name\">الإضافات</span>\r\n                                        <small class=\"weekend-note\">كل إضافة ساعة جديدة: 150 ريال | كل إضافة شخص بعد 6 أشخاص: 100 ريال (باستثناء رحلة الصيد)</small>\r\n                                    </div>\r\n                                    <div class=\"trip-price\"><strong>150 ر.س/ساعة | 100 ر.س/شخص</strong></div>\r\n                                </div>\r\n                                <div class=\"trip-price-item border-top-dash\">\r\n                                    <div class=\"trip-info\">\r\n                                        <span class=\"trip-name\">رحلة الخور المنفصلة (للساعة)</span>\r\n                                        <small class=\"weekend-note\">رحلة مستقلة تبدأ من 0.5 إلى 2 ساعة</small>\r\n                                    </div>\r\n                                    <div class=\"trip-price\"><strong>400 ريال/ساعة | 250 لنصف ساعة</strong></div>\r\n                                </div>\r\n                            </div>\r\n                            <div class=\"package-actions\">\r\n                                <a href=\"boats/al-ameed.html\" class=\"btn btn-outline\"><i class=\"fa-solid fa-circle-info\"></i> التفاصيل</a>\r\n                                <button type=\"button\" class=\"btn btn-dark\" onclick=\"openCalculatorModal('al-ameed')\"><i class=\"fa-solid fa-calculator\"></i> احسب واحجز</button>\r\n                                <button type=\"button\" class=\"btn btn-share\" onclick=\"shareBoatFromCard(this, 'boats/al-ameed.html')\" title=\"مشاركة رابط القارب\"><i class=\"fa-solid fa-share-nodes\"></i> مشاركة</button>\r\n                            </div>\r\n                        </div>",
         "pdfLinks": [],
         "images": [
             {
@@ -2009,27 +2037,27 @@ const fleetDetailsData = {
         ],
         "detailLink": "boats/al-ameed.html",
         "calcVessel": "al-ameed",
-        "depositPolicy": "العربون المطلوب لتأكيد الحجز: 200 ريال لوسط الأسبوع و 300 ريال للويكند (لرحلات 12 / 10 ساعات)، والمتبقي يُسدد عند الصعود يوم الرحلة."
+        "depositPolicy": "العربون المطلوب لتأكيد الحجز: 200 ريال لوسط الأسبوع و 300 ريال للويكند، والمتبقي يُسدد عند الصعود يوم الرحلة."
     },
     "norseen-large": {
         "key": "norseen-large",
         "name": "قارب نورسين الكبير",
         "badge": "سعة ضخمة وقوة",
         "catTag": "قارب كبير",
-        "capacity": "حتى 19 ضيفاً",
-        "marina": "مرسى البحر الأحمر",
+        "capacity": "حتى 14 ضيفاً",
+        "marina": "مرسى الأحلام",
         "keyFeature": "سعة واسعة جداً للعوائل والمجموعات",
         "featureIcon": "fa-solid fa-users",
         "startingPrice": "1,800",
         "priceUnit": "ر.س (6 ساعات)",
         "priceSubtext": "أو 500 ر.س / ساعة جولات الخور",
         "descriptions": [
-            "قارب واسع ومثالي للمجموعات الكبيرة التي تعشق الصيد أو السباحة في بياضة."
+            "قارب واسع بمرسى الأحلام ومثالي للمجموعات والعوائل التي تعشق الصيد أو السباحة في بياضة."
         ],
         "specs": [
             {
                 "icon": "fa-solid fa-users",
-                "text": "السعة الكلية 20 شخصاً — الحد الأقصى للضيوف 19 ضيفاً (الكابتن مشمول)"
+                "text": "السعة الكلية: حتى 14 ضيفاً كحد أقصى"
             },
             {
                 "icon": "fa-solid fa-circle-check",
@@ -2037,7 +2065,7 @@ const fleetDetailsData = {
             },
             {
                 "icon": "fa-solid fa-map-location-dot",
-                "text": "مرسى الانطلاق: مرسى البحر الأحمر"
+                "text": "مرسى الانطلاق: مرسى الأحلام"
             }
         ],
         "packagesHtml": "<h4 class=\"box-title\"><i class=\"fa-solid fa-gift\"></i> خيارات الرحلات الأساسية (الاقتصادية)</h4>\r\n                                <div class=\"trip-price-item\">\r\n                                    <div class=\"trip-info\"><span class=\"trip-name\">رحلة بياضة (6 ساعات)</span></div>\r\n                                    <div class=\"trip-price\"><strong>1,800 أسبوع | 2,000 ويكند</strong></div>\r\n                                </div>\r\n                                <div class=\"trip-price-item\">\r\n                                    <div class=\"trip-info\"><span class=\"trip-name\">رحلة صيد (8 / 10 / 12 ساعة)</span></div>\r\n                                    <div class=\"trip-price\">\r\n                                        <small class=\"weekend-note\">8ساعات: 2100 أسبوع / 2300 ويكند</small><br>\r\n                                        <small class=\"weekend-note\">10ساعات: 2300 أسبوع / 2500 ويكند</small><br>\r\n                                        <small class=\"weekend-note\">12ساعة: 2500 أسبوع / 2700 ويكند</small>\r\n                                    </div>\r\n                                </div>\r\n                                <div class=\"trip-price-item border-top-dash\">\r\n                                    <div class=\"trip-info\">\r\n                                        <span class=\"trip-name\">باقة المميز VIP (+300 ريال)</span>\r\n                                        <small class=\"weekend-note\">تشمل ألعاب سحب بياضة وطعم صيد طبيعي</small>\r\n                                    </div>\r\n                                    <div class=\"trip-price\"><strong>+300 ريال</strong></div>\r\n                                </div>\r\n                                <div class=\"trip-price-item\">\r\n                                    <div class=\"trip-info\">\r\n                                        <span class=\"trip-name\">باقة مميز بلس VVIP (+350 ريال)</span>\r\n                                        <small class=\"weekend-note\">VIP + مشروبات باردة ومأكولات خفيفة وعدة صيد وتصوير GoPro</small>\r\n                                    </div>\r\n                                    <div class=\"trip-price\"><strong>+350 ريال</strong></div>\r\n                                </div>\r\n                                <div class=\"trip-price-item border-top-dash\">\r\n                                    <div class=\"trip-info\">\r\n                                        <span class=\"trip-name\">رحلة الخور المنفصلة (للساعة)</span>\r\n                                        <small class=\"weekend-note\">رحلة مستقلة تبدأ من 0.5 إلى 2 ساعة</small>\r\n                                    </div>\r\n                                    <div class=\"trip-price\"><strong>400 ريال/ساعة | 250 لنصف ساعة</strong></div>\r\n                                </div>\r\n                            </div>\r\n                            <div class=\"package-actions\">\r\n                                <a href=\"boats/norseen-large.html\" class=\"btn btn-outline\"><i class=\"fa-solid fa-circle-info\"></i> التفاصيل</a>\r\n                                <button type=\"button\" class=\"btn btn-dark\" onclick=\"openCalculatorModal('norseen-large')\"><i class=\"fa-solid fa-calculator\"></i> احسب واحجز</button>\r\n                                <button type=\"button\" class=\"btn btn-share\" onclick=\"shareBoatFromCard(this, 'boats/norseen-large.html')\" title=\"مشاركة رابط القارب\"><i class=\"fa-solid fa-share-nodes\"></i> مشاركة</button>\r\n                            </div>\r\n                        </div>\r\n                    </div>\r\n                </div>",
@@ -2073,7 +2101,7 @@ const fleetDetailsData = {
         "name": "اليخت الكبير الفاخر",
         "badge": "فخامة ملكية",
         "catTag": "اليخوت الكبيرة VIP",
-        "capacity": "حتى 35 شخصاً (45 بالخور)",
+        "capacity": "حتى 30 ضيفاً",
         "marina": "مرسى البحر الأحمر",
         "keyFeature": "فخامة استثنائية للحفلات والمناسبات",
         "featureIcon": "fa-solid fa-champagne-glasses",
@@ -2081,12 +2109,12 @@ const fleetDetailsData = {
         "priceUnit": "ر.س / ساعة",
         "priceSubtext": "أقل مدة حجز ساعتان",
         "descriptions": [
-            "يخت ملكي مجهز بالكامل للمناسبات الكبيرة والاحتفالات العائلية والخاصة الفخمة."
+            "يخت ملكي مجهز بالكامل للمناسبات الكبيرة والاحتفالات العائلية والخاصة الفخمة حتى 30 ضيفاً."
         ],
         "specs": [
             {
                 "icon": "fa-solid fa-users",
-                "text": "السعة الكلية 35 شخصاً (ويمكن زيادة العدد حتى 45 في رحلات الخور)"
+                "text": "السعة الكلية: حتى 30 ضيفاً كحد أقصى"
             },
             {
                 "icon": "fa-solid fa-compass",
@@ -2793,9 +2821,9 @@ const fleetDetailsDataEn = {
         "name": "Barbaros VIP Boat (Barbarossa)",
         "catTag": "Al-Amanah Yacht Club",
         "badge": "Most Popular — VIP Choice",
-        "capacity": "Up to 11 Guests",
+        "capacity": "Up to 11 Guests (VIP: Max 10 Guests)",
         "marina": "Al-Amanah Yacht Club (South Obhur)",
-        "keyFeature": "Free Cinema, Slush & Water Park",
+        "keyFeature": "Cinema for Parties, Slush & Water Park",
         "featureIcon": "fa-solid fa-film",
         "pricingRows": [
             {
@@ -2804,12 +2832,12 @@ const fleetDetailsDataEn = {
                 "icon": "fa-solid fa-ship"
             },
             {
-                "label": "Bayadah (Pkg 1)",
+                "label": "Bayadah (Regular)",
                 "val": "From 2,000 SAR",
                 "icon": "fa-solid fa-compass"
             },
             {
-                "label": "Bayadah (VIP Pkg 2)",
+                "label": "Bayadah (VIP Pkg)",
                 "val": "From 3,000 SAR",
                 "icon": "fa-solid fa-crown"
             },
@@ -2820,24 +2848,24 @@ const fleetDetailsDataEn = {
             }
         ],
         "descriptions": [
-            "🌟 Professional Crew + Free Sunset Cinema + Slush Machine + Full Water Park!",
+            "🌟 Professional Filipino Crew (Filipino Attendant for VIP Package) + Party Cinema + Slush Machine + Full Water Park!",
             "Top-rated luxury double-decker pontoon boat offering total family privacy in Bayadah and Abu Tair islands, souvenir gifts, fresh on-board burger BBQ, and creek sightseeing tours at 460 SAR/hr."
         ],
         "specs": [
             {
                 "icon": "fa-solid fa-user-shield",
-                "text": "Professional Crew: Professional captain for cruises, with captain and female assistant on VIP Package 2 for maximum service and family privacy."
+                "text": "Professional Crew: Professional Filipino captain for regular package, with Filipino captain and female assistant for VIP Package for maximum service and family privacy."
             },
             {
                 "icon": "fa-solid fa-water-ladder",
-                "text": "Water Toys, Cinema & Slush: Built-in water slide, floating sunbed platform, sea kayak, hanging chair, large games (tent, volleyball, circular lounge), towable tube (200 SAR), free sunset cinema projector & slush machine."
+                "text": "Water Toys, Cinema & Slush: Built-in water slide & stairs, floating sunbed platform, sea kayak, hanging chair, 1 Big Toy free in VIP (tent, volleyball, circular lounge), extra toy (500 SAR), towable tube (200 SAR - subject to waves & weather), cinema projector free for party bookings over 2 hours & slush machine."
             },
             {
                 "icon": "fa-solid fa-restroom",
                 "text": "Boat Facilities: Marine restroom & freshwater shower, shaded open lounges across two decks (no enclosed AC salon or bedroom)."
             }
         ],
-        "packagesHtml": "<h4 class=\"box-title\" style=\"color: var(--navy); border-bottom: 2px solid var(--gold); padding-bottom: 6px; margin-bottom: 10px;\">\n            <i class=\"fa-solid fa-compass\" style=\"color: var(--gold);\"></i> 1. Open Sea Cruises (Bayadah or Abu Tair +300 SAR — Up to 11 Guests)\n        </h4>\n        <div class=\"trip-price-item\">\n            <div class=\"trip-info\">\n                <span class=\"trip-name\" style=\"font-weight: 700;\">Package 1 (Standard Cruise) — 6 Hours</span>\n                <small class=\"weekend-note\">Morning (6-12) or Evening (1-7) | Slush smoothies & drinks + towels & snorkeling gear for use + water slide, sunbed & hanging chair | Extra hours (300 SAR/hr)</small>\n            </div>\n            <div class=\"trip-price\"><strong>5-6 Guests: 2,000 | 7-9 Guests: 2,500 | 9-11 Guests: 3,000 SAR</strong><br><small style=\"color: var(--gold-dark); font-weight: 700;\">(Abu Tair: +300 SAR)</small></div>\n        </div>\n        <div class=\"trip-price-item border-top-dash\">\n            <div class=\"trip-info\">\n                <span class=\"trip-name\" style=\"font-weight: 700; color: var(--ocean-dark);\">Package 2: VIP Water Toys & On-Board BBQ — 6 Hours</span>\n                <small class=\"weekend-note\">Captain & female assistant + Slush + souvenir gifts to keep + grilled burgers (2/guest) + sunbed, kayak, slide & hanging chair + 1 Big Toy included (tent/volleyball/circular lounge) | 2nd Big Toy 500 SAR | Towables 200 SAR</small>\n            </div>\n            <div class=\"trip-price\"><strong>5-6 Guests: 3,000 | 7-8 Guests: 3,500 | 9-10 Guests: 4,000 SAR</strong><br><small style=\"color: var(--gold-dark); font-weight: 700;\">(Abu Tair: +300 SAR)</small></div>\n        </div>\n        <h4 class=\"box-title\" style=\"color: var(--navy); border-bottom: 2px solid var(--ocean); padding-bottom: 6px; margin: 16px 0 10px 0;\">\n            <i class=\"fa-solid fa-ship\" style=\"color: var(--ocean);\"></i> 2. Picnic & Creek Sightseeing Tours (South Obhur)\n        </h4>\n        <div class=\"trip-price-item\">\n            <div class=\"trip-info\">\n                <span class=\"trip-name\" style=\"font-weight: 700;\">Standard Sightseeing Cruise</span>\n                <small class=\"weekend-note\">1 Full Hour 460 SAR (includes complimentary American coffee & tea) | Cinema is FREE after sunset with complimentary popcorn & drinks</small>\n            </div>\n            <div class=\"trip-price\"><strong>460 SAR / hr</strong></div>\n        </div>\n        <div class=\"trip-price-item border-top-dash\">\n            <div class=\"trip-info\">\n                <span class=\"trip-name\" style=\"font-weight: 700;\">Dinner & Special Occasion Packages (Optional via WhatsApp)</span>\n                <small class=\"weekend-note\">Artche Sandwiches 60 SAR | Grilled Burgers 60 SAR | Maki Sushi 120 SAR | Cake & Styling 60 SAR (with Burgers 100 / with Sushi 200) | Chocolates 120-200 SAR</small>\n            </div>\n            <div class=\"trip-price\"><strong>Per Package</strong></div>\n        </div>",
+        "packagesHtml": "<h4 class=\"box-title\" style=\"color: var(--navy); border-bottom: 2px solid var(--gold); padding-bottom: 6px; margin-bottom: 10px;\">\n            <i class=\"fa-solid fa-compass\" style=\"color: var(--gold);\"></i> 1. Open Sea Cruises (Bayadah or Abu Tair +300 SAR)\n        </h4>\n        <div class=\"trip-price-item\">\n            <div class=\"trip-info\">\n                <span class=\"trip-name\" style=\"font-weight: 700;\">Package 1 (Regular Package) — Up to 11 Guests (6 Hours)</span>\n                <small class=\"weekend-note\">Filipino Captain | Morning (6-12) or Evening (1-7) | Slush smoothies & drinks + towels & snorkeling gear for use + water slide & stairs, sunbed & hanging chair | Extra hours (minimum 2 hours - 300 SAR/hr)</small>\n            </div>\n            <div class=\"trip-price\"><strong>5-6 Guests: 2,000 | 7-9 Guests: 2,500 | 9-11 Guests: 3,000 SAR</strong><br><small style=\"color: var(--gold-dark); font-weight: 700;\">(Abu Tair: +300 SAR)</small></div>\n        </div>\n        <div class=\"trip-price-item border-top-dash\">\n            <div class=\"trip-info\">\n                <span class=\"trip-name\" style=\"font-weight: 700; color: var(--ocean-dark);\">Package 2 (VIP Package — Max 10 Guests Only) — 6 Hours</span>\n                <small class=\"weekend-note\">Filipino captain & female assistant for VIP Package + Slush + souvenir gifts to keep + grilled burgers (2/guest) + sunbed, kayak, slide & hanging chair + 1 Big Toy included for free (tent/volleyball/circular lounge) | 2nd Big Toy 500 SAR | Towables 200 SAR (subject to waves & weather) | Extra hours (minimum 2 hours - 300 SAR/hr)</small>\n            </div>\n            <div class=\"trip-price\"><strong>5-6 Guests: 3,000 | 7-8 Guests: 3,500 | 9-10 Guests: 4,000 SAR</strong><br><small style=\"color: var(--navy); font-weight: 800;\">(VIP Package strictly up to 10 guests only)</small><br><small style=\"color: var(--gold-dark); font-weight: 700;\">(Abu Tair: +300 SAR)</small></div>\n        </div>\n        <h4 class=\"box-title\" style=\"color: var(--navy); border-bottom: 2px solid var(--ocean); padding-bottom: 6px; margin: 16px 0 10px 0;\">\n            <i class=\"fa-solid fa-ship\" style=\"color: var(--ocean);\"></i> 2. Picnic & Creek Sightseeing Tours (South Obhur)\n        </h4>\n        <div class=\"trip-price-item\">\n            <div class=\"trip-info\">\n                <span class=\"trip-name\" style=\"font-weight: 700;\">Standard Sightseeing Cruise</span>\n                <small class=\"weekend-note\">1 Full Hour 460 SAR (includes complimentary American coffee & tea) | Cinema is FREE for party & celebration packages exceeding 2 hours with popcorn & drinks</small>\n            </div>\n            <div class=\"trip-price\"><strong>460 SAR / hr</strong></div>\n        </div>\n        <div class=\"trip-price-item border-top-dash\">\n            <div class=\"trip-info\">\n                <span class=\"trip-name\" style=\"font-weight: 700;\">Dinner & Special Occasion Packages (Optional via WhatsApp)</span>\n                <small class=\"weekend-note\">Artche Sandwiches 60 SAR | Grilled Burgers 60 SAR | Maki Sushi 120 SAR | Cake & Styling 60 SAR (with Burgers 100 / with Sushi 200) | Chocolates 120-200 SAR</small>\n            </div>\n            <div class=\"trip-price\"><strong>Per Package</strong></div>\n        </div>",
         "pdfLinks": [
             {
                 "url": "files/barbaros/البحر المفتوح.pdf",
@@ -2856,8 +2884,8 @@ const fleetDetailsDataEn = {
                 "alt": "Barbaros VIP Boat (Barbarossa) - Photo 1"
             },
             {
-                "src": "images/بارباروسا/2.webp",
-                "alt": "Barbaros VIP Boat (Barbarossa) - Photo 2"
+                "src": "images/بارباروسا/activities/cinema.webp",
+                "alt": "Barbaros VIP Boat - Cinema & Projector Screen"
             },
             {
                 "src": "images/بارباروسا/3.webp",
@@ -2902,7 +2930,7 @@ const fleetDetailsDataEn = {
         "catTag": "VIP Luxury Yacht",
         "badge": "Best Value & Luxury",
         "capacity": "Up to 12 Guests",
-        "marina": "Red Sea Marina",
+        "marina": "Marsa Al Ahlam",
         "keyFeature": "Luxury Yacht & Pro Photos",
         "featureIcon": "fa-solid fa-camera-retro",
         "pricingRows": [
@@ -2913,17 +2941,17 @@ const fleetDetailsDataEn = {
             },
             {
                 "label": "Bayadah Island (6h)",
-                "val": "1,480 SAR",
+                "val": "1,980 SAR",
                 "icon": "fa-solid fa-umbrella-beach"
             },
             {
                 "label": "Abu Tair Island (6h)",
-                "val": "1,780 SAR",
+                "val": "2,280 SAR",
                 "icon": "fa-solid fa-compass"
             }
         ],
         "descriptions": [
-            "🌟 Designed for luxury seekers and professional memory capturing at unbeatable value!",
+            "🌟 Designed for luxury seekers and professional memory capturing at unbeatable value from Marsa Al Ahlam only!",
             "Premier luxury yacht combining modern sophistication, full comfort, bedroom, spacious viewing decks, and exceptional photo opportunities."
         ],
         "specs": [
@@ -2932,15 +2960,15 @@ const fleetDetailsDataEn = {
                 "text": "Professional Photography: Luxury interior design with panoramic angles for unforgettable memories."
             },
             {
-                "icon": "fa-solid fa-users",
-                "text": "Suitable for All Occasions: Ideal for family cruises, youth gatherings, swimming, and fishing."
+                "icon": "fa-solid fa-map-location-dot",
+                "text": "Departure Marina: Marsa Al Ahlam Only."
             },
             {
                 "icon": "fa-solid fa-bed",
                 "text": "Cabin Amenities: Master bedroom, private restroom, and wide bow and aft seating areas."
             }
         ],
-        "packagesHtml": "<h4 class=\"box-title\"><i class=\"fa-solid fa-crown\" style=\"color: var(--gold);\"></i> Pentos VIP Yacht Packages & Rates (Covers up to 6 Guests)</h4>\n        <div class=\"trip-price-item\">\n            <div class=\"trip-info\"><span class=\"trip-name\">Bayadah Island Cruise (6 Hours)</span></div>\n            <div class=\"trip-price\"><strong>1,480 SAR</strong></div>\n        </div>\n        <div class=\"trip-price-item\">\n            <div class=\"trip-info\"><span class=\"trip-name\">Abu Tair Island Cruise (6 Hours)</span></div>\n            <div class=\"trip-price\"><strong>1,780 SAR</strong></div>\n        </div>\n        <div class=\"trip-price-item border-top-dash\">\n            <div class=\"trip-info\">\n                <span class=\"trip-name\">Deep-Sea Fishing Trips (6 / 8 / 10 / 12 Hours)</span>\n                <small class=\"weekend-note\">6h: 1,500 | 8h: 1,780 | 10h: 1,980 | 12h: 2,180 SAR</small>\n            </div>\n            <div class=\"trip-price\"><strong>Starts from 1,500 SAR</strong></div>\n        </div>\n        <div class=\"trip-price-item border-top-dash\">\n            <div class=\"trip-info\">\n                <span class=\"trip-name\">Obhur Creek Sightseeing Tour (0.5 – 2 Hours)</span>\n                <small class=\"weekend-note\">Half hour 250 SAR | Full hour 450 SAR</small>\n            </div>\n            <div class=\"trip-price\"><strong>450 SAR / hr</strong></div>\n        </div>",
+        "packagesHtml": "<h4 class=\"box-title\"><i class=\"fa-solid fa-crown\" style=\"color: var(--gold);\"></i> Pentos VIP Yacht Packages & Rates (Covers up to 6 Guests)</h4>\n        <div class=\"trip-price-item\">\n            <div class=\"trip-info\"><span class=\"trip-name\">Bayadah Island Cruise (6 Hours)</span></div>\n            <div class=\"trip-price\"><strong>1,980 SAR Wkday | 2,180 SAR Wkend</strong></div>\n        </div>\n        <div class=\"trip-price-item\">\n            <div class=\"trip-info\"><span class=\"trip-name\">Abu Tair Island Cruise (6 Hours)</span></div>\n            <div class=\"trip-price\"><strong>2,280 SAR Wkday | 2,480 SAR Wkend</strong></div>\n        </div>\n        <div class=\"trip-price-item border-top-dash\">\n            <div class=\"trip-info\">\n                <span class=\"trip-name\">Deep-Sea Fishing Trips (6 / 8 / 10 / 12 Hours)</span>\n                <small class=\"weekend-note\">6h: 2,000 | 8h: 2,280 | 10h: 2,480 | 12h: 2,680 SAR (+200 SAR on weekend)</small>\n            </div>\n            <div class=\"trip-price\"><strong>Starts from 2,000 SAR</strong></div>\n        </div>\n        <div class=\"trip-price-item border-top-dash\">\n            <div class=\"trip-info\">\n                <span class=\"trip-name\">Obhur Creek Sightseeing Tour (0.5 – 2 Hours)</span>\n                <small class=\"weekend-note\">Half hour 250 SAR | Full hour 450 SAR (no weekend surcharge)</small>\n            </div>\n            <div class=\"trip-price\"><strong>450 SAR / hr</strong></div>\n        </div>",
         "pdfLinks": [],
         "images": [
             {
@@ -3058,7 +3086,7 @@ const fleetDetailsDataEn = {
         "catTag": "VIP Luxury Yacht",
         "badge": "VIP Luxury Yacht",
         "capacity": "Up to 14 Guests",
-        "marina": "Red Sea Marina",
+        "marina": "Al-Amanah Yacht Club",
         "keyFeature": "Full A/C & Hotel Salon",
         "featureIcon": "fa-solid fa-snowflake",
         "pricingRows": [
@@ -3069,17 +3097,17 @@ const fleetDetailsDataEn = {
             },
             {
                 "label": "Bayadah Island (6h)",
-                "val": "From 3,180 SAR",
+                "val": "From 3,680 SAR",
                 "icon": "fa-solid fa-umbrella-beach"
             },
             {
-                "label": "Extended Cruise (9h)",
-                "val": "From 3,880 SAR",
-                "icon": "fa-solid fa-clock"
+                "label": "Abu Tair Island (6h)",
+                "val": "From 3,980 SAR",
+                "icon": "fa-solid fa-compass"
             }
         ],
         "descriptions": [
-            "🌟 The ultimate in private luxury cruising in Jeddah with a hotel-grade salon and full air conditioning.",
+            "🌟 The ultimate in private luxury cruising at Al-Amanah Yacht Club in Jeddah with a hotel-grade salon and full air conditioning.",
             "Spacious yacht featuring master bedroom, equipped kitchen, bathroom, plush indoor living room, and wide sunbeds on the deck."
         ],
         "specs": [
@@ -3092,11 +3120,11 @@ const fleetDetailsDataEn = {
                 "text": "Private Stateroom: Master bedroom with luxury fittings and guest restroom."
             },
             {
-                "icon": "fa-solid fa-utensils",
-                "text": "Equipped Galley: Refrigerator, microwave, and hospitality preparation station."
+                "icon": "fa-solid fa-map-location-dot",
+                "text": "Departure Marina: Al-Amanah Yacht Club (South Obhur)."
             }
         ],
-        "packagesHtml": "<h4 class=\"box-title\"><i class=\"fa-solid fa-crown\" style=\"color: var(--gold);\"></i> Nardo VIP Yacht Packages & Rates</h4>\n        <div class=\"trip-price-item\">\n            <div class=\"trip-info\">\n                <span class=\"trip-name\">Bayadah Island Cruise (6 Hours)</span>\n                <small class=\"weekend-note\">Up to 6 guests: 3,180 SAR | 7-9 guests: 3,680 SAR | 10+ guests: 3,980 SAR</small>\n            </div>\n            <div class=\"trip-price\"><strong>Starts from 3,180 SAR</strong></div>\n        </div>\n        <div class=\"trip-price-item\">\n            <div class=\"trip-info\">\n                <span class=\"trip-name\">Extended Bayadah Cruise (9 Hours)</span>\n                <small class=\"weekend-note\">Extended cruise for maximum relaxation (+700 SAR)</small>\n            </div>\n            <div class=\"trip-price\"><strong>Starts from 3,880 SAR</strong></div>\n        </div>\n        <div class=\"trip-price-item border-top-dash\">\n            <div class=\"trip-info\">\n                <span class=\"trip-name\">Fishing Adventure Add-on</span>\n                <small class=\"weekend-note\">1 Extra Fishing Hour added to Bayadah Cruise (+300 SAR)</small>\n            </div>\n            <div class=\"trip-price\"><strong>+300 SAR</strong></div>\n        </div>\n        <div class=\"trip-price-item border-top-dash\">\n            <div class=\"trip-info\">\n                <span class=\"trip-name\">Obhur Creek Sightseeing Tour</span>\n                <small class=\"weekend-note\">First hour 680 SAR | Additional hours 580 SAR | Half hour 340 SAR</small>\n            </div>\n            <div class=\"trip-price\"><strong>680 SAR / hr</strong></div>\n        </div>",
+        "packagesHtml": "<h4 class=\"box-title\"><i class=\"fa-solid fa-crown\" style=\"color: var(--gold);\"></i> Nardo VIP Yacht Packages & Rates</h4>\n        <div class=\"trip-price-item\">\n            <div class=\"trip-info\">\n                <span class=\"trip-name\">Bayadah Island Cruise (6 Hours)</span>\n                <small class=\"weekend-note\">5-7 guests: 3,680 SAR | 7-14 guests: 3,980 SAR (+300 SAR weekend)</small>\n            </div>\n            <div class=\"trip-price\"><strong>3,680 – 3,980 SAR</strong></div>\n        </div>\n        <div class=\"trip-price-item\">\n            <div class=\"trip-info\">\n                <span class=\"trip-name\">Abu Tair Island Cruise (6 Hours)</span>\n                <small class=\"weekend-note\">Same packages + 300 SAR (5-7: 3,980 | 7-14: 4,280 SAR) (+300 SAR weekend)</small>\n            </div>\n            <div class=\"trip-price\"><strong>3,980 – 4,280 SAR</strong></div>\n        </div>\n        <div class=\"trip-price-item border-top-dash\">\n            <div class=\"trip-info\">\n                <span class=\"trip-name\">Extra Hours Add-on</span>\n                <small class=\"weekend-note\">300 SAR per extra hour (minimum 2 hours)</small>\n            </div>\n            <div class=\"trip-price\"><strong>300 SAR / hr</strong></div>\n        </div>\n        <div class=\"trip-price-item border-top-dash\">\n            <div class=\"trip-info\">\n                <span class=\"trip-name\">Obhur Creek Sightseeing Tour</span>\n                <small class=\"weekend-note\">First hour 680 SAR | Additional hours 580 SAR (unchanged)</small>\n            </div>\n            <div class=\"trip-price\"><strong>680 SAR / hr</strong></div>\n        </div>",
         "pdfLinks": [],
         "images": [
             {
@@ -3114,7 +3142,7 @@ const fleetDetailsDataEn = {
         "catTag": "VIP Luxury Yacht",
         "badge": "VIP Luxury Yacht",
         "capacity": "Up to 11 Guests",
-        "marina": "Red Sea Marina",
+        "marina": "Al-Amanah Yacht Club",
         "keyFeature": "Dedicated Generator A/C & Bedroom",
         "featureIcon": "fa-solid fa-bed",
         "pricingRows": [
@@ -3124,18 +3152,18 @@ const fleetDetailsDataEn = {
                 "icon": "fa-solid fa-ship"
             },
             {
-                "label": "Bayadah / Abu Tair (6h)",
-                "val": "From 1,580 SAR",
+                "label": "Bayadah Island (6h)",
+                "val": "From 1,880 SAR",
                 "icon": "fa-solid fa-umbrella-beach"
             },
             {
-                "label": "Extended Cruise (9h)",
+                "label": "Abu Tair Island (6h)",
                 "val": "From 2,080 SAR",
-                "icon": "fa-solid fa-clock"
+                "icon": "fa-solid fa-compass"
             }
         ],
         "descriptions": [
-            "🌟 Guaranteed continuous air conditioning with an independent generator, bedroom, and panoramic viewing deck.",
+            "🌟 Guaranteed continuous air conditioning with an independent generator, bedroom, and panoramic viewing deck at Al-Amanah Yacht Club.",
             "Perfect private yacht for families seeking privacy and upscale comfort on Bayadah or Abu Tair island excursions."
         ],
         "specs": [
@@ -3148,11 +3176,11 @@ const fleetDetailsDataEn = {
                 "text": "Comfortable Bedroom: Quiet private room for relaxation."
             },
             {
-                "icon": "fa-solid fa-shield-heart",
-                "text": "Full Safety: Complete life jackets and navigation instruments."
+                "icon": "fa-solid fa-map-location-dot",
+                "text": "Departure Marina: Al-Amanah Yacht Club (South Obhur)."
             }
         ],
-        "packagesHtml": "<h4 class=\"box-title\"><i class=\"fa-solid fa-crown\" style=\"color: var(--gold);\"></i> Tam VIP Yacht Packages & Rates</h4>\n        <div class=\"trip-price-item\">\n            <div class=\"trip-info\">\n                <span class=\"trip-name\">Bayadah or Abu Tair Cruise (6 Hours)</span>\n                <small class=\"weekend-note\">Up to 6 guests: 1,580 SAR | 7-9 guests: 1,880 SAR | 10-11 guests: 1,980 SAR</small>\n            </div>\n            <div class=\"trip-price\"><strong>Starts from 1,580 SAR</strong></div>\n        </div>\n        <div class=\"trip-price-item\">\n            <div class=\"trip-info\">\n                <span class=\"trip-name\">Extended Island Cruise (9 Hours)</span>\n                <small class=\"weekend-note\">Extended cruise for maximum relaxation (+500 SAR)</small>\n            </div>\n            <div class=\"trip-price\"><strong>Starts from 2,080 SAR</strong></div>\n        </div>\n        <div class=\"trip-price-item border-top-dash\">\n            <div class=\"trip-info\">\n                <span class=\"trip-name\">Obhur Creek Sightseeing Tour</span>\n                <small class=\"weekend-note\">First hour 460 SAR | Additional hours 430 SAR | Half hour 230 SAR</small>\n            </div>\n            <div class=\"trip-price\"><strong>460 SAR / hr</strong></div>\n        </div>",
+        "packagesHtml": "<h4 class=\"box-title\"><i class=\"fa-solid fa-crown\" style=\"color: var(--gold);\"></i> Tam VIP Yacht Packages & Rates</h4>\n        <div class=\"trip-price-item\">\n            <div class=\"trip-info\">\n                <span class=\"trip-name\">Bayadah Island Cruise (6 Hours)</span>\n                <small class=\"weekend-note\">5-6 guests: 1,880 SAR | 7-10 guests: 2,280 SAR (+200 SAR weekend)</small>\n            </div>\n            <div class=\"trip-price\"><strong>1,880 – 2,280 SAR</strong></div>\n        </div>\n        <div class=\"trip-price-item\">\n            <div class=\"trip-info\">\n                <span class=\"trip-name\">Abu Tair Island Cruise (6 Hours)</span>\n                <small class=\"weekend-note\">Same packages + 200 SAR (5-6: 2,080 | 7-10: 2,480 SAR) (+200 SAR weekend)</small>\n            </div>\n            <div class=\"trip-price\"><strong>2,080 – 2,480 SAR</strong></div>\n        </div>\n        <div class=\"trip-price-item border-top-dash\">\n            <div class=\"trip-info\">\n                <span class=\"trip-name\">Extra Hours Add-on</span>\n                <small class=\"weekend-note\">300 SAR per extra hour (minimum 2 hours)</small>\n            </div>\n            <div class=\"trip-price\"><strong>300 SAR / hr</strong></div>\n        </div>\n        <div class=\"trip-price-item border-top-dash\">\n            <div class=\"trip-info\">\n                <span class=\"trip-name\">Obhur Creek Sightseeing Tour</span>\n                <small class=\"weekend-note\">First hour 460 SAR | Additional hours 430 SAR (unchanged)</small>\n            </div>\n            <div class=\"trip-price\"><strong>460 SAR / hr</strong></div>\n        </div>",
         "pdfLinks": [],
         "images": [
             {
@@ -3322,11 +3350,11 @@ const fleetDetailsDataEn = {
         "key": "baby-al-jawhari",
         "name": "Al-Jawhari VIP Yacht",
         "catTag": "VIP Baby Yacht",
-        "badge": "VIP Luxury & Banana Boat",
-        "capacity": "Up to 10 Guests",
-        "marina": "Red Sea Marina",
-        "keyFeature": "A/C Salon & Banana Boat Toy",
-        "featureIcon": "fa-solid fa-water",
+        "badge": "VIP Luxury & Comfort",
+        "capacity": "Up to 11 Guests",
+        "marina": "Al-Amanah Yacht Club",
+        "keyFeature": "Bow Sunbed & Water Toys",
+        "featureIcon": "fa-solid fa-sun",
         "pricingRows": [
             {
                 "label": "Creek Cruise",
@@ -3335,33 +3363,33 @@ const fleetDetailsDataEn = {
             },
             {
                 "label": "Bayadah Island (6h)",
-                "val": "1,750 SAR",
+                "val": "1,880 SAR",
                 "icon": "fa-solid fa-umbrella-beach"
             },
             {
                 "label": "Abu Tair Island (6h)",
-                "val": "2,000 SAR",
+                "val": "2,180 SAR",
                 "icon": "fa-solid fa-compass"
             }
         ],
         "descriptions": [
-            "🌟 Private luxury cruising with an air-conditioned cabin, bow sunbed, and exciting towable banana boat water toy."
+            "🌟 Private luxury cruising with bow sunbed, comfortable cabin, and exciting water sports at Al-Amanah Yacht Club."
         ],
         "specs": [
             {
-                "icon": "fa-solid fa-snowflake",
-                "text": "Air-Conditioned Salon and Bedroom."
+                "icon": "fa-solid fa-bed",
+                "text": "Master Bedroom & Private Galley."
             },
             {
                 "icon": "fa-solid fa-water",
                 "text": "Towable Banana Boat Water Toy (+250 SAR)."
             },
             {
-                "icon": "fa-solid fa-shower",
-                "text": "Restroom and Fresh Water Shower."
+                "icon": "fa-solid fa-map-location-dot",
+                "text": "Departure Marina: Al-Amanah Yacht Club (South Obhur)."
             }
         ],
-        "packagesHtml": "<h4 class=\"box-title\"><i class=\"fa-solid fa-crown\" style=\"color: var(--gold);\"></i> Al-Jawhari VIP Yacht Packages & Rates</h4>\n        <div class=\"trip-price-item\">\n            <div class=\"trip-info\"><span class=\"trip-name\">Bayadah Island Cruise (6 Hours)</span></div>\n            <div class=\"trip-price\"><strong>1,750 SAR</strong></div>\n        </div>\n        <div class=\"trip-price-item\">\n            <div class=\"trip-info\"><span class=\"trip-name\">Abu Tair Island Cruise (6 Hours)</span></div>\n            <div class=\"trip-price\"><strong>2,000 SAR</strong></div>\n        </div>\n        <div class=\"trip-price-item\">\n            <div class=\"trip-info\"><span class=\"trip-name\">Khor Saud Scenic Cruise (6 Hours)</span></div>\n            <div class=\"trip-price\"><strong>1,750 SAR</strong></div>\n        </div>\n        <div class=\"trip-price-item border-top-dash\">\n            <div class=\"trip-info\"><span class=\"trip-name\">Obhur Creek Sightseeing Tour</span></div>\n            <div class=\"trip-price\"><strong>460 SAR / hr (230 half hr)</strong></div>\n        </div>\n        <div class=\"trip-price-item border-top-dash\">\n            <div class=\"trip-info\"><span class=\"trip-name\">Towable Banana Boat Water Toy</span></div>\n            <div class=\"trip-price\"><strong>+250 SAR</strong></div>\n        </div>",
+        "packagesHtml": "<h4 class=\"box-title\"><i class=\"fa-solid fa-crown\" style=\"color: var(--gold);\"></i> Al-Jawhari VIP Yacht Packages & Rates</h4>\n        <div class=\"trip-price-item\">\n            <div class=\"trip-info\"><span class=\"trip-name\">Bayadah Island Cruise (6 Hours)</span><small class=\"weekend-note\">5-6 guests: 1,880 SAR | +100 SAR/extra guest up to 11 (+200 SAR weekend)</small></div>\n            <div class=\"trip-price\"><strong>1,880 SAR</strong></div>\n        </div>\n        <div class=\"trip-price-item\">\n            <div class=\"trip-info\"><span class=\"trip-name\">Abu Tair Island Cruise (6 Hours)</span><small class=\"weekend-note\">5-6 guests: 2,180 SAR | +100 SAR/extra guest up to 11 (+200 SAR weekend)</small></div>\n            <div class=\"trip-price\"><strong>2,180 SAR</strong></div>\n        </div>\n        <div class=\"trip-price-item border-top-dash\">\n            <div class=\"trip-info\"><span class=\"trip-name\">Extra Hours Add-on</span><small class=\"weekend-note\">300 SAR per extra hour (minimum 2 hours)</small></div>\n            <div class=\"trip-price\"><strong>300 SAR / hr</strong></div>\n        </div>\n        <div class=\"trip-price-item border-top-dash\">\n            <div class=\"trip-info\"><span class=\"trip-name\">Obhur Creek Sightseeing Tour</span></div>\n            <div class=\"trip-price\"><strong>460 SAR / hr (230 half hr)</strong></div>\n        </div>\n        <div class=\"trip-price-item border-top-dash\">\n            <div class=\"trip-info\"><span class=\"trip-name\">Towable Banana Boat Water Toy</span><small class=\"weekend-note\">Available as an add-on in open sea cruises</small></div>\n            <div class=\"trip-price\"><strong>+250 SAR</strong></div>\n        </div>",
         "pdfLinks": [],
         "images": [
             {
@@ -3410,9 +3438,9 @@ const fleetDetailsDataEn = {
         "name": "Al-Ameed Large Boat",
         "catTag": "Large Group Boat",
         "badge": "Best Space & Group Value",
-        "capacity": "Up to 11 Guests (Max 15)",
-        "marina": "Red Sea Marina",
-        "keyFeature": "12-Hour Fishing & Bayadah Mix",
+        "capacity": "Up to 11 Guests",
+        "marina": "Marsa Al Ahlam",
+        "keyFeature": "6-Hour Cruises & 12-Hour Fishing",
         "featureIcon": "fa-solid fa-fish-fins",
         "pricingRows": [
             {
@@ -3421,34 +3449,34 @@ const fleetDetailsDataEn = {
                 "icon": "fa-solid fa-ship"
             },
             {
-                "label": "Bayadah (12h/10h)",
+                "label": "Bayadah (6h)",
                 "val": "1,500 Wkday | 1,800 Wkend",
                 "icon": "fa-solid fa-umbrella-beach"
             },
             {
-                "label": "Fishing or Abu Tair",
+                "label": "Abu Tair (6h)",
                 "val": "1,800 Wkday | 2,100 Wkend",
                 "icon": "fa-solid fa-fish"
             }
         ],
         "descriptions": [
-            "Spacious heavy-duty boat ideal for large families and extended 12-hour deep-sea fishing or Bayadah trips."
+            "Spacious heavy-duty boat at Marsa Al Ahlam ideal for families and groups for 6-hour Bayadah cruises and 12-hour deep-sea fishing trips."
         ],
         "specs": [
             {
+                "icon": "fa-solid fa-users",
+                "text": "Maximum Capacity: Up to 11 guests."
+            },
+            {
                 "icon": "fa-solid fa-clock",
-                "text": "Extended 12-Hour Cruise Duration."
+                "text": "6-Hour Duration for Bayadah & Abu Tair (12h/10h for Fishing)."
             },
             {
-                "icon": "fa-solid fa-fish",
-                "text": "Equipped with Deep-Sea Fishing Gear."
-            },
-            {
-                "icon": "fa-solid fa-restroom",
-                "text": "Onboard Restroom & Shaded Seating."
+                "icon": "fa-solid fa-map-location-dot",
+                "text": "Departure Marina: Marsa Al Ahlam."
             }
         ],
-        "packagesHtml": "<h4 class=\"box-title\"><i class=\"fa-solid fa-users\" style=\"color: var(--navy);\"></i> Al-Ameed Group Boat Packages (12h Weekday / 10h Weekend)</h4>\n        <div class=\"trip-price-item\">\n            <div class=\"trip-info\"><span class=\"trip-name\">Bayadah Island Cruise</span></div>\n            <div class=\"trip-price\"><strong>1,500 Wkday | 1,800 Wkend</strong></div>\n        </div>\n        <div class=\"trip-price-item\">\n            <div class=\"trip-info\"><span class=\"trip-name\">Abu Tair Island Cruise</span></div>\n            <div class=\"trip-price\"><strong>1,800 Wkday | 2,100 Wkend</strong></div>\n        </div>\n        <div class=\"trip-price-item border-top-dash\">\n            <div class=\"trip-info\"><span class=\"trip-name\">Fishing & Bayadah Combo</span></div>\n            <div class=\"trip-price\"><strong>1,950 Wkday | 2,250 Wkend</strong></div>\n        </div>\n        <div class=\"trip-price-item border-top-dash\">\n            <div class=\"trip-info\"><span class=\"trip-name\">Deep-Sea Fishing Only</span></div>\n            <div class=\"trip-price\"><strong>1,800 Wkday | 2,100 Wkend</strong></div>\n        </div>\n        <div class=\"trip-price-item border-top-dash\">\n            <div class=\"trip-info\"><span class=\"trip-name\">Obhur Creek Sightseeing Tour</span></div>\n            <div class=\"trip-price\"><strong>350 SAR / hr</strong></div>\n        </div>",
+        "packagesHtml": "<h4 class=\"box-title\"><i class=\"fa-solid fa-users\" style=\"color: var(--navy);\"></i> Al-Ameed Group Boat Packages (6 Hours / Fishing 12h-10h)</h4>\n        <div class=\"trip-price-item\">\n            <div class=\"trip-info\"><span class=\"trip-name\">Bayadah Island Cruise (6 Hours)</span></div>\n            <div class=\"trip-price\"><strong>1,500 Wkday | 1,800 Wkend</strong></div>\n        </div>\n        <div class=\"trip-price-item\">\n            <div class=\"trip-info\"><span class=\"trip-name\">Abu Tair Island Cruise (6 Hours)</span></div>\n            <div class=\"trip-price\"><strong>1,800 Wkday | 2,100 Wkend</strong></div>\n        </div>\n        <div class=\"trip-price-item border-top-dash\">\n            <div class=\"trip-info\"><span class=\"trip-name\">Fishing & Bayadah Combo (6 Hours)</span></div>\n            <div class=\"trip-price\"><strong>1,950 Wkday | 2,250 Wkend</strong></div>\n        </div>\n        <div class=\"trip-price-item border-top-dash\">\n            <div class=\"trip-info\"><span class=\"trip-name\">Deep-Sea Fishing Only (12h Wkday / 10h Wkend)</span><small class=\"weekend-note\">Duration & pricing unchanged</small></div>\n            <div class=\"trip-price\"><strong>1,800 Wkday | 2,100 Wkend</strong></div>\n        </div>\n        <div class=\"trip-price-item border-top-dash\">\n            <div class=\"trip-info\"><span class=\"trip-name\">Add-ons</span><small class=\"weekend-note\">Extra Hour: 150 SAR/hr | Extra Guest (after 6): 100 SAR/person (excluding fishing)</small></div>\n            <div class=\"trip-price\"><strong>150 SAR/hr | 100 SAR/guest</strong></div>\n        </div>\n        <div class=\"trip-price-item border-top-dash\">\n            <div class=\"trip-info\"><span class=\"trip-name\">Obhur Creek Sightseeing Tour</span></div>\n            <div class=\"trip-price\"><strong>350 SAR / hr (250 half hr)</strong></div>\n        </div>",
         "pdfLinks": [],
         "images": [
             {
@@ -3473,8 +3501,8 @@ const fleetDetailsDataEn = {
         "name": "Norseen Large Boat",
         "catTag": "Large Cruiser",
         "badge": "Huge Capacity & Power",
-        "capacity": "Up to 19 Guests",
-        "marina": "Red Sea Marina",
+        "capacity": "Up to 14 Guests",
+        "marina": "Marsa Al Ahlam",
         "keyFeature": "Extra-Large Capacity for Families",
         "featureIcon": "fa-solid fa-users",
         "pricingRows": [
@@ -3495,23 +3523,23 @@ const fleetDetailsDataEn = {
             }
         ],
         "descriptions": [
-            "Extra-large vessel designed for corporate events, big family gatherings, and large group swimming trips."
+            "Extra-large vessel at Marsa Al Ahlam designed for corporate events, big family gatherings, and large group swimming trips."
         ],
         "specs": [
             {
                 "icon": "fa-solid fa-users",
-                "text": "Huge Capacity: Accommodates up to 19 passengers comfortably."
+                "text": "Capacity: Accommodates up to 14 guests comfortably."
             },
             {
                 "icon": "fa-solid fa-shield-halved",
                 "text": "Comprehensive safety gear and life jackets for all."
             },
             {
-                "icon": "fa-solid fa-music",
-                "text": "High-power Bluetooth sound system."
+                "icon": "fa-solid fa-map-location-dot",
+                "text": "Departure Marina: Marsa Al Ahlam."
             }
         ],
-        "packagesHtml": "<h4 class=\"box-title\"><i class=\"fa-solid fa-users\" style=\"color: var(--navy);\"></i> Norseen Large Boat Packages & Rates (Up to 19 Guests)</h4>\n        <div class=\"trip-price-item\">\n            <div class=\"trip-info\"><span class=\"trip-name\">Bayadah Island Cruise (6 Hours)</span></div>\n            <div class=\"trip-price\"><strong>1,800 Wkday | 2,000 Wkend</strong></div>\n        </div>\n        <div class=\"trip-price-item\">\n            <div class=\"trip-info\"><span class=\"trip-name\">Abu Tair Island Cruise (6 Hours)</span></div>\n            <div class=\"trip-price\"><strong>2,100 Wkday | 2,300 Wkend</strong></div>\n        </div>\n        <div class=\"trip-price-item border-top-dash\">\n            <div class=\"trip-info\"><span class=\"trip-name\">Deep-Sea Fishing (8 Hours)</span></div>\n            <div class=\"trip-price\"><strong>2,100 Wkday | 2,300 Wkend</strong></div>\n        </div>\n        <div class=\"trip-price-item\">\n            <div class=\"trip-info\"><span class=\"trip-name\">Deep-Sea Fishing (10 / 12 Hours)</span></div>\n            <div class=\"trip-price\"><strong>10h: 2,300/2,500 | 12h: 2,500/2,700 SAR</strong></div>\n        </div>\n        <div class=\"trip-price-item border-top-dash\">\n            <div class=\"trip-info\"><span class=\"trip-name\">Obhur Creek Sightseeing Tour</span></div>\n            <div class=\"trip-price\"><strong>500 SAR / hr</strong></div>\n        </div>",
+        "packagesHtml": "<h4 class=\"box-title\"><i class=\"fa-solid fa-users\" style=\"color: var(--navy);\"></i> Norseen Large Boat Packages & Rates (Up to 14 Guests)</h4>\n        <div class=\"trip-price-item\">\n            <div class=\"trip-info\"><span class=\"trip-name\">Bayadah Island Cruise (6 Hours)</span></div>\n            <div class=\"trip-price\"><strong>1,800 Wkday | 2,000 Wkend</strong></div>\n        </div>\n        <div class=\"trip-price-item\">\n            <div class=\"trip-info\"><span class=\"trip-name\">Abu Tair Island Cruise (6 Hours)</span></div>\n            <div class=\"trip-price\"><strong>2,100 Wkday | 2,300 Wkend</strong></div>\n        </div>\n        <div class=\"trip-price-item border-top-dash\">\n            <div class=\"trip-info\"><span class=\"trip-name\">Deep-Sea Fishing (8 Hours)</span></div>\n            <div class=\"trip-price\"><strong>2,100 Wkday | 2,300 Wkend</strong></div>\n        </div>\n        <div class=\"trip-price-item\">\n            <div class=\"trip-info\"><span class=\"trip-name\">Deep-Sea Fishing (10 / 12 Hours)</span></div>\n            <div class=\"trip-price\"><strong>10h: 2,300/2,500 | 12h: 2,500/2,700 SAR</strong></div>\n        </div>\n        <div class=\"trip-price-item border-top-dash\">\n            <div class=\"trip-info\"><span class=\"trip-name\">Obhur Creek Sightseeing Tour</span></div>\n            <div class=\"trip-price\"><strong>500 SAR / hr</strong></div>\n        </div>",
         "pdfLinks": [],
         "images": [
             {
@@ -3544,7 +3572,7 @@ const fleetDetailsDataEn = {
         "name": "Royal Large Yacht",
         "catTag": "Grand VIP Yacht",
         "badge": "Royal Luxury",
-        "capacity": "Up to 35 Guests (45 in Creek)",
+        "capacity": "Up to 30 Guests",
         "marina": "Red Sea Marina",
         "keyFeature": "Royal Luxury for Events & Parties",
         "featureIcon": "fa-solid fa-champagne-glasses",
@@ -3566,9 +3594,13 @@ const fleetDetailsDataEn = {
             }
         ],
         "descriptions": [
-            "Grand royal yacht fully outfitted for weddings, birthdays, corporate celebrations, and luxury VIP island cruises."
+            "Grand royal yacht fully outfitted for weddings, birthdays, corporate celebrations, and luxury VIP island cruises up to 30 guests."
         ],
         "specs": [
+            {
+                "icon": "fa-solid fa-users",
+                "text": "Capacity: Accommodates up to 30 guests maximum."
+            },
             {
                 "icon": "fa-solid fa-crown",
                 "text": "Royal Elegance: Multi-deck luxury layout with grand salon."
@@ -3582,7 +3614,7 @@ const fleetDetailsDataEn = {
                 "text": "Minimum booking duration: 2 hours."
             }
         ],
-        "packagesHtml": "<h4 class=\"box-title\"><i class=\"fa-solid fa-champagne-glasses\" style=\"color: var(--gold);\"></i> Royal Large Yacht Hourly Rates (Min 2 Hours Booking)</h4>\n        <div class=\"trip-price-item\">\n            <div class=\"trip-info\">\n                <span class=\"trip-name\">Obhur Creek Grand Cruise</span>\n                <small class=\"weekend-note\">Up to 45 guests permitted in Creek tours</small>\n            </div>\n            <div class=\"trip-price\"><strong>2,000 Wkday | 2,200 Wkend (Hourly)</strong></div>\n        </div>\n        <div class=\"trip-price-item\">\n            <div class=\"trip-info\">\n                <span class=\"trip-name\">Bayadah Island Grand Cruise</span>\n                <small class=\"weekend-note\">Up to 35 guests permitted for island cruise</small>\n            </div>\n            <div class=\"trip-price\"><strong>2,000 Wkday | 2,200 Wkend (Hourly)</strong></div>\n        </div>\n        <div class=\"trip-price-item\">\n            <div class=\"trip-info\">\n                <span class=\"trip-name\">Abu Tair Island Grand Cruise</span>\n                <small class=\"weekend-note\">+300 SAR flat fuel surcharge per trip</small>\n            </div>\n            <div class=\"trip-price\"><strong>2,300 Wkday | 2,500 Wkend (Hourly)</strong></div>\n        </div>",
+        "packagesHtml": "<h4 class=\"box-title\"><i class=\"fa-solid fa-champagne-glasses\" style=\"color: var(--gold);\"></i> Royal Large Yacht Hourly Rates (Min 2 Hours Booking)</h4>\n        <div class=\"trip-price-item\">\n            <div class=\"trip-info\">\n                <span class=\"trip-name\">Obhur Creek Grand Cruise</span>\n                <small class=\"weekend-note\">Up to 30 guests permitted</small>\n            </div>\n            <div class=\"trip-price\"><strong>2,000 Wkday | 2,200 Wkend (Hourly)</strong></div>\n        </div>\n        <div class=\"trip-price-item\">\n            <div class=\"trip-info\">\n                <span class=\"trip-name\">Bayadah Island Grand Cruise</span>\n                <small class=\"weekend-note\">Up to 30 guests permitted for island cruise</small>\n            </div>\n            <div class=\"trip-price\"><strong>2,000 Wkday | 2,200 Wkend (Hourly)</strong></div>\n        </div>\n        <div class=\"trip-price-item\">\n            <div class=\"trip-info\">\n                <span class=\"trip-name\">Abu Tair Island Grand Cruise</span>\n                <small class=\"weekend-note\">+300 SAR flat fuel surcharge per trip</small>\n            </div>\n            <div class=\"trip-price\"><strong>2,300 Wkday | 2,500 Wkend (Hourly)</strong></div>\n        </div>",
         "pdfLinks": [],
         "images": [
             {

@@ -1,78 +1,358 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>قارب بارباروسا VIP (Barbarossa) | أوركا تأجير يخوت وقوارب جدة</title>
-    <meta name="description" content="قارب بارباروسا VIP في نادي الأمانة لليخوت بجدة. بونتون فاخر دورين، خصوصية تامة للعائلات، ألعاب مائية متكاملة، سينما بروجكتر، مكينة سلاش، وباقات عشاء ونزهة وبحر مفتوح.">
+    <meta name="description"
+        content="قارب بارباروسا VIP في نادي الأمانة لليخوت بجدة. بونتون فاخر دورين، خصوصية تامة للعائلات، ألعاب مائية متكاملة، سينما بروجكتر للحفلات، مكينة سلاش، وباقات عشاء ونزهة وبحر مفتوح.">
     <!-- Google Fonts & FontAwesome -->
     <!-- Local FontAwesome (font-display: swap, non-blocking) -->
     <noscript></noscript>
-    
+
     <!-- Preload Primary Font -->
     <link rel="preload" href="../font/thmanyahsans-Regular.woff2" as="font" type="font/woff2" crossorigin>
 
     <!-- Asynchronous Non-blocking Boat Page Stylesheet -->
     <link rel="preload" href="../boat-page.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="../boat-page.min.css"></noscript>
+    <noscript>
+        <link rel="stylesheet" href="../boat-page.min.css">
+    </noscript>
 
     <!-- FontAwesome Non-blocking -->
     <link rel="preload" href="../font/fontawesome.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="../font/fontawesome.min.css"></noscript>
+    <noscript>
+        <link rel="stylesheet" href="../font/fontawesome.min.css">
+    </noscript>
 
     <!-- Inlined Critical CSS for Instant 0ms Paint -->
     <style>
-        :root{--navy:#0B2545;--navy-light:#133E68;--navy-dark:#061527;--ocean:#0077B6;--ocean-light:#0096C7;--sand:#F4E8C1;--gold:#D4AF37;--gold-dark:#B89628;--white:#FFFFFF;--off-white:#F8F9FA;--gray-100:#E9ECEF;--gray-200:#DEE2E6;--gray-400:#CED4DA;--gray-600:#6C757D;--font-heading:'Thmanyah Serif Display',serif;--font-body:'Thmanyah Sans',sans-serif;--shadow-sm:0 2px 8px rgba(11,37,69,0.06);--shadow-md:0 4px 16px rgba(11,37,69,0.1);--radius-md:12px;--radius-lg:16px;--radius-full:9999px;--header-h:74px}
-        *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-        body{font-family:var(--font-body);color:var(--navy);background-color:var(--off-white);line-height:1.6;overflow-x:hidden}
-        a{text-decoration:none;color:inherit}
-        ul{list-style:none}
-        img{max-width:100%;height:auto;display:block}
-        button{cursor:pointer;font-family:inherit;border:none;outline:none;background:none}
-        .container{width:100%;max-width:1240px;margin-inline:auto;padding-inline:20px}
-        .main-header{position:fixed;top:0;left:0;width:100%;z-index:1000;background:rgba(255,255,255,.95);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:2px solid var(--gray-100);height:var(--header-h);box-shadow:0 2px 12px rgba(11,45,94,.06)}
-        .header-container{display:flex;align-items:center;justify-content:space-between;height:100%}
-        .logo{display:flex;align-items:center;gap:12px}
-        .logo-img{height:48px;width:48px;border-radius:50%;object-fit:cover}
-        .logo-text{display:flex;flex-direction:column}
-        .brand-name{font-family:var(--font-heading);font-size:1.4rem;font-weight:700;color:var(--navy);line-height:1.1}
-        .brand-name .highlight{color:var(--ocean)}
-        .brand-sub{font-size:.72rem;color:var(--gray-600);font-weight:600}
-        .main-nav ul{display:flex;align-items:center;gap:28px}
-        .main-nav .nav-link{display:flex;align-items:center;gap:6px;font-size:.92rem;font-weight:600;color:var(--navy)}
-        .header-cta{display:flex;align-items:center;gap:12px}
-        .btn-lang{display:inline-flex;align-items:center;gap:6px;background:rgba(11,37,69,.05);border:1px solid var(--gray-200);color:var(--navy);font-weight:700;font-size:.85rem;padding:7px 14px;border-radius:var(--radius-full)}
-        .btn-whatsapp{background:#25D366;color:var(--white);font-weight:700;padding:9px 18px;border-radius:var(--radius-full);display:inline-flex;align-items:center;gap:8px;font-size:.88rem}
-        .detail-main-wrapper{padding-top:calc(var(--header-h) + 32px);padding-bottom:70px}
-        .breadcrumbs{display:flex;align-items:center;gap:10px;font-size:.88rem;color:var(--gray-600);margin-bottom:24px;flex-wrap:wrap}
-        .breadcrumbs a{color:var(--navy);font-weight:600}
-        .breadcrumbs .divider{font-size:.7rem;color:var(--gray-400)}
-        .breadcrumbs .active{color:var(--gold-dark);font-weight:700}
-        .boat-detail-grid{display:grid;grid-template-columns:1fr 360px;gap:32px;align-items:start}
-        .boat-content-col{display:flex;flex-direction:column;gap:24px}
-        .boat-title-box{background:var(--white);padding:24px 28px;border-radius:var(--radius-lg);box-shadow:var(--shadow-sm);border:1px solid var(--gray-100)}
-        .badge-wrap{margin-bottom:10px}
-        .package-badge{display:inline-flex;align-items:center;gap:6px;padding:5px 14px;border-radius:var(--radius-full);font-size:.8rem;font-weight:700}
-        .badge-gold{background:linear-gradient(135deg,#B89628 0%,#D4AF37 50%,#E6CA65 100%);color:#061527}
-        .detail-title{font-family:var(--font-heading);font-size:2.1rem;font-weight:800;color:var(--navy);margin-bottom:10px;line-height:1.25}
-        .detail-desc{font-size:1.05rem;color:var(--gray-600);line-height:1.7}
-        .package-slider{position:relative;width:100%;overflow:hidden;background:#061527;border-radius:var(--radius-lg);box-shadow:var(--shadow-md);aspect-ratio:16/10}
-        .slides-container{width:100%;height:100%;position:relative}
-        .slide{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;visibility:hidden;transition:opacity .35s ease,visibility .35s ease;z-index:1}
-        .slide.active{opacity:1;visibility:visible;z-index:2}
-        @media(max-width:992px){.boat-detail-grid{grid-template-columns:1fr}.detail-slider{aspect-ratio:4/3!important}}
-        @media(max-width:768px){.main-nav{display:none}.detail-title{font-size:1.6rem}}
+        :root {
+            --navy: #0B2545;
+            --navy-light: #133E68;
+            --navy-dark: #061527;
+            --ocean: #0077B6;
+            --ocean-light: #0096C7;
+            --sand: #F4E8C1;
+            --gold: #D4AF37;
+            --gold-dark: #B89628;
+            --white: #FFFFFF;
+            --off-white: #F8F9FA;
+            --gray-100: #E9ECEF;
+            --gray-200: #DEE2E6;
+            --gray-400: #CED4DA;
+            --gray-600: #6C757D;
+            --font-heading: 'Thmanyah Serif Display', serif;
+            --font-body: 'Thmanyah Sans', sans-serif;
+            --shadow-sm: 0 2px 8px rgba(11, 37, 69, 0.06);
+            --shadow-md: 0 4px 16px rgba(11, 37, 69, 0.1);
+            --radius-md: 12px;
+            --radius-lg: 16px;
+            --radius-full: 9999px;
+            --header-h: 74px
+        }
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0
+        }
+
+        body {
+            font-family: var(--font-body);
+            color: var(--navy);
+            background-color: var(--off-white);
+            line-height: 1.6;
+            overflow-x: hidden
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit
+        }
+
+        ul {
+            list-style: none
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block
+        }
+
+        button {
+            cursor: pointer;
+            font-family: inherit;
+            border: none;
+            outline: none;
+            background: none
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1240px;
+            margin-inline: auto;
+            padding-inline: 20px
+        }
+
+        .main-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(255, 255, 255, .95);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 2px solid var(--gray-100);
+            height: var(--header-h);
+            box-shadow: 0 2px 12px rgba(11, 45, 94, .06)
+        }
+
+        .header-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 100%
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px
+        }
+
+        .logo-img {
+            height: 48px;
+            width: 48px;
+            border-radius: 50%;
+            object-fit: cover
+        }
+
+        .logo-text {
+            display: flex;
+            flex-direction: column
+        }
+
+        .brand-name {
+            font-family: var(--font-heading);
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--navy);
+            line-height: 1.1
+        }
+
+        .brand-name .highlight {
+            color: var(--ocean)
+        }
+
+        .brand-sub {
+            font-size: .72rem;
+            color: var(--gray-600);
+            font-weight: 600
+        }
+
+        .main-nav ul {
+            display: flex;
+            align-items: center;
+            gap: 28px
+        }
+
+        .main-nav .nav-link {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: .92rem;
+            font-weight: 600;
+            color: var(--navy)
+        }
+
+        .header-cta {
+            display: flex;
+            align-items: center;
+            gap: 12px
+        }
+
+        .btn-lang {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: rgba(11, 37, 69, .05);
+            border: 1px solid var(--gray-200);
+            color: var(--navy);
+            font-weight: 700;
+            font-size: .85rem;
+            padding: 7px 14px;
+            border-radius: var(--radius-full)
+        }
+
+        .btn-whatsapp {
+            background: #25D366;
+            color: var(--white);
+            font-weight: 700;
+            padding: 9px 18px;
+            border-radius: var(--radius-full);
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: .88rem
+        }
+
+        .detail-main-wrapper {
+            padding-top: calc(var(--header-h) + 32px);
+            padding-bottom: 70px
+        }
+
+        .breadcrumbs {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: .88rem;
+            color: var(--gray-600);
+            margin-bottom: 24px;
+            flex-wrap: wrap
+        }
+
+        .breadcrumbs a {
+            color: var(--navy);
+            font-weight: 600
+        }
+
+        .breadcrumbs .divider {
+            font-size: .7rem;
+            color: var(--gray-400)
+        }
+
+        .breadcrumbs .active {
+            color: var(--gold-dark);
+            font-weight: 700
+        }
+
+        .boat-detail-grid {
+            display: grid;
+            grid-template-columns: 1fr 360px;
+            gap: 32px;
+            align-items: start
+        }
+
+        .boat-content-col {
+            display: flex;
+            flex-direction: column;
+            gap: 24px
+        }
+
+        .boat-title-box {
+            background: var(--white);
+            padding: 24px 28px;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--gray-100)
+        }
+
+        .badge-wrap {
+            margin-bottom: 10px
+        }
+
+        .package-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 5px 14px;
+            border-radius: var(--radius-full);
+            font-size: .8rem;
+            font-weight: 700
+        }
+
+        .badge-gold {
+            background: linear-gradient(135deg, #B89628 0%, #D4AF37 50%, #E6CA65 100%);
+            color: #061527
+        }
+
+        .detail-title {
+            font-family: var(--font-heading);
+            font-size: 2.1rem;
+            font-weight: 800;
+            color: var(--navy);
+            margin-bottom: 10px;
+            line-height: 1.25
+        }
+
+        .detail-desc {
+            font-size: 1.05rem;
+            color: var(--gray-600);
+            line-height: 1.7
+        }
+
+        .package-slider {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            background: #061527;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-md);
+            aspect-ratio: 16/10
+        }
+
+        .slides-container {
+            width: 100%;
+            height: 100%;
+            position: relative
+        }
+
+        .slide {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity .35s ease, visibility .35s ease;
+            z-index: 1
+        }
+
+        .slide.active {
+            opacity: 1;
+            visibility: visible;
+            z-index: 2
+        }
+
+        @media(max-width:992px) {
+            .boat-detail-grid {
+                grid-template-columns: 1fr
+            }
+
+            .detail-slider {
+                aspect-ratio: 4/3 !important
+            }
+        }
+
+        @media(max-width:768px) {
+            .main-nav {
+                display: none
+            }
+
+            .detail-title {
+                font-size: 1.6rem
+            }
+        }
     </style>
 </head>
+
 <body class="boat-detail-page">
     <!-- Navigation Overlay -->
     <div class="nav-overlay" id="navOverlay"></div>
-    
+
     <!-- Header -->
     <header class="main-header boat-page-header" id="mainHeader">
         <div class="container header-container">
             <a href="../index.html" class="logo">
-                <img src="../images/logo.webp" alt="أوركا للرحلات البحرية" class="logo-img" decoding="async" width="84" height="84">
+                <img src="../images/logo.webp" alt="أوركا للرحلات البحرية" class="logo-img" decoding="async" width="84"
+                    height="84">
                 <div class="logo-text">
                     <span class="brand-name">أوركا <span class="highlight">ORCA</span></span>
                     <span class="brand-sub">تجربة تشدك للبحر</span>
@@ -80,16 +360,23 @@
             </a>
             <nav class="main-nav" id="mainNav">
                 <ul>
-                    <li><a href="../index.html#hero" class="nav-link"><i class="fa-solid fa-house"></i> الرئيسية</a></li>
-                    <li><a href="../index.html#packages" class="nav-link"><i class="fa-solid fa-ship"></i> الأسطول البحري</a></li>
-                    <li><a href="../index.html#calculator" class="nav-link"><i class="fa-solid fa-calculator"></i> حاسبة الأسعار</a></li>
-                    <li><a href="../terms.html" class="nav-link"><i class="fa-solid fa-file-contract"></i> الشروط والأحكام</a></li>
-                    <li><a href="../index.html#contact" class="nav-link"><i class="fa-solid fa-phone"></i> تواصل معنا</a></li>
+                    <li><a href="../index.html#hero" class="nav-link"><i class="fa-solid fa-house"></i> الرئيسية</a>
+                    </li>
+                    <li><a href="../index.html#packages" class="nav-link"><i class="fa-solid fa-ship"></i> الأسطول
+                            البحري</a></li>
+                    <li><a href="../index.html#calculator" class="nav-link"><i class="fa-solid fa-calculator"></i> حاسبة
+                            الأسعار</a></li>
+                    <li><a href="../terms.html" class="nav-link"><i class="fa-solid fa-file-contract"></i> الشروط
+                            والأحكام</a></li>
+                    <li><a href="../index.html#contact" class="nav-link"><i class="fa-solid fa-phone"></i> تواصل
+                            معنا</a></li>
                 </ul>
             </nav>
             <div class="header-cta">
-                <a href="../en/boats/barbaros.html" class="btn-lang" title="English Version"><i class="fa-solid fa-globe"></i> <span>EN</span></a>
-                <a href="https://wa.me/966568390147?text=السلام%20عليكم،%20أود%20الاستفسار%20عن%20حجز%20قارب%20بارباروسا%20VIP" target="_blank" class="btn btn-whatsapp btn-nav">
+                <a href="../en/boats/barbaros.html" class="btn-lang" title="English Version"><i
+                        class="fa-solid fa-globe"></i> <span>EN</span></a>
+                <a href="https://wa.me/966568390147?text=السلام%20عليكم،%20أود%20الاستفسار%20عن%20حجز%20قارب%20بارباروسا%20VIP"
+                    target="_blank" class="btn btn-whatsapp btn-nav">
                     <i class="fa-brands fa-whatsapp"></i> <span>احجز الآن</span>
                 </a>
                 <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="فتح القائمة" aria-label="Menu">
@@ -116,46 +403,107 @@
                 <div class="boat-content-col">
                     <div class="boat-title-box">
                         <div class="badge-wrap" style="display: flex; gap: 8px; flex-wrap: wrap;">
-                            <span class="package-badge badge-gold" style="position: relative; top: 0; right: 0;"><i class="fa-solid fa-crown"></i> قارب بارباروسا VIP</span>
-                            <span class="package-badge badge-blue" style="position: relative; top: 0; right: 0;"><i class="fa-solid fa-shield-heart"></i> خصوصية عائلية تامة</span>
-                            <span style="background: rgba(0,119,182,0.1); color: var(--navy); font-size: 0.8rem; font-weight: 700; padding: 4px 12px; border-radius: var(--radius-full); border: 1px solid var(--ocean-light); display: inline-flex; align-items: center; gap: 6px;">
-                                <i class="fa-solid fa-user-tie" style="color: var(--ocean);"></i> كابتن محترف (وعاملة لباقة VIP)
+                            <span class="package-badge badge-gold" style="position: relative; top: 0; right: 0;"><i
+                                    class="fa-solid fa-crown"></i> قارب بارباروسا VIP</span>
+                            <span class="package-badge badge-blue" style="position: relative; top: 0; right: 0;"><i
+                                    class="fa-solid fa-shield-heart"></i> خصوصية عائلية تامة</span>
+                            <span
+                                style="background: rgba(0,119,182,0.1); color: var(--navy); font-size: 0.8rem; font-weight: 700; padding: 4px 12px; border-radius: var(--radius-full); border: 1px solid var(--ocean-light); display: inline-flex; align-items: center; gap: 6px;">
+                                <i class="fa-solid fa-user-tie" style="color: var(--ocean);"></i> كابتن فلبيني (وعاملة
+                                فلبينية للباقة VIP)
                             </span>
                         </div>
                         <h1 class="detail-title" style="margin-top: 12px;">قارب بارباروسا VIP (Barbarossa)</h1>
-                        <p class="detail-desc">قارب بونتون فاخر دورين بسعة حتى 11 شخصاً، يوفر خصوصية تامة للعوائل في جزيرتي بياضة وأبو طير، سينما بروجكتر بعد الغروب مجاناً، مكينة سلاش، وزحليقة وألعاب مائية عائمة متكاملة.</p>
+                        <p class="detail-desc">قارب بونتون فاخر دورين يوفر خصوصية تامة للعوائل في جزيرتي بياضة وأبو طير،
+                            مكينة سلاش، سينما وبروجكتر للحفلات والمناسبات مع الفشار، وزحليقة وألعاب مائية عائمة متكاملة.
+                        </p>
                     </div>
 
                     <!-- Slider -->
                     <div class="package-slider detail-slider" data-slider-id="detail-barbaros">
                         <div class="slides-container">
-                            <img class="slide active" src="../images/بارباروسا/1.webp" alt="قارب بارباروسا VIP بونتون دورين في البحر" decoding="async" width="600" height="375" fetchpriority="high">
-                            <img class="slide" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 375'%3E%3C/svg%3E" data-src="../images/بارباروسا/2.webp" loading="lazy" alt="الدور العلوي والتراس المظلل وجلسة التشميس وقت الغروب"  decoding="async" width="600" height="375">
-                            <img class="slide" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 375'%3E%3C/svg%3E" data-src="../images/بارباروسا/3.webp" loading="lazy" alt="الجلسة العائلية الفاخرة الواسعة بالدور الأرضي"  decoding="async" width="600" height="375">
-                            <img class="slide" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 375'%3E%3C/svg%3E" data-src="../images/بارباروسا/4.webp" loading="lazy" alt="الجلسة المفتوحة وركن الضيافة والمشروبات ومدخل الزحليقة"  decoding="async" width="600" height="375">
-                            <img class="slide" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 375'%3E%3C/svg%3E" data-src="../images/بارباروسا/5.webp" loading="lazy" alt="منصة التشميس والاستجمام المائية العائمة"  decoding="async" width="600" height="375">
-                            <img class="slide" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 375'%3E%3C/svg%3E" data-src="../images/بارباروسا/6.webp" loading="lazy" alt="الخيمة المائية العائمة المظللة"  decoding="async" width="600" height="375">
-                            <img class="slide" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 375'%3E%3C/svg%3E" data-src="../images/بارباروسا/7.webp" loading="lazy" alt="الجلسة المائية العائمة الدائرية"  decoding="async" width="600" height="375">
-                            <img class="slide" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 375'%3E%3C/svg%3E" data-src="../images/بارباروسا/8.webp" loading="lazy" alt="ألعاب السحب المائية وتيوب البحر السريع"  decoding="async" width="600" height="375">
-                            <img class="slide" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 375'%3E%3C/svg%3E" data-src="../images/بارباروسا/9.webp" loading="lazy" alt="السطح العلوي وسرير التشميس المزدوج"  decoding="async" width="600" height="375">
-                            <img class="slide" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 375'%3E%3C/svg%3E" data-src="../images/بارباروسا/10.webp" loading="lazy" alt="الزحليقة المائية المدمجة للنزول المباشر إلى البحر"  decoding="async" width="600" height="375">
+                            <img class="slide active" src="../images/بارباروسا/1.webp"
+                                alt="قارب بارباروسا VIP بونتون دورين في البحر" decoding="async" width="600" height="375"
+                                fetchpriority="high">
+                            <img class="slide"
+                                src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 375'%3E%3C/svg%3E"
+                                data-src="../images/بارباروسا/activities/cinema.webp" loading="lazy"
+                                alt="سهرة السينما والبروجكتر وشاشة العرض على قارب بارباروسا"
+                                style="object-position: center 28%;" decoding="async" width="600" height="375">
+                            <img class="slide"
+                                src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 375'%3E%3C/svg%3E"
+                                data-src="../images/بارباروسا/2.webp" loading="lazy"
+                                alt="الدور العلوي والتراس المظلل وجلسة التشميس وقت الغروب" decoding="async" width="600"
+                                height="375">
+                            <img class="slide"
+                                src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 375'%3E%3C/svg%3E"
+                                data-src="../images/بارباروسا/3.webp" loading="lazy"
+                                alt="الجلسة العائلية الفاخرة الواسعة بالدور الأرضي" decoding="async" width="600"
+                                height="375">
+                            <img class="slide"
+                                src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 375'%3E%3C/svg%3E"
+                                data-src="../images/بارباروسا/4.webp" loading="lazy"
+                                alt="الجلسة المفتوحة وركن الضيافة والمشروبات ومدخل الزحليقة" decoding="async"
+                                width="600" height="375">
+                            <img class="slide"
+                                src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 375'%3E%3C/svg%3E"
+                                data-src="../images/بارباروسا/5.webp" loading="lazy"
+                                alt="منصة التشميس والاستجمام المائية العائمة" decoding="async" width="600" height="375">
+                            <img class="slide"
+                                src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 375'%3E%3C/svg%3E"
+                                data-src="../images/بارباروسا/6.webp" loading="lazy"
+                                alt="الخيمة المائية العائمة المظللة" decoding="async" width="600" height="375">
+                            <img class="slide"
+                                src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 375'%3E%3C/svg%3E"
+                                data-src="../images/بارباروسا/7.webp" loading="lazy"
+                                alt="الجلسة المائية العائمة الدائرية" decoding="async" width="600" height="375">
+                            <img class="slide"
+                                src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 375'%3E%3C/svg%3E"
+                                data-src="../images/بارباروسا/8.webp" loading="lazy"
+                                alt="ألعاب السحب المائية وتيوب البحر السريع" decoding="async" width="600" height="375">
+                            <img class="slide"
+                                src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 375'%3E%3C/svg%3E"
+                                data-src="../images/بارباروسا/9.webp" loading="lazy"
+                                alt="السطح العلوي وسرير التشميس المزدوج" decoding="async" width="600" height="375">
+                            <img class="slide"
+                                src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 375'%3E%3C/svg%3E"
+                                data-src="../images/بارباروسا/10.webp" loading="lazy"
+                                alt="الزحليقة المائية المدمجة للنزول المباشر إلى البحر" decoding="async" width="600"
+                                height="375">
                         </div>
                     </div>
 
                     <!-- Specs Card -->
                     <div class="detail-section-card expandable-block" id="barbaros-specs-card">
-                        <h3 class="section-card-title"><i class="fa-solid fa-list-check"></i> مواصفات ومميزات قارب بارباروسا VIP</h3>
+                        <h3 class="section-card-title"><i class="fa-solid fa-list-check"></i> مواصفات ومميزات قارب
+                            بارباروسا VIP</h3>
                         <ul class="package-specs detail-specs-list">
-                            <li><i class="fa-solid fa-user-shield" style="color: var(--gold);"></i> <strong>طاقم الرحلة:</strong> كابتن محترف للرحلات، مع تواجد الكابتن والعاملة في رحلات VIP لضمان أعلى مستويات الخدمة والخصوصية العائلية.</li>
-                            <li><i class="fa-solid fa-film" style="color: var(--ocean);"></i> <strong>سينما وبروجكتر خارجي:</strong> شاشة عرض للأفلام (نتفلكس، ديزني للأطفال) ومباريات كرة القدم بعد الغروب — <strong>السينما مجاناً</strong> مع فشار ومشروبات غازية مجانية.</li>
-                            <li><i class="fa-solid fa-water-ladder" style="color: var(--ocean);"></i> <strong>باقة ألعاب مائية حصرية:</strong> زحليقة مائية، منصة وسرير تشميس، كاياك بحري، كرسي معلق، ألعاب كبيرة (خيمة مائية، ملعب طائرة، جلسة دائرية)، وألعاب سحب بالتيوب.</li>
+                            <li><i class="fa-solid fa-user-shield" style="color: var(--gold);"></i> <strong>طاقم
+                                    الرحلة:</strong> كابتن فلبيني محترف للباقة العادية، مع تواجد كابتن فلبيني وعاملة
+                                فلبينية للباقة VIP (حتى 10 أشخاص فقط) لضمان أعلى مستويات الخدمة والخصوصية العائلية.</li>
+                            <li><i class="fa-solid fa-film" style="color: var(--ocean);"></i> <strong>سينما وبروجكتر
+                                    للحفلات:</strong> شاشة عرض للأفلام ومباريات كرة القدم بعد الغروب — <strong>مجانية
+                                    للحفلات والمناسبات التي تزيد مدتها عن ساعتين</strong> مع تقديم الفشار الساخن
+                                والمشروبات الغازية.</li>
+                            <li><i class="fa-solid fa-water-ladder" style="color: var(--ocean);"></i> <strong>باقة ألعاب
+                                    مائية حصرية:</strong> زحليقة مائية، منصة وسرير تشميس، كاياك بحري، كرسي معلق، لعبة
+                                كبيرة مجاناً مشمولة مع باقة VIP (ولعبة ثانية بـ 500 ريال)، وألعاب سحب بالتيوب (بحسب حالة
+                                الأمواج والجو).</li>
                         </ul>
                         <div class="more-content">
-                            <ul class="package-specs detail-specs-list" style="border-top: none; padding-top: 0; margin-top: 10px;">
-                                <li><i class="fa-solid fa-gift" style="color: var(--gold);"></i> <strong>هدايا مجانية تذكارية للضيوف:</strong> حقيبة بحرية، كفر جوال مقاوم للماء، جزمة بحرية، وسدادات أذن وأنف (المناشف ونظارات الغوص متوفرة للاستعمال خلال الرحلة).</li>
-                                <li><i class="fa-solid fa-blender" style="color: var(--ocean);"></i> <strong>مكينة سلاش وضيافة مجانية:</strong> مكينة سلاش لعمل العصائر المثلجة متوفرة بالرحلات + تقديم القهوة الأمريكية والشاي لرحلات النزهة والعشاء.</li>
-                                <li><i class="fa-solid fa-restroom" style="color: var(--ocean);"></i> <strong>التجهيزات والمرافق:</strong> دورة مياه متكاملة ومروش مجهز بماء عذب (لا يتوفر صالون مغلق مكيف أو غرفة نوم).</li>
-                                <li><i class="fa-solid fa-location-dot" style="color: var(--ocean);"></i> <strong>مرسى الانطلاق:</strong> نادي الأمانة لليخوت (أبحر الجنوبية / شرم أبحر، جدة).</li>
+                            <ul class="package-specs detail-specs-list"
+                                style="border-top: none; padding-top: 0; margin-top: 10px;">
+                                <li><i class="fa-solid fa-gift" style="color: var(--gold);"></i> <strong>هدايا مجانية
+                                        تذكارية للضيوف:</strong> حقيبة بحرية، كفر جوال مقاوم للماء، جزمة بحرية، وسدادات
+                                    أذن وأنف (المناشف ونظارات الغوص متوفرة للاستعمال خلال الرحلة).</li>
+                                <li><i class="fa-solid fa-blender" style="color: var(--ocean);"></i> <strong>مكينة سلاش
+                                        وضيافة مجانية:</strong> مكينة سلاش لعمل العصائر المثلجة متوفرة بالرحلات + تقديم
+                                    القهوة الأمريكية والشاي لرحلات النزهة والعشاء.</li>
+                                <li><i class="fa-solid fa-restroom" style="color: var(--ocean);"></i> <strong>التجهيزات
+                                        والمرافق:</strong> دورة مياه متكاملة ومروش مجهز بماء عذب (لا يتوفر صالون مغلق
+                                    مكيف أو غرفة نوم).</li>
+                                <li><i class="fa-solid fa-location-dot" style="color: var(--ocean);"></i> <strong>مرسى
+                                        الانطلاق:</strong> نادي الأمانة لليخوت (أبحر الجنوبية / شرم أبحر، جدة).</li>
                             </ul>
                         </div>
                         <button type="button" class="btn-toggle-more" onclick="toggleExpand(this)">
@@ -165,80 +513,117 @@
                     </div>
 
                     <!-- Activities Section (قسم الأنشطة والألعاب المائية والترفيه المصورة) -->
-                    <div class="detail-section-card" id="activities-section" style="border: 2px solid rgba(0,119,182,0.25); background: linear-gradient(180deg, rgba(0,119,182,0.02) 0%, transparent 100%);">
-                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px; flex-wrap: wrap; gap: 8px;">
+                    <div class="detail-section-card" id="activities-section"
+                        style="border: 2px solid rgba(0,119,182,0.25); background: linear-gradient(180deg, rgba(0,119,182,0.02) 0%, transparent 100%);">
+                        <div
+                            style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px; flex-wrap: wrap; gap: 8px;">
                             <h3 class="section-card-title" style="margin-bottom: 0; font-size: 1.25rem;">
-                                <i class="fa-solid fa-person-swimming" style="color: var(--ocean);"></i> قسم الأنشطة والألعاب المائية والترفيه
+                                <i class="fa-solid fa-person-swimming" style="color: var(--ocean);"></i> قسم الأنشطة
+                                والألعاب المائية والترفيه
                             </h3>
-                            <span style="background: var(--ocean); color: #fff; font-size: 0.78rem; font-weight: 700; padding: 4px 12px; border-radius: var(--radius-full);">
+                            <span
+                                style="background: var(--ocean); color: #fff; font-size: 0.78rem; font-weight: 700; padding: 4px 12px; border-radius: var(--radius-full);">
                                 <i class="fa-solid fa-camera"></i> صور الأنشطة المعتمدة
                             </span>
                         </div>
                         <p style="font-size: 0.9rem; color: var(--gray-600); margin-bottom: 20px;">
-                            نقدم لكم في قارب بارباروسا VIP تشكيلة حصرية واستثنائية من الألعاب والأنشطة الترفيهية التي تناسب الكبار والأطفال وتضفي أجواء من الفرح والمغامرة:
+                            نقدم لكم في قارب بارباروسا VIP تشكيلة حصرية واستثنائية من الألعاب والأنشطة الترفيهية التي
+                            تناسب الكبار والأطفال وتضفي أجواء من الفرح والمغامرة:
                         </p>
 
                         <!-- Activities Grid -->
-                        <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 260px), 1fr)); gap: 18px;">
+                        <div
+                            style="display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 260px), 1fr)); gap: 18px;">
 
                             <!-- Activity 1: Built-in Water Slide -->
-                            <div style="background: var(--white); border: 1px solid var(--gray-200); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-sm); transition: transform 0.2s ease, box-shadow 0.2s ease;">
+                            <div
+                                style="background: var(--white); border: 1px solid var(--gray-200); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-sm); transition: transform 0.2s ease, box-shadow 0.2s ease;">
                                 <div style="position: relative; height: 190px; overflow: hidden; background: #000;">
-                                    <img src="../images/بارباروسا/10.webp" alt="الزحليقة المائية المدمجة" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease;" loading="lazy" decoding="async" width="600" height="375">
-                                    <span style="position: absolute; top: 10px; right: 10px; background: rgba(14,26,43,0.85); color: #fff; font-size: 0.72rem; font-weight: 700; padding: 3px 8px; border-radius: 4px;">
+                                    <img src="../images/بارباروسا/activities/slide.webp"
+                                        alt="الزحليقة المائية والدرج المباشر للبحر"
+                                        style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease;"
+                                        loading="lazy" decoding="async" width="600" height="375">
+                                    <span
+                                        style="position: absolute; top: 10px; right: 10px; background: rgba(14,26,43,0.85); color: #fff; font-size: 0.72rem; font-weight: 700; padding: 3px 8px; border-radius: 4px;">
                                         <i class="fa-solid fa-water-ladder" style="color: var(--gold);"></i> الأكثر متعة
                                     </span>
                                 </div>
                                 <div style="padding: 14px;">
-                                    <h4 style="margin: 0 0 6px 0; color: var(--navy); font-size: 1.02rem; font-weight: 800;">الزحليقة المائية المدمجة</h4>
+                                    <h4
+                                        style="margin: 0 0 6px 0; color: var(--navy); font-size: 1.02rem; font-weight: 800;">
+                                        الزحليقة المائية والدرج</h4>
                                     <p style="margin: 0; font-size: 0.82rem; color: var(--gray-600); line-height: 1.6;">
-                                        زحليقة مائية مدمجة بالقارب للنزول السريع والممتع مباشرة إلى مياه البحر الفيروزية الصافية، متعة ومرح لجميع أفراد العائلة.
+                                        زحليقة مائية مدمجة ودرج نزول مباشر من السطح إلى مياه البحر الفيروزية الصافية،
+                                        متعة ومرح لجميع أفراد العائلة.
                                     </p>
                                 </div>
                             </div>
 
                             <!-- Activity 2: Hanging Hammock Chair -->
-                            <div style="background: var(--white); border: 1px solid var(--gray-200); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-sm);">
+                            <div
+                                style="background: var(--white); border: 1px solid var(--gray-200); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-sm);">
                                 <div style="position: relative; height: 190px; overflow: hidden; background: #000;">
-                                    <img src="../images/بارباروسا/activities/hanging_chair.webp" alt="الكرسي المعلق فوق البحر" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy" decoding="async" width="600" height="375">
-                                    <span style="position: absolute; top: 10px; right: 10px; background: rgba(14,26,43,0.85); color: #fff; font-size: 0.72rem; font-weight: 700; padding: 3px 8px; border-radius: 4px;">
+                                    <img src="../images/بارباروسا/activities/hanging_chair.webp"
+                                        alt="الكرسي المعلق فوق البحر"
+                                        style="width: 100%; height: 100%; object-fit: cover;" loading="lazy"
+                                        decoding="async" width="600" height="375">
+                                    <span
+                                        style="position: absolute; top: 10px; right: 10px; background: rgba(14,26,43,0.85); color: #fff; font-size: 0.72rem; font-weight: 700; padding: 3px 8px; border-radius: 4px;">
                                         <i class="fa-solid fa-couch" style="color: var(--ocean);"></i> استرخاء وتصوير
                                     </span>
                                 </div>
                                 <div style="padding: 14px;">
-                                    <h4 style="margin: 0 0 6px 0; color: var(--navy); font-size: 1.02rem; font-weight: 800;">الكرسي المعلق فوق الماء</h4>
+                                    <h4
+                                        style="margin: 0 0 6px 0; color: var(--navy); font-size: 1.02rem; font-weight: 800;">
+                                        الكرسي المعلق فوق الماء</h4>
                                     <p style="margin: 0; font-size: 0.82rem; color: var(--gray-600); line-height: 1.6;">
-                                        كرسي معلق برافعة خاصة ينزل بك بهدوء فوق سطح الماء لتجربة استرخاء فريدة مع إطلالة بحرية وزوايا تصوير رائعة.
+                                        كرسي معلق برافعة خاصة ينزل بك بهدوء فوق سطح الماء لتجربة استرخاء فريدة مع إطلالة
+                                        بحرية وزوايا تصوير رائعة.
                                     </p>
                                 </div>
                             </div>
 
                             <!-- Activity 3: Floating Sunbed Platform -->
-                            <div style="background: var(--white); border: 1px solid var(--gray-200); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-sm);">
+                            <div
+                                style="background: var(--white); border: 1px solid var(--gray-200); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-sm);">
                                 <div style="position: relative; height: 190px; overflow: hidden; background: #000;">
-                                    <img src="../images/بارباروسا/activities/sunbed.webp" alt="منصة وسرير التشميس المائي العائم" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy" decoding="async" width="600" height="375">
-                                    <span style="position: absolute; top: 10px; right: 10px; background: rgba(14,26,43,0.85); color: #fff; font-size: 0.72rem; font-weight: 700; padding: 3px 8px; border-radius: 4px;">
+                                    <img src="../images/بارباروسا/activities/sunbed.webp"
+                                        alt="منصة وسرير التشميس المائي العائم"
+                                        style="width: 100%; height: 100%; object-fit: cover;" loading="lazy"
+                                        decoding="async" width="600" height="375">
+                                    <span
+                                        style="position: absolute; top: 10px; right: 10px; background: rgba(14,26,43,0.85); color: #fff; font-size: 0.72rem; font-weight: 700; padding: 3px 8px; border-radius: 4px;">
                                         <i class="fa-solid fa-sun" style="color: var(--gold);"></i> تان واستجمام
                                     </span>
                                 </div>
                                 <div style="padding: 14px;">
-                                    <h4 style="margin: 0 0 6px 0; color: var(--navy); font-size: 1.02rem; font-weight: 800;">منصة وسرير التشميس العائم</h4>
+                                    <h4
+                                        style="margin: 0 0 6px 0; color: var(--navy); font-size: 1.02rem; font-weight: 800;">
+                                        منصة وسرير التشميس العائم</h4>
                                     <p style="margin: 0; font-size: 0.82rem; color: var(--gray-600); line-height: 1.6;">
-                                        منصة عائمة واسعة ومريحة للاستجمام والاستلقاء تحت أشعة الشمس وسط مياه البحر الأحمر الهادئة.
+                                        منصة عائمة واسعة ومريحة للاستجمام والاستلقاء تحت أشعة الشمس وسط مياه البحر
+                                        الأحمر الهادئة.
                                     </p>
                                 </div>
                             </div>
 
                             <!-- Activity 4: Sea Kayak -->
-                            <div style="background: var(--white); border: 1px solid var(--gray-200); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-sm);">
+                            <div
+                                style="background: var(--white); border: 1px solid var(--gray-200); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-sm);">
                                 <div style="position: relative; height: 190px; overflow: hidden; background: #000;">
-                                    <img src="../images/بارباروسا/activities/kayak.webp" alt="قارب كاياك المائي الفردي والمزدوج" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy" decoding="async" width="600" height="375">
-                                    <span style="position: absolute; top: 10px; right: 10px; background: rgba(0,119,182,0.9); color: #fff; font-size: 0.72rem; font-weight: 700; padding: 3px 8px; border-radius: 4px;">
+                                    <img src="../images/بارباروسا/activities/kayak.webp"
+                                        alt="قارب كاياك المائي الفردي والمزدوج"
+                                        style="width: 100%; height: 100%; object-fit: cover;" loading="lazy"
+                                        decoding="async" width="600" height="375">
+                                    <span
+                                        style="position: absolute; top: 10px; right: 10px; background: rgba(0,119,182,0.9); color: #fff; font-size: 0.72rem; font-weight: 700; padding: 3px 8px; border-radius: 4px;">
                                         <i class="fa-solid fa-water"></i> تجديف ومغامرة
                                     </span>
                                 </div>
                                 <div style="padding: 14px;">
-                                    <h4 style="margin: 0 0 6px 0; color: var(--navy); font-size: 1.02rem; font-weight: 800;">قارب كاياك المائي</h4>
+                                    <h4
+                                        style="margin: 0 0 6px 0; color: var(--navy); font-size: 1.02rem; font-weight: 800;">
+                                        قارب كاياك المائي</h4>
                                     <p style="margin: 0; font-size: 0.82rem; color: var(--gray-600); line-height: 1.6;">
                                         قارب كاياك للتجديف والاستكشاف بحرية ومتعة حول القارب والمياه الفيروزية الساحرة.
                                     </p>
@@ -246,113 +631,173 @@
                             </div>
 
                             <!-- Activity 5: Floating Water Tent (Big Toy) -->
-                            <div style="background: var(--white); border: 1px solid var(--gray-200); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-sm);">
+                            <div
+                                style="background: var(--white); border: 1px solid var(--gray-200); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-sm);">
                                 <div style="position: relative; height: 190px; overflow: hidden; background: #000;">
-                                    <img src="../images/بارباروسا/activities/water_tent.webp" alt="الخيمة المائية العائمة" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy" decoding="async" width="600" height="375">
-                                    <span style="position: absolute; top: 10px; right: 10px; background: rgba(14,26,43,0.85); color: #fff; font-size: 0.72rem; font-weight: 700; padding: 3px 8px; border-radius: 4px;">
+                                    <img src="../images/بارباروسا/activities/water_tent.webp"
+                                        alt="الخيمة المائية العائمة"
+                                        style="width: 100%; height: 100%; object-fit: cover;" loading="lazy"
+                                        decoding="async" width="600" height="375">
+                                    <span
+                                        style="position: absolute; top: 10px; right: 10px; background: rgba(14,26,43,0.85); color: #fff; font-size: 0.72rem; font-weight: 700; padding: 3px 8px; border-radius: 4px;">
                                         <i class="fa-solid fa-tent" style="color: var(--gold);"></i> لعبة كبيرة
                                     </span>
                                 </div>
                                 <div style="padding: 14px;">
-                                    <h4 style="margin: 0 0 6px 0; color: var(--navy); font-size: 1.02rem; font-weight: 800;">الخيمة المائية العائمة</h4>
+                                    <h4
+                                        style="margin: 0 0 6px 0; color: var(--navy); font-size: 1.02rem; font-weight: 800;">
+                                        الخيمة المائية العائمة</h4>
                                     <p style="margin: 0; font-size: 0.82rem; color: var(--gray-600); line-height: 1.6;">
-                                        خيمة عائمة مظللة داخل البحر مع جلسات دائرية وطاولة تمنحكم خصوصية وراحة، مشمولة كخيار لعبة كبيرة (ولعبة ثانية بـ 500 ريال).
+                                        خيمة عائمة مظللة داخل البحر مع جلسات دائرية وطاولة تمنحكم خصوصية وراحة، مشمولة
+                                        كخيار لعبة كبيرة (ولعبة ثانية بـ 500 ريال).
                                     </p>
                                 </div>
                             </div>
 
                             <!-- Activity 6: Floating Volleyball Court (Big Toy) -->
-                            <div style="background: var(--white); border: 1px solid var(--gray-200); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-sm);">
+                            <div
+                                style="background: var(--white); border: 1px solid var(--gray-200); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-sm);">
                                 <div style="position: relative; height: 190px; overflow: hidden; background: #000;">
-                                    <img src="../images/بارباروسا/activities/volleyball.webp" alt="ملعب الطائرة المائي العائم" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy" decoding="async" width="600" height="375">
-                                    <span style="position: absolute; top: 10px; right: 10px; background: rgba(14,26,43,0.85); color: #fff; font-size: 0.72rem; font-weight: 700; padding: 3px 8px; border-radius: 4px;">
+                                    <img src="../images/بارباروسا/activities/volleyball.webp"
+                                        alt="ملعب الطائرة المائي العائم"
+                                        style="width: 100%; height: 100%; object-fit: cover;" loading="lazy"
+                                        decoding="async" width="600" height="375">
+                                    <span
+                                        style="position: absolute; top: 10px; right: 10px; background: rgba(14,26,43,0.85); color: #fff; font-size: 0.72rem; font-weight: 700; padding: 3px 8px; border-radius: 4px;">
                                         <i class="fa-solid fa-volleyball" style="color: var(--ocean);"></i> لعبة كبيرة
                                     </span>
                                 </div>
                                 <div style="padding: 14px;">
-                                    <h4 style="margin: 0 0 6px 0; color: var(--navy); font-size: 1.02rem; font-weight: 800;">ملعب كرة الطائرة المائي</h4>
+                                    <h4
+                                        style="margin: 0 0 6px 0; color: var(--navy); font-size: 1.02rem; font-weight: 800;">
+                                        ملعب كرة الطائرة المائي</h4>
                                     <p style="margin: 0; font-size: 0.82rem; color: var(--gray-600); line-height: 1.6;">
-                                        ملعب كرة طائرة عائم متكامل بشبكة هوائية لمنافسات شيقة وحماسية بين الأصدقاء والعائلة في قلب البحر الصافي.
+                                        ملعب كرة طائرة عائم متكامل بشبكة هوائية لمنافسات شيقة وحماسية بين الأصدقاء
+                                        والعائلة في قلب البحر الصافي.
                                     </p>
                                 </div>
                             </div>
 
                             <!-- Activity 7: Floating Circular Lounge (Big Toy) -->
-                            <div style="background: var(--white); border: 1px solid var(--gray-200); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-sm);">
+                            <div
+                                style="background: var(--white); border: 1px solid var(--gray-200); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-sm);">
                                 <div style="position: relative; height: 190px; overflow: hidden; background: #000;">
-                                    <img src="../images/بارباروسا/activities/trampoline.webp" alt="الجلسة المائية العائمة الدائرية" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy" decoding="async" width="600" height="375">
-                                    <span style="position: absolute; top: 10px; right: 10px; background: rgba(14,26,43,0.85); color: #fff; font-size: 0.72rem; font-weight: 700; padding: 3px 8px; border-radius: 4px;">
+                                    <img src="../images/بارباروسا/activities/trampoline.webp"
+                                        alt="الجلسة المائية العائمة الدائرية"
+                                        style="width: 100%; height: 100%; object-fit: cover;" loading="lazy"
+                                        decoding="async" width="600" height="375">
+                                    <span
+                                        style="position: absolute; top: 10px; right: 10px; background: rgba(14,26,43,0.85); color: #fff; font-size: 0.72rem; font-weight: 700; padding: 3px 8px; border-radius: 4px;">
                                         <i class="fa-solid fa-users" style="color: var(--gold);"></i> لعبة كبيرة
                                     </span>
                                 </div>
                                 <div style="padding: 14px;">
-                                    <h4 style="margin: 0 0 6px 0; color: var(--navy); font-size: 1.02rem; font-weight: 800;">الجلسة المائية العائمة الدائرية</h4>
+                                    <h4
+                                        style="margin: 0 0 6px 0; color: var(--navy); font-size: 1.02rem; font-weight: 800;">
+                                        الجلسة المائية العائمة الدائرية</h4>
                                     <p style="margin: 0; font-size: 0.82rem; color: var(--gray-600); line-height: 1.6;">
-                                        منصة جلسة مائية دائرية مبتكرة وأنيقة للاسترخاء والحديث وتناول المشروبات وسط أمواج البحر الصافية.
+                                        منصة جلسة مائية دائرية مبتكرة وأنيقة للاسترخاء والحديث وتناول المشروبات وسط
+                                        أمواج البحر الصافية.
                                     </p>
                                 </div>
                             </div>
 
                             <!-- Activity 8: Towable Water Toys (200 SAR) -->
-                            <div style="background: var(--white); border: 1px solid var(--gray-200); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-sm);">
+                            <div
+                                style="background: var(--white); border: 1px solid var(--gray-200); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-sm);">
                                 <div style="position: relative; height: 190px; overflow: hidden; background: #000;">
-                                    <img src="../images/بارباروسا/activities/towables.webp" alt="ألعاب السحب المائية (التيوب المائي)" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy" decoding="async" width="600" height="375">
-                                    <span style="position: absolute; top: 10px; right: 10px; background: rgba(230,57,70,0.9); color: #fff; font-size: 0.72rem; font-weight: 700; padding: 3px 8px; border-radius: 4px;">
+                                    <img src="../images/بارباروسا/activities/towables.webp"
+                                        alt="ألعاب السحب المائية (التيوب المائي)"
+                                        style="width: 100%; height: 100%; object-fit: cover;" loading="lazy"
+                                        decoding="async" width="600" height="375">
+                                    <span
+                                        style="position: absolute; top: 10px; right: 10px; background: rgba(230,57,70,0.9); color: #fff; font-size: 0.72rem; font-weight: 700; padding: 3px 8px; border-radius: 4px;">
                                         <i class="fa-solid fa-bolt"></i> 200 ريال فقط
                                     </span>
                                 </div>
                                 <div style="padding: 14px;">
-                                    <h4 style="margin: 0 0 6px 0; color: var(--navy); font-size: 1.02rem; font-weight: 800;">ألعاب السحب المائية (التيوب)</h4>
+                                    <h4
+                                        style="margin: 0 0 6px 0; color: var(--navy); font-size: 1.02rem; font-weight: 800;">
+                                        ألعاب السحب المائية (التيوب)</h4>
                                     <p style="margin: 0; font-size: 0.82rem; color: var(--gray-600); line-height: 1.6;">
-                                        تيوب سحب مائي سريع خلف القارب يمنحكم جرعة أدرينالين ممتعة ومغامرة شيقة — تتوفر كإضافة بـ <strong>200 ريال</strong>.
+                                        تيوب سحب مائي سريع خلف القارب يمنحكم جرعة أدرينالين ممتعة ومغامرة شيقة — تتوفر
+                                        كإضافة بـ <strong>200 ريال</strong>.
                                     </p>
+                                    <div
+                                        style="margin-top: 6px; font-size: 0.74rem; color: #b7094c; font-weight: 700; background: rgba(230,57,70,0.08); padding: 4px 8px; border-radius: 4px; border: 1px dashed rgba(230,57,70,0.3);">
+                                        ⚠️ تنبيه: إتاحة اللعبة تخضع لسلامتكم بحسب حالة الأمواج والجو في البحر.
+                                    </div>
                                 </div>
                             </div>
 
                             <!-- Activity 9: Guest Souvenir Gifts -->
-                            <div style="background: var(--white); border: 1px solid var(--gray-200); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-sm);">
+                            <div
+                                style="background: var(--white); border: 1px solid var(--gray-200); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-sm);">
                                 <div style="position: relative; height: 190px; overflow: hidden; background: #000;">
-                                    <img src="../images/بارباروسا/activities/gifts.webp" alt="هدايا تذكارية مجانية لكل ضيف" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy" decoding="async" width="600" height="375">
-                                    <span style="position: absolute; top: 10px; right: 10px; background: var(--gold); color: #061527; font-size: 0.72rem; font-weight: 800; padding: 3px 8px; border-radius: 4px;">
+                                    <img src="../images/بارباروسا/activities/gifts.webp"
+                                        alt="هدايا تذكارية مجانية لكل ضيف"
+                                        style="width: 100%; height: 100%; object-fit: cover;" loading="lazy"
+                                        decoding="async" width="600" height="375">
+                                    <span
+                                        style="position: absolute; top: 10px; right: 10px; background: var(--gold); color: #061527; font-size: 0.72rem; font-weight: 800; padding: 3px 8px; border-radius: 4px;">
                                         <i class="fa-solid fa-gift"></i> هدايا مجانية بالباقة 2
                                     </span>
                                 </div>
                                 <div style="padding: 14px;">
-                                    <h4 style="margin: 0 0 6px 0; color: var(--navy); font-size: 1.02rem; font-weight: 800;">هدايا تذكارية فاخرة للضيوف</h4>
+                                    <h4
+                                        style="margin: 0 0 6px 0; color: var(--navy); font-size: 1.02rem; font-weight: 800;">
+                                        هدايا تذكارية فاخرة للضيوف</h4>
                                     <p style="margin: 0; font-size: 0.82rem; color: var(--gray-600); line-height: 1.6;">
-                                        حقيبة بحرية، حافظ/كفر للجوال مقاوم للماء، جزمة بحرية، وسدادات أذن وأنف خاصة لكل ضيف للاحتفاظ بها كذكرى جميلة.
+                                        حقيبة بحرية، حافظ/كفر للجوال مقاوم للماء، جزمة بحرية، وسدادات أذن وأنف خاصة لكل
+                                        ضيف للاحتفاظ بها كذكرى جميلة.
                                     </p>
                                 </div>
                             </div>
 
                             <!-- Activity 10: Slush Machine -->
-                            <div style="background: var(--white); border: 1px solid var(--gray-200); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-sm);">
+                            <div
+                                style="background: var(--white); border: 1px solid var(--gray-200); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-sm);">
                                 <div style="position: relative; height: 190px; overflow: hidden; background: #000;">
-                                    <img src="../images/بارباروسا/4.webp" alt="مكينة السلاش والعصائر المثلجة" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy" decoding="async" width="600" height="375">
-                                    <span style="position: absolute; top: 10px; right: 10px; background: rgba(0,119,182,0.9); color: #fff; font-size: 0.72rem; font-weight: 700; padding: 3px 8px; border-radius: 4px;">
+                                    <img src="../images/بارباروسا/4.webp" alt="مكينة السلاش والعصائر المثلجة"
+                                        style="width: 100%; height: 100%; object-fit: cover;" loading="lazy"
+                                        decoding="async" width="600" height="375">
+                                    <span
+                                        style="position: absolute; top: 10px; right: 10px; background: rgba(0,119,182,0.9); color: #fff; font-size: 0.72rem; font-weight: 700; padding: 3px 8px; border-radius: 4px;">
                                         <i class="fa-solid fa-blender" style="color: var(--gold);"></i> انتعاش مثلج
                                     </span>
                                 </div>
                                 <div style="padding: 14px;">
-                                    <h4 style="margin: 0 0 6px 0; color: var(--navy); font-size: 1.02rem; font-weight: 800;">مكينة السلاش للعصائر المثلجة</h4>
+                                    <h4
+                                        style="margin: 0 0 6px 0; color: var(--navy); font-size: 1.02rem; font-weight: 800;">
+                                        مكينة السلاش للعصائر المثلجة</h4>
                                     <p style="margin: 0; font-size: 0.82rem; color: var(--gray-600); line-height: 1.6;">
-                                        مكينة سلاش خاصة لعمل العصائر المثلجة المنعشة متوفرة بجميع الرحلات لتستمتعوا بأروع المشروبات الباردة تحت شمس البحر.
+                                        مكينة سلاش خاصة لعمل العصائر المثلجة المنعشة متوفرة بجميع الرحلات لتستمتعوا
+                                        بأروع المشروبات الباردة تحت شمس البحر.
                                     </p>
                                 </div>
                             </div>
 
-                            <!-- Activity 11: Outdoor Night Cinema (Free) -->
-                            <div style="background: var(--white); border: 1px solid var(--gray-200); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-sm);">
+                            <!-- Activity 11: Outdoor Night Cinema (Parties) -->
+                            <div
+                                style="background: var(--white); border: 1px solid var(--gray-200); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-sm);">
                                 <div style="position: relative; height: 190px; overflow: hidden; background: #000;">
-                                    <img src="../images/بارباروسا/2.webp" alt="سهرة السينما والبروجكتر بعد الغروب مجاناً" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy" decoding="async" width="600" height="375">
-                                    <span style="position: absolute; top: 10px; right: 10px; background: #28a745; color: #fff; font-size: 0.72rem; font-weight: 700; padding: 3px 8px; border-radius: 4px;">
-                                        <i class="fa-solid fa-film"></i> السينما مجانية بعد الغروب
+                                    <img src="../images/بارباروسا/activities/cinema.webp"
+                                        alt="سهرة السينما والبروجكتر وشاشة العرض في قارب بارباروسا"
+                                        style="width: 100%; height: 100%; object-fit: cover; object-position: center 28%;"
+                                        loading="lazy" decoding="async" width="600" height="375">
+                                    <span
+                                        style="position: absolute; top: 10px; right: 10px; background: var(--navy); color: var(--gold); font-size: 0.72rem; font-weight: 700; padding: 3px 8px; border-radius: 4px; border: 1px solid var(--gold);">
+                                        <i class="fa-solid fa-cake-candles"></i> مجانية للحفلات فوق ساعتين
                                     </span>
                                 </div>
                                 <div style="padding: 14px;">
-                                    <h4 style="margin: 0 0 6px 0; color: var(--navy); font-size: 1.02rem; font-weight: 800;">سهرة السينما والبروجكتر (مجاناً)</h4>
+                                    <h4
+                                        style="margin: 0 0 6px 0; color: var(--navy); font-size: 1.02rem; font-weight: 800;">
+                                        سهرة السينما والبروجكتر (مجانية للحفلات فوق ساعتين)</h4>
                                     <p style="margin: 0; font-size: 0.82rem; color: var(--gray-600); line-height: 1.6;">
-                                        شاشة بروجكتر لعرض الأفلام (نتفلكس، ديزني للأطفال) ومباريات كرة القدم بعد الغروب — <strong>السينما مجانية</strong> مع تقديم فشار ومشروبات غازية مجاناً.
+                                        شاشة بروجكتر متطورة لعرض الأفلام ومباريات كرة القدم بعد الغروب — <strong>مجانية
+                                            تماماً للحفلات والمناسبات التي تزيد مدتها عن ساعتين</strong> مع تقديم الفشار
+                                        الساخن والمشروبات الغازية لعيش أجواء احتفالية وسينمائية ساحرة.
                                     </p>
                                 </div>
                             </div>
@@ -362,36 +807,54 @@
 
                     <!-- Pricing & Packages Box -->
                     <div class="detail-section-card">
-                        <h3 class="section-card-title"><i class="fa-solid fa-tags"></i> تفاصيل وباقات قارب بارباروسا VIP</h3>
+                        <h3 class="section-card-title"><i class="fa-solid fa-tags"></i> تفاصيل وباقات قارب بارباروسا VIP
+                        </h3>
                         <p style="font-size: 0.95rem; color: var(--navy); font-weight: 700; margin-bottom: 18px;">
                             ينقسم جدول رحلات قارب بارباروسا VIP إلى قسمين رئيسيين:
                         </p>
-                        
+
                         <!-- ================= PART 1: OPEN SEA TRIPS ================= -->
-                        <div class="trip-options-box" style="margin-bottom: 28px; border: 2px solid var(--gold); background: linear-gradient(180deg, rgba(201,162,39,0.05) 0%, transparent 100%); border-radius: var(--radius-lg); padding: 18px;">
-                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; flex-wrap: wrap; gap: 8px;">
+                        <div class="trip-options-box"
+                            style="margin-bottom: 28px; border: 2px solid var(--gold); background: linear-gradient(180deg, rgba(201,162,39,0.05) 0%, transparent 100%); border-radius: var(--radius-lg); padding: 18px;">
+                            <div
+                                style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; flex-wrap: wrap; gap: 8px;">
                                 <h4 class="box-title" style="color: var(--navy); margin-bottom: 0; font-size: 1.15rem;">
-                                    <i class="fa-solid fa-compass" style="color: var(--gold);"></i> القسم الأول: رحلات البحر المفتوح (بياضة أو جزيرة أبو طير)
+                                    <i class="fa-solid fa-compass" style="color: var(--gold);"></i> القسم الأول: رحلات
+                                    البحر المفتوح (بياضة أو جزيرة أبو طير)
                                 </h4>
-                                <span style="font-size: 0.78rem; font-weight: 700; background: var(--gold); color: #fff; padding: 4px 12px; border-radius: var(--radius-full);">أبو طير: نفس أسعار بياضة + 300 ريال فقط</span>
+                                <span
+                                    style="font-size: 0.78rem; font-weight: 700; background: var(--gold); color: #fff; padding: 4px 12px; border-radius: var(--radius-full);">أبو
+                                    طير: نفس أسعار بياضة + 300 ريال فقط</span>
                             </div>
 
-                            <div class="expandable-block" style="background: rgba(201,162,39,0.08); padding: 12px 14px; border-radius: var(--radius-md); margin-bottom: 14px; border: 1px solid var(--gold); font-size: 0.88rem; color: var(--navy); line-height: 1.8;">
-                                <h5 style="margin: 0 0 6px 0; color: var(--navy); font-size: 0.95rem; font-weight: 800;"><i class="fa-solid fa-clock" style="color: var(--gold);"></i> أوقات وتعليمات رحلات البحر المفتوح (6 ساعات):</h5>
+                            <div class="expandable-block"
+                                style="background: rgba(201,162,39,0.08); padding: 12px 14px; border-radius: var(--radius-md); margin-bottom: 14px; border: 1px solid var(--gold); font-size: 0.88rem; color: var(--navy); line-height: 1.8;">
+                                <h5
+                                    style="margin: 0 0 6px 0; color: var(--navy); font-size: 0.95rem; font-weight: 800;">
+                                    <i class="fa-solid fa-clock" style="color: var(--gold);"></i> أوقات وتعليمات رحلات
+                                    البحر المفتوح (6 ساعات):</h5>
                                 <ul style="margin: 0; padding-right: 18px; list-style: square; font-size: 0.84rem;">
-                                    <li><strong>الوجهات:</strong> جزيرة بياضة، أو <strong>جزيرة أبو طير</strong> (نفس أسعار باقات بياضة بزيادة 300 ريال فقط لكل باقة وفئة لخصوصية عائلية أكبر).</li>
+                                    <li><strong>الوجهات:</strong> جزيرة بياضة، أو <strong>جزيرة أبو طير</strong> (نفس
+                                        أسعار باقات بياضة بزيادة 300 ريال فقط لكل باقة وفئة لخصوصية عائلية أكبر).</li>
                                     <li><strong>فترات الرحلة اليومية:</strong>
-                                        <br>• <strong>الفترة الصباحية:</strong> من 6:00 صباحاً إلى 12:00 ظهراً (6 ساعات).
+                                        <br>• <strong>الفترة الصباحية:</strong> من 6:00 صباحاً إلى 12:00 ظهراً (6
+                                        ساعات).
                                         <br>• <strong>الفترة المسائية:</strong> من 1:00 ظهراً إلى 7:00 مساءً (6 ساعات).
                                     </li>
-                                    <li><strong>تمديد الساعات الإضافية:</strong> إمكانية إضافة حتى <strong>ساعتين إضافية</strong>، وكل ساعة إضافية بـ <strong>300 ريال</strong> فقط.</li>
-                                    <li><strong>السعة المسموحة:</strong> حتى 11 شخصاً.</li>
+                                    <li><strong>تمديد الساعات الإضافية:</strong> إمكانية إضافة ساعات إضافية (بحد أدنى
+                                        ساعتين)، وكل ساعة إضافية بـ <strong>300 ريال</strong> فقط.</li>
+                                    <li><strong>السعة المسموحة:</strong> حتى 11 شخصاً (باقة VIP فقط حتى 10 أشخاص).</li>
                                 </ul>
                                 <div class="more-content">
-                                    <ul style="margin: 4px 0 0 0; padding-right: 18px; list-style: square; font-size: 0.84rem;">
-                                        <li><strong>تأكيد الرحلة:</strong> يتم التأكيد النهائي للرحلة قبل موعدها بـ <strong>24 ساعة</strong> للتأكد من الحالة الجوية.</li>
-                                        <li><strong>تصريح الإبحار:</strong> يتم إرسال صورة من بطاقة الأحوال أو الإقامة لعمل تصريح الإبحار بعد التأكيد النهائي للرحلة.</li>
-                                        <li><strong>طاقم الرحلة:</strong> يتواجد كابتن محترف، ويتواجد <strong>الكابتن مع العاملة</strong> في رحلات الباقة الثانية VIP لضمان أعلى مستويات الخدمة والخصوصية العائلية.</li>
+                                    <ul
+                                        style="margin: 4px 0 0 0; padding-right: 18px; list-style: square; font-size: 0.84rem;">
+                                        <li><strong>تأكيد الرحلة:</strong> يتم التأكيد النهائي للرحلة قبل موعدها بـ
+                                            <strong>24 ساعة</strong> للتأكد من الحالة الجوية.</li>
+                                        <li><strong>تصريح الإبحار:</strong> يتم إرسال صورة من بطاقة الأحوال أو الإقامة
+                                            لعمل تصريح الإبحار بعد التأكيد النهائي للرحلة.</li>
+                                        <li><strong>طاقم الرحلة:</strong> كابتن فلبيني محترف للباقة العادية، ويتواجد
+                                            <strong>كابتن فلبيني وعاملة فلبينية للباقة VIP</strong> لضمان أعلى مستويات
+                                            الخدمة والخصوصية العائلية.</li>
                                     </ul>
                                 </div>
                                 <button type="button" class="btn-toggle-more" onclick="toggleExpand(this)">
@@ -401,56 +864,105 @@
                             </div>
 
                             <!-- Package 1 Basic -->
-                            <div class="trip-price-item expandable-block" style="background: var(--white); padding: 14px 16px; border-radius: var(--radius-md); margin-bottom: 12px; border: 1px solid var(--gray-200); box-shadow: var(--shadow-sm);">
+                            <div class="trip-price-item expandable-block"
+                                style="background: var(--white); padding: 14px 16px; border-radius: var(--radius-md); margin-bottom: 12px; border: 1px solid var(--gray-200); box-shadow: var(--shadow-sm);">
                                 <div class="trip-info">
-                                    <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 4px; flex-wrap: wrap;">
-                                        <span class="trip-name" style="font-weight: 800; font-size: 1.02rem; color: var(--navy);">الباقة الأولى (الأساسية)</span>
-                                        <span style="background: rgba(0,119,182,0.1); color: var(--ocean-dark); font-size: 0.75rem; font-weight: 700; padding: 2px 8px; border-radius: 4px;">6 ساعات | صباحية أو مسائية</span>
+                                    <div
+                                        style="display: flex; align-items: center; gap: 8px; margin-bottom: 4px; flex-wrap: wrap;">
+                                        <span class="trip-name"
+                                            style="font-weight: 800; font-size: 1.02rem; color: var(--navy);">الباقة
+                                            الأولى (باقة عادية)</span>
+                                        <span
+                                            style="background: rgba(0,119,182,0.1); color: var(--ocean-dark); font-size: 0.75rem; font-weight: 700; padding: 2px 8px; border-radius: 4px;">6
+                                            ساعات | حتى 11 شخصاً</span>
                                     </div>
-                                    <ul style="font-size: 0.84rem; color: var(--gray-600); line-height: 1.7; margin: 4px 0 0 0; padding-right: 18px; list-style: square;">
-                                        <li><strong>المشروبات:</strong> ماء بارد + عصيرات ومشروبات غازية + مكينة سلاش مثلجة.</li>
-                                        <li><strong>أغراض للاستعمال خلال الرحلة:</strong> منشفة نظيفة + نظارات للغوص.</li>
-                                        <li><strong>تجهيزات القارب:</strong> زحليقة مائية + كرسي معلق فوق الماء + سرير تشميس عائم.</li>
-                                        <li><strong>الفترات:</strong> صباحية (6:00 إلى 12:00) أو مسائية (1:00 إلى 7:00).</li>
-                                        <li><strong>الساعات الإضافية:</strong> إمكانية إضافة حتى ساعتين، وكل ساعة بـ <strong>300 ريال</strong>.</li>
+                                    <ul
+                                        style="font-size: 0.84rem; color: var(--gray-600); line-height: 1.7; margin: 4px 0 0 0; padding-right: 18px; list-style: square;">
+                                        <li><strong>طاقم العمل:</strong> كابتن فلبيني محترف.</li>
+                                        <li><strong>المشروبات:</strong> ماء بارد + عصيرات ومشروبات غازية + مكينة سلاش
+                                            مثلجة.</li>
+                                        <li><strong>أغراض للاستعمال خلال الرحلة:</strong> منشفة نظيفة + نظارات للغوص.
+                                        </li>
+                                        <li><strong>تجهيزات القارب:</strong> زحليقة مائية + كرسي معلق فوق الماء + سرير
+                                            تشميس عائم.</li>
+                                        <li><strong>الفترات:</strong> صباحية (6:00 إلى 12:00) أو مسائية (1:00 إلى 7:00).
+                                        </li>
+                                        <li><strong>الساعات الإضافية:</strong> إمكانية إضافة ساعات إضافية (بحد أدنى
+                                            ساعتين)، وكل ساعة بـ <strong>300 ريال</strong>.</li>
                                     </ul>
                                 </div>
-                                <div class="trip-price" style="text-align: left; white-space: nowrap; min-width: 170px;">
-                                    <div style="font-size: 0.82rem; color: var(--gray-600); font-weight: 700; margin-bottom: 4px; border-bottom: 1px dashed var(--gray-300); padding-bottom: 2px;">أسعار بياضة لـ 6 ساعات:</div>
-                                    <div style="font-size: 0.88rem; color: var(--navy);">5 – 6 أشخاص: <strong style="color: var(--ocean); font-size: 1rem;">2,000 ريال</strong></div>
-                                    <div style="font-size: 0.88rem; color: var(--navy);">7 – 9 أشخاص: <strong style="color: var(--ocean); font-size: 1rem;">2,500 ريال</strong></div>
-                                    <div style="font-size: 0.88rem; color: var(--navy);">9 – 11 شخصاً: <strong style="color: var(--ocean); font-size: 1rem;">3,000 ريال</strong></div>
-                                    <div style="font-size: 0.76rem; background: rgba(201,162,39,0.15); color: var(--gold-dark); font-weight: 700; padding: 2px 6px; border-radius: 4px; margin-top: 4px;">
+                                <div class="trip-price"
+                                    style="text-align: left; white-space: nowrap; min-width: 170px;">
+                                    <div
+                                        style="font-size: 0.82rem; color: var(--gray-600); font-weight: 700; margin-bottom: 4px; border-bottom: 1px dashed var(--gray-300); padding-bottom: 2px;">
+                                        أسعار بياضة لـ 6 ساعات:</div>
+                                    <div style="font-size: 0.88rem; color: var(--navy);">5 – 6 أشخاص: <strong
+                                            style="color: var(--ocean); font-size: 1rem;">2,000 ريال</strong></div>
+                                    <div style="font-size: 0.88rem; color: var(--navy);">7 – 9 أشخاص: <strong
+                                            style="color: var(--ocean); font-size: 1rem;">2,500 ريال</strong></div>
+                                    <div style="font-size: 0.88rem; color: var(--navy);">9 – 11 شخصاً: <strong
+                                            style="color: var(--ocean); font-size: 1rem;">3,000 ريال</strong></div>
+                                    <div
+                                        style="font-size: 0.76rem; background: rgba(201,162,39,0.15); color: var(--gold-dark); font-weight: 700; padding: 2px 6px; border-radius: 4px; margin-top: 4px;">
                                         🏝️ جزيرة أبو طير: نفس الأسعار + 300 ريال
                                     </div>
                                 </div>
                             </div>
 
                             <!-- Package 2 VIP All-Inclusive -->
-                            <div class="trip-price-item expandable-block" style="background: rgba(0,119,182,0.06); padding: 14px 16px; border-radius: var(--radius-md); border: 1.5px solid var(--ocean-light); box-shadow: var(--shadow-sm);">
+                            <div class="trip-price-item expandable-block"
+                                style="background: rgba(0,119,182,0.06); padding: 14px 16px; border-radius: var(--radius-md); border: 1.5px solid var(--ocean-light); box-shadow: var(--shadow-sm);">
                                 <div class="trip-info">
-                                    <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 4px; flex-wrap: wrap;">
-                                        <span class="trip-name" style="font-weight: 800; font-size: 1.02rem; color: var(--ocean-dark);">الباقة الثانية (VIP الشاملة الألعاب والمشويات)</span>
-                                        <span style="background: var(--gold); color: #fff; font-size: 0.75rem; font-weight: 700; padding: 2px 8px; border-radius: 4px;">كابتن وعاملة | هدايا ومشويات</span>
+                                    <div
+                                        style="display: flex; align-items: center; gap: 8px; margin-bottom: 4px; flex-wrap: wrap;">
+                                        <span class="trip-name"
+                                            style="font-weight: 800; font-size: 1.02rem; color: var(--ocean-dark);">الباقة
+                                            الثانية (باقة VIP)</span>
+                                        <span
+                                            style="background: var(--gold); color: #fff; font-size: 0.75rem; font-weight: 700; padding: 2px 8px; border-radius: 4px;">فقط
+                                            حتى 10 أشخاص | هدايا ومشويات</span>
                                     </div>
-                                    <ul style="font-size: 0.84rem; color: var(--navy); line-height: 1.7; margin: 4px 0 0 0; padding-right: 18px; list-style: square;">
-                                        <li><strong>طاقم العمل:</strong> كابتن مع العاملة لضمان أعلى مستويات الخدمة والراحة والخصوصية.</li>
-                                        <li><strong>المشروبات:</strong> ماء بارد + عصيرات ومشروبات غازية + مكينة سلاش للعصائر المثلجة.</li>
-                                        <li><strong>هدايا مجانية تذكارية للضيوف:</strong> حقيبة بحرية + حافظ للجوال ضد الماء + جزمة بحرية + سدادة أذن وأنف.</li>
-                                        <li><strong>أغراض للاستعمال خلال الرحلة:</strong> منشفة كبيرة + نظارات للغوص.</li>
-                                        <li><strong>وجبة برجر مشوي طازج:</strong> عدد 2 برجر مشوي في القارب لكل شخص مع المشروبات الغازية.</li>
-                                        <li><strong>ألعاب مائية مشمولة:</strong> سرير التشميس + قارب كاياك + زحليقة مائية + كرسي معلق فوق الماء.</li>
-                                        <li><strong>تشمل لعبة واحدة كبيرة:</strong> خيمة مائية عائمة، أو ملعب طائرة مائي، أو جلسة دائرية / ترامبولين.</li>
-                                        <li><strong>إضافات اختيارية:</strong> إذا رغب بلعبة كبيرة ثانية (+500 ريال) | ألعاب السحب المائية بالتيوب (+200 ريال).</li>
-                                        <li><strong>الساعات الإضافية:</strong> إمكانية إضافة حتى ساعتين، وكل ساعة بـ <strong>300 ريال</strong>.</li>
+                                    <ul
+                                        style="font-size: 0.84rem; color: var(--navy); line-height: 1.7; margin: 4px 0 0 0; padding-right: 18px; list-style: square;">
+                                        <li><strong>طاقم العمل:</strong> كابتن فلبيني وعاملة فلبينية للباقة VIP لضمان
+                                            أعلى مستويات الخدمة والراحة والخصوصية.</li>
+                                        <li><strong>المشروبات:</strong> ماء بارد + عصيرات ومشروبات غازية + مكينة سلاش
+                                            للعصائر المثلجة.</li>
+                                        <li><strong>هدايا مجانية تذكارية للضيوف:</strong> حقيبة بحرية + حافظ للجوال ضد
+                                            الماء + جزمة بحرية + سدادة أذن وأنف.</li>
+                                        <li><strong>أغراض للاستعمال خلال الرحلة:</strong> منشفة كبيرة + نظارات للغوص.
+                                        </li>
+                                        <li><strong>وجبة برجر مشوي طازج:</strong> عدد 2 برجر مشوي في القارب لكل شخص مع
+                                            المشروبات الغازية.</li>
+                                        <li><strong>ألعاب مائية مشمولة:</strong> سرير التشميس + قارب كاياك + زحليقة
+                                            مائية + كرسي معلق فوق الماء.</li>
+                                        <li><strong>الألعاب الكبيرة:</strong> تشمل <strong>لعبة واحدة كبيرة
+                                                مجاناً</strong> مع باقة VIP (خيمة مائية عائمة، ملعب طائرة مائي، أو جلسة
+                                            دائرية / ترامبولين).</li>
+                                        <li><strong>إضافات اختيارية:</strong> في حال الرغبة بلعبة كبيرة إضافية تكون بـ
+                                            <strong>500 ريال</strong> | ألعاب السحب المائية بالتيوب بـ <strong>200
+                                                ريال</strong> (تخضع لحالة الأمواج والجو لسلامتكم).</li>
+                                        <li><strong>الساعات الإضافية:</strong> إمكانية إضافة ساعات إضافية (بحد أدنى
+                                            ساعتين)، وكل ساعة بـ <strong>300 ريال</strong>.</li>
                                     </ul>
                                 </div>
-                                <div class="trip-price" style="text-align: left; white-space: nowrap; min-width: 170px; align-self: flex-start;">
-                                    <div style="font-size: 0.82rem; color: var(--gray-600); font-weight: 700; margin-bottom: 4px; border-bottom: 1px dashed var(--gray-300); padding-bottom: 2px;">أسعار بياضة لـ 6 ساعات:</div>
-                                    <div style="font-size: 0.88rem; color: var(--navy);">5 – 6 أشخاص: <strong style="color: var(--ocean-dark); font-size: 1rem;">3,000 ريال</strong></div>
-                                    <div style="font-size: 0.88rem; color: var(--navy);">7 – 8 أشخاص: <strong style="color: var(--gold-dark); font-size: 1rem;">3,500 ريال</strong></div>
-                                    <div style="font-size: 0.88rem; color: var(--navy);">9 – 10 أشخاص: <strong style="color: var(--navy); font-size: 1rem;">4,000 ريال</strong></div>
-                                    <div style="font-size: 0.76rem; background: rgba(201,162,39,0.15); color: var(--gold-dark); font-weight: 700; padding: 2px 6px; border-radius: 4px; margin-top: 4px;">
+                                <div class="trip-price"
+                                    style="text-align: left; white-space: nowrap; min-width: 170px; align-self: flex-start;">
+                                    <div
+                                        style="font-size: 0.82rem; color: var(--gray-600); font-weight: 700; margin-bottom: 4px; border-bottom: 1px dashed var(--gray-300); padding-bottom: 2px;">
+                                        أسعار بياضة لـ 6 ساعات:</div>
+                                    <div style="font-size: 0.88rem; color: var(--navy);">5 – 6 أشخاص: <strong
+                                            style="color: var(--ocean-dark); font-size: 1rem;">3,000 ريال</strong></div>
+                                    <div style="font-size: 0.88rem; color: var(--navy);">7 – 8 أشخاص: <strong
+                                            style="color: var(--gold-dark); font-size: 1rem;">3,500 ريال</strong></div>
+                                    <div style="font-size: 0.88rem; color: var(--navy);">9 – 10 أشخاص: <strong
+                                            style="color: var(--navy); font-size: 1rem;">4,000 ريال</strong></div>
+                                    <div
+                                        style="font-size: 0.74rem; background: rgba(11,37,69,0.08); color: var(--navy); font-weight: 800; padding: 2px 6px; border-radius: 4px; margin-top: 4px; text-align: center;">
+                                        ⚠️ باقة VIP فقط حتى 10 أشخاص
+                                    </div>
+                                    <div
+                                        style="font-size: 0.76rem; background: rgba(201,162,39,0.15); color: var(--gold-dark); font-weight: 700; padding: 2px 6px; border-radius: 4px; margin-top: 4px;">
                                         🏝️ جزيرة أبو طير: نفس الأسعار + 300 ريال
                                     </div>
                                 </div>
@@ -458,27 +970,43 @@
                         </div>
 
                         <!-- ================= PART 2: PICNIC & CREEK TOURS ================= -->
-                        <div class="trip-options-box" style="margin-bottom: 20px; border: 2px solid var(--ocean); background: linear-gradient(180deg, rgba(0,119,182,0.03) 0%, transparent 100%); border-radius: var(--radius-lg); padding: 18px;">
-                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; flex-wrap: wrap; gap: 8px;">
+                        <div class="trip-options-box"
+                            style="margin-bottom: 20px; border: 2px solid var(--ocean); background: linear-gradient(180deg, rgba(0,119,182,0.03) 0%, transparent 100%); border-radius: var(--radius-lg); padding: 18px;">
+                            <div
+                                style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; flex-wrap: wrap; gap: 8px;">
                                 <h4 class="box-title" style="color: var(--navy); margin-bottom: 0; font-size: 1.15rem;">
-                                    <i class="fa-solid fa-ship" style="color: var(--ocean);"></i> القسم الثاني: رحلات النزهة وجولات الخور (شرم أبحر الجنوبية)
+                                    <i class="fa-solid fa-ship" style="color: var(--ocean);"></i> القسم الثاني: رحلات
+                                    النزهة وجولات الخور (شرم أبحر الجنوبية)
                                 </h4>
-                                <span style="font-size: 0.78rem; font-weight: 700; background: var(--ocean); color: #fff; padding: 4px 12px; border-radius: var(--radius-full);">460 ريال / ساعة</span>
+                                <span
+                                    style="font-size: 0.78rem; font-weight: 700; background: var(--ocean); color: #fff; padding: 4px 12px; border-radius: var(--radius-full);">460
+                                    ريال / ساعة</span>
                             </div>
 
                             <!-- Picnic Timings & Policies Box -->
-                            <div class="expandable-block" style="background: rgba(0,119,182,0.06); padding: 14px 16px; border-radius: var(--radius-md); margin-bottom: 16px; border: 1px solid var(--ocean-light); font-size: 0.86rem; color: var(--navy); line-height: 1.8;">
-                                <h5 style="margin: 0 0 8px 0; color: var(--navy); font-size: 0.95rem; font-weight: 800;"><i class="fa-solid fa-calendar-check" style="color: var(--ocean);"></i> أوقات وسياسات رحلات النزهة:</h5>
+                            <div class="expandable-block"
+                                style="background: rgba(0,119,182,0.06); padding: 14px 16px; border-radius: var(--radius-md); margin-bottom: 16px; border: 1px solid var(--ocean-light); font-size: 0.86rem; color: var(--navy); line-height: 1.8;">
+                                <h5
+                                    style="margin: 0 0 8px 0; color: var(--navy); font-size: 0.95rem; font-weight: 800;">
+                                    <i class="fa-solid fa-calendar-check" style="color: var(--ocean);"></i> أوقات
+                                    وسياسات رحلات النزهة:</h5>
                                 <ul style="margin: 0; padding-right: 18px; list-style: square;">
-                                    <li><strong>ساعات العمل:</strong> من 4:00 عصراً إلى 12:00 ليلاً (أيام: السبت، الإثنين، الثلاثاء، الأربعاء، الخميس، والجمعة).</li>
-                                    <li><strong>سعر الساعة:</strong> <strong>460 ريال / ساعة</strong> (أقل مدة للرحلة هي ساعة كاملة).</li>
-                                    <li><strong>الحضور والمواعيد:</strong> يُشترط حضور العميل قبل موعد الرحلة بـ <strong>15 دقيقة (ربع ساعة)</strong>.</li>
-                                    <li><strong>الضيافة المجانية:</strong> تُقدم <strong>القهوة الأمريكية والشاي (الأحمر أو الأخضر) مجاناً</strong> خلال رحلات النزهة والعشاء.</li>
+                                    <li><strong>ساعات العمل:</strong> من 4:00 عصراً إلى 12:00 ليلاً (أيام: السبت،
+                                        الإثنين، الثلاثاء، الأربعاء، الخميس، والجمعة).</li>
+                                    <li><strong>سعر الساعة:</strong> <strong>460 ريال / ساعة</strong> (أقل مدة للرحلة هي
+                                        ساعة كاملة).</li>
+                                    <li><strong>الحضور والمواعيد:</strong> يُشترط حضور العميل قبل موعد الرحلة بـ
+                                        <strong>15 دقيقة (ربع ساعة)</strong>.</li>
+                                    <li><strong>الضيافة المجانية:</strong> تُقدم <strong>القهوة الأمريكية والشاي (الأحمر
+                                            أو الأخضر) مجاناً</strong> خلال رحلات النزهة والعشاء.</li>
                                 </ul>
                                 <div class="more-content">
                                     <ul style="margin: 4px 0 0 0; padding-right: 18px; list-style: square;">
-                                        <li><strong>سهرة السينما:</strong> <strong>السينما مجاني</strong> بعد الغروب مع فشار ومشروبات غازية مجانية لجميع الضيوف.</li>
-                                        <li><strong>وجبات العشاء:</strong> العشاء اختياري ويتم الاتفاق والتأكيد عبر الواتس اب قبل الرحلة بـ 4 ساعات على الأقل.</li>
+                                        <li><strong>سهرة السينما والبروجكتر:</strong> السينما مجانية <strong>لباقات
+                                                الحفلات والمناسبات التي تزيد مدتها عن ساعتين</strong> مع الفشار
+                                            والمشروبات الغازية لعيش أجواء ساحرة.</li>
+                                        <li><strong>وجبات العشاء:</strong> العشاء اختياري ويتم الاتفاق والتأكيد عبر
+                                            الواتس اب قبل الرحلة بـ 4 ساعات على الأقل.</li>
                                     </ul>
                                 </div>
                                 <button type="button" class="btn-toggle-more" onclick="toggleExpand(this)">
@@ -488,156 +1016,207 @@
                             </div>
 
                             <!-- Basic Picnic Rate -->
-                            <div style="background: var(--white); padding: 14px 16px; border-radius: var(--radius-md); margin-bottom: 16px; border: 1px solid var(--gray-200);">
-                                <h5 style="margin: 0 0 8px 0; color: var(--navy); font-size: 0.98rem; font-weight: 800;"><i class="fa-solid fa-clock" style="color: var(--gold);"></i> أسعار إيجار جولات النزهة في الخور:</h5>
+                            <div
+                                style="background: var(--white); padding: 14px 16px; border-radius: var(--radius-md); margin-bottom: 16px; border: 1px solid var(--gray-200);">
+                                <h5
+                                    style="margin: 0 0 8px 0; color: var(--navy); font-size: 0.98rem; font-weight: 800;">
+                                    <i class="fa-solid fa-clock" style="color: var(--gold);"></i> أسعار إيجار جولات
+                                    النزهة في الخور:</h5>
                                 <div class="trip-price-item" style="padding: 6px 0;">
                                     <div class="trip-info">
                                         <span class="trip-name">جولة نزهة — ساعة كاملة</span>
-                                        <small class="weekend-note" style="color: var(--ocean); font-weight: 700;">تشمل القهوة الأمريكية والشاي (الأحمر أو الأخضر) مجاناً</small>
+                                        <small class="weekend-note" style="color: var(--ocean); font-weight: 700;">تشمل
+                                            القهوة الأمريكية والشاي (الأحمر أو الأخضر) مجاناً</small>
                                     </div>
                                     <div class="trip-price"><strong>460 ريال / ساعة</strong></div>
                                 </div>
                             </div>
 
                             <!-- Picnic Sub-packages: Dinner, Special Events, Cinema -->
-                            <h5 style="margin: 16px 0 10px 0; color: var(--navy); font-size: 1rem; font-weight: 800;"><i class="fa-solid fa-utensils" style="color: var(--ocean);"></i> باقات العشاء والمناسبات الخاصة في رحلات النزهة:</h5>
+                            <h5 style="margin: 16px 0 10px 0; color: var(--navy); font-size: 1rem; font-weight: 800;"><i
+                                    class="fa-solid fa-utensils" style="color: var(--ocean);"></i> باقات العشاء
+                                والمناسبات الخاصة في رحلات النزهة:</h5>
                             <p style="font-size: 0.85rem; color: var(--gray-600); margin-bottom: 14px;">
-                                مدة الرحلة من ساعة إلى ساعتين — يتم تقديم المشروبات الغازية مع الوجبة، وبعد الوجبة الشاي الأحمر أو الأخضر. <em>(العشاء اختياري ويتم الاتفاق عبر الواتس اب)</em>.
+                                مدة الرحلة من ساعة إلى ساعتين — يتم تقديم المشروبات الغازية مع الوجبة، وبعد الوجبة الشاي
+                                الأحمر أو الأخضر. <em>(العشاء اختياري ويتم الاتفاق عبر الواتس اب)</em>.
                             </p>
 
                             <!-- Sub-grid of Picnic Options -->
-                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 12px; margin-bottom: 14px;">
+                            <div
+                                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 12px; margin-bottom: 14px;">
 
                                 <!-- 1. Dinner Packages -->
-                                <div style="background: var(--white); border: 1px solid var(--gray-200); border-radius: var(--radius-md); padding: 14px;">
-                                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
-                                        <strong style="color: var(--navy); font-size: 0.92rem;"><i class="fa-solid fa-moon" style="color: var(--ocean);"></i> وجبات العشاء (للشخص الواحد)</strong>
-                                        <span style="font-size: 0.72rem; background: var(--gray-100); padding: 2px 6px; border-radius: 4px;">اختياري</span>
+                                <div
+                                    style="background: var(--white); border: 1px solid var(--gray-200); border-radius: var(--radius-md); padding: 14px;">
+                                    <div
+                                        style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+                                        <strong style="color: var(--navy); font-size: 0.92rem;"><i
+                                                class="fa-solid fa-moon" style="color: var(--ocean);"></i> وجبات العشاء
+                                            (للشخص الواحد)</strong>
+                                        <span
+                                            style="font-size: 0.72rem; background: var(--gray-100); padding: 2px 6px; border-radius: 4px;">اختياري</span>
                                     </div>
-                                    <ul style="font-size: 0.82rem; color: var(--gray-700); line-height: 1.7; padding-right: 16px; margin-bottom: 8px; list-style: disc;">
+                                    <ul
+                                        style="font-size: 0.82rem; color: var(--gray-700); line-height: 1.7; padding-right: 16px; margin-bottom: 8px; list-style: disc;">
                                         <li>ساندويتشات باردة من كافيه أرتشي: <strong>60 ريال / للشخص</strong></li>
-                                        <li>برجر لحم أو دجاج (الشواء طازج في القارب): <strong>60 ريال / للشخص</strong></li>
+                                        <li>برجر لحم أو دجاج (الشواء طازج في القارب): <strong>60 ريال / للشخص</strong>
+                                        </li>
                                         <li>سوشي من مطعم ماكي: <strong>120 ريال / للشخص</strong></li>
                                     </ul>
-                                    <div style="font-size: 0.78rem; color: var(--ocean-dark); background: rgba(0,119,182,0.06); padding: 6px 8px; border-radius: 4px;">
+                                    <div
+                                        style="font-size: 0.78rem; color: var(--ocean-dark); background: rgba(0,119,182,0.06); padding: 6px 8px; border-radius: 4px;">
                                         🥤 تُقدم المشروبات الغازية مع الوجبة، وبعد الوجبة الشاي الأحمر أو الأخضر.
                                     </div>
                                 </div>
 
                                 <!-- 2. Special Occasions -->
-                                <div style="background: var(--white); border: 1px solid var(--gold); border-radius: var(--radius-md); padding: 14px;">
-                                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
-                                        <strong style="color: var(--navy); font-size: 0.92rem;"><i class="fa-solid fa-cake-candles" style="color: var(--gold);"></i> الكيك وتنسيق القارب (للشخص الواحد)</strong>
-                                        <span style="font-size: 0.72rem; background: rgba(201,162,39,0.15); color: var(--navy); padding: 2px 6px; border-radius: 4px; font-weight: 700;">حفلات ومناسبات</span>
+                                <div
+                                    style="background: var(--white); border: 1px solid var(--gold); border-radius: var(--radius-md); padding: 14px;">
+                                    <div
+                                        style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+                                        <strong style="color: var(--navy); font-size: 0.92rem;"><i
+                                                class="fa-solid fa-cake-candles" style="color: var(--gold);"></i> الكيك
+                                            وتنسيق القارب (للشخص الواحد)</strong>
+                                        <span
+                                            style="font-size: 0.72rem; background: rgba(201,162,39,0.15); color: var(--navy); padding: 2px 6px; border-radius: 4px; font-weight: 700;">حفلات
+                                            ومناسبات</span>
                                     </div>
-                                    <ul style="font-size: 0.82rem; color: var(--gray-700); line-height: 1.7; padding-right: 16px; margin-bottom: 8px; list-style: disc;">
+                                    <ul
+                                        style="font-size: 0.82rem; color: var(--gray-700); line-height: 1.7; padding-right: 16px; margin-bottom: 8px; list-style: disc;">
                                         <li>كيكة وتنسيق للقارب: <strong>60 ريال / للشخص</strong></li>
-                                        <li>كيكة وتنسيق للقارب مع عشاء برجر أو ساندويتشات: <strong>100 ريال / للشخص</strong></li>
+                                        <li>كيكة وتنسيق للقارب مع عشاء برجر أو ساندويتشات: <strong>100 ريال /
+                                                للشخص</strong></li>
                                         <li>كيكة وتنسيق للقارب مع عشاء سوشي: <strong>200 ريال / للشخص</strong></li>
                                     </ul>
-                                    <div style="font-size: 0.78rem; color: var(--gray-500); background: var(--off-white); padding: 6px 8px; border-radius: 4px;">
+                                    <div
+                                        style="font-size: 0.78rem; color: var(--gray-500); background: var(--off-white); padding: 6px 8px; border-radius: 4px;">
                                         💡 مثال: إيجار ساعة لشخصين كيكة وتنسيق = 460 + 120 = <strong>580 ريال</strong>
                                     </div>
                                 </div>
 
-                                <!-- 3. Cinema Night -->
-                                <div style="background: linear-gradient(135deg, rgba(14,26,43,0.03) 0%, rgba(0,119,182,0.06) 100%); border: 1px solid var(--ocean-light); border-radius: var(--radius-md); padding: 14px;">
-                                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
-                                        <strong style="color: var(--navy); font-size: 0.92rem;"><i class="fa-solid fa-film" style="color: var(--gold);"></i> سهرة السينما والبروجكتر</strong>
-                                        <span style="font-size: 0.72rem; background: #28a745; color: #fff; padding: 2px 8px; border-radius: 4px; font-weight: 700;">السينما مجاني</span>
+                                <!-- 3. Cinema Night for Parties -->
+                                <div
+                                    style="background: linear-gradient(135deg, rgba(14,26,43,0.03) 0%, rgba(0,119,182,0.06) 100%); border: 1.5px solid var(--navy); border-radius: var(--radius-md); padding: 14px;">
+                                    <div
+                                        style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+                                        <strong style="color: var(--navy); font-size: 0.92rem;"><i
+                                                class="fa-solid fa-film" style="color: var(--gold);"></i> سهرة السينما
+                                            والبروجكتر (مجانية للحفلات)</strong>
+                                        <span
+                                            style="font-size: 0.72rem; background: var(--navy); color: var(--gold); padding: 2px 8px; border-radius: 4px; font-weight: 700; border: 1px solid var(--gold);">مجاناً
+                                            للحفلات فوق ساعتين</span>
                                     </div>
-                                    <ul style="font-size: 0.82rem; color: var(--gray-700); line-height: 1.7; padding-right: 16px; margin-bottom: 8px; list-style: disc;">
-                                        <li>شاشة بروجكتر لعرض: أفلام نتفلكس، ديزني للأطفال، ومباريات كرة القدم بعد الغروب.</li>
-                                        <li>يُقدم <strong>الفشار والمشروبات الغازية مجاناً</strong> لجميع الضيوف.</li>
-                                        <li><strong>السينما مجاني:</strong> بدون أي رسوم إضافية على إيجار القارب.</li>
-                                        <li>العشاء اختياري يتم الاتفاق عبر الواتس اب.</li>
+                                    <ul
+                                        style="font-size: 0.82rem; color: var(--gray-700); line-height: 1.7; padding-right: 16px; margin-bottom: 8px; list-style: disc;">
+                                        <li>شاشة بروجكتر متطورة لعرض: أفلام نتفلكس، ديزني للأطفال، ومباريات كرة القدم
+                                            بعد الغروب.</li>
+                                        <li><strong>مجاناً للحفلات التي تزيد عن ساعتين:</strong> جلسة السينما والشاشة
+                                            مجانية تماماً لحجوزات الحفلات فوق ساعتين.</li>
+                                        <li>يُقدم مع السينما <strong>الفشار الساخن والمشروبات الغازية مجاناً</strong>
+                                            لعيش أجواء احتفالية لا تُنسى.</li>
+                                        <li>العشاء اختياري حسب الطلب ويتم الاتفاق والتأكيد عبر الواتس اب.</li>
                                     </ul>
                                 </div>
 
                             </div>
 
                             <!-- Optional Sweets Add-on -->
-                            <div style="background: var(--white); border: 1px dashed var(--gold); border-radius: var(--radius-md); padding: 12px 14px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; font-size: 0.88rem;">
+                            <div
+                                style="background: var(--white); border: 1px dashed var(--gold); border-radius: var(--radius-md); padding: 12px 14px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; font-size: 0.88rem;">
                                 <div>
-                                    <strong style="color: var(--navy);"><i class="fa-solid fa-cookie" style="color: var(--gold);"></i> إضافات الشوكولاته والحلويات الاختيارية:</strong>
-                                    <span style="color: var(--gray-700); margin-right: 6px;">شوكولاته فاخرة من <strong>بوكودور</strong> (120 ريال) | حلى مميز من <strong>ديو DEW</strong> (200 ريال)</span>
+                                    <strong style="color: var(--navy);"><i class="fa-solid fa-cookie"
+                                            style="color: var(--gold);"></i> إضافات الشوكولاته والحلويات
+                                        الاختيارية:</strong>
+                                    <span style="color: var(--gray-700); margin-right: 6px;">شوكولاته فاخرة من
+                                        <strong>بوكودور</strong> (120 ريال) | حلى مميز من <strong>ديو DEW</strong> (200
+                                        ريال)</span>
                                 </div>
                             </div>
 
                         </div>
 
-                        </div>
+                    </div>
 
+                </div>
+            </div>
+
+            <!-- Right / Sidebar Area -->
+            <aside class="boat-sidebar-col">
+                <div class="sticky-sidebar-box">
+                    <div class="deposit-chip deposit-sidebar-chip">
+                        <i class="fa-solid fa-crown" style="color: var(--gold);"></i>
+                        <strong>أفضل خيار عائلي بجدة مع ألعاب مائية وسينما ومكينة سلاش!</strong>
+                    </div>
+
+                    <div class="action-buttons-group">
+                        <button type="button" class="btn btn-share btn-full" onclick="shareBoatDetails()"
+                            style="margin-bottom: 4px;">
+                            <i class="fa-solid fa-share-nodes"></i> مشاركة تفاصيل القارب
+                        </button>
+                        <a href="https://wa.me/966568390147?text=السلام%20عليكم،%20أود%20حجز%20قارب%20بارباروسا%20VIP%20(Barbarossa)%20مع%20أوركا"
+                            target="_blank" class="btn btn-whatsapp btn-full btn-lg">
+                            <i class="fa-brands fa-whatsapp"></i> احجز الآن عبر الواتساب
+                        </a>
+                        <a href="../index.html?vessel=barbaros#calculator" class="btn btn-dark btn-full">
+                            <i class="fa-solid fa-calculator"></i> احسب التكلفة بالحاسبة
+                        </a>
+                        <a href="../terms.html" class="btn btn-outline btn-full">
+                            <i class="fa-solid fa-file-contract"></i> شروط وأحكام الحجز
+                        </a>
+                    </div>
+
+                    <!-- PDF Catalog Downloads Box -->
+                    <div
+                        style="background: rgba(230,57,70,0.06); border: 1.5px dashed #e63946; border-radius: var(--radius-md); padding: 14px; margin-top: 16px;">
+                        <div
+                            style="font-size: 0.9rem; font-weight: 800; color: var(--navy); margin-bottom: 8px; display: flex; align-items: center; gap: 6px;">
+                            <i class="fa-solid fa-file-pdf" style="color: #e63946; font-size: 1.2rem;"></i> كتالوجات
+                            القارب الرسمية (PDF)
+                        </div>
+                        <p style="font-size: 0.8rem; color: var(--gray-600); margin-bottom: 10px; line-height: 1.5;">
+                            حمّل ملفات الـ PDF للاطلاع على تفاصيل القارب والصور (سيتم تحديث الملفات قريباً بالأسعار
+                            الجديدة):
+                        </p>
+                        <div style="display: flex; flex-direction: column; gap: 8px;">
+                            <a href="../files/barbaros/البحر المفتوح.pdf" target="_blank" download="البحر المفتوح.pdf"
+                                class="btn btn-full"
+                                style="background: #e63946; color: #fff; padding: 9px 12px; font-size: 0.82rem; font-weight: 700; border-radius: 6px; text-decoration: none; display: flex; align-items: center; justify-content: center; gap: 6px; box-shadow: 0 2px 8px rgba(230,57,70,0.25);">
+                                <i class="fa-solid fa-download"></i> تحميل PDF رحلات البحر المفتوح
+                            </a>
+                            <a href="../files/barbaros/رحلات النزهة.pdf" target="_blank" download="رحلات النزهة.pdf"
+                                class="btn btn-full"
+                                style="background: var(--navy); color: #fff; padding: 9px 12px; font-size: 0.82rem; font-weight: 700; border-radius: 6px; text-decoration: none; display: flex; align-items: center; justify-content: center; gap: 6px; box-shadow: 0 2px 8px rgba(14,26,43,0.25);">
+                                <i class="fa-solid fa-download"></i> تحميل PDF رحلات النزهة والخور
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-guarantees-list">
+                        <div class="guarantee-item">
+                            <i class="fa-solid fa-user-shield"></i>
+                            <div class="g-text">
+                                <strong>طاقم محترف وخدمة راقية</strong>
+                                <span>كابتن فلبيني، وعاملة فلبينية للباقة VIP</span>
+                            </div>
+                        </div>
+                        <div class="guarantee-item">
+                            <i class="fa-solid fa-film"></i>
+                            <div class="g-text">
+                                <strong>سينما وألعاب مائية</strong>
+                                <span>بروجكتر، زحليقة، جلسة عائمة، ومكينة سلاش</span>
+                            </div>
+                        </div>
+                        <div class="guarantee-item">
+                            <i class="fa-solid fa-credit-card"></i>
+                            <div class="g-text">
+                                <strong>دفع ميسر وتأكيد فوري</strong>
+                                <span>تحويل بنكي، نقاط بيع، أو خدمة تابي</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
-
-                <!-- Right / Sidebar Area -->
-                <aside class="boat-sidebar-col">
-                    <div class="sticky-sidebar-box">
-                        <div class="deposit-chip deposit-sidebar-chip">
-                            <i class="fa-solid fa-crown" style="color: var(--gold);"></i>
-                            <strong>أفضل خيار عائلي بجدة مع ألعاب مائية وسينما ومكينة سلاش!</strong>
-                        </div>
-
-                        <div class="action-buttons-group">
-                            <button type="button" class="btn btn-share btn-full" onclick="shareBoatDetails()" style="margin-bottom: 4px;">
-                                <i class="fa-solid fa-share-nodes"></i> مشاركة تفاصيل القارب
-                            </button>
-                            <a href="https://wa.me/966568390147?text=السلام%20عليكم،%20أود%20حجز%20قارب%20بارباروسا%20VIP%20(Barbarossa)%20مع%20أوركا" target="_blank" class="btn btn-whatsapp btn-full btn-lg">
-                                <i class="fa-brands fa-whatsapp"></i> احجز الآن عبر الواتساب
-                            </a>
-                            <a href="../index.html?vessel=barbaros#calculator" class="btn btn-dark btn-full">
-                                <i class="fa-solid fa-calculator"></i> احسب التكلفة بالحاسبة
-                            </a>
-                            <a href="../terms.html" class="btn btn-outline btn-full">
-                                <i class="fa-solid fa-file-contract"></i> شروط وأحكام الحجز
-                            </a>
-                        </div>
-
-                        <!-- PDF Catalog Downloads Box -->
-                        <div style="background: rgba(230,57,70,0.06); border: 1.5px dashed #e63946; border-radius: var(--radius-md); padding: 14px; margin-top: 16px;">
-                            <div style="font-size: 0.9rem; font-weight: 800; color: var(--navy); margin-bottom: 8px; display: flex; align-items: center; gap: 6px;">
-                                <i class="fa-solid fa-file-pdf" style="color: #e63946; font-size: 1.2rem;"></i> كتالوجات القارب الرسمية (PDF)
-                            </div>
-                            <p style="font-size: 0.8rem; color: var(--gray-600); margin-bottom: 10px; line-height: 1.5;">
-                                حمّل ملفات الـ PDF للاطلاع على تفاصيل القارب والصور (سيتم تحديث الملفات قريباً بالأسعار الجديدة):
-                            </p>
-                            <div style="display: flex; flex-direction: column; gap: 8px;">
-                                <a href="../files/barbaros/البحر المفتوح.pdf" target="_blank" download="البحر المفتوح.pdf" class="btn btn-full" style="background: #e63946; color: #fff; padding: 9px 12px; font-size: 0.82rem; font-weight: 700; border-radius: 6px; text-decoration: none; display: flex; align-items: center; justify-content: center; gap: 6px; box-shadow: 0 2px 8px rgba(230,57,70,0.25);">
-                                    <i class="fa-solid fa-download"></i> تحميل PDF رحلات البحر المفتوح
-                                </a>
-                                <a href="../files/barbaros/رحلات النزهة.pdf" target="_blank" download="رحلات النزهة.pdf" class="btn btn-full" style="background: var(--navy); color: #fff; padding: 9px 12px; font-size: 0.82rem; font-weight: 700; border-radius: 6px; text-decoration: none; display: flex; align-items: center; justify-content: center; gap: 6px; box-shadow: 0 2px 8px rgba(14,26,43,0.25);">
-                                    <i class="fa-solid fa-download"></i> تحميل PDF رحلات النزهة والخور
-                                </a>
-                            </div>
-                        </div>
-
-                        <div class="sidebar-guarantees-list">
-                            <div class="guarantee-item">
-                                <i class="fa-solid fa-user-shield"></i>
-                                <div class="g-text">
-                                    <strong>طاقم محترف وخدمة راقية</strong>
-                                    <span>كابتن للرحلات العادية وعاملة لرحلة VIP</span>
-                                </div>
-                            </div>
-                            <div class="guarantee-item">
-                                <i class="fa-solid fa-film"></i>
-                                <div class="g-text">
-                                    <strong>سينما وألعاب مائية</strong>
-                                    <span>بروجكتر، زحليقة، جلسة عائمة، ومكينة سلاش</span>
-                                </div>
-                            </div>
-                            <div class="guarantee-item">
-                                <i class="fa-solid fa-credit-card"></i>
-                                <div class="g-text">
-                                    <strong>دفع ميسر وتأكيد فوري</strong>
-                                    <span>تحويل بنكي، نقاط بيع، أو خدمة تابي</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </aside>
-            </div>
+            </aside>
+        </div>
         </div>
     </main>
 
@@ -648,17 +1227,22 @@
                 <!-- Col 1: Brand Info -->
                 <div class="footer-col brand-col">
                     <a href="../index.html" class="footer-brand-logo">
-                        <img src="../images/logo.webp" alt="أوركا للرحلات البحرية" class="footer-logo-img" decoding="async" width="84" height="84">
+                        <img src="../images/logo.webp" alt="أوركا للرحلات البحرية" class="footer-logo-img"
+                            decoding="async" width="84" height="84">
                         <div class="brand-text">
                             <span class="brand-title">أوركا <span class="highlight-gold">ORCA</span></span>
                             <span class="brand-tagline">تجربة تشدك للبحر</span>
                         </div>
                     </a>
-                    <p class="footer-about">نقدم لكم أجمل الرحلات البحرية في جدة: تأجير يخوت فاخرة، بيبي يخت، وقوارب صيد ونزهة بأعلى معايير الأمان والرفاهية لجميع مناسباتكم.</p>
+                    <p class="footer-about">نقدم لكم أجمل الرحلات البحرية في جدة: تأجير يخوت فاخرة، بيبي يخت، وقوارب صيد
+                        ونزهة بأعلى معايير الأمان والرفاهية لجميع مناسباتكم.</p>
                     <div class="footer-socials">
-                        <a href="https://wa.me/966568390147" target="_blank" aria-label="واتساب" class="social-icon wa"><i class="fa-brands fa-whatsapp"></i></a>
-                        <a href="tel:0531403454" aria-label="اتصال" class="social-icon ph"><i class="fa-solid fa-phone"></i></a>
-                        <a href="../index.html#contact" aria-label="موقعنا" class="social-icon map"><i class="fa-solid fa-location-dot"></i></a>
+                        <a href="https://wa.me/966568390147" target="_blank" aria-label="واتساب"
+                            class="social-icon wa"><i class="fa-brands fa-whatsapp"></i></a>
+                        <a href="tel:0531403454" aria-label="اتصال" class="social-icon ph"><i
+                                class="fa-solid fa-phone"></i></a>
+                        <a href="../index.html#contact" aria-label="موقعنا" class="social-icon map"><i
+                                class="fa-solid fa-location-dot"></i></a>
                     </div>
                 </div>
 
@@ -666,9 +1250,12 @@
                 <div class="footer-col links-col">
                     <h4 class="footer-heading"><i class="fa-solid fa-compass"></i> روابط سريعة</h4>
                     <ul class="footer-nav-list">
-                        <li><a href="../index.html#hero"><i class="fa-solid fa-chevron-left"></i> الصفحة الرئيسية</a></li>
-                        <li><a href="../index.html#packages"><i class="fa-solid fa-chevron-left"></i> الأسطول البحري</a></li>
-                        <li><a href="../index.html#calculator"><i class="fa-solid fa-chevron-left"></i> حاسبة الأسعار</a></li>
+                        <li><a href="../index.html#hero"><i class="fa-solid fa-chevron-left"></i> الصفحة الرئيسية</a>
+                        </li>
+                        <li><a href="../index.html#packages"><i class="fa-solid fa-chevron-left"></i> الأسطول البحري</a>
+                        </li>
+                        <li><a href="../index.html#calculator"><i class="fa-solid fa-chevron-left"></i> حاسبة
+                                الأسعار</a></li>
                         <li><a href="../terms.html"><i class="fa-solid fa-chevron-left"></i> الشروط والأحكام</a></li>
                         <li><a href="../index.html#contact"><i class="fa-solid fa-chevron-left"></i> تواصل معنا</a></li>
                     </ul>
@@ -678,7 +1265,8 @@
                 <div class="footer-col fleet-col">
                     <h4 class="footer-heading"><i class="fa-solid fa-anchor"></i> أسطول الرحلات</h4>
                     <ul class="footer-nav-list">
-                        <li><a href="barbaros.html"><i class="fa-solid fa-crown" style="color: var(--gold);"></i> قارب بارباروسا VIP</a></li>
+                        <li><a href="barbaros.html"><i class="fa-solid fa-crown" style="color: var(--gold);"></i> قارب
+                                بارباروسا VIP</a></li>
                         <li><a href="Beneteau.html"><i class="fa-solid fa-crown"></i> يخت بينتوس VIP</a></li>
                         <li><a href="large-yacht.html"><i class="fa-solid fa-ship"></i> اليخت الكبير الفاخر</a></li>
                         <li><a href="baby-ambassador.html"><i class="fa-solid fa-water"></i> بيبي يخت امباسادور</a></li>
@@ -701,7 +1289,8 @@
                             <i class="fa-brands fa-whatsapp"></i>
                             <div>
                                 <span>واتساب المبيعات:</span>
-                                <a href="https://wa.me/966568390147" target="_blank" class="contact-link wa-link">056 839 0147</a>
+                                <a href="https://wa.me/966568390147" target="_blank" class="contact-link wa-link">056
+                                    839 0147</a>
                             </div>
                         </li>
                         <li>
@@ -730,4 +1319,5 @@
 
     <script src="../boat-detail.min.js" defer></script>
 </body>
+
 </html>
