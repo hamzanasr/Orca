@@ -1,0 +1,24 @@
+# Cloudflare Pages response headers (https://developers.cloudflare.com/pages/configuration/headers/)
+# Lets browsers reuse static files instead of re-checking them on every visit.
+
+# Fonts rarely change: cache for 30 days.
+/font/*
+  Cache-Control: public, max-age=2592000, stale-while-revalidate=604800
+
+# Photos: cache for 7 days.
+/images/*
+  Cache-Control: public, max-age=604800, stale-while-revalidate=604800
+
+# CSS/JS are linked with ?v=N (bump N after editing): cache for 1 day.
+/style.min.css
+  Cache-Control: public, max-age=86400, stale-while-revalidate=604800
+/boat-page.min.css
+  Cache-Control: public, max-age=86400, stale-while-revalidate=604800
+/app.min.js
+  Cache-Control: public, max-age=86400, stale-while-revalidate=604800
+/boat-detail.min.js
+  Cache-Control: public, max-age=86400, stale-while-revalidate=604800
+
+# PDF catalogs get replaced under the same name: cache for 1 hour only.
+/files/*
+  Cache-Control: public, max-age=3600
