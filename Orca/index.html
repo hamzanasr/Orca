@@ -44,8 +44,8 @@
 
     <!-- Stylesheet -->
     <!-- Asynchronous Non-blocking Stylesheet -->
-    <link rel="preload" href="style.min.css?v=7" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="style.min.css?v=7"></noscript>
+    <link rel="preload" href="style.min.css?v=8" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="style.min.css?v=8"></noscript>
     <!-- Inlined Critical Above-The-Fold CSS -->
     <style>
         :root{--navy:#0B2545;--navy-light:#133E68;--navy-dark:#061527;--ocean:#0077B6;--ocean-light:#0096C7;--sand:#F4E8C1;--gold:#D4AF37;--gold-dark:#B89628;--white:#FFFFFF;--off-white:#F8F9FA;--gray-100:#E9ECEF;--gray-200:#DEE2E6;--gray-400:#CED4DA;--gray-600:#6C757D;--font-heading:'Thmanyah Serif Display',serif;--font-body:'Thmanyah Sans',sans-serif;--shadow-sm:0 2px 8px rgba(11,37,69,0.06);--shadow-md:0 4px 16px rgba(11,37,69,0.1);--radius-md:12px;--radius-lg:16px;--radius-full:9999px;--header-h:74px}
@@ -76,6 +76,7 @@
         .hero-title{font-family:var(--font-heading);font-weight:800}
         :where(.hero-title){line-height:1.2;margin-bottom:20px;text-shadow:0 2px 12px rgba(0,0,0,.3)}
         .btn-gold{background:linear-gradient(135deg, #B89628 0%, #D4AF37 50%, #E6CA65 100%);color:#061527;font-weight:700;box-shadow:0 4px 16px rgba(212,175,55,.3)}
+        :where(.boat-modal-backdrop,.calc-modal-backdrop){position:fixed;inset:0;opacity:0;visibility:hidden}
         @media(max-width:768px){.main-nav{display:none}}
     </style>
 </head>

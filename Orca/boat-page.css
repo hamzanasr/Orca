@@ -96,18 +96,10 @@ button {
 @font-face {
     font-family: 'Thmanyah Sans';
     src: url('font/thmanyahsans-Bold.woff2') format('woff2');
-    font-weight: 600 800;
+    font-weight: 600 900;
     font-style: normal;
     font-display: swap;
 }
-@font-face {
-    font-family: 'Thmanyah Sans';
-    src: url('font/thmanyahsans-Black.woff2') format('woff2');
-    font-weight: 900;
-    font-style: normal;
-    font-display: swap;
-}
-
 /* ── Container ─────────────────────────────────────────────────────────── */
 .container {
     width: 100%;
@@ -994,6 +986,18 @@ html[lang="en"] .footer-nav-list a:hover {
     }
     .main-header .btn-nav {
         padding: 8px 10px;
+    }
+}
+
+/* ── Phone drawer: undo the inline critical CSS that hides .main-nav on
+   phones (and centers its list) until this stylesheet loads ── */
+@media (max-width: 768px) {
+    .main-header .main-nav {
+        display: block;
+    }
+    .main-header .main-nav ul {
+        align-items: stretch;
+        gap: 16px;
     }
 }
 
