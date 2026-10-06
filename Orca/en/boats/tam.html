@@ -18,16 +18,14 @@
     <!-- Local FontAwesome (font-display: swap, non-blocking) -->
     <noscript></noscript>
     
-    <!-- Preload Primary Font -->
-    <link rel="preload" href="../../font/thmanyahsans-Regular.woff2" as="font" type="font/woff2" crossorigin>
 
     <!-- Asynchronous Non-blocking Boat Page Stylesheet -->
-    <link rel="preload" href="../../boat-page.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="../../boat-page.min.css"></noscript>
+    <link rel="preload" href="../../boat-page.min.css?v=6" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="../../boat-page.min.css?v=6"></noscript>
 
     <!-- FontAwesome Non-blocking -->
-    <link rel="preload" href="../../font/fontawesome.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="../../font/fontawesome.min.css"></noscript>
+    <link rel="preload" href="../../font/fontawesome.min.css?v=6" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="../../font/fontawesome.min.css?v=6"></noscript>
 
     <!-- Inlined Critical CSS for Instant 0ms Paint -->
     <style>
@@ -57,8 +55,8 @@
         .breadcrumbs a{color:var(--navy);font-weight:600}
         .breadcrumbs .divider{font-size:.7rem;color:var(--gray-400)}
         .breadcrumbs .active{color:var(--gold-dark);font-weight:700}
-        .boat-detail-grid{display:grid;grid-template-columns:1fr 360px;gap:32px;align-items:start}
-        .boat-content-col{display:flex;flex-direction:column;gap:24px}
+        .boat-detail-grid{display:grid;grid-template-columns:minmax(0,1fr) 360px;gap:32px;align-items:start}
+        .boat-content-col{display:flex;flex-direction:column;gap:24px;min-width:0}
         .boat-title-box{background:var(--white);padding:24px 28px;border-radius:var(--radius-lg);box-shadow:var(--shadow-sm);border:1px solid var(--gray-100)}
         .badge-wrap{margin-bottom:10px}
         .package-badge{display:inline-flex;align-items:center;gap:6px;padding:5px 14px;border-radius:var(--radius-full);font-size:.8rem;font-weight:700}
@@ -69,7 +67,7 @@
         .slides-container{width:100%;height:100%;position:relative}
         .slide{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;visibility:hidden;transition:opacity .35s ease,visibility .35s ease;z-index:1}
         .slide.active{opacity:1;visibility:visible;z-index:2}
-        @media(max-width:992px){.boat-detail-grid{grid-template-columns:1fr}.detail-slider{aspect-ratio:4/3!important}}
+        @media(max-width:992px){.boat-detail-grid{grid-template-columns:minmax(0,1fr)}.detail-slider{aspect-ratio:4/3!important}}
         @media(max-width:768px){.main-nav{display:none}.detail-title{font-size:1.6rem}}
     </style>
 </head>
@@ -256,7 +254,7 @@
                         </div>
 
                         <div class="action-buttons-group">
-                            <button type="button" class="btn btn-share btn-full" onclick="shareBoatDetails()" style="margin-bottom: 4px;">
+                            <button type="button" class="btn btn-share btn-full" style="margin-bottom: 4px;">
                                 <i class="fa-solid fa-share-nodes"></i> Share Yacht Details
                             </button>
                             <a href="https://wa.me/966568390147?text=Hello%20ORCA,%20I%20would%20like%20to%20book%20Tam%20Yacht" target="_blank" class="btn btn-whatsapp btn-full btn-lg">

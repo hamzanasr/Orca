@@ -15,15 +15,15 @@
     <link rel="preload" href="../font/thmanyahsans-Regular.woff2" as="font" type="font/woff2" crossorigin>
 
     <!-- Asynchronous Non-blocking Boat Page Stylesheet -->
-    <link rel="preload" href="../boat-page.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="../boat-page.min.css?v=6" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript>
-        <link rel="stylesheet" href="../boat-page.min.css">
+        <link rel="stylesheet" href="../boat-page.min.css?v=6">
     </noscript>
 
     <!-- FontAwesome Non-blocking -->
-    <link rel="preload" href="../font/fontawesome.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="../font/fontawesome.min.css?v=6" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript>
-        <link rel="stylesheet" href="../font/fontawesome.min.css">
+        <link rel="stylesheet" href="../font/fontawesome.min.css?v=6">
     </noscript>
 
     <!-- Inlined Critical CSS for Instant 0ms Paint -->
@@ -234,7 +234,7 @@
 
         .boat-detail-grid {
             display: grid;
-            grid-template-columns: 1fr 360px;
+            grid-template-columns: minmax(0, 1fr) 360px;
             gap: 32px;
             align-items: start
         }
@@ -242,7 +242,8 @@
         .boat-content-col {
             display: flex;
             flex-direction: column;
-            gap: 24px
+            gap: 24px;
+            min-width: 0
         }
 
         .boat-title-box {
@@ -323,7 +324,7 @@
 
         @media(max-width:992px) {
             .boat-detail-grid {
-                grid-template-columns: 1fr
+                grid-template-columns: minmax(0, 1fr)
             }
 
             .detail-slider {
@@ -379,7 +380,7 @@
                     target="_blank" class="btn btn-whatsapp btn-nav">
                     <i class="fa-brands fa-whatsapp"></i> <span>احجز الآن</span>
                 </a>
-                <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="فتح القائمة" aria-label="Menu">
+                <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="فتح القائمة">
                     <i class="fa-solid fa-bars"></i>
                 </button>
             </div>
@@ -478,32 +479,32 @@
                         <h3 class="section-card-title"><i class="fa-solid fa-list-check"></i> مواصفات ومميزات قارب
                             بارباروسا VIP</h3>
                         <ul class="package-specs detail-specs-list">
-                            <li><i class="fa-solid fa-user-shield" style="color: var(--gold);"></i> <strong>طاقم
+                            <li><i class="fa-solid fa-user-shield" style="color: var(--gold);"></i> <span><strong>طاقم
                                     الرحلة:</strong> كابتن فلبيني محترف للباقة العادية، مع تواجد كابتن فلبيني وعاملة
-                                فلبينية للباقة VIP (حتى 10 أشخاص فقط) لضمان أعلى مستويات الخدمة والخصوصية العائلية.</li>
-                            <li><i class="fa-solid fa-film" style="color: var(--ocean);"></i> <strong>سينما وبروجكتر
+                                فلبينية للباقة VIP (حتى 10 أشخاص فقط) لضمان أعلى مستويات الخدمة والخصوصية العائلية.</span></li>
+                            <li><i class="fa-solid fa-film" style="color: var(--ocean);"></i> <span><strong>سينما وبروجكتر
                                     للحفلات:</strong> شاشة عرض للأفلام ومباريات كرة القدم بعد الغروب — <strong>مجانية
                                     للحفلات والمناسبات التي تزيد مدتها عن ساعتين</strong> مع تقديم الفشار الساخن
-                                والمشروبات الغازية.</li>
-                            <li><i class="fa-solid fa-water-ladder" style="color: var(--ocean);"></i> <strong>باقة ألعاب
+                                والمشروبات الغازية.</span></li>
+                            <li><i class="fa-solid fa-water-ladder" style="color: var(--ocean);"></i> <span><strong>باقة ألعاب
                                     مائية حصرية:</strong> زحليقة مائية، منصة وسرير تشميس، كاياك بحري، كرسي معلق، لعبة
                                 كبيرة مجاناً مشمولة مع باقة VIP (ولعبة ثانية بـ 500 ريال)، وألعاب سحب بالتيوب (بحسب حالة
-                                الأمواج والجو).</li>
+                                الأمواج والجو).</span></li>
                         </ul>
                         <div class="more-content">
                             <ul class="package-specs detail-specs-list"
                                 style="border-top: none; padding-top: 0; margin-top: 10px;">
-                                <li><i class="fa-solid fa-gift" style="color: var(--gold);"></i> <strong>هدايا مجانية
+                                <li><i class="fa-solid fa-gift" style="color: var(--gold);"></i> <span><strong>هدايا مجانية
                                         تذكارية للضيوف:</strong> حقيبة بحرية، كفر جوال مقاوم للماء، جزمة بحرية، وسدادات
-                                    أذن وأنف (المناشف ونظارات الغوص متوفرة للاستعمال خلال الرحلة).</li>
-                                <li><i class="fa-solid fa-blender" style="color: var(--ocean);"></i> <strong>مكينة سلاش
+                                    أذن وأنف (المناشف ونظارات الغوص متوفرة للاستعمال خلال الرحلة).</span></li>
+                                <li><i class="fa-solid fa-blender" style="color: var(--ocean);"></i> <span><strong>مكينة سلاش
                                         وضيافة مجانية:</strong> مكينة سلاش لعمل العصائر المثلجة متوفرة بالرحلات + تقديم
-                                    القهوة الأمريكية والشاي لرحلات النزهة والعشاء.</li>
-                                <li><i class="fa-solid fa-restroom" style="color: var(--ocean);"></i> <strong>التجهيزات
+                                    القهوة الأمريكية والشاي لرحلات النزهة والعشاء.</span></li>
+                                <li><i class="fa-solid fa-restroom" style="color: var(--ocean);"></i> <span><strong>التجهيزات
                                         والمرافق:</strong> دورة مياه متكاملة ومروش مجهز بماء عذب (لا يتوفر صالون مغلق
-                                    مكيف أو غرفة نوم).</li>
-                                <li><i class="fa-solid fa-location-dot" style="color: var(--ocean);"></i> <strong>مرسى
-                                        الانطلاق:</strong> نادي الأمانة لليخوت (أبحر الجنوبية / شرم أبحر، جدة).</li>
+                                    مكيف أو غرفة نوم).</span></li>
+                                <li><i class="fa-solid fa-location-dot" style="color: var(--ocean);"></i> <span><strong>مرسى
+                                        الانطلاق:</strong> نادي الأمانة لليخوت (أبحر الجنوبية / شرم أبحر، جدة).</span></li>
                             </ul>
                         </div>
                         <button type="button" class="btn-toggle-more" onclick="toggleExpand(this)">
@@ -892,7 +893,7 @@
                                     </ul>
                                 </div>
                                 <div class="trip-price"
-                                    style="text-align: left; white-space: nowrap; min-width: 170px;">
+                                    style="text-align: left; min-width: 170px;">
                                     <div
                                         style="font-size: 0.82rem; color: var(--gray-600); font-weight: 700; margin-bottom: 4px; border-bottom: 1px dashed var(--gray-300); padding-bottom: 2px;">
                                         أسعار بياضة لـ 6 ساعات:</div>
@@ -947,7 +948,7 @@
                                     </ul>
                                 </div>
                                 <div class="trip-price"
-                                    style="text-align: left; white-space: nowrap; min-width: 170px; align-self: flex-start;">
+                                    style="text-align: left; min-width: 170px; align-self: flex-start;">
                                     <div
                                         style="font-size: 0.82rem; color: var(--gray-600); font-weight: 700; margin-bottom: 4px; border-bottom: 1px dashed var(--gray-300); padding-bottom: 2px;">
                                         أسعار بياضة لـ 6 ساعات:</div>
@@ -1043,7 +1044,7 @@
 
                             <!-- Sub-grid of Picnic Options -->
                             <div
-                                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 12px; margin-bottom: 14px;">
+                                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(260px, 100%), 1fr)); gap: 12px; margin-bottom: 14px;">
 
                                 <!-- 1. Dinner Packages -->
                                 <div
@@ -1138,7 +1139,6 @@
                     </div>
 
                 </div>
-            </div>
 
             <!-- Right / Sidebar Area -->
             <aside class="boat-sidebar-col">
@@ -1149,7 +1149,7 @@
                     </div>
 
                     <div class="action-buttons-group">
-                        <button type="button" class="btn btn-share btn-full" onclick="shareBoatDetails()"
+                        <button type="button" class="btn btn-share btn-full"
                             style="margin-bottom: 4px;">
                             <i class="fa-solid fa-share-nodes"></i> مشاركة تفاصيل القارب
                         </button>
