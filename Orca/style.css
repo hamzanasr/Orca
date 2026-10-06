@@ -4,6 +4,14 @@
    ========================================================================== */
 
 @font-face {
+    font-family: 'Hail Elastic';
+    src: url('font/hail-elastic-light.woff2') format('woff2');
+    font-weight: 100 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
     font-family: 'Thmanyah Serif Display';
     src: url('font/thmanyahserifdisplay-Light.woff2') format('woff2');
     font-weight: 300;
@@ -95,7 +103,7 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; font-size: 16px; -webkit-text-size-adjust: 100%; }
 body {
-    font-family: 'Thmanyah Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-family: 'Hail Elastic', 'Thmanyah Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     background: var(--white);
     color: var(--gray-800);
     line-height: 1.65;
@@ -800,7 +808,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
     font-weight: 700;
     color: var(--white);
     margin: 0 0 2px 0;
-    font-family: 'Thmanyah Serif Display', serif;
+    font-family: 'Hail Elastic', 'Thmanyah Sans', sans-serif;
 }
 
 .calc-modal-header-text p {
@@ -884,7 +892,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
     font-weight: 800;
     color: var(--navy);
     margin: 2px 0 0 0;
-    font-family: 'Thmanyah Serif Display', serif;
+    font-family: 'Hail Elastic', 'Thmanyah Sans', sans-serif;
 }
 
 /* Floating Action Button for Calculator */

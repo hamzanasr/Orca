@@ -23,8 +23,8 @@
     --gray-700: #495057;
     --gray-800: #343A40;
     --ocean-dark: #005F92;
-    --font-heading: 'Thmanyah Serif Display', serif;
-    --font-body: 'Thmanyah Sans', sans-serif;
+    --font-heading: 'Hail Elastic', 'Thmanyah Sans', sans-serif;
+    --font-body: 'Hail Elastic', 'Thmanyah Sans', sans-serif;
     --font-en: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
     --shadow-sm: 0 2px 8px rgba(11, 37, 69, 0.06);
     --shadow-md: 0 4px 16px rgba(11, 37, 69, 0.1);
@@ -79,6 +79,13 @@ button {
 }
 
 /* ── Fonts ──────────────────────────────────────────────────────────────── */
+@font-face {
+    font-family: 'Hail Elastic';
+    src: url('font/hail-elastic-light.woff2') format('woff2');
+    font-weight: 100 500;
+    font-style: normal;
+    font-display: swap;
+}
 @font-face {
     font-family: 'Thmanyah Serif Display';
     src: url('font/thmanyahserifdisplay-Bold.woff2') format('woff2');
