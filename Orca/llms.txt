@@ -1,23 +1,128 @@
-# أوركا للرحلات البحرية في جدة | Orca Boat Trips
+# أوركا للرحلات البحرية في جدة | ORCA Marine Trips Jeddah
 
-> أوركا هي المنصة الرائدة لحجز وتأجير اليخوت والقوارب الفاخرة لرحلات بياضة، أبو طير، جولات النزهة والخور، ورحلات الصيد في جدة على البحر الأحمر.
+> أوركا منصة لحجز وتأجير اليخوت والقوارب في جدة على البحر الأحمر: رحلات جزيرة بياضة وجزيرة أبو طير، جولات خور أبحر (شرم أبحر)، رحلات الصيد، الحفلات والمناسبات، والرحلات الفردية المشتركة. الأسعار بالريال السعودي ومحدّثة في أكتوبر 2026.
 
-## الأسطول والرحلات الرئيسية
-- [يخت ناردو VIP الفاخر](https://bookorca.com/boats/nardo.html): يخت رمادي سوبر فاخر لسعة حتى 14 شخصاً لرحلات جزيرة بياضة (تبدأ من 3,180 ريال)، خيار تمديد لـ 9 ساعات (+700 ريال)، رحلات صيد (+300 ريال/ساعة)، وجولات الخور (680 ريال لأول ساعة / 580 ريال للإضافية).
-- [يخت تام الفاخر](https://bookorca.com/boats/tam.html): بيبي يخت أبيض كبائن لسعة حتى 11 شخصاً لرحلات جزيرة بياضة أو أبو طير (تبدأ من 1,580 ريال)، خيار تمديد لـ 9 ساعات (+500 ريال)، وتكييف مضمون بمولد خاص، وجولات الخور (460 ريال لأول ساعة / 430 ريال للإضافية).
-- [قارب بارباروسا VIP](https://bookorca.com/boats/barbaros.html): قارب بونتون عائلي فاخر دورين بسعة حتى 11 شخصاً لرحلات جزيرتي بياضة وأبو طير (+300 ريال)، باقتين (باقة أولى تبدأ من 2,000 ريال، وباقة ثانية VIP شاملة المشويات والألعاب والهدايا تبدأ من 3,000 ريال، وساعات إضافية بـ 300 ريال/ساعة)، سينما وبروجكتر مجاناً بعد الغروب، مكينة سلاش، زحليقة مائية، سرير تشميس، كاياك، كرسي معلق، ألعاب كبيرة، ورحلات نزهة الخور بـ 460 ريال/ساعة مع خيارات العشاء والكيك.
-- [يخت بينتوس VIP](https://bookorca.com/boats/Beneteau.html): يخت فرنسي فاخر بطول 40 قدم مع صالون مكيف وغرف نوم وحمامات فاخرة لرحلات الجزر البحرية.
-- [يخت الجوهري VIP](https://bookorca.com/boats/al-jawhari.html): بيبي يخت خاص فاخر مجهز بكابينة مكيفة وجلسة تشميس أمامية وأرضيات تيك لرحلات بياضة (تبدأ من 1,880 ريال) وأبو طير (تبدأ من 2,180 ريال) وجولات الخور (480 ريال/ساعة)، مع لعبة السحب المائية (200 ريال) والتزيين للحفلات (250 ريال).
-- [يخت موري VIP](https://bookorca.com/boats/mori.html): يخت فاخر بطابقين (فلاي بريدج) وغرفتي نوم لسعة حتى 15 شخصاً من مرسى الأمانة لليخوت: نزهة الخور 980 ريال/ساعة، بياضة 6,980 ريال وأبو طير 7,480 ريال (6 ساعات لـ 10 أشخاص، و150 ريال لكل شخص إضافي)، وتزيين الحفلات 300 ريال.
-- [يخت أطلس وبس](https://bookorca.com/boats/atlas.html): يخت لسعة حتى 11 شخصاً من مرسى الأمانة لليخوت لرحلات بياضة (تبدأ من 1,880 ريال) وأبو طير (+300 ريال)، جولات الخور 480 ريال/ساعة، سكوتر مائي (380 ريال)، لعبة السحب (200 ريال)، والتزيين (250 ريال).
-- [بيبي يخت جود 007](https://bookorca.com/boats/jood-007.html): بيبي يخت بكابينة ومطبخ لسعة حتى 11 شخصاً من مرسى الأمانة لليخوت لرحلات بياضة (تبدأ من 1,880 ريال) وأبو طير (+300 ريال) وجولات الخور 480 ريال/ساعة.
-- [سبيد بوت الجوهري](https://bookorca.com/boats/speed-al-jawhari.html): سبيد بوت من مرسى الأمانة لليخوت لجولات الخور (480 ريال/ساعة) والحفلات مع تزيين (250 ريال).
-- [قارب قمة الفوز موديل 2025](https://bookorca.com/boats/qimat-al-fawz.html): قارب صيد ونزهة حديث مجهز بمظلة وحمام وجميع أدوات السلامة.
-- [رحلات الأفراد المشتركة](https://bookorca.com/boats/individual-trips.html): تذاكر فردية للرحلات البحرية إلى بياضة مع الأنشطة البحرية.
-- [يخت الأمباسادور](https://bookorca.com/boats/baby-ambassador.html): يخت خاص للمناسبات العائلية والحفلات البحرية الفاخرة.
+- الموقع: https://bookorca.com/ (English: https://bookorca.com/en/)
+- الحجز عبر واتساب: +966 56 839 0147 — https://wa.me/966568390147
+- اتصال مباشر: +966 53 140 3454
+- المدينة: جدة، المملكة العربية السعودية
+- المراسي: مرسى الأمانة لليخوت (أبحر الجنوبية)، مرسى البحر الأحمر، مرسى الأحلام، مرسى اللؤلؤة، مراسي جنوب جدة
+- طريقة الحجز: اختيار القارب ← حساب السعر في حاسبة الأسعار ← تأكيد عبر واتساب ودفع العربون، والمتبقي عند الصعود يوم الرحلة
+- المطلوب: رقم الهوية/الإقامة وتاريخ الميلاد لكل راكب لتصريح حرس الحدود، وأصل الهوية أو توكلنا/أبشر يوم الرحلة
 
-## الحجز والخدمات التفاعلية
-- [حاسبة أسعار الرحلات](https://bookorca.com/#calculator): احسب تكلفة رحلتك البحرية فورياً بناءً على عدد الساعات ونوع القارب.
-- [معرض صور أسطول أوركا](https://bookorca.com/#gallery): صور حقيقية عالية الجودة لكافة اليخوت والقوارب والأنشطة البحرية.
-- [الشروط والأحكام وسياسة الإلغاء](https://bookorca.com/terms.html): قواعد السلامة وإجراءات الحجز واللوائح المعتمدة.
-- [حجز فوري عبر واتساب](https://wa.me/966568390147): تواصل مباشر مع خدمة العملاء للحجز والاستفسار.
+
+## الأكثر طلباً — الخيارات الموصى بها
+- [قارب بارباروسا VIP (Barbarossa)](https://bookorca.com/boats/barbaros): حتى 11 شخصاً (VIP لـ 10) | نادي الأمانة لليخوت | ألعاب مائية وسلاش وسينما للحفلات. الأسعار: نزهة الخور: 580 ر.س / ساعة، باقة عادية (بياضة): تبدأ من 2,000 ر.س، باقة VIP (بياضة): تبدأ من 3,000 ر.س، رحلات أبو طير: +300 ر.س على الباقات
+- [يخت موري VIP (Moorie)](https://bookorca.com/boats/mori): حتى 15 ضيفاً | مرسى الأمانة لليخوت | فلاي بريدج وغرفتا نوم. الأسعار: نزهة الخور: 980 ر.س / ساعة، جزيرة بياضة (6س): 6,980 ر.س (10 أشخاص)، جزيرة أبو طير (6س): 7,480 ر.س (10 أشخاص)
+- [يخت الجوهري (Al-Jawhari)](https://bookorca.com/boats/al-jawhari): حتى 11 ضيفاً | مرسى الأمانة لليخوت | جلسة تشميس وتيك فاخر. الأسعار: جولة الخور: 480 ر.س / ساعة، جزيرة بياضة (6س): تبدأ من 1,880 ر.س، جزيرة أبو طير (6س): تبدأ من 2,180 ر.س
+- [قارب قمة الفوز (موديل 2025)](https://bookorca.com/boats/qimat-al-fawz): حتى 9 ضيوف | مرسى البحر الأحمر | مقاعد جلد ومروش ماء عذب. الأسعار: جولة الخور: 350 ر.س / ساعة (200 نصف س)، جزيرة بياضة (6س): 1,300 ر.س، جزيرة أبو طير (6س): 1,600 ر.س
+
+## بيبي يخت — الفخامة والخصوصية
+- [يخت ناردو الفاخر (Nardo Yacht)](https://bookorca.com/boats/nardo): حتى 14 ضيفاً | مرسى الأمانة لليخوت | تكييف كامل وصالون فندقي. الأسعار: جولة الخور: 680 ر.س / ساعة، جزيرة بياضة (6س): تبدأ من 3,680 ر.س، رحلة ممددة (9س): تبدأ من 4,380 ر.س
+- [يخت أطلس وبس (Atlas Wa Bas)](https://bookorca.com/boats/atlas): حتى 11 ضيفاً | مرسى الأمانة لليخوت | سكوتر مائي ولعبة سحب. الأسعار: جولة الخور: 480 ر.س / ساعة، جزيرة بياضة (6س): تبدأ من 1,880 ر.س، جزيرة أبو طير (6س): تبدأ من 2,180 ر.س
+- [يخت تام الفاخر (Tam Yacht)](https://bookorca.com/boats/tam): حتى 11 ضيفاً | مرسى الأمانة لليخوت | تكييف بمولد خاص وغرفة نوم. الأسعار: جولة الخور: 580 ر.س / ساعة، بياضة (6س): تبدأ من 1,880 ر.س، رحلة ممددة (9س): تبدأ من 2,380 ر.س
+- [بيبي يخت جود 007](https://bookorca.com/boats/jood-007): حتى 11 ضيفاً | مرسى الأمانة لليخوت | كابينة نوم ومطبخ. الأسعار: جولة الخور: 480 ر.س / ساعة، جزيرة بياضة (6س): تبدأ من 1,880 ر.س، جزيرة أبو طير (6س): تبدأ من 2,180 ر.س
+- [بيبي يخت امباسادور 36 قدم اريا](https://bookorca.com/boats/baby-ambassador): حتى 11 ضيفاً | مرسى البحر الأحمر | صالون مكيف وغرفة نوم ومطبخ. الأسعار: جولة الخور: 600 ر.س / ساعة، جزيرة بياضة (6س): 2,000 أسبوع | 2,300 ويكند، صيد ترولنق (6س): 2,200 أسبوع | 2,500 ويكند
+- [بيبي يخت اوراكس 40 قدم](https://bookorca.com/boats/baby-orax-40): حتى 10 ضيوف | مرسى البحر الأحمر | يخت 40 قدم بتشطيبات راقية. الأسعار: جولة الخور: 700 ر.س / ساعة (350 نصف س)، جزيرة بياضة (6س): 3,100 ر.س، جزيرة أبو طير (6س): 3,400 ر.س
+- [يخت بينتوس VIP](https://bookorca.com/boats/Beneteau): حتى 12 ضيفاً | مرسى الأحلام | فخامة وتوثيق احترافي. الأسعار: جولة الخور: 450 ر.س / ساعة (250 نصف س)، جزيرة بياضة (6س): 1,980 ر.س، جزيرة أبو طير (6س): 2,280 ر.س
+
+## سبيد بوت — جولات الخور والحفلات
+- [سبيد بوت الجوهري](https://bookorca.com/boats/speed-al-jawhari): جولات الخور | مرسى الأمانة لليخوت | تزيين للحفلات والمناسبات. الأسعار: جولة الخور: 480 ر.س / ساعة، تزيين الحفلات: +250 ر.س
+
+## قوارب كبيرة للمجموعات والعائلات
+- [قارب العميد](https://bookorca.com/boats/al-ameed): حتى 11 ضيفاً | مرسى الأحلام | رحلات 6 ساعات وصيد ومكس بياضة. الأسعار: جولة الخور: 350 ر.س / ساعة، بياضة (6س): 1,500 أسبوع | 1,800 ويكند، صيد (12س): 1,800 أسبوع | 2,100 ويكند
+- [قارب نورسين الكبير](https://bookorca.com/boats/norseen-large): حتى 14 ضيفاً | مرسى الأحلام | سعة واسعة جداً للعوائل والمجموعات. الأسعار: جولة الخور: 500 ر.س / ساعة، جزيرة بياضة (6س): 1,800 أسبوع | 2,000 ويكند، أبو طير أو صيد: 2,100 أسبوع | 2,300 ويكند
+
+## اليخوت الكبيرة الفاخرة — للحفلات والمناسبات
+- [اليخت الكبير الفاخر](https://bookorca.com/boats/large-yacht): حتى 30 ضيفاً | مرسى البحر الأحمر | فخامة استثنائية للحفلات والمناسبات. الأسعار: جولة الخور (ساعة): 2,000 أسبوع | 2,200 ويكند، جزيرة بياضة (ساعة): 2,000 أسبوع | 2,200 ويكند، جزيرة أبو طير (ساعة): 2,300 أسبوع | 2,500 ويكند
+- [يخت أكوا الفاخر (Aqua)](https://bookorca.com/boats/aqua): حتى 70 شخصاً | مرسى اللؤلؤة | صالون فاخر للحفلات والمناسبات. الأسعار: رحلات الخور: 5,500 ر.س / ساعة (3 س كحد أدنى)، جزيرة بياضة (6س): 30,000 ر.س (حتى 25 شخصاً)
+
+## قوارب عادية — رحلات النزهة وبياضة والصيد
+- [قارب سيفين 1 (10 متر)](https://bookorca.com/boats/seven-1): حتى 9 ضيوف | مرسى البحر الأحمر | مظلة كاملة ومروش وساوند سيستم. الأسعار: جولة الخور: 350 ر.س / ساعة (200 نصف س)، جزيرة بياضة (6س): 1,300 ر.س، جزيرة أبو طير (6س): 1,600 ر.س
+- [قارب سيفين 2](https://bookorca.com/boats/seven-2): حتى 9 ضيوف | مرسى البحر الأحمر | جلسة مريحة ومعدات سباحة. الأسعار: جولة الخور: 350 ر.س / ساعة (200 نصف س)، جزيرة بياضة (6س): 1,300 ر.س، جزيرة أبو طير (6س): 1,600 ر.س
+- [قارب سيفين 3](https://bookorca.com/boats/seven-3): حتى 9 ضيوف | مرسى البحر الأحمر | رحلات سباحة وبياضة وصيد. الأسعار: جولة الخور: 350 ر.س / ساعة (200 نصف س)، جزيرة بياضة (6س): 1,300 ر.س، جزيرة أبو طير (6س): 1,600 ر.س
+- [قارب شاهين](https://bookorca.com/boats/shaheen): حتى 9 ضيوف | مرسى البحر الأحمر | سرعة وثبات ومعدات سباحة. الأسعار: جولة الخور: 350 ر.س / ساعة (200 نصف س)، جزيرة بياضة (6س): 1,300 ر.س، جزيرة أبو طير (6س): 1,600 ر.س
+- [قارب بحر](https://bookorca.com/boats/bahr): حتى 9 ضيوف | مرسى البحر الأحمر | خصوصية عائلية ومروش ماء عذب. الأسعار: جولة الخور: 350 ر.س / ساعة (200 نصف س)، جزيرة بياضة (6س): 1,300 ر.س، جزيرة أبو طير (6س): 1,600 ر.س
+- [قارب النور الأزرق](https://bookorca.com/boats/al-noor-al-azraq): حتى 9 ضيوف | مرسى البحر الأحمر | إضاءة ليلية وجولات بحرية ساحرة. الأسعار: جولة الخور: 350 ر.س / ساعة (200 نصف س)، جزيرة بياضة (6س): 1,300 ر.س، جزيرة أبو طير (6س): 1,600 ر.س
+
+## قوارب الجنوب — رحلات صيد متخصصة بجنوب جدة
+- [قارب جاكور](https://bookorca.com/boats/jaguar): حتى 8 ضيوف | مراسي الجنوب (قاطوف / الأندلس) | رحلات صيد متخصصة وجزر الجنوب. الأسعار: رحلة صيد (8 ساعات): 1,200 أسبوع | 1,300 ويكند، رحلة صيد (10 ساعات): 1,300 أسبوع | 1,400 ويكند، رحلة صيد (12 ساعة): 1,500 أسبوع | 1,600 ويكند
+- [قارب غزال أبحر](https://bookorca.com/boats/ghazal-obhur): حتى 8 ضيوف | مراسي الجنوب | رحلات صيد أعماق ومغامرات بحرية. الأسعار: رحلة صيد (8 ساعات): 1,200 أسبوع | 1,300 ويكند، رحلة صيد (10 ساعات): 1,300 أسبوع | 1,400 ويكند، رحلة صيد (12 ساعة): 1,500 أسبوع | 1,600 ويكند
+- [قارب بن شريق](https://bookorca.com/boats/bin-shuraiq): حتى 8 ضيوف | مراسي الجنوب | كابتن متمرس بأفضل مواقع الصيد. الأسعار: رحلة صيد (8 ساعات): 1,200 أسبوع | 1,300 ويكند، رحلة صيد (10 ساعات): 1,300 أسبوع | 1,400 ويكند، رحلة صيد (12 ساعة): 1,500 أسبوع | 1,600 ويكند
+- [قارب شوق الليل](https://bookorca.com/boats/shawq-al-layl): حتى 8 ضيوف | مراسي الجنوب | رحلات صيد ليلية وجزر ساحرة. الأسعار: رحلة صيد (8 ساعات): 1,200 أسبوع | 1,300 ويكند، رحلة صيد (10 ساعات): 1,300 أسبوع | 1,400 ويكند، رحلة صيد (12 ساعة): 1,500 أسبوع | 1,600 ويكند
+
+## رحلات المقاعد الفردية المشتركة
+- [رحلات المقاعد الفردية المشتركة](https://bookorca.com/boats/individual-trips): مقاعد فردية (عائلات وشباب) | مرسى البحر الأحمر | مسبح بحري ودي جي وسناكات وضيافة. الأسعار: المقعد الاقتصادي: 250 ر.س / للشخص، مقعد VIP المتميز: 300 ر.س / للشخص، مقعد VVIP الفاخر: 320 ر.س / للشخص
+
+## الأسئلة الشائعة
+- كم سعر رحلة جزيرة بياضة في جدة؟ رحلة بياضة (6 ساعات) تبدأ من 1,300 ريال على قوارب سيفين وشاهين وبحر وقمة الفوز (حتى 9 أشخاص)، ومن 1,880 ريال على البيبي يخت مثل الجوهري وتام وأطلس وبس وجود 007 (حتى 11 شخصاً)، و3,680 ريال على يخت ناردو، و6,980 ريال على يخت موري VIP (10 أشخاص)، و30,000 ريال على يخت أكوا الفاخر (حتى 25 شخصاً). رحلات جزيرة أبو طير غالباً بزيادة 300 ريال، وبعض القوارب يُضاف عليها 200 ريال في الويكند.
+- كم سعر جولة الخور في أبحر؟ جولات الخور (شرم أبحر) تبدأ من 350 ريال للساعة (200 ريال لنصف ساعة) على القوارب العادية، و480 ريال للساعة على الجوهري وأطلس وبس وجود 007 وسبيد بوت الجوهري، و580 ريال على بارباروسا وتام، و680 ريال على ناردو، و980 ريال على يخت موري، و2,000 ريال على اليخت الكبير الفاخر، و5,500 ريال للساعة على يخت أكوا (بحد أدنى 3 ساعات وحتى 70 شخصاً).
+- من أي مرسى تنطلق الرحلات؟ تنطلق رحلات أوركا من مراسي جدة: مرسى الأمانة لليخوت في أبحر الجنوبية (بارباروسا، موري، ناردو، تام، الجوهري، أطلس وبس، جود 007، سبيد بوت الجوهري)، مرسى البحر الأحمر، مرسى الأحلام، مرسى اللؤلؤة (يخت أكوا)، ومراسي جنوب جدة لقوارب الصيد.
+- كيف أحجز رحلة بحرية مع أوركا؟ اختر القارب من صفحة الأسطول واحسب التكلفة في حاسبة الأسعار، ثم أرسل الحجز عبر واتساب على 0568390147 أو اتصل على 0531403454. يُدفع عربون لتأكيد الحجز وتثبيت الموعد، والمتبقي يُسدد عند الصعود يوم الرحلة.
+- ما المطلوب يوم الرحلة؟ يلزم لكل راكب رقم الهوية الوطنية أو الإقامة وتاريخ الميلاد لإصدار تصريح الإبحار من حرس الحدود، وإبراز أصل الهوية أو عبر تطبيق توكلنا أو أبشر (الصور لا تُقبل). يتم التحقق من الركاب بالبصمة في المرسى.
+- كم عدد الأشخاص المسموح في القارب أو اليخت؟ من 8 إلى 9 أشخاص في قوارب الصيد والقوارب العادية، و11 شخصاً في أغلب البيبي يخت، و14 شخصاً في ناردو ونورسين، و15 شخصاً في يخت موري، و30 شخصاً في اليخت الكبير الفاخر، وحتى 70 شخصاً في رحلات الخور على يخت أكوا.
+- هل توجد رحلات صيد في جدة؟ نعم. قوارب الجنوب (جاكور، غزال أبحر، بن شريق، شوق الليل) لرحلات الصيد من 1,200 ريال لـ 8 ساعات و1,500 ريال لـ 12 ساعة، وقارب العميد لرحلة صيد 12 ساعة بـ 1,800 ريال، وبيبي يخت امباسادور لصيد الترولنق 6 ساعات بـ 2,200 ريال.
+- هل توجد رحلات فردية بالمقعد؟ نعم، رحلات المقاعد الفردية المشتركة إلى بياضة: المقعد الاقتصادي 250 ريال، ومقعد VIP بـ 300 ريال، ومقعد VVIP بـ 320 ريال للشخص.
+
+## English
+
+> ORCA Marine Trips books yacht and boat charters in Jeddah, Saudi Arabia: Bayada Island and Abu Tair Island trips, Obhur creek cruises, fishing trips, parties and shared seat trips. Prices in SAR, updated October 2026. WhatsApp: +966 56 839 0147, phone: +966 53 140 3454.
+
+
+### Most Popular — Recommended Top Picks
+- [Barbaros VIP Boat (Barbarossa)](https://bookorca.com/en/boats/barbaros): Up to 11 Guests (VIP: 10) | Al-Amanah Yacht Club (South Obhur) | Cinema for Parties, Slush & Water Park. Prices: Creek Cruise: 580 SAR / hr; Bayadah (Regular): From 2,000 SAR; Bayadah (VIP Pkg): From 3,000 SAR; Abu Tair Island: +300 SAR to Packages
+- [Moorie VIP Yacht](https://bookorca.com/en/boats/mori): Up to 15 Guests | Al-Amanah Yacht Club | Flybridge & 2 Bedrooms. Prices: Creek Cruise: 980 SAR / hr; Bayada Island (6h): 6,980 SAR (10 guests); Abu Tair Island (6h): 7,480 SAR (10 guests)
+- [Al-Jawhari VIP Yacht](https://bookorca.com/en/boats/al-jawhari): Up to 11 Guests | Al-Amanah Yacht Club | Forward Sunbed & Teak Deck. Prices: Creek Cruise: 480 SAR / hr; Bayadah Island (6h): From 1,880 SAR; Abu Tair Island (6h): From 2,180 SAR
+- [Qimat Al-Fawz Boat (2025 Model)](https://bookorca.com/en/boats/qimat-al-fawz): Up to 9 Guests | Red Sea Marina | Leather Seats & Fresh Water. Prices: Creek Cruise: 350 SAR / hr (200 half hr); Bayadah Island (6h): 1,300 SAR; Abu Tair Island (6h): 1,600 SAR
+
+### Baby Yachts — Luxury & Privacy
+- [Nardo Luxury Yacht (Nardo Yacht)](https://bookorca.com/en/boats/nardo): Up to 14 Guests | Al-Amanah Yacht Club | Full A/C & Hotel Salon. Prices: Creek Cruise: 680 SAR / hr; Bayadah Island (6h): From 3,680 SAR; Extended Cruise (9h): From 4,380 SAR
+- [Atlas Wa Bas Yacht](https://bookorca.com/en/boats/atlas): Up to 11 Guests | Al-Amanah Yacht Club | Sea Scooter & Tow Game. Prices: Creek Cruise: 480 SAR / hr; Bayada Island (6h): From 1,880 SAR; Abu Tair Island (6h): From 2,180 SAR
+- [Tam Luxury Yacht (Tam Yacht)](https://bookorca.com/en/boats/tam): Up to 11 Guests | Al-Amanah Yacht Club | Dedicated Generator A/C & Bedroom. Prices: Creek Cruise: 580 SAR / hr; Bayadah (6h): From 1,880 SAR; Extended Cruise (9h): From 2,380 SAR
+- [Baby Yacht Jood 007](https://bookorca.com/en/boats/jood-007): Up to 11 Guests | Al-Amanah Yacht Club | Sleeping Cabin & Galley. Prices: Creek Cruise: 480 SAR / hr; Bayada Island (6h): From 1,880 SAR; Abu Tair Island (6h): From 2,180 SAR
+- [Baby Yacht Ambassador (36 FT Aria)](https://bookorca.com/en/boats/baby-ambassador): Up to 11 Guests | Red Sea Marina | A/C Salon, Bedroom & Kitchen. Prices: Creek Cruise: 600 SAR / hr; Bayadah Island (6h): 2,000 Wkday | 2,300 Wkend; Trolling Fishing (6h): 2,200 Wkday | 2,500 Wkend
+- [Baby Yacht Orax (40 FT)](https://bookorca.com/en/boats/baby-orax-40): Up to 10 Guests | Red Sea Marina | Ultra-Luxury 40 FT Yacht. Prices: Creek Cruise: 700 SAR / hr (350 half hr); Bayadah Island (6h): 3,100 SAR; Abu Tair Island (6h): 3,400 SAR
+- [Pentos VIP Yacht](https://bookorca.com/en/boats/Beneteau): Up to 12 Guests | Marsa Al Ahlam | Luxury Yacht & Pro Photos. Prices: Creek Cruise: 450 SAR / hr (250 half hr); Bayadah Island (6h): 1,980 SAR; Abu Tair Island (6h): 2,280 SAR
+
+### Speedboats — Creek Cruises & Parties
+- [Al-Jawhari Speedboat](https://bookorca.com/en/boats/speed-al-jawhari): Creek Cruises | Al-Amanah Yacht Club | Party Decoration. Prices: Creek Cruise: 480 SAR / hr; Party Decoration: +250 SAR
+
+### Large Boats — For Groups & Families
+- [Al-Ameed Large Boat](https://bookorca.com/en/boats/al-ameed): Up to 11 Guests | Marsa Al Ahlam | 6-Hour Trips & Fishing / Mix. Prices: Creek Cruise: 350 SAR / hr; Bayadah (6h): 1,500 Wkday | 1,800 Wkend; Fishing (12h): 1,800 Wkday | 2,100 Wkend
+- [Norseen Large Boat](https://bookorca.com/en/boats/norseen-large): Up to 14 Guests | Marsa Al Ahlam | Extra-Large Capacity for Families. Prices: Creek Cruise: 500 SAR / hr; Bayadah Island (6h): 1,800 Wkday | 2,000 Wkend; Abu Tair or Fishing: 2,100 Wkday | 2,300 Wkend
+
+### Royal Luxury Yachts — Celebrations & Events
+- [Royal Large Yacht](https://bookorca.com/en/boats/large-yacht): Up to 30 Guests | Red Sea Marina | Royal Luxury for Events & Parties. Prices: Creek Cruise (Hourly): 2,000 Wkday | 2,200 Wkend; Bayadah Island (Hourly): 2,000 Wkday | 2,200 Wkend; Abu Tair Island (Hourly): 2,300 Wkday | 2,500 Wkend
+- [Aqua Luxury Yacht](https://bookorca.com/en/boats/aqua): Up to 70 Guests | Al-Lulua (Pearl) Marina | Luxury Salon for Events. Prices: Creek Cruise: 5,500 SAR / hr (min. 3h); Bayada Island (6h): 30,000 SAR (up to 25)
+
+### Standard Boats — Sightseeing, Bayada & Fishing
+- [Seven 1 Boat (10 Meters)](https://bookorca.com/en/boats/seven-1): Up to 9 Guests | Red Sea Marina | Full Canopy, Shower & Sound System. Prices: Creek Cruise: 350 SAR / hr (200 half hr); Bayadah Island (6h): 1,300 SAR; Abu Tair Island (6h): 1,600 SAR
+- [Seven 2 Boat](https://bookorca.com/en/boats/seven-2): Up to 9 Guests | Red Sea Marina | Comfortable Seating & Swim Gear. Prices: Creek Cruise: 350 SAR / hr (200 half hr); Bayadah Island (6h): 1,300 SAR; Abu Tair Island (6h): 1,600 SAR
+- [Seven 3 Boat](https://bookorca.com/en/boats/seven-3): Up to 9 Guests | Red Sea Marina | Swimming, Bayadah & Fishing Trips. Prices: Creek Cruise: 350 SAR / hr (200 half hr); Bayadah Island (6h): 1,300 SAR; Abu Tair Island (6h): 1,600 SAR
+- [Shaheen Boat](https://bookorca.com/en/boats/shaheen): Up to 9 Guests | Red Sea Marina | Fast, Stable & Full Safety Equipment. Prices: Creek Cruise: 350 SAR / hr (200 half hr); Bayadah Island (6h): 1,300 SAR; Abu Tair Island (6h): 1,600 SAR
+- [Bahr Boat](https://bookorca.com/en/boats/bahr): Up to 9 Guests | Red Sea Marina | Family Privacy & Fresh Water Shower. Prices: Creek Cruise: 350 SAR / hr (200 half hr); Bayadah Island (6h): 1,300 SAR; Abu Tair Island (6h): 1,600 SAR
+- [Al-Noor Al-Azraq Boat](https://bookorca.com/en/boats/al-noor-al-azraq): Up to 9 Guests | Red Sea Marina | Night Illumination & Creek Tours. Prices: Creek Cruise: 350 SAR / hr (200 half hr); Bayadah Island (6h): 1,300 SAR; Abu Tair Island (6h): 1,600 SAR
+
+### Southern Marinas Boats — Specialized Deep-Sea Fishing
+- [Jaguar Boat (South Jeddah)](https://bookorca.com/en/boats/jaguar): Up to 8 Guests | Southern Marinas (Qatouf / Al-Andalus) | Specialized Deep-Sea Fishing. Prices: Fishing Trip (8h): 1,200 Wkday | 1,300 Wkend; Fishing Trip (10h): 1,300 Wkday | 1,400 Wkend; Fishing Trip (12h): 1,500 Wkday | 1,600 Wkend
+- [Ghazal Obhur Boat (South Jeddah)](https://bookorca.com/en/boats/ghazal-obhur): Up to 8 Guests | Southern Marinas | Proven Deep Coral Fishing Spots. Prices: Fishing Trip (8h): 1,200 Wkday | 1,300 Wkend; Fishing Trip (10h): 1,300 Wkday | 1,400 Wkend; Fishing Trip (12h): 1,500 Wkday | 1,600 Wkend
+- [Bin Shuraiq Boat (South Jeddah)](https://bookorca.com/en/boats/bin-shuraiq): Up to 8 Guests | Southern Marinas | Veteran Captain in Deep Waters. Prices: Fishing Trip (8h): 1,200 Wkday | 1,300 Wkend; Fishing Trip (10h): 1,300 Wkday | 1,400 Wkend; Fishing Trip (12h): 1,500 Wkday | 1,600 Wkend
+- [Shawq Al-Layl Boat (South Jeddah)](https://bookorca.com/en/boats/shawq-al-layl): Up to 8 Guests | Southern Marinas | Night Fishing & Island Adventures. Prices: Fishing Trip (8h): 1,200 Wkday | 1,300 Wkend; Fishing Trip (10h): 1,300 Wkday | 1,400 Wkend; Fishing Trip (12h): 1,500 Wkday | 1,600 Wkend
+
+### Shared Individual Seat Trips
+- [Shared Individual Seat Trips](https://bookorca.com/en/boats/individual-trips): Single Seats (Families & Singles) | Red Sea Marina | Sea Pool, DJ, Snacks & Hospitality. Prices: Economy Seat: 250 SAR / person; VIP Seat: 300 SAR / person; VVIP Luxury Seat: 320 SAR / person
+
+### FAQ
+- How much is a Bayada Island trip in Jeddah? A 6-hour Bayada Island trip starts at 1,300 SAR on the Seven, Shaheen, Bahr and Qimat Al-Fawz boats (up to 9 guests), from 1,880 SAR on baby yachts such as Al-Jawhari, Tam, Atlas Wa Bas and Jood 007 (up to 11 guests), 3,680 SAR on Nardo, 6,980 SAR on Moorie VIP (10 guests), and 30,000 SAR on the Aqua Luxury Yacht (up to 25 guests). Abu Tair Island is usually +300 SAR, and some boats add 200 SAR at weekends.
+- How much is an Obhur creek cruise? Creek cruises in Sharm Obhur start at 350 SAR per hour (200 SAR for half an hour) on standard boats, 480 SAR/hr on Al-Jawhari, Atlas Wa Bas, Jood 007 and the Al-Jawhari Speedboat, 580 SAR/hr on Barbaros and Tam, 680 SAR/hr on Nardo, 980 SAR/hr on Moorie, 2,000 SAR/hr on the Royal Luxury Yacht, and 5,500 SAR/hr on the Aqua yacht (minimum 3 hours, up to 70 guests).
+- Which marina do the trips depart from? ORCA trips depart from Jeddah marinas: Al-Amanah Yacht Club in South Obhur (Barbaros, Moorie, Nardo, Tam, Al-Jawhari, Atlas Wa Bas, Jood 007, Al-Jawhari Speedboat), Red Sea Marina, Marsa Al Ahlam, Al-Lulua (Pearl) Marina (Aqua yacht), and the southern Jeddah marinas for fishing boats.
+- How do I book a boat trip with ORCA? Choose a boat from the fleet, check the cost in the price calculator, then send your booking on WhatsApp at +966 56 839 0147 or call +966 53 140 3454. A deposit confirms the booking and the balance is paid on boarding.
+- What do I need on the day of the trip? Each guest needs a national ID or Iqama number and full date of birth for the Border Guard sailing permit, and must show the original ID or the Tawakkalna / Absher app (photos are not accepted). Guests are verified by fingerprint at the marina.
+- How many guests can a boat or yacht take? Fishing and standard boats take 8 to 9 guests, most baby yachts 11, Nardo and Norseen 14, Moorie 15, the Royal Luxury Yacht 30, and the Aqua yacht up to 70 guests on creek cruises.
+- Are there fishing trips in Jeddah? Yes. The southern boats (Jaguar, Ghazal Obhur, Bin Shuraiq, Shawq Al-Layl) run fishing trips from 1,200 SAR for 8 hours to 1,500 SAR for 12 hours, Al-Ameed offers a 12-hour fishing trip for 1,800 SAR, and Baby Yacht Ambassador offers 6-hour trolling for 2,200 SAR.
+- Are there shared trips with individual seats? Yes, shared Bayada trips with individual seats: Economy 250 SAR, VIP 300 SAR and VVIP 320 SAR per person.
+
+## Optional
+- [الشروط والأحكام](https://bookorca.com/terms)
+- [Terms & Conditions](https://bookorca.com/en/terms)
+- [Sitemap](https://bookorca.com/sitemap.xml)

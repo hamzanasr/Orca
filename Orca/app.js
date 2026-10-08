@@ -294,22 +294,22 @@ document.addEventListener('DOMContentLoaded', () => {
         'nardo': [
             { id: 'bayadah-6', name: 'رحلة جزيرة بياضة (6 ساعات - تبدأ من 3,680 ريال)', duration: 6 },
             { id: 'abu-tair-6', name: 'رحلة جزيرة أبو طير (6 ساعات - تبدأ من 3,980 ريال)', duration: 6 },
-            { id: 'bayadah-9', name: 'رحلة جزيرة بياضة ممددة (9 ساعات - تبدأ من 4,580 ريال)', duration: 9 },
+            { id: 'bayadah-9', name: 'رحلة جزيرة بياضة ممددة (9 ساعات - تبدأ من 4,380 ريال)', duration: 9 },
             { id: 'fishing-add', name: 'رحلة صيد ومغامرات (ساعة صيد إضافية +300 ريال على بياضة)', duration: 7 },
             { id: 'creek', name: 'جولة الخور / شرم أبحر (الساعة الأولى 680 / الإضافية 580 ريال)', duration: 1 }
         ],
         'tam': [
             { id: 'bayadah-6', name: 'رحلة جزيرة بياضة (6 ساعات - تبدأ من 1,880 ريال)', duration: 6 },
             { id: 'abu-tair-6', name: 'رحلة جزيرة أبو طير (6 ساعات - تبدأ من 2,080 ريال)', duration: 6 },
-            { id: 'bayadah-9', name: 'رحلة جزيرة بياضة ممددة (9 ساعات - تبدأ من 2,780 ريال)', duration: 9 },
-            { id: 'creek', name: 'جولة الخور / شرم أبحر (الساعة الأولى 460 / الإضافية 430 ريال)', duration: 1 }
+            { id: 'bayadah-9', name: 'رحلة جزيرة بياضة ممددة (9 ساعات - تبدأ من 2,380 ريال)', duration: 9 },
+            { id: 'creek', name: 'جولة الخور / شرم أبحر (580 ريال/ساعة)', duration: 1 }
         ],
         'barbaros': [
             { id: 'bayadah-pkg1', name: 'رحلة بياضة — باقة عادية (6 ساعات - تبدأ من 2,000 ريال)', duration: 6 },
             { id: 'abu-tair-pkg1', name: 'رحلة جزيرة أبو طير — باقة عادية (+300 ريال خصوصية - تبدأ من 2,300 ريال)', duration: 6 },
             { id: 'bayadah-pkg2', name: 'رحلة بياضة — باقة VIP فقط حتى 10 أشخاص (6 ساعات - تبدأ من 3,000 ريال)', duration: 6 },
             { id: 'abu-tair-pkg2', name: 'رحلة جزيرة أبو طير — باقة VIP فقط حتى 10 أشخاص (+300 ريال - تبدأ من 3,300 ريال)', duration: 6 },
-            { id: 'creek', name: 'جولة النزهة في الخور / شرم أبحر (460 ريال/ساعة)', duration: 1 }
+            { id: 'creek', name: 'جولة النزهة في الخور / شرم أبحر (580 ريال/ساعة)', duration: 1 }
         ],
         'qimat-al-fawz-pentos': [
             { id: 'bayadah', name: 'رحلة جزيرة بياضة (6 ساعات - 1,980 ريال)', basePriceWeekday: 1980, basePriceWeekend: 2180, duration: 6 },
@@ -319,6 +319,10 @@ document.addEventListener('DOMContentLoaded', () => {
             { id: 'fishing-10', name: 'رحلة صيد (10 ساعات - 2,480 ريال)', basePriceWeekday: 2480, basePriceWeekend: 2680, duration: 10 },
             { id: 'fishing-12', name: 'رحلة صيد (12 ساعة - 2,680 ريال)', basePriceWeekday: 2680, basePriceWeekend: 2880, duration: 12 },
             { id: 'creek', name: 'جولة الخور / شرم أبحر (0.5 – 2 ساعة)', duration: 1 }
+        ],
+        'aqua': [
+            { id: 'bayadah-6', name: 'رحلة جزيرة بياضة (6 ساعات - 30,000 ريال حتى 25 شخصاً)', duration: 6 },
+            { id: 'creek-hourly', name: 'رحلة الخور (5,500 ريال/ساعة - بحد أدنى 3 ساعات حتى 70 شخصاً)' }
         ],
         'large-yacht': [
             { id: 'bayadah-hourly', name: 'رحلة بياضة (ساعة - بحد أدنى ساعتين)', hourlyPriceWeekday: 2000, hourlyPriceWeekend: 2200 },
@@ -414,12 +418,8 @@ document.addEventListener('DOMContentLoaded', () => {
             if (hours <= 0.5) return 340;
             return 680 + Math.max(0, hours - 1) * 580;
         }
-        if (vessel === 'tam') {
-            if (hours <= 0.5) return 230;
-            return 460 + Math.max(0, hours - 1) * 430;
-        }
-        if (vessel === 'barbaros') {
-            return 460 * Math.max(1, hours); // 460 per hour, minimum 1 full hour
+        if (vessel === 'tam' || vessel === 'barbaros') {
+            return 580 * Math.max(1, hours); // 580 per hour, minimum 1 full hour
         }
         if (vessel === 'qimat-al-fawz-pentos') {
             if (hours <= 0.5) return 250;
@@ -498,7 +498,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (tripId === 'creek' || tripId === 'creek-hourly') {
             return totalCost; // 100% deposit for short Creek trips
         }
-        if (vessel === 'barbaros' || vessel === 'qimat-al-fawz-pentos' || vessel === 'large-yacht' || vessel === 'nardo' || vessel === 'tam' || amanaCreekRates[vessel]) {
+        if (vessel === 'barbaros' || vessel === 'qimat-al-fawz-pentos' || vessel === 'large-yacht' || vessel === 'aqua' || vessel === 'nardo' || vessel === 'tam' || amanaCreekRates[vessel]) {
             return totalCost * 0.50; // 50% deposit
         }
         if (vessel.startsWith('baby-yacht')) {
@@ -641,7 +641,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Ensure Barbaros creek minimum is 1 hour
         if (creekHoursInput) {
-            if (vessel === 'barbaros' || amanaCreekRates[vessel]) {
+            if (vessel === 'barbaros' || vessel === 'tam' || amanaCreekRates[vessel]) {
                 creekHoursInput.min = '1';
                 if (parseFloat(creekHoursInput.value) < 1) {
                     creekHoursInput.value = '1';
@@ -668,7 +668,7 @@ document.addEventListener('DOMContentLoaded', () => {
             southernMarinaGroup.classList.add('hidden');
             if (packageGroup) packageGroup.classList.add('hidden');
             if (specialRequestsGroup) specialRequestsGroup.classList.remove('hidden');
-        } else if (vessel === 'large-yacht') {
+        } else if (vessel === 'large-yacht' || vessel === 'aqua') {
             yachtHoursGroup.classList.remove('hidden');
             if (babyYachtOptions) babyYachtOptions.classList.add('hidden');
             if (amanaAddonsGroup) amanaAddonsGroup.classList.add('hidden');
@@ -707,6 +707,27 @@ document.addEventListener('DOMContentLoaded', () => {
         calculatePrice();
     }
 
+    // Hours slider: large yacht min 2h on every trip; Aqua only on the creek trip with min 3h
+    const yachtHoursLabel = document.querySelector('label[for="yachtHours"]');
+    const yachtHoursLabelDefault = yachtHoursLabel ? yachtHoursLabel.innerHTML : '';
+    function updateYachtHours() {
+        const vessel = vesselTypeSelect.value;
+        if (!yachtHoursInput || (vessel !== 'large-yacht' && vessel !== 'aqua')) return;
+        const minHrs = vessel === 'aqua' ? 3 : 2;
+        yachtHoursInput.min = String(minHrs);
+        if (parseFloat(yachtHoursInput.value) < minHrs) {
+            yachtHoursInput.value = String(minHrs);
+            if (yachtHoursVal) yachtHoursVal.textContent = String(minHrs);
+        }
+        if (yachtHoursLabel) {
+            const isEn = document.documentElement.lang === 'en';
+            yachtHoursLabel.innerHTML = vessel === 'aqua'
+                ? (isEn ? '<i class="fa-solid fa-clock"></i> Creek Cruise Hours (Min. 3 Hours)' : '<i class="fa-solid fa-clock"></i> عدد ساعات رحلة الخور (3 ساعات كحد أدنى)')
+                : yachtHoursLabelDefault;
+        }
+        yachtHoursGroup.classList.toggle('hidden', vessel === 'aqua' && tripTypeSelect.value !== 'creek-hourly');
+    }
+
     // Helper to dynamically update vessel guest limits
     function updateCapacity() {
         const vessel = vesselTypeSelect.value;
@@ -714,7 +735,15 @@ document.addEventListener('DOMContentLoaded', () => {
         let maxGuests = 9;
         let maxGuestsLabel = '9 ضيوف';
 
-        if (vessel === 'large-yacht') {
+        if (vessel === 'aqua') {
+            if (tripId === 'creek-hourly') {
+                maxGuests = 70;
+                maxGuestsLabel = '70 شخصاً (رحلات الخور)';
+            } else {
+                maxGuests = 25;
+                maxGuestsLabel = '25 شخصاً (رحلة بياضة)';
+            }
+        } else if (vessel === 'large-yacht') {
             if (tripId === 'creek-hourly') {
                 maxGuests = 45;
                 maxGuestsLabel = '45 شخصاً (في جولات الخور مسموح بعدد أكبر)';
@@ -756,6 +785,7 @@ document.addEventListener('DOMContentLoaded', () => {
         toggleCreekHoursSlider();
         toggleBabyYachtBBQ();
         updateAmanaAddons();
+        updateYachtHours();
 
         const vessel = vesselTypeSelect.value;
         const tripId = tripTypeSelect.value;
@@ -775,7 +805,17 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!selectedTrip) return;
 
         // 1. Base cost & weekend extra calculations
-        if (vessel === 'large-yacht') {
+        if (vessel === 'aqua') {
+            if (tripId === 'creek-hourly') {
+                const hrs = Math.max(3, parseFloat(yachtHoursInput.value));
+                basePrice = 5500 * hrs;
+                durationText = `${hrs} ساعات`;
+            } else {
+                basePrice = 30000;
+                durationText = '6 ساعات';
+            }
+        }
+        else if (vessel === 'large-yacht') {
             const hrs = parseFloat(yachtHoursInput.value);
             const hourlyPrice = (day === 'weekend') ? selectedTrip.hourlyPriceWeekend : selectedTrip.hourlyPriceWeekday;
             
@@ -851,7 +891,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 basePrice = tierPrice + 300;
                 durationText = '6 ساعات';
             } else if (tripId === 'bayadah-9') {
-                basePrice = tierPrice + 900;
+                basePrice = tierPrice + 700;
                 durationText = '9 ساعات';
             } else if (tripId === 'fishing-add') {
                 basePrice = tierPrice + 300;
@@ -876,7 +916,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 basePrice = tierPrice + 200;
                 durationText = '6 ساعات';
             } else if (tripId === 'bayadah-9') {
-                basePrice = tierPrice + 900;
+                basePrice = tierPrice + 500;
                 durationText = '9 ساعات';
             } else {
                 basePrice = tierPrice;
@@ -962,7 +1002,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         // 2. VIP & VVIP Package additions (if not large-yacht, not southern boats, not Al-Amana boats, not nardo, not tam, and not barbaros)
-        if (vessel !== 'large-yacht' && vessel !== 'boat-51' && !amanaCreekRates[vessel] && vessel !== 'nardo' && vessel !== 'tam' && vessel !== 'barbaros' && !southernBoatAliases.includes(vessel)) {
+        if (vessel !== 'large-yacht' && vessel !== 'aqua' && vessel !== 'boat-51' && !amanaCreekRates[vessel] && vessel !== 'nardo' && vessel !== 'tam' && vessel !== 'barbaros' && !southernBoatAliases.includes(vessel)) {
             if (pkg === 'vip') {
                 packageExtra = 300;
             } else if (pkg === 'vvip') {
@@ -1042,6 +1082,7 @@ const vesselDisplayNamesEn = {
     'barbaros': 'Barbaros VIP Boat',
     'qimat-al-fawz-pentos': 'Pentos VIP Yacht',
     'large-yacht': 'Royal Luxury Yacht',
+    'aqua': 'Aqua Luxury Yacht',
     'baby-yacht-ambassador': 'Baby Yacht Ambassador',
     'baby-yacht-orax-40': 'Baby Yacht Orax 40',
     'al-jawhari': 'Al-Jawhari VIP Yacht',
@@ -1076,7 +1117,7 @@ const tripNamesEn = {
     'barbaros-9h': 'Open Sea Standard Cruise (9 Hours - 2,500 SAR)',
     'barbaros-vip-6h-small': 'VIP Toys & BBQ (6 Hours / Up to 6 Guests - 3,000 SAR)',
     'barbaros-vip-6h-large': 'VIP Toys & BBQ (6 Hours / Up to 9 Guests - 3,500 SAR)',
-    'barbaros-picnic': 'Obhur Creek Tour (460 SAR / hr)',
+    'barbaros-picnic': 'Obhur Creek Tour (580 SAR / hr)',
     'bayadah': 'Bayadah Island Cruise (6 Hours)',
     'abu-tair': 'Abu Tair Island Cruise (6 Hours)',
     'fishing-6': 'Deep-Sea Fishing (6 Hours)',
@@ -1111,6 +1152,7 @@ const vesselDisplayNames = {
         'baby-yacht-ambassador': 'بيبي يخت امباسادور 36 قدم',
         'baby-yacht-orax-40': 'بيبي يخت اوراكس 40 قدم',
         'large-yacht': 'اليخت الكبير الفاخر (30 شخص)',
+        'aqua': 'يخت أكوا الفاخر (حتى 70 شخصاً)',
         'al-ameed': 'قارب العميد (11 شخص)',
         'norseen-large': 'قارب نورسين الكبير (14 شخص)',
         'seven-boat': 'قارب سيفين 1 (10 متر)',
@@ -1184,6 +1226,8 @@ const vesselDisplayNames = {
                 customDetails += isEn ? `\n📍 Departure Marina: *Al-Amanah Yacht Club (South Obhur)*` : `\n📍 مرسى الانطلاق: *نادي الأمانة لليخوت (أبحر الجنوبية)*`;
             } else if (vessel === 'qimat-al-fawz-pentos' || vessel === 'al-ameed' || vessel === 'norseen-large') {
                 customDetails += isEn ? `\n📍 Departure Marina: *Marsa Al Ahlam*` : `\n📍 مرسى الانطلاق: *مرسى الأحلام*`;
+            } else if (vessel === 'aqua') {
+                customDetails += isEn ? `\n📍 Departure Marina: *Al-Lulua (Pearl) Marina*` : `\n📍 مرسى الانطلاق: *مرسى اللؤلؤة*`;
             } else if (vessel === 'boat-51' || southernBoatAliases.includes(vessel)) {
                 customDetails += isEn ? `\n📍 Departure Marina: *${southernMarinaSelect.options[southernMarinaSelect.selectedIndex].text}*` : `\n📍 مرسى الانطلاق: *${southernMarinaSelect.options[southernMarinaSelect.selectedIndex].text}*`;
             } else {
@@ -1193,6 +1237,15 @@ const vesselDisplayNames = {
             let packageLine = isEn ? `🎁 Package: *${packageName}*\n` : `🎁 الباقة: *${packageName}*\n`;
 
             // Yacht hours detail
+            if (vessel === 'aqua') {
+                if (tripId === 'creek-hourly') {
+                    customDetails += isEn ? `\n⏱ Requested Hours: *${Math.max(3, yachtHoursInput.value)} Hours*` : `\n⏱ الساعات المطلوبة: *${Math.max(3, yachtHoursInput.value)} ساعات*`;
+                }
+                packageLine = '';
+                if (specialRequestsInput && specialRequestsInput.value.trim() !== '') {
+                    customDetails += isEn ? `\n✨ Special Requests: *${specialRequestsInput.value.trim()}*` : `\n✨ طلبات خاصة: *${specialRequestsInput.value.trim()}*`;
+                }
+            }
             if (vessel === 'large-yacht') {
                 customDetails += isEn ? `\n⏱ Requested Hours: *${yachtHoursInput.value} Hours*` : `\n⏱ الساعات المطلوبة: *${yachtHoursInput.value} ساعات*`;
                 packageLine = '';
@@ -1567,6 +1620,7 @@ window.toggleExpand = toggleExpand;
 // ══════════════════════════════════════════════════════════════════════════
 
 const fleetDetailsData = {
+    "aqua": { "key": "aqua", "name": "يخت أكوا الفاخر", "detailLink": "boats/aqua.html", "calcVessel": "aqua" },
     "mori": { "key": "mori", "name": "يخت موري VIP", "detailLink": "boats/mori.html", "calcVessel": "mori" },
     "atlas": { "key": "atlas", "name": "يخت أطلس وبس", "detailLink": "boats/atlas.html", "calcVessel": "atlas" },
     "jood-007": { "key": "jood-007", "name": "بيبي يخت جود 007", "detailLink": "boats/jood-007.html", "calcVessel": "jood-007" },
@@ -2895,6 +2949,7 @@ const fleetDetailsData = {
 
 
 const fleetDetailsDataEn = {
+    "aqua": { "key": "aqua", "name": "Aqua Luxury Yacht", "detailLink": "boats/aqua.html", "calcVessel": "aqua" },
     "mori": { "key": "mori", "name": "Moorie VIP Yacht", "detailLink": "boats/mori.html", "calcVessel": "mori" },
     "atlas": { "key": "atlas", "name": "Atlas Wa Bas Yacht", "detailLink": "boats/atlas.html", "calcVessel": "atlas" },
     "jood-007": { "key": "jood-007", "name": "Baby Yacht Jood 007", "detailLink": "boats/jood-007.html", "calcVessel": "jood-007" },
