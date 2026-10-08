@@ -336,11 +336,18 @@ document.addEventListener('DOMContentLoaded', () => {
             { id: 'abu-tair', name: 'رحلة جزيرة أبو طير (6 ساعات - 3,400 ريال)', basePriceWeekday: 3400, basePriceWeekend: 3400, duration: 6 },
             { id: 'creek', name: 'جولة الخور (0.5 – 2 ساعة)', duration: 1 }
         ],
-        'al-jawhari': [
-            { id: 'bayadah', name: 'رحلة جزيرة بياضة (6 ساعات - 1,880 ريال)', basePriceWeekday: 1880, basePriceWeekend: 2080, duration: 6 },
-            { id: 'abu-tair', name: 'رحلة جزيرة أبو طير (6 ساعات - 2,180 ريال)', basePriceWeekday: 2180, basePriceWeekend: 2380, duration: 6 },
-            { id: 'khor-saud', name: 'رحلة خور سعود (6 ساعات - 1,880 ريال)', basePriceWeekday: 1880, basePriceWeekend: 2080, duration: 6 },
-            { id: 'creek', name: 'جولة الخور / شرم أبحر (460 ريال/ساعة)', duration: 1 }
+        'mori': [
+            { id: 'bayadah-6', name: 'رحلة جزيرة بياضة (6 ساعات - 6,980 ريال حتى 10 أشخاص)', duration: 6 },
+            { id: 'abu-tair-6', name: 'رحلة جزيرة أبو طير (6 ساعات - 7,480 ريال حتى 10 أشخاص)', duration: 6 },
+            { id: 'creek', name: 'نزهة الخور / شرم أبحر (980 ريال/ساعة)', duration: 1 }
+        ],
+        'atlas': [
+            { id: 'bayadah-6', name: 'رحلة جزيرة بياضة (6 ساعات - تبدأ من 1,880 ريال)', duration: 6 },
+            { id: 'abu-tair-6', name: 'رحلة جزيرة أبو طير (6 ساعات - تبدأ من 2,180 ريال)', duration: 6 },
+            { id: 'creek', name: 'جولة الخور / شرم أبحر (480 ريال/ساعة)', duration: 1 }
+        ],
+        'speed-al-jawhari': [
+            { id: 'creek', name: 'جولة الخور / شرم أبحر (480 ريال/ساعة)', duration: 1 }
         ],
         'al-ameed': [
             { id: 'bayadah', name: 'رحلة جزيرة بياضة (6 ساعات - 1,500 ريال)', basePriceWeekday: 1500, basePriceWeekend: 1800, duration: 6 },
@@ -383,8 +390,26 @@ document.addEventListener('DOMContentLoaded', () => {
         ]
     };
 
+    // Al-Amana fleet sharing the Atlas price list: Bayadah tiers by guest count,
+    // Abu Tair +300, weekend +200, tow game add-on; water scooter only where available
+    const amanaTierBoats = {
+        'atlas':      { scooter: true },
+        'jood-007':   { scooter: false },
+        'al-jawhari': { scooter: false }
+    };
+    const amanaBayadahTiers = [[6, 1880], [8, 2080], [11, 2080]]; // [max guests, price]
+    const amanaAddonPrices = { tow: 200, scooter: 380 };
+    // Hourly creek rate (minimum 1 hour) and party decoration price for Al-Amana boats
+    const amanaCreekRates = { 'mori': 980, 'atlas': 480, 'jood-007': 480, 'al-jawhari': 480, 'speed-al-jawhari': 480 };
+    const decorPrices     = { 'mori': 300, 'atlas': 250, 'jood-007': 250, 'al-jawhari': 250, 'speed-al-jawhari': 250 };
+    tripOptions['jood-007'] = JSON.parse(JSON.stringify(tripOptions['atlas']));
+    tripOptions['al-jawhari'] = JSON.parse(JSON.stringify(tripOptions['atlas']));
+
     // Creek price lookup based on vessel type and duration
     function getCreekPrice(vessel, hours) {
+        if (amanaCreekRates[vessel]) {
+            return amanaCreekRates[vessel] * Math.max(1, hours);
+        }
         if (vessel === 'nardo') {
             if (hours <= 0.5) return 340;
             return 680 + Math.max(0, hours - 1) * 580;
@@ -399,10 +424,6 @@ document.addEventListener('DOMContentLoaded', () => {
         if (vessel === 'qimat-al-fawz-pentos') {
             if (hours <= 0.5) return 250;
             return 450; // 1 hour full is 450
-        }
-        if (vessel === 'al-jawhari') {
-            if (hours <= 0.5) return 230;
-            return 460 * hours; // 460 per hour
         }
         if (vessel === 'baby-yacht-orax-40') {
             if (hours <= 0.5) return 350;
@@ -450,6 +471,10 @@ document.addEventListener('DOMContentLoaded', () => {
         'tam':                    { max: 11, label: '11 ضيفاً' },
         'barbaros':               { max: 11, label: '11 ضيفاً' },
         'al-jawhari':             { max: 11, label: '11 ضيفاً' },
+        'mori':                   { max: 15, label: '15 ضيفاً' },
+        'atlas':                  { max: 11, label: '11 ضيفاً' },
+        'jood-007':               { max: 11, label: '11 ضيفاً' },
+        'speed-al-jawhari':       { max: 8,  label: '8 ضيوف' },
         'qimat-al-fawz-pentos':   { max: 12, label: '12 ضيفاً' },
         'large-yacht':            { max: 30, label: '30 شخصاً' },
         'baby-yacht-ambassador':  { max: 11, label: '11 ضيفاً' },
@@ -473,7 +498,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (tripId === 'creek' || tripId === 'creek-hourly') {
             return totalCost; // 100% deposit for short Creek trips
         }
-        if (vessel === 'barbaros' || vessel === 'qimat-al-fawz-pentos' || vessel === 'large-yacht' || vessel === 'al-jawhari' || vessel === 'nardo' || vessel === 'tam') {
+        if (vessel === 'barbaros' || vessel === 'qimat-al-fawz-pentos' || vessel === 'large-yacht' || vessel === 'nardo' || vessel === 'tam' || amanaCreekRates[vessel]) {
             return totalCost * 0.50; // 50% deposit
         }
         if (vessel.startsWith('baby-yacht')) {
@@ -581,6 +606,26 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    // Al-Amana add-ons: decoration for every trip; tow game and water scooter on island trips only
+    const addDecorSelect = document.getElementById('addDecor');
+    const addTowSelect = document.getElementById('addTow');
+    const addScooterSelect = document.getElementById('addScooter');
+    function updateAmanaAddons() {
+        const vessel = vesselTypeSelect.value;
+        if (!amanaCreekRates[vessel]) return;
+        const isEn = document.documentElement.lang === 'en';
+        const islandTrip = tripTypeSelect.value !== 'creek' && !!amanaTierBoats[vessel];
+        const towRow = document.getElementById('towAddonRow');
+        const scooterRow = document.getElementById('scooterAddonRow');
+        if (towRow) towRow.classList.toggle('hidden', !islandTrip);
+        if (scooterRow) scooterRow.classList.toggle('hidden', !(islandTrip && amanaTierBoats[vessel].scooter));
+        if (addDecorSelect && addDecorSelect.options[1]) {
+            addDecorSelect.options[1].textContent = isEn
+                ? `Add party decoration (+${decorPrices[vessel]} SAR)`
+                : `إضافة تزيين للحفلة (+${decorPrices[vessel]} ريال)`;
+        }
+    }
+
     // Populate Group Form Options
     function populateTripTypes() {
         const vessel = vesselTypeSelect.value;
@@ -596,7 +641,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Ensure Barbaros creek minimum is 1 hour
         if (creekHoursInput) {
-            if (vessel === 'barbaros') {
+            if (vessel === 'barbaros' || amanaCreekRates[vessel]) {
                 creekHoursInput.min = '1';
                 if (parseFloat(creekHoursInput.value) < 1) {
                     creekHoursInput.value = '1';
@@ -608,46 +653,46 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         // Toggle UI panels based on yacht / baby-yacht / southern marina properties
-        const alJawhariOptions = document.getElementById('alJawhariOptions');
+        const amanaAddonsGroup = document.getElementById('amanaAddonsGroup');
         if (vessel === 'nardo' || vessel === 'tam' || vessel === 'barbaros') {
             yachtHoursGroup.classList.add('hidden');
             if (babyYachtOptions) babyYachtOptions.classList.add('hidden');
-            if (alJawhariOptions) alJawhariOptions.classList.add('hidden');
+            if (amanaAddonsGroup) amanaAddonsGroup.classList.add('hidden');
             southernMarinaGroup.classList.add('hidden');
             if (packageGroup) packageGroup.classList.add('hidden');
             if (specialRequestsGroup) specialRequestsGroup.classList.remove('hidden');
-        } else if (vessel === 'al-jawhari') {
+        } else if (amanaCreekRates[vessel]) {
             yachtHoursGroup.classList.add('hidden');
             if (babyYachtOptions) babyYachtOptions.classList.add('hidden');
-            if (alJawhariOptions) alJawhariOptions.classList.remove('hidden');
+            if (amanaAddonsGroup) amanaAddonsGroup.classList.remove('hidden');
             southernMarinaGroup.classList.add('hidden');
             if (packageGroup) packageGroup.classList.add('hidden');
             if (specialRequestsGroup) specialRequestsGroup.classList.remove('hidden');
         } else if (vessel === 'large-yacht') {
             yachtHoursGroup.classList.remove('hidden');
             if (babyYachtOptions) babyYachtOptions.classList.add('hidden');
-            if (alJawhariOptions) alJawhariOptions.classList.add('hidden');
+            if (amanaAddonsGroup) amanaAddonsGroup.classList.add('hidden');
             southernMarinaGroup.classList.add('hidden');
             if (packageGroup) packageGroup.classList.add('hidden');
             if (specialRequestsGroup) specialRequestsGroup.classList.remove('hidden');
         } else if (vessel.startsWith('baby-yacht')) {
             yachtHoursGroup.classList.add('hidden');
             toggleBabyYachtBBQ();
-            if (alJawhariOptions) alJawhariOptions.classList.add('hidden');
+            if (amanaAddonsGroup) amanaAddonsGroup.classList.add('hidden');
             southernMarinaGroup.classList.add('hidden');
             if (packageGroup) packageGroup.classList.remove('hidden');
             if (specialRequestsGroup) specialRequestsGroup.classList.add('hidden');
         } else if (vessel === 'boat-51' || southernBoatAliases.includes(vessel)) {
             yachtHoursGroup.classList.add('hidden');
             if (babyYachtOptions) babyYachtOptions.classList.add('hidden');
-            if (alJawhariOptions) alJawhariOptions.classList.add('hidden');
+            if (amanaAddonsGroup) amanaAddonsGroup.classList.add('hidden');
             southernMarinaGroup.classList.remove('hidden');
             if (packageGroup) packageGroup.classList.add('hidden');
             if (specialRequestsGroup) specialRequestsGroup.classList.add('hidden');
         } else {
             yachtHoursGroup.classList.add('hidden');
             if (babyYachtOptions) babyYachtOptions.classList.add('hidden');
-            if (alJawhariOptions) alJawhariOptions.classList.add('hidden');
+            if (amanaAddonsGroup) amanaAddonsGroup.classList.add('hidden');
             southernMarinaGroup.classList.add('hidden');
             if (packageGroup) packageGroup.classList.remove('hidden');
             if (specialRequestsGroup) specialRequestsGroup.classList.add('hidden');
@@ -710,6 +755,7 @@ document.addEventListener('DOMContentLoaded', () => {
         updateCapacity();
         toggleCreekHoursSlider();
         toggleBabyYachtBBQ();
+        updateAmanaAddons();
 
         const vessel = vesselTypeSelect.value;
         const tripId = tripTypeSelect.value;
@@ -743,7 +789,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // Calculate base price dynamically using getCreekPrice helper
             basePrice = getCreekPrice(vessel, creekHrs);
 
-            if (vessel === 'nardo' || vessel === 'tam' || vessel === 'barbaros') {
+            if (vessel === 'nardo' || vessel === 'tam' || vessel === 'barbaros' || amanaCreekRates[vessel]) {
                 // Flat creek tour rate covering full capacity
                 guestExtra = 0;
             }
@@ -841,18 +887,26 @@ document.addEventListener('DOMContentLoaded', () => {
                 weekendExtra = 200;
             }
         }
-        else if (vessel === 'al-jawhari') {
-            basePrice = (day === 'weekend') ? selectedTrip.basePriceWeekend : selectedTrip.basePriceWeekday;
-            durationText = `${selectedTrip.duration} ساعات`;
-
-            // Base covers 5-6 guests, +100 SAR per person above 6 up to 11
-            if (guests > 6) {
-                guestExtra += (guests - 6) * 100;
+        else if (vessel === 'mori') {
+            // Price covers up to 10 guests, +150 SAR per extra guest (max 15)
+            basePrice = (tripId === 'abu-tair-6') ? 7480 : 6980;
+            durationText = '6 ساعات';
+            if (guests > 10) {
+                guestExtra += (guests - 10) * 150;
             }
-
-            const addBananaBoatSelect = document.getElementById('addBananaBoat');
-            if (addBananaBoatSelect && addBananaBoatSelect.value === 'yes') {
-                guestExtra += 250;
+        }
+        else if (amanaTierBoats[vessel]) {
+            const tier = amanaBayadahTiers.find(t => guests <= t[0]) || amanaBayadahTiers[amanaBayadahTiers.length - 1];
+            basePrice = tier[1] + (tripId === 'abu-tair-6' ? 300 : 0);
+            durationText = '6 ساعات';
+            if (day === 'weekend') {
+                weekendExtra = 200;
+            }
+            if (addTowSelect && addTowSelect.value === 'yes') {
+                guestExtra += amanaAddonPrices.tow;
+            }
+            if (amanaTierBoats[vessel].scooter && addScooterSelect && addScooterSelect.value === 'yes') {
+                guestExtra += amanaAddonPrices.scooter;
             }
         }
         else if (vessel.startsWith('baby-yacht')) {
@@ -902,8 +956,13 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
 
-        // 2. VIP & VVIP Package additions (if not large-yacht, not southern boats, not al-jawhari, not nardo, not tam, and not barbaros)
-        if (vessel !== 'large-yacht' && vessel !== 'boat-51' && vessel !== 'al-jawhari' && vessel !== 'nardo' && vessel !== 'tam' && vessel !== 'barbaros' && !southernBoatAliases.includes(vessel)) {
+        // Party decoration (Al-Amana boats)
+        if (amanaCreekRates[vessel] && addDecorSelect && addDecorSelect.value === 'yes') {
+            guestExtra += decorPrices[vessel];
+        }
+
+        // 2. VIP & VVIP Package additions (if not large-yacht, not southern boats, not Al-Amana boats, not nardo, not tam, and not barbaros)
+        if (vessel !== 'large-yacht' && vessel !== 'boat-51' && !amanaCreekRates[vessel] && vessel !== 'nardo' && vessel !== 'tam' && vessel !== 'barbaros' && !southernBoatAliases.includes(vessel)) {
             if (pkg === 'vip') {
                 packageExtra = 300;
             } else if (pkg === 'vvip') {
@@ -986,6 +1045,10 @@ const vesselDisplayNamesEn = {
     'baby-yacht-ambassador': 'Baby Yacht Ambassador',
     'baby-yacht-orax-40': 'Baby Yacht Orax 40',
     'al-jawhari': 'Al-Jawhari VIP Yacht',
+    'mori': 'Moorie VIP Yacht',
+    'atlas': 'Atlas Wa Bas Yacht',
+    'jood-007': 'Baby Yacht Jood 007',
+    'speed-al-jawhari': 'Al-Jawhari Speedboat',
     'nardo': 'Nardo VIP Yacht',
     'tam': 'Tam VIP Yacht',
     'al-ameed': 'Al-Ameed Boat',
@@ -1039,6 +1102,10 @@ const vesselDisplayNames = {
         'tam': 'يخت تام الفاخر (11 شخص)',
         'barbaros': 'قارب بارباروسا VIP (نادي الأمانة)',
         'al-jawhari': 'يخت الجوهري (11 شخص)',
+        'mori': 'يخت موري VIP (15 شخص)',
+        'atlas': 'يخت أطلس وبس (11 شخص)',
+        'jood-007': 'بيبي يخت جود 007 (11 شخص)',
+        'speed-al-jawhari': 'سبيد بوت الجوهري',
         'qimat-al-fawz-pentos': 'يخت بينتوس VIP (مرسى الأحلام)',
         'qimat-al-fawz': 'قارب قمة الفوز (موديل 2025)',
         'baby-yacht-ambassador': 'بيبي يخت امباسادور 36 قدم',
@@ -1113,7 +1180,7 @@ const vesselDisplayNames = {
             let customDetails = '';
 
             // Add marina details
-            if (vessel === 'barbaros' || vessel === 'nardo' || vessel === 'tam' || vessel === 'al-jawhari') {
+            if (vessel === 'barbaros' || vessel === 'nardo' || vessel === 'tam' || amanaCreekRates[vessel]) {
                 customDetails += isEn ? `\n📍 Departure Marina: *Al-Amanah Yacht Club (South Obhur)*` : `\n📍 مرسى الانطلاق: *نادي الأمانة لليخوت (أبحر الجنوبية)*`;
             } else if (vessel === 'qimat-al-fawz-pentos' || vessel === 'al-ameed' || vessel === 'norseen-large') {
                 customDetails += isEn ? `\n📍 Departure Marina: *Marsa Al Ahlam*` : `\n📍 مرسى الانطلاق: *مرسى الأحلام*`;
@@ -1144,11 +1211,20 @@ const vesselDisplayNames = {
                 customDetails += isEn ? `\n🥩 Add BBQ Meal: *Yes (+600 SAR)*` : `\n🥩 إضافة وجبة مشويات: *نعم (+600 ريال)*`;
             }
 
-            // Al-Jawhari water toy option
-            if (vessel === 'al-jawhari') {
-                const addBananaBoatSelect = document.getElementById('addBananaBoat');
-                if (addBananaBoatSelect && addBananaBoatSelect.value === 'yes') {
-                    customDetails += isEn ? `\n🍌 Banana Boat Water Toy: *Yes (+250 SAR)*` : `\n🍌 لعبة سحب الموزة: *نعم (+250 ريال)*`;
+            // Al-Amana boats add-ons
+            if (amanaCreekRates[vessel]) {
+                const islandTrip = tripId !== 'creek' && !!amanaTierBoats[vessel];
+                if (islandTrip && addTowSelect && addTowSelect.value === 'yes') {
+                    customDetails += isEn ? `\n🛟 Tow Game: *Yes (+${amanaAddonPrices.tow} SAR)*` : `\n🛟 لعبة السحب: *نعم (+${amanaAddonPrices.tow} ريال)*`;
+                }
+                if (islandTrip && amanaTierBoats[vessel].scooter && addScooterSelect && addScooterSelect.value === 'yes') {
+                    customDetails += isEn ? `\n🤿 Water Scooter: *Yes (+${amanaAddonPrices.scooter} SAR)*` : `\n🤿 سكوتر مائي: *نعم (+${amanaAddonPrices.scooter} ريال)*`;
+                }
+                if (addDecorSelect && addDecorSelect.value === 'yes') {
+                    customDetails += isEn ? `\n🎈 Party Decoration: *Yes (+${decorPrices[vessel]} SAR)*` : `\n🎈 تزيين الحفلة: *نعم (+${decorPrices[vessel]} ريال)*`;
+                }
+                if (specialRequestsInput && specialRequestsInput.value.trim() !== '') {
+                    customDetails += isEn ? `\n✨ Special Requests: *${specialRequestsInput.value.trim()}*` : `\n✨ طلبات خاصة: *${specialRequestsInput.value.trim()}*`;
                 }
                 packageLine = '';
             }
@@ -1237,11 +1313,10 @@ const vesselDisplayNames = {
         addBBQSelect.addEventListener('change', calculatePrice);
     }
 
-    // Add Banana Boat (Al-Jawhari)
-    const addBananaBoatSelect = document.getElementById('addBananaBoat');
-    if (addBananaBoatSelect) {
-        addBananaBoatSelect.addEventListener('change', calculatePrice);
-    }
+    // Al-Amana add-ons
+    [addDecorSelect, addTowSelect, addScooterSelect].forEach(sel => {
+        if (sel) sel.addEventListener('change', calculatePrice);
+    });
 
     // Individual listeners
     if (indTripType) indTripType.addEventListener('change', calculatePrice);
@@ -1492,6 +1567,10 @@ window.toggleExpand = toggleExpand;
 // ══════════════════════════════════════════════════════════════════════════
 
 const fleetDetailsData = {
+    "mori": { "key": "mori", "name": "يخت موري VIP", "detailLink": "boats/mori.html", "calcVessel": "mori" },
+    "atlas": { "key": "atlas", "name": "يخت أطلس وبس", "detailLink": "boats/atlas.html", "calcVessel": "atlas" },
+    "jood-007": { "key": "jood-007", "name": "بيبي يخت جود 007", "detailLink": "boats/jood-007.html", "calcVessel": "jood-007" },
+    "speed-al-jawhari": { "key": "speed-al-jawhari", "name": "سبيد بوت الجوهري", "detailLink": "boats/speed-al-jawhari.html", "calcVessel": "speed-al-jawhari" },
     "barbaros": {
         "key": "barbaros",
         "name": "قارب بارباروسا VIP (Barbarossa)",
@@ -2816,6 +2895,10 @@ const fleetDetailsData = {
 
 
 const fleetDetailsDataEn = {
+    "mori": { "key": "mori", "name": "Moorie VIP Yacht", "detailLink": "boats/mori.html", "calcVessel": "mori" },
+    "atlas": { "key": "atlas", "name": "Atlas Wa Bas Yacht", "detailLink": "boats/atlas.html", "calcVessel": "atlas" },
+    "jood-007": { "key": "jood-007", "name": "Baby Yacht Jood 007", "detailLink": "boats/jood-007.html", "calcVessel": "jood-007" },
+    "speed-al-jawhari": { "key": "speed-al-jawhari", "name": "Al-Jawhari Speedboat", "detailLink": "boats/speed-al-jawhari.html", "calcVessel": "speed-al-jawhari" },
     "barbaros": {
         "key": "barbaros",
         "name": "Barbaros VIP Boat (Barbarossa)",

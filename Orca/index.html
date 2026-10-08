@@ -205,6 +205,7 @@
             <div class="packages-tabs">
                 <a href="#cat-featured" class="tab-btn active">الأكثر طلباً</a>
                 <a href="#cat-baby-yachts" class="tab-btn">بيبي يخت</a>
+                <a href="#cat-speed-boats" class="tab-btn">سبيد بوت</a>
                 <a href="#cat-large-boats" class="tab-btn">قوارب كبيرة</a>
                 <a href="#cat-yachts" class="tab-btn">اليخوت الكبيرة</a>
                 <a href="#cat-regular-boats" class="tab-btn">قوارب عادية</a>
@@ -292,6 +293,77 @@
                             </div>
                         </div>
                     </div>
+                    <!-- Minimalist Boat Card: يخت موري VIP (Moorie) -->
+                    <div class="package-card minimalist-boat-card featured-boat-card" id="package-mori">
+                        <div class="package-badge badge-gold"><i class="fa-solid fa-crown"></i> يخت VIP بطابقين | حتى 15 ضيفاً</div>
+                        <div class="package-slider" data-slider-id="mori">
+                            <div class="slides-container">
+                            <img class="slide active" src="images/موري/1.webp" alt="يخت موري VIP في البحر بجدة" loading="lazy" decoding="async" width="600" height="375">
+                            <img class="slide " src="images/موري/2.webp" alt="يخت موري أثناء الإبحار" loading="lazy" decoding="async" width="600" height="375">
+                            <img class="slide " src="images/موري/3.webp" alt="إطلالة علوية على يخت موري" loading="lazy" decoding="async" width="600" height="375">
+                            <img class="slide " src="images/موري/4.webp" alt="مقدمة يخت موري وجلسة التشميس" loading="lazy" decoding="async" width="600" height="375">
+                            <img class="slide " src="images/موري/5.webp" alt="يخت موري في مرسى الأمانة لليخوت" loading="lazy" decoding="async" width="600" height="375">
+                            <img class="slide " src="images/موري/6.webp" alt="جلسة الفلاي بريدج العلوية" loading="lazy" decoding="async" width="600" height="375">
+                            </div>
+                        </div>
+                        <div class="package-body card-compact-body">
+                            <div class="card-header-row">
+                                <h3 class="package-name">يخت موري VIP (Moorie)</h3>
+                                <span class="card-cat-tag">يخت فاخر VIP</span>
+                            </div>
+                            <div class="boat-quick-specs">
+                                <div class="quick-spec-badge" title="السعة القصوى">
+                                    <i class="fa-solid fa-users"></i>
+                                    <span>حتى 15 ضيفاً</span>
+                                </div>
+                                <div class="quick-spec-badge" title="مرسى الانطلاق">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                    <span>مرسى الأمانة لليخوت</span>
+                                </div>
+                                <div class="quick-spec-badge highlight-feature" title="الميزة الرئيسية">
+                                    <i class="fa-solid fa-bed"></i>
+                                    <span>فلاي بريدج وغرفتا نوم</span>
+                                </div>
+                            </div>
+
+                            <!-- Detailed Mini Pricing Block -->
+                            <div class="card-pricing-block">
+                                <div class="pricing-block-title">
+                                    <i class="fa-solid fa-tags"></i>
+                                    <span>تفاصيل الأسعار والرحلات:</span>
+                                </div>
+                                <div class="pricing-mini-list">
+
+                                    <div class="pricing-mini-row">
+                                        <span class="trip-mini-label"><i class="fa-solid fa-ship"></i> نزهة الخور:</span>
+                                        <strong class="trip-mini-val">980 ر.س / ساعة</strong>
+                                    </div>
+                                    <div class="pricing-mini-row">
+                                        <span class="trip-mini-label"><i class="fa-solid fa-umbrella-beach"></i> جزيرة بياضة (6س):</span>
+                                        <strong class="trip-mini-val">6,980 ر.س (10 أشخاص)</strong>
+                                    </div>
+                                    <div class="pricing-mini-row">
+                                        <span class="trip-mini-label"><i class="fa-solid fa-compass"></i> جزيرة أبو طير (6س):</span>
+                                        <strong class="trip-mini-val">7,480 ر.س (10 أشخاص)</strong>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card-action-buttons">
+                                <a href="boats/mori.html" class="btn btn-primary btn-boat-page" title="عرض صفحة القارب">
+                                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                    <span>صفحة القارب</span>
+                                </a>
+                                <button type="button" class="btn btn-outline btn-card-book" onclick="openCalculatorModal('mori')">
+                                    <i class="fa-solid fa-calculator"></i>
+                                    <span>احجز</span>
+                                </button>
+                                <button type="button" class="btn btn-share-icon" onclick="shareBoatDirect('mori', 'boats/mori.html')" title="مشاركة رابط القارب" aria-label="مشاركة رابط القارب">
+                                    <i class="fa-solid fa-share-nodes"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
                     <!-- Minimalist Boat Card: يخت الجوهري (Al-Jawhari) -->
                     <div class="package-card minimalist-boat-card featured-boat-card" id="package-baby-al-jawhari">
                         <div class="package-badge badge-gold"><i class="fa-solid fa-crown"></i> VIP فخامة وألعاب مائية</div>
@@ -335,7 +407,7 @@
 
                                     <div class="pricing-mini-row">
                                         <span class="trip-mini-label"><i class="fa-solid fa-ship"></i> جولة الخور:</span>
-                                        <strong class="trip-mini-val">580 ر.س / ساعة</strong>
+                                        <strong class="trip-mini-val">480 ر.س / ساعة</strong>
                                     </div>
                                     <div class="pricing-mini-row">
                                         <span class="trip-mini-label"><i class="fa-solid fa-umbrella-beach"></i> جزيرة بياضة (6س):</span>
@@ -507,6 +579,77 @@
                             </div>
                         </div>
                     </div>
+                    <!-- Minimalist Boat Card: يخت أطلس وبس (Atlas Wa Bas) -->
+                    <div class="package-card minimalist-boat-card" id="package-atlas">
+                        <div class="package-badge badge-gold"><i class="fa-solid fa-crown"></i> ألعاب مائية وسكوتر | إضاءة ليلية</div>
+                        <div class="package-slider" data-slider-id="atlas">
+                            <div class="slides-container">
+                            <img class="slide active" src="images/اطلس وبس/1.webp" alt="يخت أطلس وبس في البحر بجدة" loading="lazy" decoding="async" width="600" height="375">
+                            <img class="slide " src="images/اطلس وبس/2.webp" alt="الجلسات الأمامية الواسعة" loading="lazy" decoding="async" width="600" height="375">
+                            <img class="slide " src="images/اطلس وبس/3.webp" alt="الجلسة الجانبية المبطنة" loading="lazy" decoding="async" width="600" height="375">
+                            <img class="slide " src="images/اطلس وبس/4.webp" alt="الجلسة الخلفية والمحركات المزدوجة" loading="lazy" decoding="async" width="600" height="375">
+                            <img class="slide " src="images/اطلس وبس/5.webp" alt="جلسات السطح المظللة" loading="lazy" decoding="async" width="600" height="375">
+                            <img class="slide " src="images/اطلس وبس/6.webp" alt="مقصورة القيادة" loading="lazy" decoding="async" width="600" height="375">
+                            </div>
+                        </div>
+                        <div class="package-body card-compact-body">
+                            <div class="card-header-row">
+                                <h3 class="package-name">يخت أطلس وبس (Atlas Wa Bas)</h3>
+                                <span class="card-cat-tag">بيبي يخت</span>
+                            </div>
+                            <div class="boat-quick-specs">
+                                <div class="quick-spec-badge" title="السعة القصوى">
+                                    <i class="fa-solid fa-users"></i>
+                                    <span>حتى 11 ضيفاً</span>
+                                </div>
+                                <div class="quick-spec-badge" title="مرسى الانطلاق">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                    <span>مرسى الأمانة لليخوت</span>
+                                </div>
+                                <div class="quick-spec-badge highlight-feature" title="الميزة الرئيسية">
+                                    <i class="fa-solid fa-person-swimming"></i>
+                                    <span>سكوتر مائي ولعبة سحب</span>
+                                </div>
+                            </div>
+
+                            <!-- Detailed Mini Pricing Block -->
+                            <div class="card-pricing-block">
+                                <div class="pricing-block-title">
+                                    <i class="fa-solid fa-tags"></i>
+                                    <span>تفاصيل الأسعار والرحلات:</span>
+                                </div>
+                                <div class="pricing-mini-list">
+
+                                    <div class="pricing-mini-row">
+                                        <span class="trip-mini-label"><i class="fa-solid fa-ship"></i> جولة الخور:</span>
+                                        <strong class="trip-mini-val">480 ر.س / ساعة</strong>
+                                    </div>
+                                    <div class="pricing-mini-row">
+                                        <span class="trip-mini-label"><i class="fa-solid fa-umbrella-beach"></i> جزيرة بياضة (6س):</span>
+                                        <strong class="trip-mini-val">تبدأ من 1,880 ر.س</strong>
+                                    </div>
+                                    <div class="pricing-mini-row">
+                                        <span class="trip-mini-label"><i class="fa-solid fa-compass"></i> جزيرة أبو طير (6س):</span>
+                                        <strong class="trip-mini-val">تبدأ من 2,180 ر.س</strong>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card-action-buttons">
+                                <a href="boats/atlas.html" class="btn btn-primary btn-boat-page" title="عرض صفحة القارب">
+                                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                    <span>صفحة القارب</span>
+                                </a>
+                                <button type="button" class="btn btn-outline btn-card-book" onclick="openCalculatorModal('atlas')">
+                                    <i class="fa-solid fa-calculator"></i>
+                                    <span>احجز</span>
+                                </button>
+                                <button type="button" class="btn btn-share-icon" onclick="shareBoatDirect('atlas', 'boats/atlas.html')" title="مشاركة رابط القارب" aria-label="مشاركة رابط القارب">
+                                    <i class="fa-solid fa-share-nodes"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
                     <!-- Minimalist Boat Card: يخت تام الفاخر (Tam Yacht) -->
                     <div class="package-card minimalist-boat-card" id="package-tam">
                         <div class="package-badge badge-gold"><i class="fa-solid fa-crown"></i> بيبي يخت أنيق | أبيض</div>
@@ -568,6 +711,77 @@
                                     <span>احجز</span>
                                 </button>
                                 <button type="button" class="btn btn-share-icon" onclick="shareBoatDirect('tam', 'boats/tam.html')" title="مشاركة رابط القارب" aria-label="مشاركة رابط القارب">
+                                    <i class="fa-solid fa-share-nodes"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Minimalist Boat Card: بيبي يخت جود 007 -->
+                    <div class="package-card minimalist-boat-card" id="package-jood-007">
+                        <div class="package-badge badge-gold"><i class="fa-solid fa-crown"></i> بيبي يخت | كابينة ومطبخ</div>
+                        <div class="package-slider" data-slider-id="jood-007">
+                            <div class="slides-container">
+                            <img class="slide active" src="images/جود 007/1.webp" alt="بيبي يخت جود 007 في بياضة" loading="lazy" decoding="async" width="600" height="375">
+                            <img class="slide " src="images/جود 007/2.webp" alt="جود 007 فوق الشعاب المرجانية" loading="lazy" decoding="async" width="600" height="375">
+                            <img class="slide " src="images/جود 007/3.webp" alt="جود 007 في المياه الفيروزية" loading="lazy" decoding="async" width="600" height="375">
+                            <img class="slide " src="images/جود 007/4.webp" alt="جود 007 وقت الغروب" loading="lazy" decoding="async" width="600" height="375">
+                            <img class="slide " src="images/جود 007/5.webp" alt="جود 007 في المرسى ليلاً" loading="lazy" decoding="async" width="600" height="375">
+                            <img class="slide " src="images/جود 007/6.webp" alt="جود 007 بالقرب من الجزيرة" loading="lazy" decoding="async" width="600" height="375">
+                            </div>
+                        </div>
+                        <div class="package-body card-compact-body">
+                            <div class="card-header-row">
+                                <h3 class="package-name">بيبي يخت جود 007</h3>
+                                <span class="card-cat-tag">بيبي يخت</span>
+                            </div>
+                            <div class="boat-quick-specs">
+                                <div class="quick-spec-badge" title="السعة القصوى">
+                                    <i class="fa-solid fa-users"></i>
+                                    <span>حتى 11 ضيفاً</span>
+                                </div>
+                                <div class="quick-spec-badge" title="مرسى الانطلاق">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                    <span>مرسى الأمانة لليخوت</span>
+                                </div>
+                                <div class="quick-spec-badge highlight-feature" title="الميزة الرئيسية">
+                                    <i class="fa-solid fa-bed"></i>
+                                    <span>كابينة نوم ومطبخ</span>
+                                </div>
+                            </div>
+
+                            <!-- Detailed Mini Pricing Block -->
+                            <div class="card-pricing-block">
+                                <div class="pricing-block-title">
+                                    <i class="fa-solid fa-tags"></i>
+                                    <span>تفاصيل الأسعار والرحلات:</span>
+                                </div>
+                                <div class="pricing-mini-list">
+
+                                    <div class="pricing-mini-row">
+                                        <span class="trip-mini-label"><i class="fa-solid fa-ship"></i> جولة الخور:</span>
+                                        <strong class="trip-mini-val">480 ر.س / ساعة</strong>
+                                    </div>
+                                    <div class="pricing-mini-row">
+                                        <span class="trip-mini-label"><i class="fa-solid fa-umbrella-beach"></i> جزيرة بياضة (6س):</span>
+                                        <strong class="trip-mini-val">تبدأ من 1,880 ر.س</strong>
+                                    </div>
+                                    <div class="pricing-mini-row">
+                                        <span class="trip-mini-label"><i class="fa-solid fa-compass"></i> جزيرة أبو طير (6س):</span>
+                                        <strong class="trip-mini-val">تبدأ من 2,180 ر.س</strong>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card-action-buttons">
+                                <a href="boats/jood-007.html" class="btn btn-primary btn-boat-page" title="عرض صفحة القارب">
+                                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                    <span>صفحة القارب</span>
+                                </a>
+                                <button type="button" class="btn btn-outline btn-card-book" onclick="openCalculatorModal('jood-007')">
+                                    <i class="fa-solid fa-calculator"></i>
+                                    <span>احجز</span>
+                                </button>
+                                <button type="button" class="btn btn-share-icon" onclick="shareBoatDirect('jood-007', 'boats/jood-007.html')" title="مشاركة رابط القارب" aria-label="مشاركة رابط القارب">
                                     <i class="fa-solid fa-share-nodes"></i>
                                 </button>
                             </div>
@@ -781,6 +995,79 @@
                                     <span>احجز</span>
                                 </button>
                                 <button type="button" class="btn btn-share-icon" onclick="shareBoatDirect('pentos', 'boats/Beneteau.html')" title="مشاركة رابط القارب" aria-label="مشاركة رابط القارب">
+                                    <i class="fa-solid fa-share-nodes"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+
+                <!-- Category: cat-speed-boats -->
+                <div class="category-section" id="cat-speed-boats">
+                    <h3 class="category-title"><i class="fa-solid fa-gauge-high" style="color: var(--ocean);"></i> سبيد بوت — جولات الخور والحفلات</h3>
+                    <div class="packages-grid">
+                    <!-- Minimalist Boat Card: سبيد بوت الجوهري -->
+                    <div class="package-card minimalist-boat-card" id="package-speed-al-jawhari">
+                        <div class="package-badge badge-gold"><i class="fa-solid fa-crown"></i> سبيد بوت | جولات الخور والحفلات</div>
+                        <div class="package-slider" data-slider-id="speed-al-jawhari">
+                            <div class="slides-container">
+                            <img class="slide active" src="images/سبيد الجوهري/1.webp" alt="سبيد بوت الجوهري في مرسى الأمانة" loading="lazy" decoding="async" width="600" height="375">
+                            <img class="slide " src="images/سبيد الجوهري/2.webp" alt="سبيد بوت الجوهري في المرسى" loading="lazy" decoding="async" width="600" height="375">
+                            <img class="slide " src="images/سبيد الجوهري/3.webp" alt="سبيد بوت الجوهري مزين لحفلة" loading="lazy" decoding="async" width="600" height="375">
+                            <img class="slide " src="images/سبيد الجوهري/4.webp" alt="سبيد بوت الجوهري وقت الغروب" loading="lazy" decoding="async" width="600" height="375">
+                            <img class="slide " src="images/سبيد الجوهري/5.webp" alt="سبيد بوت الجوهري مع إضاءة الغروب" loading="lazy" decoding="async" width="600" height="375">
+                            </div>
+                        </div>
+                        <div class="package-body card-compact-body">
+                            <div class="card-header-row">
+                                <h3 class="package-name">سبيد بوت الجوهري</h3>
+                                <span class="card-cat-tag">سبيد بوت</span>
+                            </div>
+                            <div class="boat-quick-specs">
+                                <div class="quick-spec-badge" title="نوع الرحلة">
+                                    <i class="fa-solid fa-gauge-high"></i>
+                                    <span>جولات الخور</span>
+                                </div>
+                                <div class="quick-spec-badge" title="مرسى الانطلاق">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                    <span>مرسى الأمانة لليخوت</span>
+                                </div>
+                                <div class="quick-spec-badge highlight-feature" title="الميزة الرئيسية">
+                                    <i class="fa-solid fa-champagne-glasses"></i>
+                                    <span>تزيين للحفلات والمناسبات</span>
+                                </div>
+                            </div>
+
+                            <!-- Detailed Mini Pricing Block -->
+                            <div class="card-pricing-block">
+                                <div class="pricing-block-title">
+                                    <i class="fa-solid fa-tags"></i>
+                                    <span>تفاصيل الأسعار والرحلات:</span>
+                                </div>
+                                <div class="pricing-mini-list">
+
+                                    <div class="pricing-mini-row">
+                                        <span class="trip-mini-label"><i class="fa-solid fa-ship"></i> جولة الخور:</span>
+                                        <strong class="trip-mini-val">480 ر.س / ساعة</strong>
+                                    </div>
+                                    <div class="pricing-mini-row">
+                                        <span class="trip-mini-label"><i class="fa-solid fa-champagne-glasses"></i> تزيين الحفلات:</span>
+                                        <strong class="trip-mini-val">+250 ر.س</strong>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card-action-buttons">
+                                <a href="boats/speed-al-jawhari.html" class="btn btn-primary btn-boat-page" title="عرض صفحة القارب">
+                                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                    <span>صفحة القارب</span>
+                                </a>
+                                <button type="button" class="btn btn-outline btn-card-book" onclick="openCalculatorModal('speed-al-jawhari')">
+                                    <i class="fa-solid fa-calculator"></i>
+                                    <span>احجز</span>
+                                </button>
+                                <button type="button" class="btn btn-share-icon" onclick="shareBoatDirect('speed-al-jawhari', 'boats/speed-al-jawhari.html')" title="مشاركة رابط القارب" aria-label="مشاركة رابط القارب">
                                     <i class="fa-solid fa-share-nodes"></i>
                                 </button>
                             </div>
@@ -2031,13 +2318,27 @@
                             </div>
                         </div>
 
-                        <!-- Al-Jawhari specific options (Banana Boat) -->
-                        <div class="form-group hidden" id="alJawhariOptions">
+                        <!-- Al-Amana boats add-ons (decoration, tow game, water scooter) -->
+                        <div class="form-group hidden" id="amanaAddonsGroup">
                             <div class="sub-form-group">
-                                <label for="addBananaBoat"><i class="fa-solid fa-bolt" style="color: var(--gold);"></i> إضافة لعبة سحب الموزة (Banana Boat)</label>
-                                <select id="addBananaBoat" aria-label="إضافة لعبة سحب الموزة">
-                                    <option value="no">بدون لعبة سحب الموزة</option>
-                                    <option value="yes">إضافة لعبة سحب الموزة (+250 ريال)</option>
+                                <label for="addDecor"><i class="fa-solid fa-champagne-glasses" style="color: var(--gold);"></i> تزيين للحفلات والمناسبات</label>
+                                <select id="addDecor" aria-label="إضافة تزيين للحفلة">
+                                    <option value="no">بدون تزيين</option>
+                                    <option value="yes">إضافة تزيين للحفلة</option>
+                                </select>
+                            </div>
+                            <div class="sub-form-group margin-top-sm" id="towAddonRow">
+                                <label for="addTow"><i class="fa-solid fa-bolt" style="color: var(--gold);"></i> لعبة السحب المائية</label>
+                                <select id="addTow" aria-label="إضافة لعبة السحب">
+                                    <option value="no">بدون لعبة السحب</option>
+                                    <option value="yes">إضافة لعبة السحب (+200 ريال)</option>
+                                </select>
+                            </div>
+                            <div class="sub-form-group margin-top-sm" id="scooterAddonRow">
+                                <label for="addScooter"><i class="fa-solid fa-person-swimming" style="color: var(--ocean);"></i> سكوتر مائي (Sea Scooter)</label>
+                                <select id="addScooter" aria-label="إضافة سكوتر مائي">
+                                    <option value="no">بدون سكوتر</option>
+                                    <option value="yes">إضافة سكوتر مائي (+380 ريال)</option>
                                 </select>
                             </div>
                         </div>
@@ -2478,6 +2779,10 @@
                         <li><a href="boats/nardo.html"><i class="fa-solid fa-crown" style="color: var(--gold);"></i> يخت ناردو VIP</a></li>
                         <li><a href="boats/tam.html"><i class="fa-solid fa-ship"></i> يخت تام الفاخر</a></li>
                         <li><a href="boats/barbaros.html"><i class="fa-solid fa-crown" style="color: var(--gold);"></i> قارب بارباروسا VIP</a></li>
+                        <li><a href="boats/mori.html"><i class="fa-solid fa-crown" style="color: var(--gold);"></i> يخت موري VIP</a></li>
+                        <li><a href="boats/atlas.html"><i class="fa-solid fa-ship"></i> يخت أطلس وبس</a></li>
+                        <li><a href="boats/jood-007.html"><i class="fa-solid fa-ship"></i> بيبي يخت جود 007</a></li>
+                        <li><a href="boats/speed-al-jawhari.html"><i class="fa-solid fa-gauge-high"></i> سبيد بوت الجوهري</a></li>
                         <li><a href="boats/al-jawhari.html"><i class="fa-solid fa-gem" style="color: var(--gold);"></i> يخت الجوهري VIP</a></li>
                         <li><a href="boats/Beneteau.html"><i class="fa-solid fa-crown"></i> يخت بينتوس VIP</a></li>
                         <li><a href="boats/large-yacht.html"><i class="fa-solid fa-ship"></i> اليخت الكبير الفاخر</a></li>
@@ -2537,6 +2842,6 @@
         <div id="caption"></div>
     </div>
 
-    <script src="app.min.js?v=5" defer></script>
+    <script src="app.min.js?v=6" defer></script>
 </body>
 </html>
