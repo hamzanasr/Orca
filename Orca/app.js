@@ -2134,7 +2134,7 @@ const fleetDetailsData = {
         "featureIcon": "fa-solid fa-fish-fins",
         "startingPrice": "1,500",
         "priceUnit": "ر.س (6 ساعات)",
-        "priceSubtext": "أو 350 ر.س / ساعة جولات الخور",
+        "priceSubtext": "أو 400 ر.س / ساعة جولات الخور",
         "descriptions": [
             "قارب واسع ومريح بمرسى الأحلام ومثالي للعوائل والرحلات المميزة لجزيرة بياضة وجزيرة أبو طير ورحلات الصيد."
         ],
@@ -2463,7 +2463,7 @@ const fleetDetailsData = {
             },
             {
                 "icon": "fa-solid fa-circle-check",
-                "text": "السعر يشمل 7 أشخاص (كل شخص إضافي 100 ريال)"
+                "text": "السعر يشمل 6 أشخاص (كل شخص إضافي 100 ريال)"
             },
             {
                 "icon": "fa-solid fa-map-location-dot",
@@ -2516,7 +2516,7 @@ const fleetDetailsData = {
             },
             {
                 "icon": "fa-solid fa-circle-check",
-                "text": "السعر يشمل 7 أشخاص (كل شخص إضافي 100 ريال)"
+                "text": "السعر يشمل 6 أشخاص (كل شخص إضافي 100 ريال)"
             },
             {
                 "icon": "fa-solid fa-map-location-dot",
@@ -2581,7 +2581,7 @@ const fleetDetailsData = {
             },
             {
                 "icon": "fa-solid fa-circle-check",
-                "text": "السعر يشمل 7 أشخاص (كل شخص إضافي 100 ريال)"
+                "text": "السعر يشمل 6 أشخاص (كل شخص إضافي 100 ريال)"
             },
             {
                 "icon": "fa-solid fa-map-location-dot",
@@ -3583,7 +3583,7 @@ const fleetDetailsDataEn = {
         "pricingRows": [
             {
                 "label": "Creek Cruise",
-                "val": "350 SAR / hr",
+                "val": "400 SAR / hr",
                 "icon": "fa-solid fa-ship"
             },
             {
@@ -3614,7 +3614,7 @@ const fleetDetailsDataEn = {
                 "text": "Departure Marina: Marsa Al Ahlam."
             }
         ],
-        "packagesHtml": "<h4 class=\"box-title\"><i class=\"fa-solid fa-users\" style=\"color: var(--navy);\"></i> Al-Ameed Group Boat Packages (6 Hours / Fishing 12h-10h)</h4>\n        <div class=\"trip-price-item\">\n            <div class=\"trip-info\"><span class=\"trip-name\">Bayadah Island Cruise (6 Hours)</span></div>\n            <div class=\"trip-price\"><strong>1,500 Wkday | 1,800 Wkend</strong></div>\n        </div>\n        <div class=\"trip-price-item\">\n            <div class=\"trip-info\"><span class=\"trip-name\">Abu Tair Island Cruise (6 Hours)</span></div>\n            <div class=\"trip-price\"><strong>1,800 Wkday | 2,100 Wkend</strong></div>\n        </div>\n        <div class=\"trip-price-item border-top-dash\">\n            <div class=\"trip-info\"><span class=\"trip-name\">Fishing & Bayadah Combo (6 Hours)</span></div>\n            <div class=\"trip-price\"><strong>1,950 Wkday | 2,250 Wkend</strong></div>\n        </div>\n        <div class=\"trip-price-item border-top-dash\">\n            <div class=\"trip-info\"><span class=\"trip-name\">Deep-Sea Fishing Only (12h Wkday / 10h Wkend)</span><small class=\"weekend-note\">Duration & pricing unchanged</small></div>\n            <div class=\"trip-price\"><strong>1,800 Wkday | 2,100 Wkend</strong></div>\n        </div>\n        <div class=\"trip-price-item border-top-dash\">\n            <div class=\"trip-info\"><span class=\"trip-name\">Add-ons</span><small class=\"weekend-note\">Extra Hour: 150 SAR/hr | Extra Guest (after 6): 100 SAR/person (excluding fishing)</small></div>\n            <div class=\"trip-price\"><strong>150 SAR/hr | 100 SAR/guest</strong></div>\n        </div>\n        <div class=\"trip-price-item border-top-dash\">\n            <div class=\"trip-info\"><span class=\"trip-name\">Obhur Creek Sightseeing Tour</span></div>\n            <div class=\"trip-price\"><strong>350 SAR / hr (250 half hr)</strong></div>\n        </div>",
+        "packagesHtml": "<h4 class=\"box-title\"><i class=\"fa-solid fa-users\" style=\"color: var(--navy);\"></i> Al-Ameed Group Boat Packages (6 Hours / Fishing 12h-10h)</h4>\n        <div class=\"trip-price-item\">\n            <div class=\"trip-info\"><span class=\"trip-name\">Bayadah Island Cruise (6 Hours)</span></div>\n            <div class=\"trip-price\"><strong>1,500 Wkday | 1,800 Wkend</strong></div>\n        </div>\n        <div class=\"trip-price-item\">\n            <div class=\"trip-info\"><span class=\"trip-name\">Abu Tair Island Cruise (6 Hours)</span></div>\n            <div class=\"trip-price\"><strong>1,800 Wkday | 2,100 Wkend</strong></div>\n        </div>\n        <div class=\"trip-price-item border-top-dash\">\n            <div class=\"trip-info\"><span class=\"trip-name\">Fishing & Bayadah Combo (6 Hours)</span></div>\n            <div class=\"trip-price\"><strong>1,950 Wkday | 2,250 Wkend</strong></div>\n        </div>\n        <div class=\"trip-price-item border-top-dash\">\n            <div class=\"trip-info\"><span class=\"trip-name\">Deep-Sea Fishing Only (12h Wkday / 10h Wkend)</span><small class=\"weekend-note\">Duration & pricing unchanged</small></div>\n            <div class=\"trip-price\"><strong>1,800 Wkday | 2,100 Wkend</strong></div>\n        </div>\n        <div class=\"trip-price-item border-top-dash\">\n            <div class=\"trip-info\"><span class=\"trip-name\">Add-ons</span><small class=\"weekend-note\">Extra Hour: 150 SAR/hr | Extra Guest (after 6): 100 SAR/person (excluding fishing)</small></div>\n            <div class=\"trip-price\"><strong>150 SAR/hr | 100 SAR/guest</strong></div>\n        </div>\n        <div class=\"trip-price-item border-top-dash\">\n            <div class=\"trip-info\"><span class=\"trip-name\">Obhur Creek Sightseeing Tour</span></div>\n            <div class=\"trip-price\"><strong>400 SAR / hr (250 half hr)</strong></div>\n        </div>",
         "pdfLinks": [],
         "images": [
             {
