@@ -1001,12 +1001,14 @@ document.addEventListener('DOMContentLoaded', () => {
         } 
         else {
             // Seven boat series & Regular Boats (Base covers 6 guests, +100 SAR per extra guest)
+            // Norseen Large: base covers 7 guests
             basePrice = (day === 'weekend') ? selectedTrip.basePriceWeekend : selectedTrip.basePriceWeekday;
             durationText = `${selectedTrip.duration} ساعات`;
 
-            // Extra guests above 6 -> 100 SAR per person
-            if (guests > 6) {
-                guestExtra += (guests - 6) * 100;
+            // Extra guests above the base -> 100 SAR per person
+            const baseGuests = (vessel === 'norseen-large') ? 7 : 6;
+            if (guests > baseGuests) {
+                guestExtra += (guests - baseGuests) * 100;
             }
         }
 
@@ -2624,7 +2626,7 @@ const fleetDetailsData = {
         "badge": "جنوب جدة | قارب جاكور",
         "catTag": "قوارب الجنوب",
         "capacity": "حتى 8 ضيوف",
-        "marina": "مراسي الجنوب (قاطوف / الأندلس)",
+        "marina": "مراسي جنوب جدة",
         "keyFeature": "رحلات صيد متخصصة وجزر الجنوب",
         "featureIcon": "fa-solid fa-fish",
         "startingPrice": "1,200",
@@ -2644,7 +2646,7 @@ const fleetDetailsData = {
             },
             {
                 "icon": "fa-solid fa-map-location-dot",
-                "text": "قوارب الجنوب (مراسي: البضيع، السروم، الشعيبة، الطفية) — صيد وفير"
+                "text": "قوارب الجنوب من مراسي جنوب جدة — صيد وفير"
             }
         ],
         "packagesHtml": "<h4 class=\"box-title\"><i class=\"fa-solid fa-gift\"></i> خيارات الرحلات والأسعار الاقتصادية</h4>\r\n                                <div class=\"trip-price-item\">\r\n                                    <div class=\"trip-info\"><span class=\"trip-name\">رحلة صيد (8 ساعات)</span></div>\r\n                                    <div class=\"trip-price\"><strong>1,200 أسبوع | 1,300 ويكند</strong></div>\r\n                                </div>\r\n                                <div class=\"trip-price-item\">\r\n                                    <div class=\"trip-info\"><span class=\"trip-name\">رحلة صيد (10 ساعات)</span></div>\r\n                                    <div class=\"trip-price\"><strong>1,300 أسبوع | 1,400 ويكند</strong></div>\r\n                                </div>\r\n                                <div class=\"trip-price-item\">\r\n                                    <div class=\"trip-info\"><span class=\"trip-name\">رحلة صيد (12 ساعة)</span></div>\r\n                                    <div class=\"trip-price\"><strong>1,500 أسبوع | 1,600 ويكند</strong></div>\r\n                                </div>\r\n                            </div>\r\n                            <div class=\"package-actions\">\r\n                                <a href=\"boats/jaguar\" class=\"btn btn-outline\"><i class=\"fa-solid fa-circle-info\"></i> التفاصيل</a>\r\n                                <button type=\"button\" class=\"btn btn-dark\" onclick=\"openCalculatorModal('jaguar')\"><i class=\"fa-solid fa-calculator\"></i> احسب واحجز</button>\r\n                                <button type=\"button\" class=\"btn btn-share\" onclick=\"shareBoatFromCard(this, 'boats/jaguar')\" title=\"مشاركة رابط القارب\"><i class=\"fa-solid fa-share-nodes\"></i> مشاركة</button>\r\n                            </div>\r\n                        </div>",
@@ -4202,7 +4204,7 @@ const fleetDetailsDataEn = {
         "catTag": "Southern Marinas",
         "badge": "South Jeddah | Jaguar",
         "capacity": "Up to 8 Guests",
-        "marina": "Southern Marinas (Qatouf / Al-Andalus)",
+        "marina": "South Jeddah marinas",
         "keyFeature": "Specialized Deep-Sea Fishing",
         "featureIcon": "fa-solid fa-fish",
         "pricingRows": [

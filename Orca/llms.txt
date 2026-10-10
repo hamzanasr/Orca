@@ -46,7 +46,7 @@
 - [قارب النور الأزرق](https://bookorca.com/boats/al-noor-al-azraq): حتى 9 ضيوف | مرسى البحر الأحمر | إضاءة ليلية وجولات بحرية ساحرة. الأسعار: جولة الخور: 350 ر.س / ساعة (200 نصف س)، جزيرة بياضة (6س): 1,300 ر.س، جزيرة أبو طير (6س): 1,600 ر.س
 
 ## قوارب الجنوب — رحلات صيد متخصصة بجنوب جدة
-- [قارب جاكور](https://bookorca.com/boats/jaguar): حتى 8 ضيوف | مراسي الجنوب (قاطوف / الأندلس) | رحلات صيد متخصصة وجزر الجنوب. الأسعار: رحلة صيد (8 ساعات): 1,200 أسبوع | 1,300 ويكند، رحلة صيد (10 ساعات): 1,300 أسبوع | 1,400 ويكند، رحلة صيد (12 ساعة): 1,500 أسبوع | 1,600 ويكند
+- [قارب جاكور](https://bookorca.com/boats/jaguar): حتى 8 ضيوف | مراسي جنوب جدة | رحلات صيد متخصصة وجزر الجنوب. الأسعار: رحلة صيد (8 ساعات): 1,200 أسبوع | 1,300 ويكند، رحلة صيد (10 ساعات): 1,300 أسبوع | 1,400 ويكند، رحلة صيد (12 ساعة): 1,500 أسبوع | 1,600 ويكند
 - [قارب غزال أبحر](https://bookorca.com/boats/ghazal-obhur): حتى 8 ضيوف | مراسي الجنوب | رحلات صيد أعماق ومغامرات بحرية. الأسعار: رحلة صيد (8 ساعات): 1,200 أسبوع | 1,300 ويكند، رحلة صيد (10 ساعات): 1,300 أسبوع | 1,400 ويكند، رحلة صيد (12 ساعة): 1,500 أسبوع | 1,600 ويكند
 - [قارب بن شريق](https://bookorca.com/boats/bin-shuraiq): حتى 8 ضيوف | مراسي الجنوب | كابتن متمرس بأفضل مواقع الصيد. الأسعار: رحلة صيد (8 ساعات): 1,200 أسبوع | 1,300 ويكند، رحلة صيد (10 ساعات): 1,300 أسبوع | 1,400 ويكند، رحلة صيد (12 ساعة): 1,500 أسبوع | 1,600 ويكند
 - [قارب شوق الليل](https://bookorca.com/boats/shawq-al-layl): حتى 8 ضيوف | مراسي الجنوب | رحلات صيد ليلية وجزر ساحرة. الأسعار: رحلة صيد (8 ساعات): 1,200 أسبوع | 1,300 ويكند، رحلة صيد (10 ساعات): 1,300 أسبوع | 1,400 ويكند، رحلة صيد (12 ساعة): 1,500 أسبوع | 1,600 ويكند
@@ -104,7 +104,7 @@
 - [Al-Noor Al-Azraq Boat](https://bookorca.com/en/boats/al-noor-al-azraq): Up to 9 Guests | Red Sea Marina | Night Illumination & Creek Tours. Prices: Creek Cruise: 350 SAR / hr (200 half hr); Bayadah Island (6h): 1,300 SAR; Abu Tair Island (6h): 1,600 SAR
 
 ### Southern Marinas Boats — Specialized Deep-Sea Fishing
-- [Jaguar Boat (South Jeddah)](https://bookorca.com/en/boats/jaguar): Up to 8 Guests | Southern Marinas (Qatouf / Al-Andalus) | Specialized Deep-Sea Fishing. Prices: Fishing Trip (8h): 1,200 Wkday | 1,300 Wkend; Fishing Trip (10h): 1,300 Wkday | 1,400 Wkend; Fishing Trip (12h): 1,500 Wkday | 1,600 Wkend
+- [Jaguar Boat (South Jeddah)](https://bookorca.com/en/boats/jaguar): Up to 8 Guests | South Jeddah marinas | Specialized Deep-Sea Fishing. Prices: Fishing Trip (8h): 1,200 Wkday | 1,300 Wkend; Fishing Trip (10h): 1,300 Wkday | 1,400 Wkend; Fishing Trip (12h): 1,500 Wkday | 1,600 Wkend
 - [Ghazal Obhur Boat (South Jeddah)](https://bookorca.com/en/boats/ghazal-obhur): Up to 8 Guests | Southern Marinas | Proven Deep Coral Fishing Spots. Prices: Fishing Trip (8h): 1,200 Wkday | 1,300 Wkend; Fishing Trip (10h): 1,300 Wkday | 1,400 Wkend; Fishing Trip (12h): 1,500 Wkday | 1,600 Wkend
 - [Bin Shuraiq Boat (South Jeddah)](https://bookorca.com/en/boats/bin-shuraiq): Up to 8 Guests | Southern Marinas | Veteran Captain in Deep Waters. Prices: Fishing Trip (8h): 1,200 Wkday | 1,300 Wkend; Fishing Trip (10h): 1,300 Wkday | 1,400 Wkend; Fishing Trip (12h): 1,500 Wkday | 1,600 Wkend
 - [Shawq Al-Layl Boat (South Jeddah)](https://bookorca.com/en/boats/shawq-al-layl): Up to 8 Guests | Southern Marinas | Night Fishing & Island Adventures. Prices: Fishing Trip (8h): 1,200 Wkday | 1,300 Wkend; Fishing Trip (10h): 1,300 Wkday | 1,400 Wkend; Fishing Trip (12h): 1,500 Wkday | 1,600 Wkend
