@@ -438,6 +438,18 @@ document.addEventListener('DOMContentLoaded', () => {
             if (hours <= 1.0) return 500;
             if (hours <= 1.5) return 750;
             return 1000; // 2 hours
+        } else if (vessel === 'al-ameed') {
+            // 400 per hour, 250 per half hour
+            if (hours <= 0.5) return 250;
+            if (hours <= 1.0) return 400;
+            if (hours <= 1.5) return 650;
+            return 800; // 2 hours
+        } else if (vessel === 'norseen-large') {
+            // 500 per hour, 250 per half hour
+            if (hours <= 0.5) return 250;
+            if (hours <= 1.0) return 500;
+            if (hours <= 1.5) return 750;
+            return 1000; // 2 hours
         } else {
             // Regular boats: qimat-al-fawz, seven series (1, 2, 3), shaheen, bahr, al-noor-al-azraq, etc.
             if (hours <= 0.5) return 200;
@@ -846,10 +858,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             }
             else {
-                // Seven series & Norseen
-                // Extra guests above 7 -> 100 SAR per person
-                if (guests > 7) {
-                    guestExtra += (guests - 7) * 100;
+                // Seven series, Shaheen, Bahr, Al-Noor: base covers 6 guests
+                // Norseen and other regular boats: base covers 7 guests
+                // Extra guests above the base -> 100 SAR per person
+                const creekBaseGuests = (vessel === 'seven-boat' || sevenAliases.includes(vessel)) ? 6 : 7;
+                if (guests > creekBaseGuests) {
+                    guestExtra += (guests - creekBaseGuests) * 100;
                 }
             }
         }
