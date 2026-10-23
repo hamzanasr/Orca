@@ -22,3 +22,9 @@
 # PDF catalogs get replaced under the same name: cache for 1 hour only.
 /files/*
   Cache-Control: public, max-age=3600
+
+# Blog script is linked with ?v=<content hash> by blog-src/build.mjs: cache for 1 day.
+/blog/blog.js
+  Cache-Control: public, max-age=86400, stale-while-revalidate=604800
+/blog/feed.xml
+  Cache-Control: public, max-age=3600
