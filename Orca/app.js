@@ -353,6 +353,19 @@ document.addEventListener('DOMContentLoaded', () => {
         'speed-al-jawhari': [
             { id: 'creek', name: 'جولة الخور / شرم أبحر (480 ريال/ساعة)', duration: 1 }
         ],
+        'orca-7': [
+            { id: 'bayadah', name: 'رحلة جزيرة بياضة (6 ساعات - 1,380 ريال)', basePriceWeekday: 1380, basePriceWeekend: 1580, duration: 6 },
+            { id: 'abu-tair', name: 'رحلة جزيرة أبو طير (6 ساعات - 1,680 ريال)', basePriceWeekday: 1680, basePriceWeekend: 1880, duration: 6 },
+            { id: 'khor-saud', name: 'رحلة خور سعود (6 ساعات - 1,380 ريال)', basePriceWeekday: 1380, basePriceWeekend: 1580, duration: 6 },
+            { id: 'fishing-6', name: 'رحلة صيد (6 ساعات - 1,380 ريال حتى 10 أشخاص)', basePriceWeekday: 1380, basePriceWeekend: 1380, duration: 6 },
+            { id: 'sport-fishing', name: 'صيد رياضي (6 ساعات - 1,480 ريال حتى 6 أشخاص)', basePriceWeekday: 1480, basePriceWeekend: 1480, duration: 6 },
+            { id: 'creek', name: 'جولة الخور / شرم أبحر (196 ريال نصف ساعة / 350 ريال الساعة)', duration: 1 }
+        ],
+        'lazurdi': [
+            { id: 'bayadah', name: 'رحلة جزيرة بياضة (6 ساعات - 1,800 ريال)', basePriceWeekday: 1800, basePriceWeekend: 2000, duration: 6 },
+            { id: 'khor-saud', name: 'رحلة خور سعود (6 ساعات - 1,800 ريال)', basePriceWeekday: 1800, basePriceWeekend: 2000, duration: 6 },
+            { id: 'creek', name: 'داخل خور أبحر (500 ريال/ساعة - 600 بالويكند)', duration: 1 }
+        ],
         'al-ameed': [
             { id: 'bayadah', name: 'رحلة جزيرة بياضة (6 ساعات - 1,500 ريال)', basePriceWeekday: 1500, basePriceWeekend: 1800, duration: 6 },
             { id: 'abu-tair', name: 'رحلة جزيرة أبو طير (6 ساعات - 1,800 ريال)', basePriceWeekday: 1800, basePriceWeekend: 2100, duration: 6 },
@@ -409,10 +422,24 @@ document.addEventListener('DOMContentLoaded', () => {
     tripOptions['jood-007'] = JSON.parse(JSON.stringify(tripOptions['atlas']));
     tripOptions['al-jawhari'] = JSON.parse(JSON.stringify(tripOptions['atlas']));
 
+    // Orca 7 sport boat: base covers 6 guests (+90 each, max 10; sport fishing max 6),
+    // extra hours 140 SAR each (minimum 2), weekend +200 on island trips only
+    const orca7 = { baseGuests: 6, extraGuest: 90, extraHour: 140, weekendTrips: ['bayadah', 'abu-tair', 'khor-saud'] };
+    const orca7PartyPrices = { decor: 200, full: 400 };
+    // Lazurdi jet boat: creek 500 SAR/hr on weekdays, 600 on weekends (minimum 1 hour)
+    const lazurdiCreekRates = { weekday: 500, weekend: 600 };
+
     // Creek price lookup based on vessel type and duration
-    function getCreekPrice(vessel, hours) {
+    function getCreekPrice(vessel, hours, day) {
         if (amanaCreekRates[vessel]) {
             return amanaCreekRates[vessel] * Math.max(1, hours);
+        }
+        if (vessel === 'lazurdi') {
+            return lazurdiCreekRates[day === 'weekend' ? 'weekend' : 'weekday'] * Math.max(1, hours);
+        }
+        if (vessel === 'orca-7') {
+            if (hours <= 0.5) return 196;
+            return 350 * hours;
         }
         if (vessel === 'nardo') {
             if (hours <= 0.5) return 340;
@@ -487,6 +514,8 @@ document.addEventListener('DOMContentLoaded', () => {
         'atlas':                  { max: 11, label: '11 ضيفاً' },
         'jood-007':               { max: 11, label: '11 ضيفاً' },
         'speed-al-jawhari':       { max: 8,  label: '8 ضيوف' },
+        'orca-7':                 { max: 10, label: '10 أشخاص' },
+        'lazurdi':                { max: 6,  label: '6 أشخاص' },
         'qimat-al-fawz-pentos':   { max: 12, label: '12 ضيفاً' },
         'large-yacht':            { max: 30, label: '30 شخصاً' },
         'baby-yacht-ambassador':  { max: 11, label: '11 ضيفاً' },
@@ -638,6 +667,21 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    // Orca 7 add-ons: extra hours on island/fishing trips (not creek or sport fishing), party package on every trip
+    const orca7AddonsGroup = document.getElementById('orca7AddonsGroup');
+    const orcaExtraHoursSelect = document.getElementById('orcaExtraHours');
+    const orcaPartySelect = document.getElementById('orcaParty');
+    function orca7AllowsExtraHours(tripId) {
+        return tripId !== 'creek' && tripId !== 'sport-fishing';
+    }
+    function updateOrca7Addons() {
+        if (vesselTypeSelect.value !== 'orca-7') return;
+        const allow = orca7AllowsExtraHours(tripTypeSelect.value);
+        const row = document.getElementById('orcaExtraHoursRow');
+        if (row) row.classList.toggle('hidden', !allow);
+        if (!allow && orcaExtraHoursSelect) orcaExtraHoursSelect.value = '0';
+    }
+
     // Populate Group Form Options
     function populateTripTypes() {
         const vessel = vesselTypeSelect.value;
@@ -653,7 +697,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Ensure Barbaros creek minimum is 1 hour
         if (creekHoursInput) {
-            if (vessel === 'barbaros' || vessel === 'tam' || amanaCreekRates[vessel]) {
+            if (vessel === 'barbaros' || vessel === 'tam' || vessel === 'lazurdi' || amanaCreekRates[vessel]) {
                 creekHoursInput.min = '1';
                 if (parseFloat(creekHoursInput.value) < 1) {
                     creekHoursInput.value = '1';
@@ -666,7 +710,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Toggle UI panels based on yacht / baby-yacht / southern marina properties
         const amanaAddonsGroup = document.getElementById('amanaAddonsGroup');
-        if (vessel === 'nardo' || vessel === 'tam' || vessel === 'barbaros') {
+        if (orca7AddonsGroup) orca7AddonsGroup.classList.toggle('hidden', vessel !== 'orca-7');
+        if (vessel === 'orca-7' || vessel === 'lazurdi') {
+            yachtHoursGroup.classList.add('hidden');
+            if (babyYachtOptions) babyYachtOptions.classList.add('hidden');
+            if (amanaAddonsGroup) amanaAddonsGroup.classList.add('hidden');
+            southernMarinaGroup.classList.add('hidden');
+            if (packageGroup) packageGroup.classList.add('hidden');
+            if (specialRequestsGroup) specialRequestsGroup.classList.remove('hidden');
+        } else if (vessel === 'nardo' || vessel === 'tam' || vessel === 'barbaros') {
             yachtHoursGroup.classList.add('hidden');
             if (babyYachtOptions) babyYachtOptions.classList.add('hidden');
             if (amanaAddonsGroup) amanaAddonsGroup.classList.add('hidden');
@@ -763,6 +815,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 maxGuests = 35;
                 maxGuestsLabel = '35 شخصاً (الحد الأقصى للرحلة)';
             }
+        } else if (vessel === 'orca-7' && tripId === 'sport-fishing') {
+            maxGuests = 6;
+            maxGuestsLabel = '6 أشخاص (صيد رياضي)';
         } else {
             const capacityLimit = capacities[vessel];
             if (capacityLimit) {
@@ -797,6 +852,7 @@ document.addEventListener('DOMContentLoaded', () => {
         toggleCreekHoursSlider();
         toggleBabyYachtBBQ();
         updateAmanaAddons();
+        updateOrca7Addons();
         updateYachtHours();
 
         const vessel = vesselTypeSelect.value;
@@ -839,9 +895,9 @@ document.addEventListener('DOMContentLoaded', () => {
             durationText = creekHrs === 0.5 ? 'نصف ساعة' : `${creekHrs} ساعة`;
 
             // Calculate base price dynamically using getCreekPrice helper
-            basePrice = getCreekPrice(vessel, creekHrs);
+            basePrice = getCreekPrice(vessel, creekHrs, day);
 
-            if (vessel === 'nardo' || vessel === 'tam' || vessel === 'barbaros' || amanaCreekRates[vessel]) {
+            if (vessel === 'nardo' || vessel === 'tam' || vessel === 'barbaros' || vessel === 'orca-7' || vessel === 'lazurdi' || amanaCreekRates[vessel]) {
                 // Flat creek tour rate covering full capacity
                 guestExtra = 0;
             }
@@ -866,6 +922,25 @@ document.addEventListener('DOMContentLoaded', () => {
                     guestExtra += (guests - creekBaseGuests) * 100;
                 }
             }
+        }
+        else if (vessel === 'orca-7') {
+            basePrice = selectedTrip.basePriceWeekday;
+            if (day === 'weekend' && orca7.weekendTrips.includes(tripId)) {
+                weekendExtra = 200;
+            }
+            if (guests > orca7.baseGuests) {
+                guestExtra += (guests - orca7.baseGuests) * orca7.extraGuest;
+            }
+            const extraHrs = (orcaExtraHoursSelect && orca7AllowsExtraHours(tripId)) ? parseInt(orcaExtraHoursSelect.value) || 0 : 0;
+            guestExtra += extraHrs * orca7.extraHour;
+            durationText = `${selectedTrip.duration + extraHrs} ساعات`;
+        }
+        else if (vessel === 'lazurdi') {
+            basePrice = selectedTrip.basePriceWeekday;
+            if (day === 'weekend') {
+                weekendExtra = 200;
+            }
+            durationText = '6 ساعات';
         }
         else if (vessel === 'barbaros') {
             if (tripId === 'bayadah-pkg1') {
@@ -1017,8 +1092,13 @@ document.addEventListener('DOMContentLoaded', () => {
             guestExtra += decorPrices[vessel];
         }
 
-        // 2. VIP & VVIP Package additions (if not large-yacht, not southern boats, not Al-Amana boats, not nardo, not tam, and not barbaros)
-        if (vessel !== 'large-yacht' && vessel !== 'aqua' && vessel !== 'boat-51' && !amanaCreekRates[vessel] && vessel !== 'nardo' && vessel !== 'tam' && vessel !== 'barbaros' && !southernBoatAliases.includes(vessel)) {
+        // Orca 7 party package (decoration only, or decoration + cake + drinks)
+        if (vessel === 'orca-7' && orcaPartySelect && orca7PartyPrices[orcaPartySelect.value]) {
+            guestExtra += orca7PartyPrices[orcaPartySelect.value];
+        }
+
+        // 2. VIP & VVIP Package additions (if not large-yacht, not southern boats, not Al-Amana boats, not nardo, not tam, not barbaros, not orca-7/lazurdi)
+        if (vessel !== 'large-yacht' && vessel !== 'aqua' && vessel !== 'boat-51' && !amanaCreekRates[vessel] && vessel !== 'nardo' && vessel !== 'tam' && vessel !== 'barbaros' && vessel !== 'orca-7' && vessel !== 'lazurdi' && !southernBoatAliases.includes(vessel)) {
             if (pkg === 'vip') {
                 packageExtra = 300;
             } else if (pkg === 'vvip') {
@@ -1106,6 +1186,8 @@ const vesselDisplayNamesEn = {
     'atlas': 'Atlas Wa Bas Yacht',
     'jood-007': 'Baby Yacht Jood 007',
     'speed-al-jawhari': 'Al-Jawhari Speedboat',
+    'orca-7': 'Orca 7 Sport Boat',
+    'lazurdi': 'Lazurdi Jet Boat',
     'nardo': 'Nardo VIP Yacht',
     'tam': 'Tam VIP Yacht',
     'al-ameed': 'Al-Ameed Boat',
@@ -1144,6 +1226,7 @@ const tripNamesEn = {
     'mix': 'Fishing & Bayadah Island Mix (10-12 Hours)',
     'fishing': 'Deep-Sea Fishing Trip (10-12 Hours)',
     'trolling': 'Trolling Fishing Cruise (6 Hours)',
+    'sport-fishing': 'Sport Fishing (6 Hours)',
     'khor-saud': 'Khor Saud Cruise (6 Hours - 1,750 SAR)',
     'bayadah-6': 'Bayadah Island Cruise (6 Hours)',
     'abu-tair-6': 'Abu Tair Island Cruise (6 Hours)',
@@ -1163,6 +1246,8 @@ const vesselDisplayNames = {
         'atlas': 'يخت أطلس وبس (11 شخص)',
         'jood-007': 'بيبي يخت جود 007 (11 شخص)',
         'speed-al-jawhari': 'سبيد بوت الجوهري',
+        'orca-7': 'طراد رياضي أوركا 7',
+        'lazurdi': 'جت بوت لازوردي',
         'qimat-al-fawz-pentos': 'يخت بينتوس VIP (مرسى الأحلام)',
         'qimat-al-fawz': 'قارب قمة الفوز (موديل 2025)',
         'baby-yacht-ambassador': 'بيبي يخت امباسادور 36 قدم',
@@ -1238,7 +1323,7 @@ const vesselDisplayNames = {
             let customDetails = '';
 
             // Add marina details
-            if (vessel === 'barbaros' || vessel === 'nardo' || vessel === 'tam' || amanaCreekRates[vessel]) {
+            if (vessel === 'barbaros' || vessel === 'nardo' || vessel === 'tam' || vessel === 'lazurdi' || amanaCreekRates[vessel]) {
                 customDetails += isEn ? `\n📍 Departure Marina: *Al-Amanah Yacht Club (South Obhur)*` : `\n📍 مرسى الانطلاق: *نادي الأمانة لليخوت (أبحر الجنوبية)*`;
             } else if (vessel === 'qimat-al-fawz-pentos' || vessel === 'al-ameed' || vessel === 'norseen-large') {
                 customDetails += isEn ? `\n📍 Departure Marina: *Marsa Al Ahlam*` : `\n📍 مرسى الانطلاق: *مرسى الأحلام*`;
@@ -1296,6 +1381,30 @@ const vesselDisplayNames = {
                     customDetails += isEn ? `\n✨ Special Requests: *${specialRequestsInput.value.trim()}*` : `\n✨ طلبات خاصة: *${specialRequestsInput.value.trim()}*`;
                 }
                 packageLine = '';
+            }
+
+            // Orca 7 and Lazurdi custom details
+            if (vessel === 'orca-7' || vessel === 'lazurdi') {
+                packageLine = '';
+                if (vessel === 'orca-7') {
+                    const extraHrs = orca7AllowsExtraHours(tripId) && orcaExtraHoursSelect ? parseInt(orcaExtraHoursSelect.value) || 0 : 0;
+                    if (extraHrs > 0) {
+                        customDetails += isEn ? `
+⏱ Extra Hours: *${extraHrs} (+${extraHrs * orca7.extraHour} SAR)*` : `
+⏱ ساعات إضافية: *${extraHrs} (+${extraHrs * orca7.extraHour} ريال)*`;
+                    }
+                    if (orcaPartySelect && orca7PartyPrices[orcaPartySelect.value]) {
+                        const partyName = orcaPartySelect.options[orcaPartySelect.selectedIndex].text;
+                        customDetails += isEn ? `
+🎈 Party: *${partyName}*` : `
+🎈 الحفلة: *${partyName}*`;
+                    }
+                }
+                if (specialRequestsInput && specialRequestsInput.value.trim() !== '') {
+                    customDetails += isEn ? `
+✨ Special Requests: *${specialRequestsInput.value.trim()}*` : `
+✨ طلبات خاصة: *${specialRequestsInput.value.trim()}*`;
+                }
             }
 
             // Nardo, Tam, and Barbaros custom details
@@ -1382,8 +1491,8 @@ const vesselDisplayNames = {
         addBBQSelect.addEventListener('change', calculatePrice);
     }
 
-    // Al-Amana add-ons
-    [addDecorSelect, addTowSelect, addScooterSelect].forEach(sel => {
+    // Al-Amana and Orca 7 add-ons
+    [addDecorSelect, addTowSelect, addScooterSelect, orcaExtraHoursSelect, orcaPartySelect].forEach(sel => {
         if (sel) sel.addEventListener('change', calculatePrice);
     });
 
@@ -1641,6 +1750,8 @@ const fleetDetailsData = {
     "atlas": { "key": "atlas", "name": "يخت أطلس وبس", "detailLink": "boats/atlas", "calcVessel": "atlas" },
     "jood-007": { "key": "jood-007", "name": "بيبي يخت جود 007", "detailLink": "boats/jood-007", "calcVessel": "jood-007" },
     "speed-al-jawhari": { "key": "speed-al-jawhari", "name": "سبيد بوت الجوهري", "detailLink": "boats/speed-al-jawhari", "calcVessel": "speed-al-jawhari" },
+    "orca-7": { "key": "orca-7", "name": "طراد رياضي أوركا 7", "detailLink": "boats/orca-7", "calcVessel": "orca-7" },
+    "lazurdi": { "key": "lazurdi", "name": "جت بوت لازوردي", "detailLink": "boats/lazurdi", "calcVessel": "lazurdi" },
     "barbaros": {
         "key": "barbaros",
         "name": "قارب بارباروسا VIP (Barbarossa)",
@@ -2970,6 +3081,8 @@ const fleetDetailsDataEn = {
     "atlas": { "key": "atlas", "name": "Atlas Wa Bas Yacht", "detailLink": "boats/atlas", "calcVessel": "atlas" },
     "jood-007": { "key": "jood-007", "name": "Baby Yacht Jood 007", "detailLink": "boats/jood-007", "calcVessel": "jood-007" },
     "speed-al-jawhari": { "key": "speed-al-jawhari", "name": "Al-Jawhari Speedboat", "detailLink": "boats/speed-al-jawhari", "calcVessel": "speed-al-jawhari" },
+    "orca-7": { "key": "orca-7", "name": "Orca 7 Sport Boat", "detailLink": "boats/orca-7", "calcVessel": "orca-7" },
+    "lazurdi": { "key": "lazurdi", "name": "Lazurdi Jet Boat", "detailLink": "boats/lazurdi", "calcVessel": "lazurdi" },
     "barbaros": {
         "key": "barbaros",
         "name": "Barbaros VIP Boat (Barbarossa)",
