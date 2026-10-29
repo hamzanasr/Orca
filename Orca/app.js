@@ -366,6 +366,11 @@ document.addEventListener('DOMContentLoaded', () => {
             { id: 'khor-saud', name: 'رحلة خور سعود (6 ساعات - 1,800 ريال)', basePriceWeekday: 1800, basePriceWeekend: 2000, duration: 6 },
             { id: 'creek', name: 'داخل خور أبحر (500 ريال/ساعة - 600 بالويكند)', duration: 1 }
         ],
+        'yamaha-jet': [
+            { id: 'bayadah', name: 'رحلة جزيرة بياضة (6 ساعات - 2,480 ريال)', basePriceWeekday: 2480, basePriceWeekend: 2680, duration: 6 },
+            { id: 'khor-saud', name: 'رحلة خور سعود (6 ساعات - 1,980 ريال)', basePriceWeekday: 1980, basePriceWeekend: 2180, duration: 6 },
+            { id: 'creek', name: 'داخل خور أبحر (780 ريال/ساعة - 880 بالويكند)', duration: 1 }
+        ],
         'al-ameed': [
             { id: 'bayadah', name: 'رحلة جزيرة بياضة (6 ساعات - 1,500 ريال)', basePriceWeekday: 1500, basePriceWeekend: 1800, duration: 6 },
             { id: 'abu-tair', name: 'رحلة جزيرة أبو طير (6 ساعات - 1,800 ريال)', basePriceWeekday: 1800, basePriceWeekend: 2100, duration: 6 },
@@ -426,16 +431,20 @@ document.addEventListener('DOMContentLoaded', () => {
     // extra hours 140 SAR each (minimum 2), weekend +200 on island trips only
     const orca7 = { baseGuests: 6, extraGuest: 90, extraHour: 140, weekendTrips: ['bayadah', 'abu-tair', 'khor-saud'] };
     const orca7PartyPrices = { decor: 200, full: 400 };
-    // Lazurdi jet boat: creek 500 SAR/hr on weekdays, 600 on weekends (minimum 1 hour)
-    const lazurdiCreekRates = { weekday: 500, weekend: 600 };
+    // Jet boats (max 6 guests, flat price, weekend +200 on island trips): hourly creek rate
+    // by day (minimum 1 hour)
+    const jetBoatCreekRates = {
+        'lazurdi':    { weekday: 500, weekend: 600 },
+        'yamaha-jet': { weekday: 780, weekend: 880 }
+    };
 
     // Creek price lookup based on vessel type and duration
     function getCreekPrice(vessel, hours, day) {
         if (amanaCreekRates[vessel]) {
             return amanaCreekRates[vessel] * Math.max(1, hours);
         }
-        if (vessel === 'lazurdi') {
-            return lazurdiCreekRates[day === 'weekend' ? 'weekend' : 'weekday'] * Math.max(1, hours);
+        if (jetBoatCreekRates[vessel]) {
+            return jetBoatCreekRates[vessel][day === 'weekend' ? 'weekend' : 'weekday'] * Math.max(1, hours);
         }
         if (vessel === 'orca-7') {
             if (hours <= 0.5) return 196;
@@ -516,6 +525,7 @@ document.addEventListener('DOMContentLoaded', () => {
         'speed-al-jawhari':       { max: 8,  label: '8 ضيوف' },
         'orca-7':                 { max: 10, label: '10 أشخاص' },
         'lazurdi':                { max: 6,  label: '6 أشخاص' },
+        'yamaha-jet':             { max: 6,  label: '6 أشخاص' },
         'qimat-al-fawz-pentos':   { max: 12, label: '12 ضيفاً' },
         'large-yacht':            { max: 30, label: '30 شخصاً' },
         'baby-yacht-ambassador':  { max: 11, label: '11 ضيفاً' },
@@ -697,7 +707,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Ensure Barbaros creek minimum is 1 hour
         if (creekHoursInput) {
-            if (vessel === 'barbaros' || vessel === 'tam' || vessel === 'lazurdi' || amanaCreekRates[vessel]) {
+            if (vessel === 'barbaros' || vessel === 'tam' || jetBoatCreekRates[vessel] || amanaCreekRates[vessel]) {
                 creekHoursInput.min = '1';
                 if (parseFloat(creekHoursInput.value) < 1) {
                     creekHoursInput.value = '1';
@@ -711,7 +721,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // Toggle UI panels based on yacht / baby-yacht / southern marina properties
         const amanaAddonsGroup = document.getElementById('amanaAddonsGroup');
         if (orca7AddonsGroup) orca7AddonsGroup.classList.toggle('hidden', vessel !== 'orca-7');
-        if (vessel === 'orca-7' || vessel === 'lazurdi') {
+        if (vessel === 'orca-7' || jetBoatCreekRates[vessel]) {
             yachtHoursGroup.classList.add('hidden');
             if (babyYachtOptions) babyYachtOptions.classList.add('hidden');
             if (amanaAddonsGroup) amanaAddonsGroup.classList.add('hidden');
@@ -897,7 +907,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // Calculate base price dynamically using getCreekPrice helper
             basePrice = getCreekPrice(vessel, creekHrs, day);
 
-            if (vessel === 'nardo' || vessel === 'tam' || vessel === 'barbaros' || vessel === 'orca-7' || vessel === 'lazurdi' || amanaCreekRates[vessel]) {
+            if (vessel === 'nardo' || vessel === 'tam' || vessel === 'barbaros' || vessel === 'orca-7' || jetBoatCreekRates[vessel] || amanaCreekRates[vessel]) {
                 // Flat creek tour rate covering full capacity
                 guestExtra = 0;
             }
@@ -935,7 +945,7 @@ document.addEventListener('DOMContentLoaded', () => {
             guestExtra += extraHrs * orca7.extraHour;
             durationText = `${selectedTrip.duration + extraHrs} ساعات`;
         }
-        else if (vessel === 'lazurdi') {
+        else if (jetBoatCreekRates[vessel]) {
             basePrice = selectedTrip.basePriceWeekday;
             if (day === 'weekend') {
                 weekendExtra = 200;
@@ -1097,8 +1107,8 @@ document.addEventListener('DOMContentLoaded', () => {
             guestExtra += orca7PartyPrices[orcaPartySelect.value];
         }
 
-        // 2. VIP & VVIP Package additions (if not large-yacht, not southern boats, not Al-Amana boats, not nardo, not tam, not barbaros, not orca-7/lazurdi)
-        if (vessel !== 'large-yacht' && vessel !== 'aqua' && vessel !== 'boat-51' && !amanaCreekRates[vessel] && vessel !== 'nardo' && vessel !== 'tam' && vessel !== 'barbaros' && vessel !== 'orca-7' && vessel !== 'lazurdi' && !southernBoatAliases.includes(vessel)) {
+        // 2. VIP & VVIP Package additions (if not large-yacht, not southern boats, not Al-Amana boats, not nardo, not tam, not barbaros, not orca-7/jet boats)
+        if (vessel !== 'large-yacht' && vessel !== 'aqua' && vessel !== 'boat-51' && !amanaCreekRates[vessel] && vessel !== 'nardo' && vessel !== 'tam' && vessel !== 'barbaros' && vessel !== 'orca-7' && !jetBoatCreekRates[vessel] && !southernBoatAliases.includes(vessel)) {
             if (pkg === 'vip') {
                 packageExtra = 300;
             } else if (pkg === 'vvip') {
@@ -1188,6 +1198,7 @@ const vesselDisplayNamesEn = {
     'speed-al-jawhari': 'Al-Jawhari Speedboat',
     'orca-7': 'Orca 7 Sport Boat',
     'lazurdi': 'Lazurdi Jet Boat',
+    'yamaha-jet': 'Yamaha Jet Boat',
     'nardo': 'Nardo VIP Yacht',
     'tam': 'Tam VIP Yacht',
     'al-ameed': 'Al-Ameed Boat',
@@ -1248,6 +1259,7 @@ const vesselDisplayNames = {
         'speed-al-jawhari': 'سبيد بوت الجوهري',
         'orca-7': 'طراد رياضي أوركا 7',
         'lazurdi': 'جت بوت لازوردي',
+        'yamaha-jet': 'جت بوت ياماها',
         'qimat-al-fawz-pentos': 'يخت بينتوس VIP (مرسى الأحلام)',
         'qimat-al-fawz': 'قارب قمة الفوز (موديل 2025)',
         'baby-yacht-ambassador': 'بيبي يخت امباسادور 36 قدم',
@@ -1329,6 +1341,8 @@ const vesselDisplayNames = {
                 customDetails += isEn ? `\n📍 Departure Marina: *Marsa Al Ahlam*` : `\n📍 مرسى الانطلاق: *مرسى الأحلام*`;
             } else if (vessel === 'aqua') {
                 customDetails += isEn ? `\n📍 Departure Marina: *Al-Lulua (Pearl) Marina*` : `\n📍 مرسى الانطلاق: *مرسى اللؤلؤة*`;
+            } else if (vessel === 'yamaha-jet') {
+                // Marina is confirmed with the customer on WhatsApp
             } else if (vessel === 'boat-51' || southernBoatAliases.includes(vessel)) {
                 customDetails += isEn ? `\n📍 Departure Marina: *${southernMarinaSelect.options[southernMarinaSelect.selectedIndex].text}*` : `\n📍 مرسى الانطلاق: *${southernMarinaSelect.options[southernMarinaSelect.selectedIndex].text}*`;
             } else {
@@ -1384,7 +1398,7 @@ const vesselDisplayNames = {
             }
 
             // Orca 7 and Lazurdi custom details
-            if (vessel === 'orca-7' || vessel === 'lazurdi') {
+            if (vessel === 'orca-7' || jetBoatCreekRates[vessel]) {
                 packageLine = '';
                 if (vessel === 'orca-7') {
                     const extraHrs = orca7AllowsExtraHours(tripId) && orcaExtraHoursSelect ? parseInt(orcaExtraHoursSelect.value) || 0 : 0;
@@ -1752,6 +1766,7 @@ const fleetDetailsData = {
     "speed-al-jawhari": { "key": "speed-al-jawhari", "name": "سبيد بوت الجوهري", "detailLink": "boats/speed-al-jawhari", "calcVessel": "speed-al-jawhari" },
     "orca-7": { "key": "orca-7", "name": "طراد رياضي أوركا 7", "detailLink": "boats/orca-7", "calcVessel": "orca-7" },
     "lazurdi": { "key": "lazurdi", "name": "جت بوت لازوردي", "detailLink": "boats/lazurdi", "calcVessel": "lazurdi" },
+    "yamaha-jet": { "key": "yamaha-jet", "name": "جت بوت ياماها", "detailLink": "boats/yamaha-jet", "calcVessel": "yamaha-jet" },
     "barbaros": {
         "key": "barbaros",
         "name": "قارب بارباروسا VIP (Barbarossa)",
@@ -3083,6 +3098,7 @@ const fleetDetailsDataEn = {
     "speed-al-jawhari": { "key": "speed-al-jawhari", "name": "Al-Jawhari Speedboat", "detailLink": "boats/speed-al-jawhari", "calcVessel": "speed-al-jawhari" },
     "orca-7": { "key": "orca-7", "name": "Orca 7 Sport Boat", "detailLink": "boats/orca-7", "calcVessel": "orca-7" },
     "lazurdi": { "key": "lazurdi", "name": "Lazurdi Jet Boat", "detailLink": "boats/lazurdi", "calcVessel": "lazurdi" },
+    "yamaha-jet": { "key": "yamaha-jet", "name": "Yamaha Jet Boat", "detailLink": "boats/yamaha-jet", "calcVessel": "yamaha-jet" },
     "barbaros": {
         "key": "barbaros",
         "name": "Barbaros VIP Boat (Barbarossa)",

@@ -225,6 +225,14 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://bookorca.com/boats/lazurdi"/>
   </url>
   <url>
+    <loc>https://bookorca.com/boats/yamaha-jet</loc>
+    <lastmod>2026-10-29</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://bookorca.com/boats/yamaha-jet"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bookorca.com/en/boats/yamaha-jet"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bookorca.com/boats/yamaha-jet"/>
+  </url>
+  <url>
     <loc>https://bookorca.com/boats/tam</loc>
     <lastmod>2026-10-10</lastmod>
     <priority>0.8</priority>
@@ -455,6 +463,14 @@
     <xhtml:link rel="alternate" hreflang="ar" href="https://bookorca.com/boats/lazurdi"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://bookorca.com/en/boats/lazurdi"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://bookorca.com/boats/lazurdi"/>
+  </url>
+  <url>
+    <loc>https://bookorca.com/en/boats/yamaha-jet</loc>
+    <lastmod>2026-10-29</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://bookorca.com/boats/yamaha-jet"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bookorca.com/en/boats/yamaha-jet"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bookorca.com/boats/yamaha-jet"/>
   </url>
   <url>
     <loc>https://bookorca.com/en/boats/tam</loc>
