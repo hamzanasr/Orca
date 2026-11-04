@@ -88,7 +88,7 @@ const ICON = {
 // ---------------------------------------------------------------- validation
 const BLOCKS = ['p', 'h3', 'ul', 'ol', 'callout', 'table', 'steps', 'checklist', 'quiz', 'picker', 'calc', 'compare', 'timeline', 'stats', 'boats', 'quote', 'reveal', 'cta'];
 const INTERACTIVE = ['checklist', 'quiz', 'picker', 'calc'];
-const KNOWN_PRICES = new Set([...[...fs.readFileSync(path.join(SRC, 'BOAT-PAGES.md'), 'utf8').matchAll(/(\d{1,2},\d{3}|\d{3,5})/g)].map((m) => +m[1].replace(',', '')), 200, 250, 300, 320, 350, 400, 450, 480, 500, 580, 600, 680, 700, 980, 1200, 1300, 1400, 1500, 1600, 1800, 1880, 1980, 2000, 2100, 2180, 2200, 2280, 2300, 2380, 2500, 3000, 3100, 3400, 3680, 4380, 5500, 6980, 7480, 16500, 30000]);
+const KNOWN_PRICES = new Set([...[...fs.readFileSync(path.join(SRC, 'BOAT-PAGES.md'), 'utf8').matchAll(/(\d{1,2},\d{3}|\d{3,5})/g)].map((m) => +m[1].replace(',', '')), 200, 250, 300, 320, 350, 400, 450, 480, 500, 580, 600, 680, 700, 980, 1200, 1300, 1400, 1500, 1600, 1800, 1880, 1980, 2000, 2100, 2180, 2200, 2280, 2300, 2380, 2500, 3000, 3100, 3400, 3680, 4380, 6000, 6980, 7480, 18000, 30000]);
 
 function validate(a, file) {
   const E = [], W = [];
