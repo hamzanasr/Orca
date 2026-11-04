@@ -200,7 +200,7 @@
       var cnt = range(w, 'people', function () { run(); });
       run = function () {
         var s = +tier(), n = cnt(), seats = s * n, cap = cfg.boatCap || 9;
-        var boat = priceFor({ p: cfg.boatPrice || 1300, incl: cfg.boatIncl || 6, extra: cfg.boatExtra == null ? 100 : cfg.boatExtra }, Math.min(n, cap));
+        var boat = priceFor({ p: cfg.boatPrice || 1280, incl: cfg.boatIncl || 6, extra: cfg.boatExtra == null ? 100 : cfg.boatExtra }, Math.min(n, cap));
         var per = boat / n, cheaper = seats < boat;
         res.innerHTML = '<div class="big">' + fmt(seats) + ' ر.س</div><p>تكلفة ' + ppl(n) + ' بالمقاعد الفردية (' + s + ' ر.س للمقعد). قارب خاص لبياضة لعددكم ≈ ' + fmt(boat) + ' ر.س (يشمل 6 أشخاص وكل شخص إضافي 100 ريال، حتى ' + ppl(cap) + ') أي ' + fmt(per) + ' ر.س للشخص.</p><p><strong style="color:#fff">' + (n > cap ? 'عددكم أكبر من سعة القارب الصغير — قارن مع قارب أكبر.' : cheaper ? 'المقاعد الفردية أوفر لكم بـ ' + fmt(boat - seats) + ' ر.س.' : 'القارب الخاص أوفر لكم بـ ' + fmt(seats - boat) + ' ر.س، مع خصوصية كاملة.') + '</strong></p>';
       };

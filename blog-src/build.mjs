@@ -88,7 +88,7 @@ const ICON = {
 // ---------------------------------------------------------------- validation
 const BLOCKS = ['p', 'h3', 'ul', 'ol', 'callout', 'table', 'steps', 'checklist', 'quiz', 'picker', 'calc', 'compare', 'timeline', 'stats', 'boats', 'quote', 'reveal', 'cta'];
 const INTERACTIVE = ['checklist', 'quiz', 'picker', 'calc'];
-const KNOWN_PRICES = new Set([...[...fs.readFileSync(path.join(SRC, 'BOAT-PAGES.md'), 'utf8').matchAll(/(\d{1,2},\d{3}|\d{3,5})/g)].map((m) => +m[1].replace(',', '')), 200, 250, 300, 320, 350, 400, 450, 480, 500, 580, 600, 680, 700, 980, 1200, 1300, 1400, 1500, 1600, 1800, 1880, 1980, 2000, 2100, 2180, 2200, 2280, 2300, 2380, 2500, 3000, 3100, 3400, 3680, 4380, 6000, 6980, 7480, 18000, 30000]);
+const KNOWN_PRICES = new Set([...[...fs.readFileSync(path.join(SRC, 'BOAT-PAGES.md'), 'utf8').matchAll(/(\d{1,2},\d{3}|\d{3,5})/g)].map((m) => +m[1].replace(',', '')), 180, 200, 250, 280, 300, 320, 350, 380, 400, 450, 480, 500, 580, 680, 700, 980, 1000, 1180, 1280, 1380, 1480, 1580, 1780, 1880, 1980, 2080, 2180, 2280, 2380, 2480, 2580, 2680, 2780, 2980, 3080, 3280, 3380, 3480, 3680, 3980, 4280, 4380, 6000, 6980, 7480, 18000, 29980]);
 
 function validate(a, file) {
   const E = [], W = [];
@@ -273,7 +273,7 @@ function renderCalc(b, M) {
     return `<div class="widget" data-calc="boats">${head('أداة: أي قارب يناسب مجموعتك؟', 'حدد نوع الرحلة وعدد الأشخاص، وستظهر لك القوارب المناسبة من أسطول أوركا مرتبة من الأوفر.')}${pillsHtml('trip', 'نوع الرحلة', trips.map((x, i) => ({ ...x, on: i === on })))}${rng('people', 1, 70, b.people || 8, 'عدد الأشخاص')}${result}</div>`;
   }
   if (b.kind === 'seats') {
-    return `<div class="widget" data-calc="seats" data-cfg="${esc(JSON.stringify({ boatPrice: b.boatPrice || 1300, boatCap: b.boatCap || 9, boatIncl: b.boatIncl || 6, boatExtra: b.boatExtra ?? 100 }))}">${head('المقعد الفردي أم القارب الخاص؟', 'قارن تكلفة المقاعد الفردية لمجموعتك مع حجز قارب كامل لبياضة.')}${pillsHtml('tier', 'فئة المقعد', [{ v: 250, label: 'اقتصادي 250' }, { v: 300, label: 'VIP 300' }, { v: 320, label: 'VVIP 320' }])}${rng('people', 1, 12, b.people || 4, 'عدد الأشخاص')}${result}</div>`;
+    return `<div class="widget" data-calc="seats" data-cfg="${esc(JSON.stringify({ boatPrice: b.boatPrice || 1280, boatCap: b.boatCap || 9, boatIncl: b.boatIncl || 6, boatExtra: b.boatExtra ?? 100 }))}">${head('المقعد الفردي أم القارب الخاص؟', 'قارن تكلفة المقاعد الفردية لمجموعتك مع حجز قارب كامل لبياضة.')}${pillsHtml('tier', 'فئة المقعد', [{ v: 250, label: 'اقتصادي 250' }, { v: 280, label: 'VIP 280' }, { v: 320, label: 'VVIP 320' }])}${rng('people', 1, 12, b.people || 4, 'عدد الأشخاص')}${result}</div>`;
   }
   return '';
 }
