@@ -359,7 +359,7 @@ document.addEventListener('DOMContentLoaded', () => {
             { id: 'khor-saud', name: 'رحلة خور سعود (6 ساعات - 1,380 ريال)', basePriceWeekday: 1380, basePriceWeekend: 1580, duration: 6 },
             { id: 'fishing-6', name: 'رحلة صيد (6 ساعات - 1,380 ريال حتى 10 أشخاص)', basePriceWeekday: 1380, basePriceWeekend: 1380, duration: 6 },
             { id: 'sport-fishing', name: 'صيد رياضي (6 ساعات - 1,480 ريال حتى 6 أشخاص)', basePriceWeekday: 1480, basePriceWeekend: 1480, duration: 6 },
-            { id: 'creek', name: 'جولة الخور / شرم أبحر (196 ريال نصف ساعة / 350 ريال الساعة)', duration: 1 }
+            { id: 'creek', name: 'جولة الخور / شرم أبحر (200 ريال نصف ساعة / 296 ريال الساعة)', duration: 1 }
         ],
         'lazurdi': [
             { id: 'bayadah', name: 'رحلة جزيرة بياضة (6 ساعات - 1,780 ريال)', basePriceWeekday: 1780, basePriceWeekend: 1980, duration: 6 },
@@ -447,8 +447,8 @@ document.addEventListener('DOMContentLoaded', () => {
             return jetBoatCreekRates[vessel][day === 'weekend' ? 'weekend' : 'weekday'] * Math.max(1, hours);
         }
         if (vessel === 'orca-7') {
-            if (hours <= 0.5) return 196;
-            return 350 * hours;
+            if (hours <= 0.5) return 200;
+            return 296 * hours;
         }
         if (vessel === 'nardo') {
             if (hours <= 0.5) return 340;
