@@ -88,7 +88,7 @@ const ICON = {
 // ---------------------------------------------------------------- validation
 const BLOCKS = ['p', 'h3', 'ul', 'ol', 'callout', 'table', 'steps', 'checklist', 'quiz', 'picker', 'calc', 'compare', 'timeline', 'stats', 'boats', 'quote', 'reveal', 'cta'];
 const INTERACTIVE = ['checklist', 'quiz', 'picker', 'calc'];
-const KNOWN_PRICES = new Set([...[...fs.readFileSync(path.join(SRC, 'BOAT-PAGES.md'), 'utf8').matchAll(/(\d{1,2},\d{3}|\d{3,5})/g)].map((m) => +m[1].replace(',', '')), 180, 200, 250, 280, 300, 320, 350, 380, 400, 450, 480, 500, 580, 680, 700, 980, 1000, 1180, 1280, 1380, 1480, 1580, 1780, 1880, 1980, 2080, 2180, 2280, 2380, 2480, 2580, 2680, 2780, 2980, 3080, 3280, 3380, 3480, 3680, 3980, 4280, 4380, 6000, 6980, 7480, 18000, 29980]);
+const KNOWN_PRICES = new Set([...[...fs.readFileSync(path.join(SRC, 'BOAT-PAGES.md'), 'utf8').matchAll(/(\d{1,2},\d{3}|\d{3,5})/g)].map((m) => +m[1].replace(',', '')), 180, 200, 250, 280, 300, 320, 350, 380, 400, 450, 480, 500, 580, 680, 700, 980, 1000, 1180, 1280, 1380, 1480, 1580, 1780, 1880, 1980, 2080, 2180, 2280, 2380, 2480, 2580, 2680, 2780, 2980, 3080, 3280, 3380, 3480, 3680, 3980, 4280, 4380, 6500, 6980, 7480, 19500, 29980]);
 
 function validate(a, file) {
   const E = [], W = [];

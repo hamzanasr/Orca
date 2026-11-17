@@ -21,7 +21,7 @@
   "al-ameed":        { "creek": 380, "half": 250, "bayada": {"p": 1480, "incl": 6, "extra": 100}, "abuTair": {"p": 1780, "incl": 6, "extra": 100}, "fishing": {"p": 1780}, "fishingNote": "صيد 12 ساعة" },
   "norseen-large":   { "creek": 480, "half": 250, "bayada": {"p": 1780, "incl": 7, "extra": 100}, "abuTair": {"p": 2080, "incl": 7, "extra": 100}, "fishing": {"p": 2080, "incl": 7, "extra": 100}, "fishingNote": "صيد 8 ساعات" },
   "large-yacht":     { "creek": 1980, "creekMinHours": 2 },
-  "aqua":            { "creek": 6000, "creekMinHours": 3, "bayada": {"p": 29980}, "bayadaCap": 25 },
+  "aqua":            { "creek": 6500, "creekMinHours": 3, "bayada": {"p": 29980}, "bayadaCap": 25 },
   "jaguar":          { "fishing": {"p": 1180, "incl": 6, "extra": 100}, "fishingNote": "صيد 8 ساعات", "abuTair": {"p": 1580}, "abuTairNote": "8 ساعات" },
   "ghazal-obhur":    { "fishing": {"p": 1180, "incl": 6, "extra": 100}, "fishingNote": "صيد 8 ساعات" },
   "bin-shuraiq":     { "fishing": {"p": 1180, "incl": 6, "extra": 100}, "fishingNote": "صيد 8 ساعات" },
