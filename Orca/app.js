@@ -322,7 +322,7 @@ document.addEventListener('DOMContentLoaded', () => {
         ],
         'aqua': [
             { id: 'bayadah-6', name: 'رحلة جزيرة بياضة (6 ساعات - 29,980 ريال حتى 25 شخصاً)', duration: 6 },
-            { id: 'creek-hourly', name: 'رحلة الخور (6,000 ريال/ساعة - بحد أدنى 3 ساعات حتى 70 شخصاً)' }
+            { id: 'creek-hourly', name: 'رحلة الخور (6,500 ريال/ساعة - بحد أدنى 3 ساعات حتى 70 شخصاً)' }
         ],
         'large-yacht': [
             { id: 'bayadah-hourly', name: 'رحلة بياضة (ساعة - بحد أدنى ساعتين)', hourlyPriceWeekday: 1980, hourlyPriceWeekend: 2180 },
@@ -886,7 +886,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (vessel === 'aqua') {
             if (tripId === 'creek-hourly') {
                 const hrs = Math.max(3, parseFloat(yachtHoursInput.value));
-                basePrice = 6000 * hrs;
+                basePrice = 6500 * hrs;
                 durationText = `${hrs} ساعات`;
             } else {
                 basePrice = 29980;
